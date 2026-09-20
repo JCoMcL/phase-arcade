@@ -1,7 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dpvkxkn0ksvru"]
 
 [ext_resource type="Texture2D" uid="uid://chivp5sw8im74" path="res://textures/breezeblocks/breezeblocks.png" id="1_6g313"]
-[ext_resource type="Texture2D" uid="uid://dtueplmikp66k" path="res://gridmap-level/tiles_Roughness_Map.png" id="2_m1e2x"]
 [ext_resource type="Texture2D" uid="uid://xp3g0htghhog" path="res://textures/breezeblocks/Normal_Map.png" id="3_m1e2x"]
 [ext_resource type="Texture2D" uid="uid://csfajtkqe1hky" path="res://textures/breezeblocks/Roughness_Map.png" id="4_m1e2x"]
 
@@ -9,8 +8,6 @@
 resource_name = "Bricks"
 cull_mode = 2
 albedo_texture = ExtResource("1_6g313")
-metallic_texture = ExtResource("2_m1e2x")
-metallic_texture_channel = 2
 roughness_texture = ExtResource("4_m1e2x")
 roughness_texture_channel = 1
 normal_enabled = true
