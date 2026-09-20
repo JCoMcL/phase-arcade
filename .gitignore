@@ -1,0 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+temp/
+*.png~
+*.kra~
+*.blend1
+export
+audio/sfx/crushed-*
+test_scene.tscn

@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bx2mma2aiaf8o"]
+
+[ext_resource type="Texture2D" uid="uid://ddcgfotowj3h" path="res://textures/chipboard/chipboard2.png" id="1_bf815"]
+[ext_resource type="Texture2D" uid="uid://b7rytr4dgu3pk" path="res://textures/chipboard/Normal_Map.png" id="2_1c6dw"]
+[ext_resource type="Texture2D" uid="uid://dogni8xmc800r" path="res://textures/chipboard/Roughness_Map.png" id="3_pcqvj"]
+
+[resource]
+resource_name = "Wood"
+albedo_texture = ExtResource("1_bf815")
+roughness = 0.6
+roughness_texture = ExtResource("3_pcqvj")
+normal_enabled = true
+normal_scale = 0.39
+normal_texture = ExtResource("2_1c6dw")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2
