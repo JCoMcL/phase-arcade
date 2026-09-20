@@ -15,6 +15,10 @@ run/main_scene="uid://samwjuw67shl"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[editor]
+
+movie_writer/movie_file="export/arcade-dev.avi"
+
 [filesystem]
 
 import/blender/enabled=false
