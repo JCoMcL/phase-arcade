@@ -19,6 +19,16 @@ config/icon="res://icon.svg"
 
 movie_writer/movie_file="export/arcade-dev.avi"
 
+[file_customization]
+
+folder_colors={
+"res://cabinets/": "green",
+"res://gridmap-level/": "pink",
+"res://materials/": "purple",
+"res://player/": "red",
+"res://textures/": "purple"
+}
+
 [filesystem]
 
 import/blender/enabled=false

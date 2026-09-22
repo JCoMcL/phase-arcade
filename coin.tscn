@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://otft3bv64umi"]
+
+[ext_resource type="PackedScene" uid="uid://wsxhsr50jcv7" path="res://cabinets/coin.glb" id="1_d5gmh"]
+
+[node name="coin" unique_id=1993092626 instance=ExtResource("1_d5gmh")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=484283053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016909838, 0.072794944, 0)
+light_color = Color(0.15504289, 0.116039015, 0.037961263, 1)
+light_energy = 0.004
+omni_range = 0.2
+omni_attenuation = 2.0

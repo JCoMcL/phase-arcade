@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://samwjuw67shl"]
 
 [ext_resource type="MeshLibrary" uid="uid://cgkcujwd432h2" path="res://gridmap-level/mesh_library.tres" id="1_ghvus"]
-[ext_resource type="PackedScene" uid="uid://c5qhyuctvc26m" path="res://player_character.tscn" id="2_ghvus"]
+[ext_resource type="PackedScene" uid="uid://c5qhyuctvc26m" path="res://player/player_character.tscn" id="2_ghvus"]
+[ext_resource type="PackedScene" uid="uid://b2th27vl4noa2" path="res://cabinets/cabinet.glb" id="3_kou5f"]
+[ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://coin.tscn" id="4_vpf4b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
 sky_top_color = Color(0.042913936, 0.070302956, 0.10943019, 1)
@@ -16,8 +18,6 @@ sky_material = SubResource("ProceduralSkyMaterial_kou5f")
 [sub_resource type="Environment" id="Environment_oq02x"]
 background_mode = 2
 sky = SubResource("Sky_vpf4b")
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ghvus"]
 
 [node name="level" type="Node3D" unique_id=1498293256]
 
@@ -60,7 +60,6 @@ shadow_reverse_cull_face = true
 transform = Transform3D(0.9767002, -0.16840667, -0.13302648, 0.13234733, -0.015302002, 0.9910854, -0.16894092, -0.98559886, 0.0073426664, 3.556295, 3.0964682, -0.89939785)
 light_color = Color(0.7183131, 0.20532736, 0.28202447, 1)
 shadow_enabled = true
-shadow_reverse_cull_face = true
 spot_attenuation = 2.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=674092471]
@@ -70,9 +69,10 @@ shadow_enabled = true
 omni_range = 21.699
 omni_attenuation = 2.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1354425077]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1049731545]
-shape = SubResource("WorldBoundaryShape3D_ghvus")
-
 [node name="FirstPersonCharacter" parent="." unique_id=743034332 instance=ExtResource("2_ghvus")]
+
+[node name="cabinet" parent="." unique_id=1901331561 instance=ExtResource("3_kou5f")]
+transform = Transform3D(0.96592593, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, 0.96592593, 0.1373902, -1.1641532e-10, -4.262603)
+
+[node name="coin" parent="." unique_id=1993092626 instance=ExtResource("4_vpf4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5800053, 0, -0.8161829)

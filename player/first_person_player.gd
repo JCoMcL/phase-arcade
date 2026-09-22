@@ -49,7 +49,7 @@ func _input(ev: InputEvent) -> void:
 	if ev is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		var look = ev.relative * -mouse_sensitivity / 1000
 
-		if DisplayServer.get_name() == "web":
+		if DisplayServer.get_name() == &"web":
 			look *=  0.6 # Look is faster on the web for some reason
 
 		rotate_y(look.x)
