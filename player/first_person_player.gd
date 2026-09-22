@@ -15,16 +15,19 @@ const accel = 20.0
 		width = val
 		setup_children()
 
+var height_mod = 1.0
+
 func setup_children() -> void:
 	if not is_node_ready():
 		# the above setters will trigger this early, so we have to wait until our children come home
 		await ready 
 
-	$Camera3D.position.y = max(height - 0.3, height * 0.8)
+	var _height:float = height * height_mod
+	$Camera3D.position.y = max(_height - 0.3, _height * 0.8)
 	var col:CapsuleShape3D = $CollisionShape3D.shape
 	col.radius = width/2
-	col.height = height
-	$CollisionShape3D.position.y = height / 2
+	col.height = _height
+	$CollisionShape3D.position.y = _height / 2
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
@@ -32,12 +35,22 @@ func _physics_process(delta: float) -> void:
 
 	velocity += get_gravity() * delta
 
-	var walk_input := Input.get_vector("left", "right", "forward", "backward").normalized()
-	var walk = walk_input.rotated(-rotation.y) * speed
+	# TODO: collision check when unchrouching
+	# TODO: smooth motion
+	var crouching = Input.is_action_pressed("crouch")
+	const crouch_speed:float = 4
+	height_mod = move_toward(height_mod, 0.4 if crouching else 1.0, crouch_speed * delta)
+	setup_children()
 	
+
+	var walk_input := Input.get_vector("left", "right", "forward", "backward").normalized()
+	var walk = walk_input.rotated(-rotation.y) * speed * (0.4 if crouching else 1.0)
+
 	# maybe this should be relative to the floor normal, but probably doesn't matter
 	velocity.x = move_toward(velocity.x, walk.x, accel * delta)
 	velocity.z = move_toward(velocity.z, walk.y, accel * delta)
+
+
 
 	move_and_slide()
 
