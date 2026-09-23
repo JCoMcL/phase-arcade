@@ -61,9 +61,15 @@ crouch={
 ]
 }
 
+[layer_names]
+
+3d_render/layer_2="Coins"
+
 [physics]
 
+common/physics_ticks_per_second=15
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 
