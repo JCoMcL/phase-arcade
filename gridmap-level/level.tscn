@@ -60,13 +60,14 @@ shadow_reverse_cull_face = true
 transform = Transform3D(0.9767002, -0.16840667, -0.13302648, 0.13234733, -0.015302002, 0.9910854, -0.16894092, -0.98559886, 0.0073426664, 3.556295, 3.0964682, -0.89939785)
 light_color = Color(0.7183131, 0.20532736, 0.28202447, 1)
 shadow_enabled = true
+shadow_reverse_cull_face = true
 spot_attenuation = 2.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=674092471]
 transform = Transform3D(-0.6864115, 0.71064615, -0.15434185, -0.6121357, -0.45004895, 0.65018916, 0.39259303, 0.5407754, 0.7439306, -0.46467257, 4.2107577, -3.1320162)
 light_color = Color(0.59755903, 0.54120654, 0.45262164, 1)
 shadow_enabled = true
-omni_range = 21.699
+omni_range = 7.518
 omni_attenuation = 2.0
 
 [node name="FirstPersonCharacter" parent="." unique_id=743034332 instance=ExtResource("2_ghvus")]
@@ -75,4 +76,13 @@ omni_attenuation = 2.0
 transform = Transform3D(0.96592593, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, 0.96592593, 0.1373902, -1.1641532e-10, -4.262603)
 
 [node name="coin" parent="." unique_id=1993092626 instance=ExtResource("4_vpf4b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5800053, 0, -0.8161829)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67483675, -2.9802322e-08, -0.8124078)
+
+[node name="coin4" parent="." unique_id=446114474 instance=ExtResource("4_vpf4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7323816, -2.9802322e-08, -1.1850636)
+
+[node name="coin2" parent="." unique_id=1211632040 instance=ExtResource("4_vpf4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67483675, -2.9802322e-08, 1.4779353)
+
+[node name="coin3" parent="." unique_id=1736674089 instance=ExtResource("4_vpf4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8321171, -2.9802322e-08, 1.4779353)
