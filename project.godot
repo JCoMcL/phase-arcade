@@ -64,6 +64,8 @@ crouch={
 [layer_names]
 
 3d_render/layer_2="Coins"
+3d_physics/layer_1="Solid"
+3d_physics/layer_5="Player"
 
 [physics]
 

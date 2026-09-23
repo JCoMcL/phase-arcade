@@ -1,4 +1,5 @@
 @tool
+class_name FirstPersonCharacter
 extends CharacterBody3D
 
 const speed = 3.0
@@ -8,26 +9,40 @@ const accel = 20.0
 
 @export var height = 1.6:
 	set(val):
-		height = val
+		height = max(val, width)
 		setup_children()
 @export var width = 0.5:
 	set(val):
 		width = val
-		setup_children()
+		if height < val:
+			height = val
+		else:
+			setup_children()
 
 var height_mod = 1.0
+
+func set_body_to_head():
+	var head_col:SphereShape3D = $Head/CollisionShape3D.shape
+	var body_col:CapsuleShape3D = $CollisionShape3D.shape
+	body_col.radius = head_col.radius
+	body_col.height = $Head.position.y + head_col.radius
+	$CollisionShape3D.position.y = body_col.height / 2
 
 func setup_children() -> void:
 	if not is_node_ready():
 		# the above setters will trigger this early, so we have to wait until our children come home
-		await ready 
+		await ready
+	assert (height >= width) #TODO: assert does nothing in tool mode, need a better we to handle this
+	var head_col:SphereShape3D = $Head/CollisionShape3D.shape
+	head_col.radius = width/2
+	$Head.position.y = height - head_col.radius
+	set_body_to_head()
 
-	var _height:float = height * height_mod
-	$Camera3D.position.y = max(_height - 0.3, _height * 0.8)
-	var col:CapsuleShape3D = $CollisionShape3D.shape
-	col.radius = width/2
-	col.height = _height
-	$CollisionShape3D.position.y = _height / 2
+func change_height(new_height:float) -> KinematicCollision3D:
+	var delta = Vector3(0, new_height - $Head.position.y, 0)
+	var result = $Head.move_and_collide(delta)
+	set_body_to_head()
+	return result
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
@@ -35,13 +50,11 @@ func _physics_process(delta: float) -> void:
 
 	velocity += get_gravity() * delta
 
-	# TODO: collision check when unchrouching
 	# TODO: smooth motion
 	var crouching = Input.is_action_pressed("crouch")
 	const crouch_speed:float = 4
 	height_mod = move_toward(height_mod, 0.4 if crouching else 1.0, crouch_speed * delta)
-	setup_children()
-	
+	change_height(height*height_mod)
 
 	var walk_input := Input.get_vector("left", "right", "forward", "backward").normalized()
 	var walk = walk_input.rotated(-rotation.y) * speed * (0.4 if crouching else 1.0)
@@ -49,8 +62,6 @@ func _physics_process(delta: float) -> void:
 	# maybe this should be relative to the floor normal, but probably doesn't matter
 	velocity.x = move_toward(velocity.x, walk.x, accel * delta)
 	velocity.z = move_toward(velocity.z, walk.y, accel * delta)
-
-
 
 	move_and_slide()
 
@@ -66,7 +77,9 @@ func _input(ev: InputEvent) -> void:
 			look *=  0.6 # Look is faster on the web for some reason
 
 		rotate_y(look.x)
-		$Camera3D.rotate_x(look.y)
+		# Rotating the camera instead of the head, as the head is a sphere so it doesn't need to rotate.
+		# and moving collision objects unneccesarily can have side-effects.
+		%Camera.rotate_x(look.y)
 		const max_vertical_look = PI/2
-		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -max_vertical_look, max_vertical_look)
-	
+		%Camera.rotation.x = clampf(%Camera.rotation.x, -max_vertical_look, max_vertical_look)
+
