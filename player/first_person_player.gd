@@ -19,8 +19,6 @@ const accel = 20.0
 		else:
 			setup_children()
 
-var height_mod = 1.0
-
 func set_body_to_head():
 	var head_col:SphereShape3D = $Head/CollisionShape3D.shape
 	var body_col:CapsuleShape3D = $CollisionShape3D.shape
@@ -50,14 +48,13 @@ func _physics_process(delta: float) -> void:
 
 	velocity += get_gravity() * delta
 
-	# TODO: smooth motion
 	var crouching = Input.is_action_pressed("crouch")
-	const crouch_speed:float = 4
-	height_mod = move_toward(height_mod, 0.4 if crouching else 1.0, crouch_speed * delta)
-	change_height(height*height_mod)
+	const crouch_speed:float = 10
+	var target_height = height * (0.4 if crouching else 1.0)
+	change_height(lerpf($Head.position.y, target_height, 1.0 - exp(-crouch_speed * delta)))
 
 	var walk_input := Input.get_vector("left", "right", "forward", "backward").normalized()
-	var walk = walk_input.rotated(-rotation.y) * speed * (0.4 if crouching else 1.0)
+	var walk = walk_input.rotated(-rotation.y) * speed * clampf($Head.position.y / height, 0.0, 1.0)
 
 	# maybe this should be relative to the floor normal, but probably doesn't matter
 	velocity.x = move_toward(velocity.x, walk.x, accel * delta)
@@ -82,4 +79,3 @@ func _input(ev: InputEvent) -> void:
 		%Camera.rotate_x(look.y)
 		const max_vertical_look = PI/2
 		%Camera.rotation.x = clampf(%Camera.rotation.x, -max_vertical_look, max_vertical_look)
-
