@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://docbuikkpeuto"]
+
+[ext_resource type="PackedScene" uid="uid://cug028ta2fklu" path="res://meshes/SM_ConstructionBits.fbx" id="1_y1a05"]
+[ext_resource type="Material" uid="uid://c2su0p7ytbnnf" path="res://materials/Construction.tres" id="2_70qe7"]
+
+[node name="SM_ConstructionBits" unique_id=1139805140 instance=ExtResource("1_y1a05")]
+
+[node name="Bucket" parent="." index="0" unique_id=960834331]
+material_override = ExtResource("2_70qe7")
+
+[node name="AluPlank001" parent="." index="1" unique_id=525781687]
+material_override = ExtResource("2_70qe7")
+
+[node name="AluPlank002" parent="." index="2" unique_id=2065881451]
+transform = Transform3D(-0.046391685, 0.49946165, -0.86509293, 0.9989233, 0.023195824, -0.040176388, -2.1855694e-08, -0.8660254, -0.5, 0, 0.26136142, 0)
+material_override = ExtResource("2_70qe7")
+
+[node name="Torus001" parent="." index="3" unique_id=1496256417]
+material_override = ExtResource("2_70qe7")
+
+[node name="Torus002" parent="." index="4" unique_id=1499150283]
+material_override = ExtResource("2_70qe7")
+
+[node name="BucketBlack" parent="." index="5" unique_id=1151134147]
+material_override = ExtResource("2_70qe7")

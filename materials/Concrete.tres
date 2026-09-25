@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ctmgj6eqnpye5"]
+
+[ext_resource type="Texture2D" uid="uid://bewgoscrlmbid" path="res://textures/concrete/T_Concrete_pale.png" id="1_s862j"]
+[ext_resource type="Texture2D" uid="uid://xp3g0htghhog" path="res://textures/breezeblocks/Normal_Map.png" id="2_4bami"]
+[ext_resource type="Texture2D" uid="uid://csfajtkqe1hky" path="res://textures/breezeblocks/Roughness_Map.png" id="3_t5rwq"]
+
+[resource]
+resource_name = "Bricks"
+albedo_color = Color(0.87058824, 0.87058824, 0.87058824, 1)
+albedo_texture = ExtResource("1_s862j")
+roughness_texture = ExtResource("3_t5rwq")
+roughness_texture_channel = 1
+normal_scale = 0.37
+normal_texture = ExtResource("2_4bami")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

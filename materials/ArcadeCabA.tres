@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cy3s86c04q25v"]
+
+[ext_resource type="Texture2D" uid="uid://bjdoqru3jieo7" path="res://textures/arcadeCabinets/T_ArcadeCabinetA_LR.png" id="1_7fk7o"]
+
+[resource]
+resource_name = "Bricks"
+albedo_texture = ExtResource("1_7fk7o")
+texture_filter = 2

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mmf34lqyxd32"]
+
+[ext_resource type="Texture2D" uid="uid://daswnm46guxoe" path="res://textures/carpet/T_PhaseConnectCarpet.png" id="1_dsu8a"]
+[ext_resource type="Texture2D" uid="uid://xp3g0htghhog" path="res://textures/breezeblocks/Normal_Map.png" id="2_r1mq8"]
+
+[resource]
+resource_name = "Bricks"
+cull_mode = 2
+albedo_texture = ExtResource("1_dsu8a")
+roughness_texture_channel = 1
+normal_scale = 0.37
+normal_texture = ExtResource("2_r1mq8")
+uv1_scale = Vector3(0.6, 0.6, 0.6)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

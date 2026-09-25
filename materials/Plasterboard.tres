@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxkw7bhb4snax"]
+
+[ext_resource type="Texture2D" uid="uid://dwcrmuk211ecb" path="res://textures/construction/T_Plasterboard.png" id="1_270b2"]
+
+[resource]
+resource_name = "Bricks"
+albedo_texture = ExtResource("1_270b2")
+metallic_specular = 0.23
+uv1_scale = Vector3(20, 2, 20)
+texture_filter = 2

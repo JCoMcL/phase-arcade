@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://waga7jt0eo5y"]
+
+[ext_resource type="Shader" uid="uid://lsdmrkd22lgf" path="res://materials/shd_neonOuterGlow.tres" id="1_af4wd"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_af4wd")
+shader_parameter/GlowColour = Vector3(0.4, 0.6, 2)

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b0tktcrtsrg60"]
+
+[ext_resource type="Shader" uid="uid://b3nse2vuiwyot" path="res://materials/shd_NeonTube.tres" id="1_dn84g"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_dn84g")
+shader_parameter/EdgeColour = Vector3(1, 0.3, 1)
+shader_parameter/FillColour = Vector3(0, 0.6, 2)
