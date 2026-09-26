@@ -1,13 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cxr8c3lg0bmnc"]
 
-[ext_resource type="Texture2D" uid="uid://0niaceic07xx" path="res://textures/coin_normal.png" id="1_vaff6"]
+[ext_resource type="Texture2D" uid="uid://0niaceic07xx" path="res://textures/coin/coin_normal.png" id="1_vaff6"]
+[ext_resource type="Texture2D" uid="uid://bm7xklvxbtihd" path="res://textures/coin/coin_roughness.png" id="2_231iq"]
 
 [resource]
 resource_name = "Coin"
-albedo_color = Color(0.9063433, 0.7897424, 0.56408215, 1)
-metallic = 1.0
-roughness = 0.41
+albedo_color = Color(0.90588236, 0.7882353, 0.5647059, 1)
+metallic = 0.91
+metallic_specular = 1.0
+roughness_texture = ExtResource("2_231iq")
+emission = Color(0.17393684, 0.13883919, 0.07375295, 1)
+emission_energy_multiplier = 0.62
 normal_enabled = true
-normal_scale = 0.4
 normal_texture = ExtResource("1_vaff6")
 grow_amount = 0.058
