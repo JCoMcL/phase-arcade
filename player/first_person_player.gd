@@ -19,6 +19,8 @@ const accel = 20.0
 		else:
 			setup_children()
 
+# --- Crouching ---
+
 func set_body_to_head():
 	var head_col:SphereShape3D = $Head/CollisionShape3D.shape
 	var body_col:CapsuleShape3D = $CollisionShape3D.shape
@@ -31,10 +33,19 @@ func setup_children() -> void:
 		# the above setters will trigger this early, so we have to wait until our children come home
 		await ready
 	assert (height >= width) #TODO: assert does nothing in tool mode, need a better we to handle this
+
+	collision_layer = Layers.physics3D["Player"]
+	collision_mask = Layers.physics3D["Solid"]
+	$Head.collision_layer = collision_layer
+	$Head.collision_mask = collision_mask
+
 	var head_col:SphereShape3D = $Head/CollisionShape3D.shape
 	head_col.radius = width/2
 	$Head.position.y = height - head_col.radius
+
 	set_body_to_head()
+
+	%InteractRay.collision_mask = Layers.physics3D["Interactive"]
 
 func change_height(new_height:float) -> KinematicCollision3D:
 	var delta = Vector3(0, new_height - $Head.position.y, 0)
@@ -42,11 +53,25 @@ func change_height(new_height:float) -> KinematicCollision3D:
 	set_body_to_head()
 	return result
 
+# --- Interaction ---
+
+func _interact():
+	var target = %InteractRay.get_collider()
+	print(target)
+	if target:
+		target.interact()
+
+# --- Main ---
+
+func _ready():
+	setup_children()
+
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 
 	velocity += get_gravity() * delta
+	_interact()
 
 	var crouching = Input.is_action_pressed("crouch")
 	const crouch_speed:float = 10
@@ -65,6 +90,8 @@ func _physics_process(delta: float) -> void:
 func _input(ev: InputEvent) -> void:
 	if ev is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if ev.is_action_pressed("interact"):
+		_interact()
 	if ev.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if ev is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
