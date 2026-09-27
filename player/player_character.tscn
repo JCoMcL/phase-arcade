@@ -24,6 +24,7 @@ collision_layer = 16
 
 [node name="Camera" type="Camera3D" parent="Head" unique_id=1288420055]
 unique_name_in_owner = true
+current = true
 
 [node name="InteractRay" type="RayCast3D" parent="Head/Camera" unique_id=503782457]
 unique_name_in_owner = true
