@@ -57,7 +57,6 @@ func change_height(new_height:float) -> KinematicCollision3D:
 
 func _interact():
 	var target = %InteractRay.get_collider()
-	print(target)
 	if target:
 		target.interact()
 
@@ -71,7 +70,6 @@ func _physics_process(delta: float) -> void:
 		return
 
 	velocity += get_gravity() * delta
-	_interact()
 
 	var crouching = Input.is_action_pressed("crouch")
 	const crouch_speed:float = 10

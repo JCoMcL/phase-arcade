@@ -1,22 +1,11 @@
 [gd_scene format=3 uid="uid://c5qhyuctvc26m"]
 
 [ext_resource type="Script" uid="uid://c3d7wl5g1aks0" path="res://player/first_person_player.gd" id="1_y3mll"]
-[ext_resource type="Script" uid="uid://bd3i1pmmp3fqc" path="res://player/interact_ray.gd" id="2_6ahhe"]
+[ext_resource type="Texture2D" uid="uid://wlxgm4wl7036" path="res://player/crosshair.tres" id="3_ni121"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6unth"]
 radius = 0.25
 height = 1.6
-
-[sub_resource type="Gradient" id="Gradient_1v1wt"]
-offsets = PackedFloat32Array(0, 0.50625, 0.6375)
-colors = PackedColorArray(0.47788018, 0.47788012, 0.47788012, 1, 0.5529556, 0.55295557, 0.55295557, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6ahhe"]
-gradient = SubResource("Gradient_1v1wt")
-width = 24
-height = 24
-fill = 1
-fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1v1wt"]
 radius = 0.25
@@ -42,12 +31,18 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 target_position = Vector3(0, -2, 0)
 collision_mask = 2
 collide_with_areas = true
-script = ExtResource("2_6ahhe")
 
-[node name="Cursor" type="Sprite3D" parent="Head/Camera/InteractRay" unique_id=383763886]
-transform = Transform3D(0.063, 0, 0, 0, 0.063, 0, 0, 0, 0.063, 0, 0, 0)
-billboard = 1
-texture = SubResource("GradientTexture2D_6ahhe")
+[node name="CenterContainer" type="CenterContainer" parent="Head/Camera" unique_id=1332956341]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera/CenterContainer" unique_id=62715061]
+modulate = Color(1, 1, 1, 0.36078432)
+layout_mode = 2
+texture = ExtResource("3_ni121")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head" unique_id=1511988174]
 unique_name_in_owner = true
