@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://otft3bv64umi"]
 
+[ext_resource type="Script" uid="uid://b8tmhljysvkd8" path="res://stuff/coin.gd" id="1_7jtme"]
 [ext_resource type="PackedScene" uid="uid://wsxhsr50jcv7" path="res://stuff/coin.glb" id="1_d5gmh"]
 [ext_resource type="PackedScene" uid="uid://ciofuhj1xxdb7" path="res://stuff/interact_zone.tscn" id="2_jnefc"]
 [ext_resource type="AudioStream" uid="uid://cngv1jt00kb4n" path="res://audio/clink_1.wav" id="3_5t2kp"]
@@ -7,11 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://4dkfi2ehjhbg" path="res://audio/clink_3.wav" id="5_82hwq"]
 [ext_resource type="AudioStream" uid="uid://c5u8538b7arxc" path="res://audio/clink_4.wav" id="6_2i1yi"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_pykkm"]
-height = 0.032
-radius = 0.045
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_r52sy"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5t2kp"]
 random_pitch = 1.0632641
 random_volume_offset_db = 1.45
 streams_count = 4
@@ -20,12 +17,19 @@ stream_1/stream = ExtResource("4_7jtme")
 stream_2/stream = ExtResource("5_82hwq")
 stream_3/stream = ExtResource("6_2i1yi")
 
-[node name="coin" unique_id=1993092626 instance=ExtResource("1_d5gmh")]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7jtme"]
+height = 0.010120392
+radius = 0.024902344
 
-[node name="coin" parent="." index="0" unique_id=558435518]
+[node name="Coin" type="CharacterBody3D" unique_id=1489538825]
+script = ExtResource("1_7jtme")
+
+[node name="coin_glb" parent="." unique_id=1364528605 instance=ExtResource("1_d5gmh")]
+
+[node name="coin" parent="coin_glb" index="0" unique_id=558435518]
 layers = 2
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=484283053]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=290125103]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026, 0)
 light_color = Color(0.12814349, 0.11165514, 0.07990029, 1)
 light_energy = 0.005
@@ -37,7 +41,7 @@ distance_fade_length = 2.0
 omni_range = 0.788
 omni_attenuation = 2.555
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="." index="2" unique_id=410118014]
+[node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=454939149]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00452058, -0.034142356, 0)
 layers = 3
 max_distance = 0.5
@@ -46,13 +50,19 @@ interior = true
 enable_shadows = true
 reflection_mask = 1047554
 
-[node name="InteractZone" parent="." index="3" unique_id=1828705782 instance=ExtResource("2_jnefc")]
+[node name="InteractZone" parent="." unique_id=1828705782 instance=ExtResource("2_jnefc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012608316, 0)
-shape = SubResource("CylinderShape3D_pykkm")
 
-[node name="ClinkSFX" type="AudioStreamPlayer3D" parent="." index="4" unique_id=969178134]
-stream = SubResource("AudioStreamRandomizer_r52sy")
+[node name="ClinkSFX" type="AudioStreamPlayer3D" parent="." unique_id=1750986184]
+stream = SubResource("AudioStreamRandomizer_5t2kp")
 pitch_scale = 0.67
 max_polyphony = 3
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1537120434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005220413, 0)
+shape = SubResource("CylinderShape3D_7jtme")
+
+[connection signal="interacted" from="InteractZone" to="." method="flip"]
 [connection signal="interacted" from="InteractZone" to="ClinkSFX" method="play"]
+
+[editable path="coin_glb"]
