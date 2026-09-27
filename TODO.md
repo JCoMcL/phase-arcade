@@ -2,7 +2,7 @@
 - [ ] visibly working arcade machine
 - [x] first person exploration
 - [ ] interesting level
-- [ ] interactive coins
+- [x] interactive coins
 
 # Phase 2: Core Functionality (Oct 01)
 ## Arcade Cabinet

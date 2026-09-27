@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://cxr8c3lg0bmnc"]
 
-[ext_resource type="Texture2D" uid="uid://0niaceic07xx" path="res://textures/coin/coin_normal.png" id="1_vaff6"]
-[ext_resource type="Texture2D" uid="uid://bm7xklvxbtihd" path="res://textures/coin/coin_roughness.png" id="2_231iq"]
+[ext_resource type="Texture2D" uid="uid://0niaceic07xx" path="res://stuff/coin/textures/coin_normal.png" id="1_vaff6"]
+[ext_resource type="Texture2D" uid="uid://bm7xklvxbtihd" path="res://stuff/coin/textures/coin_roughness.png" id="2_231iq"]
 
 [resource]
 resource_name = "Coin"

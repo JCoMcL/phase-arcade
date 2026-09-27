@@ -58,7 +58,7 @@ func change_height(new_height:float) -> KinematicCollision3D:
 func _interact():
 	var target = %InteractRay.get_collider()
 	if target:
-		target.interact()
+		target.interact(self)
 
 # --- Main ---
 
@@ -82,6 +82,11 @@ func _physics_process(delta: float) -> void:
 	# maybe this should be relative to the floor normal, but probably doesn't matter
 	velocity.x = move_toward(velocity.x, walk.x, accel * delta)
 	velocity.z = move_toward(velocity.z, walk.y, accel * delta)
+
+	var target =  %InteractRay.get_collider()
+	if target:
+		target.hover(self)
+
 
 	move_and_slide()
 
