@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dkhpl7x04cvu7"]
+
+[ext_resource type="Texture2D" uid="uid://c8o0ur3d7k3fa" path="res://textures/props/T_Door.png" id="1_xxqyg"]
+[ext_resource type="Texture2D" uid="uid://cmp1kdfbe8iey" path="res://textures/props/T_Door_metalness.png" id="2_fvpua"]
+
+[resource]
+albedo_texture = ExtResource("1_xxqyg")
+metallic = 1.0
+metallic_specular = 0.42
+metallic_texture = ExtResource("2_fvpua")
+roughness = 0.55
+texture_filter = 2

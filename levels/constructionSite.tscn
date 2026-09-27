@@ -3,7 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://ipj6hhe2qvtv" path="res://meshes/sm_ArcadeCabA_base.tres" id="5_so5aq"]
 [ext_resource type="Material" uid="uid://djx1k2nyialm8" path="res://materials/GlassScreen.tres" id="6_dp2em"]
 [ext_resource type="ArrayMesh" uid="uid://bqsij0ujf14wg" path="res://meshes/sm_ArcadeCabA_screen.tres" id="7_6d5fx"]
-[ext_resource type="PackedScene" uid="uid://dtlwxaq0k7uab" path="res://meshes/scene_concrete_ceiling.tscn" id="7_173re"]
+[ext_resource type="PackedScene" uid="uid://dtlwxaq0k7uab" path="res://meshes/PropScenes/scene_concrete_ceiling.tscn" id="7_173re"]
 [ext_resource type="PackedScene" uid="uid://chgsktnxluv8p" path="res://meshes/SM_CStudWall.fbx" id="7_i4oqc"]
 [ext_resource type="PackedScene" uid="uid://dv2pp4sgqrclp" path="res://meshes/SM_PlasterboardPile.fbx" id="8_jd3w2"]
 [ext_resource type="ArrayMesh" uid="uid://c3068hb6r4jmd" path="res://meshes/sm_ArcadeCabA_shooter.tres" id="8_ylfxq"]
@@ -14,6 +14,7 @@
 [ext_resource type="Material" uid="uid://mmf34lqyxd32" path="res://materials/Carpet_arcade.tres" id="10_ylfxq"]
 [ext_resource type="Material" uid="uid://ctmgj6eqnpye5" path="res://materials/Concrete.tres" id="12_gygl6"]
 [ext_resource type="PackedScene" uid="uid://6k1gn74pb3l6" path="res://meshes/SM_Doorway_Standard.fbx" id="13_ofks7"]
+[ext_resource type="ArrayMesh" uid="uid://bx6x7fhvnhs8v" path="res://meshes/sm_lamp_planet.tres" id="13_v1fwx"]
 [ext_resource type="Material" uid="uid://bx2mma2aiaf8o" path="res://materials/Wood.tres" id="14_l0s7m"]
 [ext_resource type="ArrayMesh" uid="uid://sb7sgyxi8r3p" path="res://meshes/sm_Neon_PhaseArcade.tres" id="15_ylfxq"]
 [ext_resource type="Texture2D" uid="uid://chivp5sw8im74" path="res://textures/breezeblocks/breezeblocks.png" id="16_bwipc"]
@@ -22,7 +23,14 @@
 [ext_resource type="PackedScene" uid="uid://bjpdsck1glrjp" path="res://meshes/SM_ChangeCounter.fbx" id="17_01k7k"]
 [ext_resource type="ArrayMesh" uid="uid://bmmak7a0apcjv" path="res://meshes/sm_Neon_Logo.tres" id="17_5ctpl"]
 [ext_resource type="Texture2D" uid="uid://xp3g0htghhog" path="res://textures/breezeblocks/Normal_Map.png" id="17_jv8nk"]
+[ext_resource type="PackedScene" uid="uid://qsfox6n5cg6p" path="res://meshes/SM_HeavyCabling.fbx" id="18_0xm26"]
 [ext_resource type="Texture2D" uid="uid://csfajtkqe1hky" path="res://textures/breezeblocks/Roughness_Map.png" id="18_rn6t8"]
+[ext_resource type="PackedScene" uid="uid://hmgfi7haw1s0" path="res://meshes/PropScenes/scene_doorway_escape.tscn" id="19_2rewf"]
+[ext_resource type="PackedScene" uid="uid://csvyrqpwx17q8" path="res://meshes/PropScenes/scene_doorway_windowed.tscn" id="19_hkksu"]
+[ext_resource type="ArrayMesh" uid="uid://bwu5ijrgiqeii" path="res://meshes/sm_Sofa.tres" id="20_jv8nk"]
+[ext_resource type="PackedScene" uid="uid://d2awucc1aqq1q" path="res://meshes/PropScenes/prize_counter.tscn" id="25_rn6t8"]
+[ext_resource type="PackedScene" uid="uid://d2lkp6mk8m2r7" path="res://meshes/PropScenes/scene_airDuct.tscn" id="31_0xm26"]
+[ext_resource type="ArrayMesh" uid="uid://cyo06mjkj4grk" path="res://meshes/sm_Cabling_tray.tres" id="32_vnpcl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
 sky_top_color = Color(0.042913936, 0.070302956, 0.10943019, 1)
@@ -39,12 +47,18 @@ background_mode = 2
 sky = SubResource("Sky_vpf4b")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_01k7k"]
+lightmap_size_hint = Vector2i(102, 62)
+add_uv2 = true
 size = Vector2(20, 12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bwipc"]
+lightmap_size_hint = Vector2i(65, 86)
+add_uv2 = true
 size = Vector3(0.2, 2, 12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jv8nk"]
+lightmap_size_hint = Vector2i(105, 126)
+add_uv2 = true
 size = Vector3(20, 2, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_rn6t8"]
@@ -54,15 +68,21 @@ size = Vector3(1, 6, 1)
 size = Vector3(0.2, 3, 2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2rewf"]
+lightmap_size_hint = Vector2i(45, 76)
+add_uv2 = true
 size = Vector3(0.2, 3, 8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jay6p"]
 size = Vector3(0.2, 3, 12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gu285"]
+lightmap_size_hint = Vector2i(105, 136)
+add_uv2 = true
 size = Vector3(20, 3, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_v1fwx"]
+lightmap_size_hint = Vector2i(80, 111)
+add_uv2 = true
 size = Vector3(15, 3, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_0xm26"]
@@ -84,6 +104,8 @@ size = Vector3(20, 3, 0.2)
 size = Vector3(12, 5, 0.1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_l0s7m"]
+lightmap_size_hint = Vector2i(62, 22)
+add_uv2 = true
 size = Vector2(12, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hkksu"]
@@ -99,9 +121,13 @@ uv1_scale = Vector3(2, 3, 1)
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_01k7k"]
+lightmap_size_hint = Vector2i(10, 41)
+add_uv2 = true
 size = Vector3(0.2, 3, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_1841t"]
+lightmap_size_hint = Vector2i(10, 41)
+add_uv2 = true
 size = Vector3(0.2, 3, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rewf"]
@@ -117,6 +143,8 @@ uv1_scale = Vector3(7, 3, 1)
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_lik7w"]
+lightmap_size_hint = Vector2i(20, 51)
+add_uv2 = true
 size = Vector3(3, 3, 0.2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jay6p"]
@@ -132,9 +160,13 @@ uv1_scale = Vector3(30, 3, 1)
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_nbbox"]
+lightmap_size_hint = Vector2i(65, 96)
+add_uv2 = true
 size = Vector3(12, 3, 0.2)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ggqdw"]
+lightmap_size_hint = Vector2i(32, 52)
+add_uv2 = true
 size = Vector2(6, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gu285"]
@@ -196,15 +228,21 @@ uv1_scale = Vector3(20, 3, 1)
 texture_filter = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_7byvj"]
+lightmap_size_hint = Vector2i(55, 86)
+add_uv2 = true
 size = Vector3(0.2, 3, 10)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_gygl6"]
 size = Vector2(14, 18)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gygl6"]
+lightmap_size_hint = Vector2i(95, 116)
+add_uv2 = true
 size = Vector3(0.2, 2, 18)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tivwb"]
+lightmap_size_hint = Vector2i(75, 96)
+add_uv2 = true
 size = Vector3(14, 2, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_n8v8u"]
@@ -268,23 +306,26 @@ size = Vector3(0.2, 1.2, 4.6)
 [sub_resource type="BoxMesh" id="BoxMesh_hyikb"]
 size = Vector3(1, 0.4, 9)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jay6p"]
+size = Vector3(100, 4, 100)
+
 [node name="level" type="Node3D" unique_id=1498293256]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1952660331]
 environment = SubResource("Environment_oq02x")
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="WorldEnvironment" unique_id=498225968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+size = Vector3(22, 11, 14.5)
+origin_offset = Vector3(0, -3, 0)
+box_projection = true
+enable_shadows = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=250888974]
 transform = Transform3D(-0.6864115, 0.71064615, -0.1543419, -0.6121357, -0.45004898, 0.6501891, 0.39259303, 0.5407754, 0.7439306, 6.6640444, 4.0958123, 0)
 light_color = Color(0.38077882, 0.44247177, 0.5451058, 1)
 shadow_enabled = true
 shadow_reverse_cull_face = true
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=275790911]
-transform = Transform3D(0.9767002, -0.16840667, -0.13302648, 0.13234733, -0.015302002, 0.9910854, -0.16894092, -0.98559886, 0.0073426664, 3.556295, 3.0964682, -0.89939785)
-light_color = Color(0.7183131, 0.20532736, 0.28202447, 1)
-shadow_enabled = true
-shadow_reverse_cull_face = true
-spot_attenuation = 2.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=674092471]
 transform = Transform3D(-0.6864115, 0.71064615, -0.15434185, -0.6121357, -0.45004895, 0.65018916, 0.39259303, 0.5407754, 0.7439306, -0.46467257, 4.195501, 3.6471524)
@@ -298,7 +339,7 @@ transform = Transform3D(-0.6864115, 0.71064615, -0.15434185, -0.6121357, -0.4500
 light_color = Color(0.96, 0.115200005, 0.115200005, 1)
 light_energy = 0.1
 shadow_enabled = true
-omni_range = 21.699
+omni_range = 24.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1833227545]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0546298, 0.67154264)
@@ -325,31 +366,8 @@ mesh = ExtResource("7_6d5fx")
 [node name="SmArcadeCabAShooter" type="MeshInstance3D" parent="SmArcadeCabABase2" unique_id=466780723]
 mesh = ExtResource("8_ylfxq")
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1852593868]
-transform = Transform3D(-0.07646921, 0.96984005, -0.23143622, 0.28373086, 0.24368557, 0.9274234, 0.95585006, 0.0052537406, -0.293808, -16.538204, 4.813696, -3.3570998)
-spot_range = 6.9336357
-spot_attenuation = 2.0
-spot_angle = 50.209652
-
 [node name="SM_ConstructionBits" parent="." unique_id=1139805140 instance=ExtResource("9_gygl6")]
 transform = Transform3D(0.62804455, 0, -0.7781774, 0, 1, 0, 0.7781774, 0, 0.62804455, -12.650743, 4.7683716e-07, 3.5346498)
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=460004642]
-transform = Transform3D(1.3113417e-07, -1, -4.371138e-08, 6.7762637e-22, -4.371138e-08, 1, -1, -1.3113417e-07, -5.732055e-15, 1.8, 2.95, 4.5)
-light_color = Color(0.9933513, 0.7616974, 0.6138959, 1)
-spot_angle = 73.18898
-
-[node name="SpotLight3D5" type="SpotLight3D" parent="." unique_id=1800721358]
-transform = Transform3D(-1.3113417e-07, 1, 1.3113416e-07, -1.1464114e-14, 1.3113416e-07, -1, -1, -1.3113417e-07, -5.7320558e-15, 0.42662358, 5.8674164, 4.5)
-light_color = Color(0.49659988, 0.052000012, 0.52, 1)
-light_energy = 0.3
-spot_range = 6.5727763
-spot_angle = 89.99
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="." unique_id=634882432]
-transform = Transform3D(1.3113417e-07, -1, -4.3711378e-08, 6.7762637e-22, -4.3711378e-08, 1, -1, -1.3113417e-07, -5.7320545e-15, -1.8, 2.95, 4.5)
-light_color = Color(0.9933513, 0.7616974, 0.6138959, 1)
-spot_angle = 73.18898
 
 [node name="SM_CStudWall_prizeShelving" parent="." unique_id=2132788692 instance=ExtResource("7_i4oqc")]
 transform = Transform3D(-4.371139e-07, 1, 4.371139e-08, 0, -4.371139e-08, 1, 10, 4.371139e-08, 1.9106855e-15, 0, 1.23, 5.565)
@@ -394,13 +412,94 @@ transform = Transform3D(0.9567222, 0, 0.29100275, 0, 1, 0, -0.29100275, 0, 0.956
 transform = Transform3D(0.9644837, 0, 0.2641424, 0, 1, 0, -0.2641424, 0, 0.9644837, -16.269035, 0, -1.7186756)
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=1329519440]
+quality = 3
+bounces = 4
+interior = true
+texel_scale = 4.0
+generate_probes_subdiv = 4
 light_data = ExtResource("10_5ctpl")
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="LightmapGI" unique_id=1302659064]
+transform = Transform3D(0.9120208, -0.15349543, 0.38033834, -0.37373394, 0.070951395, 0.9248183, -0.16894092, -0.98559886, 0.0073426915, -3.9618158, 4.6972685, -1.6110208)
+light_color = Color(0.7183131, 0.20532736, 0.28202447, 1)
+light_energy = 3.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 9.0
+spot_attenuation = 2.0
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="LightmapGI" unique_id=1981690789]
+transform = Transform3D(0.74469423, -0.122760266, 0.6560187, -0.6456699, 0.11629647, 0.75470895, -0.16894093, -0.98559886, 0.0073427022, -4.6425586, 1.3428506, -1.172296)
+light_color = Color(0.7183131, 0.20532736, 0.28202447, 1)
+light_energy = 3.0
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 9.0
+spot_attenuation = 2.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="LightmapGI" unique_id=1852593868]
+transform = Transform3D(-0.07646921, 0.96984005, -0.23143622, 0.28373086, 0.24368557, 0.9274234, 0.95585006, 0.0052537406, -0.293808, -16.538204, 4.813696, -3.3570998)
+spot_range = 6.9336357
+spot_attenuation = 2.0
+spot_angle = 50.209652
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="LightmapGI" unique_id=460004642]
+transform = Transform3D(1.3113417e-07, -1, -4.371138e-08, 6.7762637e-22, -4.371138e-08, 1, -1, -1.3113417e-07, -5.732055e-15, 1.8, 2.95, 4.5)
+light_color = Color(0.9933513, 0.7616974, 0.6138959, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_angle = 73.18898
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="LightmapGI" unique_id=1800721358]
+transform = Transform3D(-1.3113417e-07, 1, 1.3113416e-07, -1.1464114e-14, 1.3113416e-07, -1, -1, -1.3113417e-07, -5.7320558e-15, 0.42662358, 5.8674164, 4.5)
+light_color = Color(0.49659988, 0.052000012, 0.52, 1)
+light_energy = 0.3
+spot_range = 6.5727763
+spot_angle = 89.99
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="LightmapGI" unique_id=634882432]
+transform = Transform3D(1.3113417e-07, -1, -4.3711378e-08, 6.7762637e-22, -4.3711378e-08, 1, -1, -1.3113417e-07, -5.7320545e-15, -1.8, 2.95, 4.5)
+light_color = Color(0.9933513, 0.7616974, 0.6138959, 1)
+light_bake_mode = 1
+shadow_enabled = true
+spot_angle = 73.18898
 
 [node name="levelGeo" type="Node3D" parent="LightmapGI" unique_id=1597040145]
 
 [node name="foyer" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=479573380]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("10_ylfxq")
 mesh = SubResource("PlaneMesh_01k7k")
+
+[node name="SmLampPlanet" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=329981921]
+transform = Transform3D(1, 0, 0, 0, -4.3711392e-08, 1.0000001, 0, -1, -4.371139e-08, 6, 4, -2)
+cast_shadow = 0
+mesh = ExtResource("13_v1fwx")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="LightmapGI/levelGeo/foyer/SmLampPlanet" unique_id=275790911]
+light_color = Color(1, 0.60784316, 0.30980393, 1)
+light_energy = 2.0
+light_size = 0.2
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 9.0
+spot_attenuation = 2.5
+spot_angle = 89.99
+
+[node name="SmLampPlanet2" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=1603697888]
+transform = Transform3D(1, 0, 0, 0, -4.3711392e-08, 1.0000001, 0, -1, -4.371139e-08, -6, 4, -2)
+cast_shadow = 0
+mesh = ExtResource("13_v1fwx")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="LightmapGI/levelGeo/foyer/SmLampPlanet2" unique_id=356731584]
+light_color = Color(1, 0.60784316, 0.30980393, 1)
+light_energy = 2.0
+light_size = 0.2
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 9.0
+spot_attenuation = 2.5
+spot_angle = 89.99
 
 [node name="SceneConcreteCeiling" parent="LightmapGI/levelGeo/foyer" unique_id=703963425 instance=ExtResource("7_173re")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 8, 5)
@@ -547,8 +646,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -4)
 material_override = ExtResource("12_gygl6")
 mesh = SubResource("PlaneMesh_l0s7m")
 
+[node name="SM_HeavyCabling" parent="LightmapGI/levelGeo/maintenanceCorridor" unique_id=1246159408 instance=ExtResource("18_0xm26")]
+transform = Transform3D(-0.983, 0, -1.4842887e-07, 0, 0.983, 0, 1.4842887e-07, 0, -0.983, 1.97, 2.5, -1.9)
+
+[node name="SM_HeavyCabling2" parent="LightmapGI/levelGeo/maintenanceCorridor/SM_HeavyCabling" unique_id=1133971604 instance=ExtResource("18_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -9.536743e-07)
+
 [node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/maintenanceCorridor" unique_id=1798806813]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2412987, 2.1038895, 0.005426407)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.195938, 2.7180865, -1.6286874)
+light_energy = 0.4
+light_bake_mode = 1
 omni_range = 8.548474
 
 [node name="SceneConcreteCeiling" parent="LightmapGI/levelGeo/maintenanceCorridor" unique_id=12826570 instance=ExtResource("7_173re")]
@@ -581,16 +688,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2)
 material_override = SubResource("StandardMaterial3D_jay6p")
 mesh = SubResource("BoxMesh_nbbox")
 
-[node name="SM_Doorway_Standard" parent="LightmapGI/levelGeo/maintenanceCorridor" unique_id=367686370 instance=ExtResource("13_ofks7")]
+[node name="scene_doorway_escape" parent="LightmapGI/levelGeo/maintenanceCorridor" unique_id=197144363 instance=ExtResource("19_2rewf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
 
-[node name="SM_Doorway_Standard2" parent="LightmapGI/levelGeo/maintenanceCorridor" unique_id=704378623 instance=ExtResource("13_ofks7")]
+[node name="scene_doorway_windowed" parent="LightmapGI/levelGeo/maintenanceCorridor" unique_id=718683284 instance=ExtResource("19_hkksu")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5, 0, 2)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="LightmapGI/levelGeo/maintenanceCorridor" unique_id=1659864727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+blend_distance = 0.15
+size = Vector3(12.1, 4, 4.1)
+box_projection = true
+interior = true
+enable_shadows = true
 
 [node name="changeOffice" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=277464367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 3)
 material_override = ExtResource("12_gygl6")
 mesh = SubResource("PlaneMesh_ggqdw")
+
+[node name="ReflectionProbe2" type="ReflectionProbe" parent="LightmapGI/levelGeo/changeOffice" unique_id=75780834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+blend_distance = 0.15
+size = Vector3(6.1, 4, 10.1)
+box_projection = true
+interior = true
+enable_shadows = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/changeOffice" unique_id=854881974]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1526432, 2.1038895, 0.005426407)
@@ -688,6 +811,29 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 7, 0, -6)
 [node name="SM_ChangeCounter" parent="LightmapGI/levelGeo/arcade" unique_id=1711632563 instance=ExtResource("17_01k7k")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.6, 0, -9)
 
+[node name="SmLampPlanet3" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=267453728]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 3, -5)
+cast_shadow = 0
+mesh = ExtResource("13_v1fwx")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="LightmapGI/levelGeo/arcade/SmLampPlanet3" unique_id=2078940787]
+light_color = Color(1, 0.60784316, 0.30980393, 1)
+light_energy = 2.0
+light_size = 0.2
+shadow_enabled = true
+shadow_reverse_cull_face = true
+spot_range = 9.0
+spot_attenuation = 2.5
+spot_angle = 89.99
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="LightmapGI/levelGeo/arcade" unique_id=1590636323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55, 0)
+blend_distance = 0.15
+size = Vector3(14.3, 5.6, 18.3)
+box_projection = true
+interior = true
+enable_shadows = true
+
 [node name="arcadeCorridor" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=737576934]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 7)
 material_override = ExtResource("10_ylfxq")
@@ -766,6 +912,38 @@ mesh = SubResource("BoxMesh_v0dwg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
 mesh = SubResource("BoxMesh_hyikb")
 
+[node name="SmSofa" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1422745879]
+transform = Transform3D(0.49999997, -0.86602545, -3.7855173e-08, 0, -4.371139e-08, 1, -0.86602545, -0.49999997, -2.1855692e-08, -5.6600523, 1.1920929e-07, -2.923935)
+mesh = ExtResource("20_jv8nk")
+
+[node name="SmSofa2" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=896985683]
+transform = Transform3D(-0.86602545, -0.49999994, -2.185569e-08, 0, -4.371139e-08, 1, -0.49999994, 0.86602545, 3.7855173e-08, -5.571261, 1.1920929e-07, -0.9609356)
+mesh = ExtResource("20_jv8nk")
+
+[node name="SmSofa7" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1475182765]
+transform = Transform3D(-0.9659258, 0.2588191, 1.1313341e-08, 0, -4.371139e-08, 1, 0.2588191, 0.9659258, 4.222196e-08, -6.47116, 1.1920929e-07, 3.3314764)
+mesh = ExtResource("20_jv8nk")
+
+[node name="SmSofa8" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1313175027]
+transform = Transform3D(0.2588191, 0.9659258, 4.2221956e-08, 0, -4.371139e-08, 1, 0.9659258, -0.2588191, -1.1313343e-08, -5.1458945, 1.1920929e-07, 1.8806415)
+mesh = ExtResource("20_jv8nk")
+
+[node name="SmSofa3" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1103316236]
+transform = Transform3D(-0.49999988, 0.8660255, 3.7855177e-08, 0, -4.371139e-08, 1, 0.8660255, 0.49999988, 2.185569e-08, 4.588869, 1.1920929e-07, -0.6531019)
+mesh = ExtResource("20_jv8nk")
+
+[node name="SmSofa4" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=981873015]
+transform = Transform3D(0.5444635, 0.8387846, 3.6664435e-08, 0, -4.371139e-08, 1, 0.8387846, -0.5444635, -2.3799252e-08, 4.5000777, 1.1920929e-07, -2.6161013)
+mesh = ExtResource("20_jv8nk")
+
+[node name="SmSofa5" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=99678220]
+transform = Transform3D(-0.30881786, -0.95112115, -4.157482e-08, 3.4243037e-15, -4.3711385e-08, 1, -0.95112115, 0.30881786, 1.3498858e-08, 5.8682995, 1.1920929e-07, -2.8728929)
+mesh = ExtResource("20_jv8nk")
+
+[node name="SmSofa6" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1385878348]
+transform = Transform3D(0.99783826, 0.06571654, 2.8725589e-09, 2.363713e-15, -4.3711392e-08, 1, 0.06571654, -0.99783826, -4.3616893e-08, 6.7094007, 1.1920929e-07, -4.4024224)
+mesh = ExtResource("20_jv8nk")
+
 [node name="SmNeonPhaseArcade" type="MeshInstance3D" parent="." unique_id=826508568]
 transform = Transform3D(-4.3711392e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1.0000001, 4.371139e-08, 1.9106855e-15, 0.30617213, 4.73661, 3.720872)
 cast_shadow = 0
@@ -795,7 +973,245 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.205639, 1.8251119, 20.55059
 light_color = Color(0.2684, 0.44, 0.28555998, 1)
 omni_range = 7.369379
 
-[node name="SpotLight3D6" type="SpotLight3D" parent="." unique_id=1836104256]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 12.166477, 2.8752825, -4.0494795)
-spot_range = 5.6270494
-spot_angle = 80.119354
+[node name="SM_PrizeCounter" parent="." unique_id=2140673125 instance=ExtResource("25_rn6t8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.31496334, 0, 3.4422507)
+
+[node name="FloorBox" type="StaticBody3D" parent="." unique_id=545620827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorBox" unique_id=1892300573]
+shape = SubResource("BoxShape3D_jay6p")
+
+[node name="SM_AirVent" parent="." unique_id=1456588445 instance=ExtResource("31_0xm26")]
+transform = Transform3D(-1, -2.1175824e-21, -8.742278e-08, 4.2351647e-22, 1, 1.4210855e-14, 8.742278e-08, 1.4210855e-14, -1, 5.042579, 6.544482, 5.091982)
+
+[node name="SM_AirVent3" parent="SM_AirVent" unique_id=68120566 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, -7.341046e-22, 0, 4.2351647e-22, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 4)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent3" unique_id=1539221422 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent2" parent="SM_AirVent" unique_id=1924559087 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent4" parent="SM_AirVent" unique_id=253071532 instance=ExtResource("31_0xm26")]
+transform = Transform3D(-1.316615, 8.742279e-08, -1.7484555e-07, 2.3020426e-07, 4.371143e-08, -1, -1.1510213e-07, -1, -4.3711434e-08, 0, 0.50263405, -0.8759866)
+
+[node name="SM_AirVent5" parent="SM_AirVent" unique_id=1904417611 instance=ExtResource("31_0xm26")]
+transform = Transform3D(-4.3711367e-08, -7.10544e-15, 1, 5.3290705e-14, 1, 1.06581444e-14, -1, 6.039613e-14, -4.3711367e-08, -4.487423, 0.33851767, 6.4979806)
+
+[node name="SM_AirVent4" parent="SM_AirVent/SM_AirVent5" unique_id=1685041573 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, -4.2504886e-23, 0, -1.2723637e-22, 1, -9.536743e-07, 0, 8)
+
+[node name="SM_AirVent3" parent="SM_AirVent/SM_AirVent5/SM_AirVent4" unique_id=1057173718 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, -7.341046e-22, 0, 4.2351647e-22, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 4)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent4/SM_AirVent3" unique_id=727927190 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent4" unique_id=1528805580 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent5" parent="SM_AirVent/SM_AirVent5" unique_id=692293518 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, -4.2504886e-23, 0, -1.2723637e-22, 1, -1.9073486e-06, 0, 16)
+
+[node name="SM_AirVent3" parent="SM_AirVent/SM_AirVent5/SM_AirVent5" unique_id=331369267 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, -7.341046e-22, 0, 4.2351647e-22, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 4)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent5/SM_AirVent3" unique_id=1490042880 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent5" unique_id=1818157491 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent6" parent="SM_AirVent/SM_AirVent5" unique_id=2095991722 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, -4.2504886e-23, 0, -1.2723637e-22, 1, -2.861023e-06, 0, 24)
+
+[node name="SM_AirVent3" parent="SM_AirVent/SM_AirVent5/SM_AirVent6" unique_id=602725118 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, -7.341046e-22, 0, 4.2351647e-22, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 4)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent6/SM_AirVent3" unique_id=1622763407 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent6" unique_id=1208415774 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent7" parent="SM_AirVent/SM_AirVent5" unique_id=498538555 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, -4.2504886e-23, 0, -1.2723637e-22, 1, -3.9339066e-06, 0, 32)
+
+[node name="SM_AirVent3" parent="SM_AirVent/SM_AirVent5/SM_AirVent7" unique_id=1405550783 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, -7.341046e-22, 0, 4.2351647e-22, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 4)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent7/SM_AirVent3" unique_id=129709825 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent7" unique_id=1311209280 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent3" parent="SM_AirVent/SM_AirVent5" unique_id=1395406554 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, -7.341046e-22, 0, 4.2351647e-22, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 4)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5/SM_AirVent3" unique_id=1135686525 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5" unique_id=1429174251 instance=ExtResource("31_0xm26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="SM_HeavyCabling" parent="." unique_id=1746556908 instance=ExtResource("18_0xm26")]
+transform = Transform3D(-1.7, -2.5669289e-07, 0, 2.5669289e-07, -1.7, 0, 0, 0, 1.7, 9.999709, 7.133685, 5.910292)
+
+[node name="SM_HeavyCabling2" parent="SM_HeavyCabling" unique_id=1099126057 instance=ExtResource("18_0xm26")]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 11.998514, 0.042681694, 0)
+
+[node name="SM_HeavyCabling2" parent="." unique_id=1270527689 instance=ExtResource("18_0xm26")]
+transform = Transform3D(-1.7000003, -2.566929e-07, 0, -1.1220403e-14, 7.430937e-08, 1.7000003, -2.566929e-07, 1.7000003, -7.430937e-08, 2.05, 7.971, 0.36409783)
+
+[node name="SM_HeavyCabling2" parent="SM_HeavyCabling2" unique_id=396059665 instance=ExtResource("18_0xm26")]
+transform = Transform3D(-1, -8.742278e-08, -1.2705494e-21, 8.742278e-08, -1, -2.1316282e-14, 5.0821977e-21, -2.1316282e-14, 1, 2.421081, 0.04268025, 0)
+
+[node name="SM_HeavyCabling3" parent="SM_HeavyCabling2" unique_id=1863347045 instance=ExtResource("18_0xm26")]
+transform = Transform3D(1.3113414e-07, -1, -4.371141e-08, 1, 1.3113414e-07, 4.371137e-08, -4.3711363e-08, -4.371141e-08, 1, 0.4839232, 0.042679906, 0)
+
+[node name="SmCablingTray" type="MeshInstance3D" parent="." unique_id=1160949934]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 11.006667, 0.91906357, -5.9007907)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray" unique_id=1290693899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2" unique_id=1540007625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2" unique_id=1844100564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=1635301308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=195462130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=1607586822]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=1530781468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray3" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=1966176662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3" unique_id=250695418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3/SmCablingTray2" unique_id=750765927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3/SmCablingTray2/SmCablingTray2" unique_id=1778623647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="." unique_id=997821211]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, 10.380472, 7.694183, 1.4268026)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2" unique_id=586772894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2" unique_id=799030850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=1913030354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=179358602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=1398430641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=2016363934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=1222230773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray3" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=737311108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3" unique_id=1406516747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3/SmCablingTray2" unique_id=1878873935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3/SmCablingTray2/SmCablingTray2" unique_id=1158749706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray3" type="MeshInstance3D" parent="." unique_id=1867802379]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, 10.380472, 7.694183, 2.8165226)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3" unique_id=1959382146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2" unique_id=712638336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2" unique_id=758337324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=796566475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=1208565578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=148821443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=639928911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray3" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2" unique_id=65923236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3" unique_id=440035066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3/SmCablingTray2" unique_id=1092492026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")
+
+[node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3/SmCablingTray2/SmCablingTray2" unique_id=171519948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("32_vnpcl")

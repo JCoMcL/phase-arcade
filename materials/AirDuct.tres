@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfs8r57fgbbgh"]
+
+[ext_resource type="Texture2D" uid="uid://bewgoscrlmbid" path="res://textures/concrete/T_Concrete_pale.png" id="1_cotrs"]
+[ext_resource type="Texture2D" uid="uid://cm21p5pb61inl" path="res://textures/airvents/T_AirVent_normal.png" id="2_qyxox"]
+
+[resource]
+albedo_texture = ExtResource("1_cotrs")
+metallic = 1.0
+metallic_specular = 0.42
+roughness = 0.4
+normal_enabled = true
+normal_texture = ExtResource("2_qyxox")
+texture_filter = 2

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b7aoncnt6obdf"]
+
+[ext_resource type="Material" uid="uid://djx1k2nyialm8" path="res://materials/GlassScreen.tres" id="1_h4ema"]
+[ext_resource type="ArrayMesh" uid="uid://bqsij0ujf14wg" path="res://meshes/sm_ArcadeCabA_screen.tres" id="2_jm64f"]
+[ext_resource type="Texture2D" uid="uid://bok722soe7as4" path="res://textures/props/T_TVTest.png" id="3_vra5g"]
+[ext_resource type="Material" uid="uid://bpx7osk2jy1iw" path="res://materials/GlassWindow.tres" id="4_07orn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as4x1"]
+resource_name = "Material"
+albedo_color = Color(0.1275, 0.17, 0.16079167, 1)
+roughness = 0.01
+emission_enabled = true
+emission_texture = ExtResource("3_vra5g")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1bd7k"]
+size = Vector2(0.6, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w8ilc"]
+size = Vector3(0.2, 1, 1)
+
+[node name="SceneReflectionSceen" type="Node3D" unique_id=991305117]
+
+[node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="." unique_id=44065490]
+transform = Transform3D(0.8999999, 6.993823e-08, -1.7881393e-07, -7.868049e-08, 0.79999995, -1.7158264e-15, -1.3411045e-07, -7.1054274e-15, -0.99999994, 0, -0.036968186, 1.3081069)
+material_override = ExtResource("1_h4ema")
+mesh = ExtResource("2_jm64f")
+
+[node name="SmArcadeCabAScreen2" type="MeshInstance3D" parent="." unique_id=155669750]
+transform = Transform3D(0.9, 0, 0, 0, 0.20705526, 0.9659258, 0, -0.77274066, 0.25881907, -1.1920929e-07, -1.0363418, 0.023639947)
+material_override = SubResource("StandardMaterial3D_as4x1")
+mesh = ExtResource("2_jm64f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1633373706]
+transform = Transform3D(1, 0, 0, 0, -0.4226183, 0.9063077, 0, -0.9063077, -0.4226183, 0, 0.26484004, 0.1205751)
+material_override = ExtResource("4_07orn")
+mesh = SubResource("PlaneMesh_1bd7k")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=348056220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0.368)
+mesh = SubResource("BoxMesh_w8ilc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1872651554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0.368)
+mesh = SubResource("BoxMesh_w8ilc")

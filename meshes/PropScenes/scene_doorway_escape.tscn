@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://hmgfi7haw1s0"]
+
+[ext_resource type="PackedScene" uid="uid://csvyrqpwx17q8" path="res://meshes/PropScenes/scene_doorway_windowed.tscn" id="1_myw37"]
+[ext_resource type="ArrayMesh" uid="uid://cjixd7t5apwy4" path="res://meshes/sm_door_escape.tres" id="2_myw37"]
+
+[node name="scene_doorway_escape" unique_id=197144363 instance=ExtResource("1_myw37")]
+
+[node name="DoorPivot" parent="." index="0" unique_id=979159790]
+transform = Transform3D(-1, -8.742278e-08, -3.821371e-15, 0, -4.371139e-08, 1, -8.742278e-08, 1, 4.371139e-08, 0.09, 0, -0.457)
+
+[node name="SmDoorWindowed" parent="DoorPivot/RigidBody3D" parent_id_path=PackedInt32Array(442503229) index="0" unique_id=1631294201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032, 0, 0)
+mesh = ExtResource("2_myw37")

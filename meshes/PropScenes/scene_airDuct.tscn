@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d2lkp6mk8m2r7"]
+
+[ext_resource type="PackedScene" uid="uid://cya0qryrnis7x" path="res://meshes/SM_AirVent.fbx" id="1_i4fbs"]
+[ext_resource type="Material" uid="uid://bfs8r57fgbbgh" path="res://materials/AirDuct.tres" id="2_wddir"]
+
+[node name="SM_AirVent" unique_id=1456588445 instance=ExtResource("1_i4fbs")]
+
+[node name="AirVent" parent="." index="0" unique_id=1509930809]
+material_override = ExtResource("2_wddir")

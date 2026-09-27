@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://n05qb16v3rn5"]
+
+[ext_resource type="Texture2D" uid="uid://bqtxrhg0jts21" path="res://textures/props/T_Cabling.png" id="1_ta2b6"]
+[ext_resource type="Texture2D" uid="uid://b6moo7mijgntb" path="res://textures/props/T_Cabling_metalness.png" id="2_7f4bv"]
+
+[resource]
+albedo_texture = ExtResource("1_ta2b6")
+metallic = 1.0
+metallic_specular = 0.4
+metallic_texture = ExtResource("2_7f4bv")
+roughness = 0.8
+texture_filter = 2

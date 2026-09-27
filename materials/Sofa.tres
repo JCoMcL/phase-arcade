@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dv8ad517yuhyh"]
+
+[ext_resource type="Texture2D" uid="uid://byg71fh367nuc" path="res://textures/props/T_Chesterfield.png" id="1_jma7y"]
+[ext_resource type="Texture2D" uid="uid://b243kpqy2i1gd" path="res://textures/props/T_Chesterfield_normal.png" id="2_fyxbx"]
+
+[resource]
+albedo_texture = ExtResource("1_jma7y")
+metallic_specular = 0.42
+roughness = 0.22
+normal_enabled = true
+normal_texture = ExtResource("2_fyxbx")
+texture_filter = 2

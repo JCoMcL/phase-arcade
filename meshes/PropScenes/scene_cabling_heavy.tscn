@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d3d2lkut5yfxh"]
+
+[ext_resource type="ArrayMesh" uid="uid://jes8vl3xxloq" path="res://meshes/sm_Cabling_heavy.tres" id="1_2r3tp"]
+
+[node name="cabling_heavy" type="Node3D" unique_id=537466891]
+
+[node name="SmCablingHeavy" type="MeshInstance3D" parent="." unique_id=2119108899]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = ExtResource("1_2r3tp")
