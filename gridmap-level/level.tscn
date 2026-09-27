@@ -2,8 +2,8 @@
 
 [ext_resource type="MeshLibrary" uid="uid://cgkcujwd432h2" path="res://gridmap-level/mesh_library.tres" id="1_ghvus"]
 [ext_resource type="PackedScene" uid="uid://c5qhyuctvc26m" path="res://player/player_character.tscn" id="2_ghvus"]
-[ext_resource type="PackedScene" uid="uid://b2th27vl4noa2" path="res://cabinets/cabinet.glb" id="3_kou5f"]
-[ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://coin.tscn" id="4_vpf4b"]
+[ext_resource type="PackedScene" uid="uid://b2th27vl4noa2" path="res://gridmap-level/cabinet.glb" id="3_kou5f"]
+[ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://stuff/coin.tscn" id="4_vpf4b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
 sky_top_color = Color(0.042913936, 0.070302956, 0.10943019, 1)

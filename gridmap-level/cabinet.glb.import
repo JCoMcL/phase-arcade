@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://wsxhsr50jcv7"
-path="res://.godot/imported/coin.glb-ebec35a13da3bbae9956e8a473b3e824.scn"
+uid="uid://b2th27vl4noa2"
+path="res://.godot/imported/cabinet.glb-4aeecba2f5fe35921f20092a65a25f25.scn"
 
 [deps]
 
-source_file="res://cabinets/coin.glb"
-dest_files=["res://.godot/imported/coin.glb-ebec35a13da3bbae9956e8a473b3e824.scn"]
+source_file="res://gridmap-level/cabinet.glb"
+dest_files=["res://.godot/imported/cabinet.glb-4aeecba2f5fe35921f20092a65a25f25.scn"]
 
 [params]
 
@@ -34,17 +34,9 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=1
+materials/extract=0
 materials/extract_format=0
-materials/extract_path="res://materials"
-_subresources={
-"materials": {
-"Coin": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://materials/Coin.tres",
-"use_external/path": "uid://cxr8c3lg0bmnc"
-}
-}
-}
+materials/extract_path=""
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

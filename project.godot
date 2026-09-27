@@ -24,10 +24,11 @@ movie_writer/disable_vsync=true
 [file_customization]
 
 folder_colors={
-"res://cabinets/": "green",
+"res://audio/": "yellow",
 "res://gridmap-level/": "pink",
 "res://materials/": "purple",
 "res://player/": "red",
+"res://stuff/": "green",
 "res://textures/": "purple"
 }
 
