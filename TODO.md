@@ -20,12 +20,12 @@
 - [ ] collisions on walls and floor
 - [ ] hidden coins
 - [ ] switchable lights
-- [ ] impassable areas (perhaps a "too dark" wall)
 
 # Phase 3: Open For Submissions (Oct 10)
 - [ ] documentation
 - [ ] an easy way to test the game during development
 - [ ] get started on our respective games do know what's needed
+- [ ] different places to put games, how accessible?
 ## Arcade Cabinet
 - [ ] screen works for various sizes
 - [ ] different control schemes
@@ -51,6 +51,8 @@
 ## Sakura Shootout
 
 # Phase 5: Release (Oct 30)
+- [ ] impassable areas (perhaps a "too dark" wall)
+- [ ] adventure game mechanics
 - [ ] fix bugs in the jam games
 - [ ] add scares
 - [ ] finalize the layout
@@ -75,6 +77,7 @@
 - [ ] player character casts a shadow
 - [ ] rigid bodies
 - [ ] cabinets illuminate themselves
+- [ ] flickering lights
 ## Props
 - [ ] wrecked cabinets
 - [ ] various light sources which could operate without mains power
