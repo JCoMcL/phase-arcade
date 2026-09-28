@@ -1,7 +1,7 @@
-# Phase 1: Demo to JK (Sep 27)
-- [ ] visibly working arcade machine
+# ~~Phase 1: Demo to JK (Sep 27)~~
+- [x] visibly working arcade machine
 - [x] first person exploration
-- [ ] interesting level
+- [x] interesting level
 - [x] interactive coins
 
 # Phase 2: Core Functionality (Oct 01)
@@ -14,7 +14,7 @@
 - [x] crouching
 - [x] interaction
 - [ ] cabinet lock-on
-- [ ] tooltips
+- [x] tooltips
 - [ ] inventory
 ## Level
 - [ ] collisions on walls and floor
@@ -103,4 +103,3 @@
 
 # See Also:
 [` assert (height >= width) #TODO  assert does nothing in tool mode, need a better we to handle this`](./player/first_person_player.gd)
-
