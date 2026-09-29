@@ -2,7 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://cgkcujwd432h2" path="res://gridmap-level/mesh_library.tres" id="1_ghvus"]
 [ext_resource type="PackedScene" uid="uid://c5qhyuctvc26m" path="res://player/player_character.tscn" id="2_ghvus"]
-[ext_resource type="PackedScene" uid="uid://b2th27vl4noa2" path="res://stuff/cabinet.glb" id="3_kou5f"]
+[ext_resource type="PackedScene" uid="uid://bnrat3k8mdug0" path="res://stuff/cabinet.tscn" id="4_oq02x"]
 [ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://stuff/coin/coin.tscn" id="4_vpf4b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
@@ -72,9 +72,6 @@ omni_attenuation = 2.0
 
 [node name="FirstPersonCharacter" parent="." unique_id=743034332 instance=ExtResource("2_ghvus")]
 
-[node name="cabinet" parent="." unique_id=1901331561 instance=ExtResource("3_kou5f")]
-transform = Transform3D(0.96592593, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, 0.96592593, 0.1373902, -1.1641532e-10, -4.262603)
-
 [node name="coin" parent="." unique_id=1993092626 instance=ExtResource("4_vpf4b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67483675, -2.9802322e-08, -0.8124078)
 
@@ -86,3 +83,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67483675, -2.9802322e-08, 
 
 [node name="coin3" parent="." unique_id=1736674089 instance=ExtResource("4_vpf4b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8321171, -2.9802322e-08, 1.4779353)
+
+[node name="Cabinet" parent="." unique_id=1752319625 instance=ExtResource("4_oq02x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037123263, 1.19092874e-07, -3.9271576)

@@ -26,7 +26,7 @@ script = ExtResource("1_7jtme")
 
 [node name="coin_glb" parent="." unique_id=1364528605 instance=ExtResource("1_d5gmh")]
 
-[node name="coin" parent="coin_glb" index="0" unique_id=1974430070]
+[node name="coin" parent="coin_glb" index="0" unique_id=74594019]
 layers = 2
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=290125103]
@@ -52,6 +52,7 @@ reflection_mask = 1047554
 
 [node name="InteractZone" parent="." unique_id=1828705782 instance=ExtResource("2_jnefc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15002273, 0)
+oneshot = true
 
 [node name="ClinkSFX" type="AudioStreamPlayer3D" parent="." unique_id=1750986184]
 stream = SubResource("AudioStreamRandomizer_5t2kp")

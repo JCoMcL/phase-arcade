@@ -32,7 +32,7 @@ func setup_children() -> void:
 	if not is_node_ready():
 		# the above setters will trigger this early, so we have to wait until our children come home
 		await ready
-	assert (height >= width) #TODO: assert does nothing in tool mode, need a better we to handle this
+	assert (height >= width) #TODO: assert does nothing in tool mode, need a better way to handle this
 
 	collision_layer = Layers.physics3D["Player"]
 	collision_mask = Layers.physics3D["Solid"]
@@ -59,6 +59,13 @@ func _interact():
 	var target = %InteractRay.get_collider()
 	if target:
 		target.interact(self)
+
+# --- Arcade Cabinets ---
+
+var active_cabinet:ArcadeCabinet = null
+func set_active_cabinet(cab:ArcadeCabinet):
+	var op:CameraTransform = cab.get_observation_point()
+	op.apply_absolute(%Camera)
 
 # --- Main ---
 
