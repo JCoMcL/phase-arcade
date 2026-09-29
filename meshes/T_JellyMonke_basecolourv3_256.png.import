@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2u1f052imhht"
-path.s3tc="res://.godot/imported/coin_coin_roughness.png-9ce13ac85727a4daf29ab45bdcfe7d3a.s3tc.ctex"
+uid="uid://x11i1fdgadh0"
+path="res://.godot/imported/T_JellyMonke_basecolourv3_256.png-cb6dbf59acde4e875dcce8decc4f303b.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "ca8873885f73ce9784362b64e8c9ef6d"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://stuff/coin/coin_coin_roughness.png"
-dest_files=["res://.godot/imported/coin_coin_roughness.png-9ce13ac85727a4daf29ab45bdcfe7d3a.s3tc.ctex"]
+source_file="res://meshes/T_JellyMonke_basecolourv3_256.png"
+dest_files=["res://.godot/imported/T_JellyMonke_basecolourv3_256.png-cb6dbf59acde4e875dcce8decc4f303b.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

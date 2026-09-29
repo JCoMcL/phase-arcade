@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2u1f052imhht"
-path.s3tc="res://.godot/imported/coin_coin_roughness.png-9ce13ac85727a4daf29ab45bdcfe7d3a.s3tc.ctex"
+uid="uid://bv0g1nivvcy"
+path.s3tc="res://.godot/imported/T_LUT_UVGlowing.png-f238ff9d9f39c16bf3c6b5066e217135.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "ca8873885f73ce9784362b64e8c9ef6d"
-}
 
 [deps]
 
-source_file="res://stuff/coin/coin_coin_roughness.png"
-dest_files=["res://.godot/imported/coin_coin_roughness.png-9ce13ac85727a4daf29ab45bdcfe7d3a.s3tc.ctex"]
+source_file="res://textures/effects/T_LUT_UVGlowing.png"
+dest_files=["res://.godot/imported/T_LUT_UVGlowing.png-f238ff9d9f39c16bf3c6b5066e217135.s3tc.ctex"]
 
 [params]
 

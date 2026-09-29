@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2u1f052imhht"
-path.s3tc="res://.godot/imported/coin_coin_roughness.png-9ce13ac85727a4daf29ab45bdcfe7d3a.s3tc.ctex"
+uid="uid://spkuc02ku0p0"
+path.s3tc="res://.godot/imported/SM_RollerShutter_0.png-b946c353b4208dbf91391b9d1fabf3a8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ca8873885f73ce9784362b64e8c9ef6d"
+"md5": "85ebe46f434fbd0ac588df5a418c9b0d"
 }
 
 [deps]
 
-source_file="res://stuff/coin/coin_coin_roughness.png"
-dest_files=["res://.godot/imported/coin_coin_roughness.png-9ce13ac85727a4daf29ab45bdcfe7d3a.s3tc.ctex"]
+source_file="res://meshes/SM_RollerShutter_0.png"
+dest_files=["res://.godot/imported/SM_RollerShutter_0.png-b946c353b4208dbf91391b9d1fabf3a8.s3tc.ctex"]
 
 [params]
 

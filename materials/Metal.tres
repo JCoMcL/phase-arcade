@@ -1,12 +1,15 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dnvgetg74i2co"]
 
 [ext_resource type="Texture2D" uid="uid://bewgoscrlmbid" path="res://textures/concrete/T_Concrete_pale.png" id="1_0thpk"]
+[ext_resource type="Texture2D" uid="uid://cxroif41b6tdw" path="res://textures/airvents/T_Hammered_normal.png" id="2_0thpk"]
 
 [resource]
 albedo_texture = ExtResource("1_0thpk")
 metallic = 1.0
 metallic_specular = 0.42
 roughness = 0.4
-uv1_scale = Vector3(0.4, 0.4, 0.4)
+normal_enabled = true
+normal_scale = 0.1
+normal_texture = ExtResource("2_0thpk")
 uv1_triplanar = true
 texture_filter = 2

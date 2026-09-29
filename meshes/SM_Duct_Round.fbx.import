@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://wsxhsr50jcv7"
-path="res://.godot/imported/coin.glb-75a7c5af97a66cda384623153c265753.scn"
+uid="uid://c1uuib6xaypqk"
+path="res://.godot/imported/SM_Duct_Round.fbx-7d60683321685215247c19965d76397b.scn"
 
 [deps]
 
-source_file="res://stuff/coin/coin.glb"
-dest_files=["res://.godot/imported/coin.glb-75a7c5af97a66cda384623153c265753.scn"]
+source_file="res://meshes/SM_Duct_Round.fbx"
+dest_files=["res://.godot/imported/SM_Duct_Round.fbx-7d60683321685215247c19965d76397b.scn"]
 
 [params]
 
@@ -30,21 +30,22 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=1
+materials/extract=0
 materials/extract_format=0
-materials/extract_path="res://materials"
+materials/extract_path=""
 _subresources={
 "materials": {
-"Coin": {
+"@MATERIAL:0": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://materials/Coin.tres",
-"use_external/path": "uid://b0pk1xehvmp5y"
+"use_external/path": "uid://dnvgetg74i2co"
 }
 }
 }
-gltf/naming_version=2
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

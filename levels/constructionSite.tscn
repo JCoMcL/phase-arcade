@@ -16,6 +16,7 @@
 [ext_resource type="Material" uid="uid://ctmgj6eqnpye5" path="res://materials/Concrete.tres" id="12_gygl6"]
 [ext_resource type="PackedScene" uid="uid://6k1gn74pb3l6" path="res://meshes/SM_Doorway_Standard.fbx" id="13_ofks7"]
 [ext_resource type="ArrayMesh" uid="uid://bx6x7fhvnhs8v" path="res://meshes/sm_lamp_planet.tres" id="13_v1fwx"]
+[ext_resource type="PackedScene" uid="uid://disowst3xs3tf" path="res://meshes/LevelGeo/geo_roller_shutter.tscn" id="13_xacbb"]
 [ext_resource type="Material" uid="uid://bx2mma2aiaf8o" path="res://materials/Wood.tres" id="14_l0s7m"]
 [ext_resource type="Texture2D" uid="uid://chivp5sw8im74" path="res://textures/breezeblocks/breezeblocks.png" id="16_bwipc"]
 [ext_resource type="ArrayMesh" uid="uid://dnln2tdvlrj88" path="res://meshes/sm_NeonGlow_PhaseArcade.tres" id="16_gygl6"]
@@ -24,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://xp3g0htghhog" path="res://textures/breezeblocks/Normal_Map.png" id="17_jv8nk"]
 [ext_resource type="PackedScene" uid="uid://dkcad5o58joxu" path="res://meshes/LevelGeo/geo_foyer_entry.tscn" id="17_lcydp"]
 [ext_resource type="PackedScene" uid="uid://drfsvokvc34b0" path="res://meshes/LevelGeo/geo_entry_arch.tscn" id="17_n8v8u"]
-[ext_resource type="PackedScene" uid="uid://qsfox6n5cg6p" path="res://meshes/SM_HeavyCabling.fbx" id="18_0xm26"]
+[ext_resource type="Material" uid="uid://f7pb3wu04tx7" path="res://materials/PlasterWall.tres" id="17_r5lcs"]
 [ext_resource type="Texture2D" uid="uid://csfajtkqe1hky" path="res://textures/breezeblocks/Roughness_Map.png" id="18_rn6t8"]
 [ext_resource type="PackedScene" uid="uid://hmgfi7haw1s0" path="res://meshes/PropScenes/scene_doorway_escape.tscn" id="19_2rewf"]
 [ext_resource type="PackedScene" uid="uid://csvyrqpwx17q8" path="res://meshes/PropScenes/scene_doorway_windowed.tscn" id="19_hkksu"]
@@ -32,13 +33,20 @@
 [ext_resource type="PackedScene" uid="uid://d3d2lkut5yfxh" path="res://meshes/PropScenes/scene_cabling_heavy.tscn" id="22_lcydp"]
 [ext_resource type="Material" uid="uid://bfs8r57fgbbgh" path="res://materials/AirDuct.tres" id="24_vnpcl"]
 [ext_resource type="PackedScene" uid="uid://d2awucc1aqq1q" path="res://meshes/PropScenes/prize_counter.tscn" id="25_rn6t8"]
+[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_UVLit.tres" id="30_nbbox"]
 [ext_resource type="PackedScene" uid="uid://d2lkp6mk8m2r7" path="res://meshes/PropScenes/scene_airDuct.tscn" id="31_0xm26"]
+[ext_resource type="Shader" uid="uid://djlyf0nwekuf0" path="res://materials/LightingTest.tres" id="31_ggqdw"]
 [ext_resource type="Material" uid="uid://b0tktcrtsrg60" path="res://materials/NeonTube.tres" id="31_lcydp"]
 [ext_resource type="PackedScene" uid="uid://dw5qktcvdyo26" path="res://meshes/PropScenes/scene_Sofa.tscn" id="31_r5lcs"]
+[ext_resource type="Texture2D" uid="uid://daswnm46guxoe" path="res://textures/carpet/T_PhaseConnectCarpet.png" id="31_xsasp"]
+[ext_resource type="Material" uid="uid://dnvgetg74i2co" path="res://materials/Metal.tres" id="32_h0g04"]
 [ext_resource type="ArrayMesh" uid="uid://cyo06mjkj4grk" path="res://meshes/sm_Cabling_tray.tres" id="32_vnpcl"]
 [ext_resource type="PackedScene" uid="uid://c5qhyuctvc26m" path="res://player/player_character.tscn" id="33_1841t"]
 [ext_resource type="Shader" uid="uid://b3nse2vuiwyot" path="res://materials/shd_NeonTube.tres" id="34_r5lcs"]
 [ext_resource type="Material" uid="uid://bdwcl28853tmp" path="res://materials/Cabling_tray.tres" id="38_r5lcs"]
+[ext_resource type="ArrayMesh" uid="uid://bwu5ijrgiqeii" path="res://meshes/sm_Sofa.tres" id="39_auksg"]
+[ext_resource type="PackedScene" uid="uid://8xx3dcuhmnv2" path="res://meshes/Poseables/sk_jelly_button_monkey.tscn" id="40_r5lcs"]
+[ext_resource type="PackedScene" uid="uid://ctgsld2gkkji1" path="res://meshes/PropScenes/scene_duct_round.tscn" id="43_40a1i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
 sky_top_color = Color(0.042913936, 0.070302956, 0.10943019, 1)
@@ -55,7 +63,7 @@ background_mode = 2
 sky = SubResource("Sky_vpf4b")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_01k7k"]
-lightmap_size_hint = Vector2i(512, 256)
+lightmap_size_hint = Vector2i(102, 62)
 add_uv2 = true
 size = Vector2(20, 12)
 
@@ -70,6 +78,8 @@ add_uv2 = true
 size = Vector3(20, 2, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_rn6t8"]
+lightmap_size_hint = Vector2i(14, 71)
+add_uv2 = true
 size = Vector3(1, 6, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_hkksu"]
@@ -106,9 +116,9 @@ size = Vector3(8, 3, 2)
 size = Vector3(9.6, 3, 0.1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_vnpcl"]
-lightmap_size_hint = Vector2i(65, 76)
+lightmap_size_hint = Vector2i(66, 76)
 add_uv2 = true
-size = Vector3(0.2, 1, 12)
+size = Vector3(0.5, 1, 12)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_te35t"]
 lightmap_size_hint = Vector2i(52, 34)
@@ -259,10 +269,53 @@ size = Vector3(0.2, 3, 10)
 [sub_resource type="PlaneMesh" id="PlaneMesh_gygl6"]
 size = Vector2(14, 18)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_auksg"]
+render_priority = 0
+shader = ExtResource("30_nbbox")
+shader_parameter/Texture2DParameter2 = ExtResource("31_xsasp")
+shader_parameter/Texture2DParameter = ExtResource("31_xsasp")
+
+[sub_resource type="BoxMesh" id="BoxMesh_vv80q"]
+material = SubResource("ShaderMaterial_auksg")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ggqdw"]
+render_priority = 0
+shader = ExtResource("30_nbbox")
+
+[sub_resource type="BoxMesh" id="BoxMesh_a734w"]
+material = SubResource("ShaderMaterial_ggqdw")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xsasp"]
+render_priority = 0
+shader = ExtResource("31_ggqdw")
+
+[sub_resource type="BoxMesh" id="BoxMesh_vgrb5"]
+material = SubResource("ShaderMaterial_xsasp")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0iggl"]
+render_priority = 0
+shader = ExtResource("30_nbbox")
+shader_parameter/Texture2DParameter2 = ExtResource("31_xsasp")
+shader_parameter/Texture2DParameter = ExtResource("31_xsasp")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7byvj"]
+size = Vector2(4, 4)
+
 [sub_resource type="BoxMesh" id="BoxMesh_gygl6"]
 lightmap_size_hint = Vector2i(95, 116)
 add_uv2 = true
 size = Vector3(0.2, 2, 18)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xacbb"]
+render_priority = 0
+shader = ExtResource("34_r5lcs")
+shader_parameter/EdgeColour = Vector3(0.2, 0.3, 0.9)
+shader_parameter/FillColour = Vector3(0.15, 0, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c3ewd"]
+lightmap_size_hint = Vector2i(89, 92)
+add_uv2 = true
+size = Vector3(0.02, 0.1, 17)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tivwb"]
 lightmap_size_hint = Vector2i(75, 96)
@@ -273,6 +326,8 @@ size = Vector3(14, 2, 0.2)
 size = Vector3(0.2, 2, 18)
 
 [sub_resource type="BoxMesh" id="BoxMesh_te35t"]
+lightmap_size_hint = Vector2i(15, 31)
+add_uv2 = true
 size = Vector3(0.2, 1.5, 2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ofks7"]
@@ -281,6 +336,8 @@ add_uv2 = true
 size = Vector3(0.2, 3, 14)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gijpi"]
+lightmap_size_hint = Vector2i(95, 126)
+add_uv2 = true
 size = Vector3(0.2, 3, 18)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ov46t"]
@@ -289,21 +346,31 @@ add_uv2 = true
 size = Vector3(14, 3, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5ctpl"]
+lightmap_size_hint = Vector2i(11, 42)
+add_uv2 = true
 size = Vector3(1.3, 3, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_lcydp"]
+lightmap_size_hint = Vector2i(12, 43)
+add_uv2 = true
 size = Vector3(1.5, 3, 0.2)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_r5lcs"]
 size = Vector2(5, 2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xacbb"]
+lightmap_size_hint = Vector2i(15, 41)
+add_uv2 = true
 size = Vector3(0.2, 2.5, 2.1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ywp47"]
+lightmap_size_hint = Vector2i(14, 40)
+add_uv2 = true
 size = Vector3(0.2, 2.5, 1.8)
 
 [sub_resource type="BoxMesh" id="BoxMesh_h0g04"]
+lightmap_size_hint = Vector2i(40, 36)
+add_uv2 = true
 size = Vector3(5.1, 0.5, 2.2)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_e1iq1"]
@@ -371,8 +438,8 @@ shadow_mesh = SubResource("ArrayMesh_vh87m")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6l1cd"]
 render_priority = 0
 shader = ExtResource("34_r5lcs")
-shader_parameter/EdgeColour = Vector3(4, 0.3, 1)
-shader_parameter/FillColour = Vector3(1, 0.6, 0.7)
+shader_parameter/EdgeColour = Vector3(1, 0.3, 1)
+shader_parameter/FillColour = Vector3(0.8, 0.4, 0.6)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8k1xi"]
 _surfaces = [{
@@ -583,35 +650,11 @@ mesh = ExtResource("8_ylfxq")
 [node name="SM_ConstructionBits" parent="." unique_id=1139805140 instance=ExtResource("9_gygl6")]
 transform = Transform3D(0.62804455, 0, -0.7781774, 0, 1, 0, 0.7781774, 0, 0.62804455, -12.650743, 4.7683716e-07, 3.5346498)
 
-[node name="SM_CStudWall_PrizeShelving" parent="." unique_id=468731720 instance=ExtResource("7_te35t")]
+[node name="CStudWall_PrizeShelving" parent="." unique_id=468731720 instance=ExtResource("7_te35t")]
 transform = Transform3D(-4.371139e-07, 1, 4.371139e-08, 0, -4.371139e-08, 1, 10, 4.371139e-08, 1.9106855e-15, 0, 1.23, 5.565)
 
-[node name="SM_CStudWall2" parent="SM_CStudWall_PrizeShelving" unique_id=1130075445 instance=ExtResource("7_te35t")]
+[node name="SM_CStudWall2" parent="CStudWall_PrizeShelving" unique_id=1130075445 instance=ExtResource("7_te35t")]
 transform = Transform3D(-1, -8.742277e-09, -3.8213722e-16, 8.742278e-07, -1, -8.742278e-08, 3.8213725e-14, -8.742278e-08, 1, 0, 0, 0)
-
-[node name="SM_CStudWall_gate" parent="." unique_id=289939049 instance=ExtResource("7_i4oqc")]
-transform = Transform3D(-2, -3.3596564e-07, -6.600236e-15, 0, -9.725783e-08, 1, -3.019916e-07, 2.225, 4.371139e-08, -10, 1.2, 0.5)
-
-[node name="SM_CStudWall5" parent="SM_CStudWall_gate" unique_id=1227921691 instance=ExtResource("7_i4oqc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 1.6940659e-21, -1.4210855e-14, 1, 0, 0, 2.4)
-
-[node name="SM_CStudWall_gate2" parent="." unique_id=323693731 instance=ExtResource("7_i4oqc")]
-transform = Transform3D(-2, -3.3596564e-07, -6.600236e-15, 0, -9.725783e-08, 1, -3.019916e-07, 2.225, 4.371139e-08, -10, 1.2, -5.9)
-
-[node name="SM_CStudWall5" parent="SM_CStudWall_gate2" unique_id=707287942 instance=ExtResource("7_i4oqc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 1.6940659e-21, -1.4210855e-14, 1, 0, 0, 2.4)
-
-[node name="SM_CStudWall_gate3" parent="." unique_id=1226334345 instance=ExtResource("7_i4oqc")]
-transform = Transform3D(-2, -3.3596564e-07, -6.600236e-15, 0, -9.725783e-08, 1, -3.019916e-07, 2.225, 4.371139e-08, -10.011108, 1.3560159, 0.5)
-
-[node name="SM_CStudWall5" parent="SM_CStudWall_gate3" unique_id=317321906 instance=ExtResource("7_i4oqc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 1.6940659e-21, -1.4210855e-14, 1, 0, 0, 2.4)
-
-[node name="SM_CStudWall_gate4" parent="." unique_id=582085310 instance=ExtResource("7_i4oqc")]
-transform = Transform3D(-2, -3.3596564e-07, -6.600236e-15, 0, -9.725783e-08, 1, -3.019916e-07, 2.225, 4.371139e-08, -10.011108, 1.3560159, -5.9)
-
-[node name="SM_CStudWall5" parent="SM_CStudWall_gate4" unique_id=1497186982 instance=ExtResource("7_i4oqc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 1.6940659e-21, -1.4210855e-14, 1, 0, 0, 2.4)
 
 [node name="SM_PlasterboardPile" parent="." unique_id=653609782 instance=ExtResource("8_jd3w2")]
 transform = Transform3D(0.5037739, 0, 0.8638355, 0, 1, 0, -0.8638355, 0, 0.5037739, -13.408732, 0, -2.7984552)
@@ -626,7 +669,7 @@ transform = Transform3D(0.9644837, 0, 0.2641424, 0, 1, 0, -0.2641424, 0, 0.96448
 quality = 3
 bounces = 5
 interior = true
-denoiser_strength = 0.001
+denoiser_strength = 0.4
 texel_scale = 2.0
 generate_probes_subdiv = 4
 light_data = ExtResource("10_5ctpl")
@@ -676,6 +719,12 @@ transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("10_ylfxq")
 mesh = SubResource("PlaneMesh_01k7k")
 
+[node name="SM_RollerShutter" parent="LightmapGI/levelGeo/foyer" unique_id=1836176340 instance=ExtResource("13_xacbb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.0000001, 0, -1, 0, -4.371139e-08, -10, 0, 3.2)
+
+[node name="SM_RollerShutter2" parent="LightmapGI/levelGeo/foyer" unique_id=1110697302 instance=ExtResource("13_xacbb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.0000001, 0, -1, 0, -4.371139e-08, -10, 0, -3.25)
+
 [node name="ReflectionProbe" type="ReflectionProbe" parent="LightmapGI/levelGeo/foyer" unique_id=498225968]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 4.0000005, 0)
 size = Vector3(22, 11, 14.5)
@@ -691,7 +740,7 @@ mesh = ExtResource("13_v1fwx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="LightmapGI/levelGeo/foyer/SmLampPlanet" unique_id=275790911]
 light_color = Color(1, 0.60784316, 0.30980393, 1)
-light_energy = 2.0
+light_energy = 4.0
 light_size = 0.2
 light_bake_mode = 1
 shadow_enabled = true
@@ -707,7 +756,7 @@ mesh = ExtResource("13_v1fwx")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="LightmapGI/levelGeo/foyer/SmLampPlanet2" unique_id=356731584]
 light_color = Color(1, 0.60784316, 0.30980393, 1)
-light_energy = 2.0
+light_energy = 4.0
 light_size = 0.2
 light_bake_mode = 1
 shadow_enabled = true
@@ -743,36 +792,43 @@ mesh = SubResource("BoxMesh_bwipc")
 
 [node name="pillar" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=438382977]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.054, 3, 0)
+material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_rn6t8")
 
 [node name="WallNorth" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=1038581293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.002, 1.5, -5)
+material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_hkksu")
 
 [node name="WallNorth2" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=925130562]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.002, 1.5, 2)
+material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_2rewf")
 
 [node name="WallUpperNorth" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=647200535]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.002, 4.5, 0)
+material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_jay6p")
 
 [node name="WallUpperEast" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=138849324]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, 6)
+material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_gu285")
 
 [node name="WallEast" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=307914722]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1.4999999, 6)
+material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_v1fwx")
 
 [node name="WallEast_Bump" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=837858601]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, 5)
+material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_0xm26")
 
@@ -792,6 +848,7 @@ transform = Transform3D(2.2649371e-07, 1.02598805e-14, 3.25, -4.5298748e-07, 0.9
 
 [node name="WallUpperSouth" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=2130189120]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5.5, 0)
+material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_vnpcl")
 
@@ -989,6 +1046,55 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 17)
 material_override = ExtResource("10_ylfxq")
 mesh = SubResource("PlaneMesh_gygl6")
 
+[node name="Light_UVTest" type="OmniLight3D" parent="LightmapGI/levelGeo/arcade" unique_id=1640310653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3294172, 2.090386, 6.0745106)
+layers = 2
+light_color = Color(0.49803922, 0, 1, 1)
+light_energy = 0.3
+omni_attenuation = 2.0
+
+[node name="Light_WhiteTest" type="OmniLight3D" parent="LightmapGI/levelGeo/arcade" unique_id=296209347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.127707, 1.5438907, 1.4855881)
+layers = 2
+light_energy = 0.3
+omni_attenuation = 2.0
+
+[node name="SmArcadeCabABase" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=112795757]
+transform = Transform3D(0.70710677, 0.70710677, 3.090862e-08, 0, -4.371139e-08, 1, 0.70710677, -0.70710677, -3.090862e-08, -2.351923, 0.0061490834, 4.483263)
+mesh = ExtResource("5_so5aq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=474871439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22702408, 0.6471558, 2.726654)
+mesh = SubResource("BoxMesh_vv80q")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/arcade/MeshInstance3D" unique_id=758958078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6714153, 0.85755086, 1.4106407)
+visible = false
+light_negative = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=436165122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0534992, 0.6471558, 2.9659786)
+mesh = SubResource("BoxMesh_a734w")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/arcade/MeshInstance3D3" unique_id=300350238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6714153, 0.85755086, 1.4106407)
+visible = false
+light_negative = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=1029247548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.680334, 0.64715594, -21.473598)
+mesh = SubResource("BoxMesh_vgrb5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/arcade/MeshInstance3D2" unique_id=1474916689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6714153, 0.85755086, 1.4106407)
+visible = false
+light_negative = true
+
+[node name="arcade_UVFloor" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=1689213033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7640328, 0.001, 6.543972)
+material_override = SubResource("ShaderMaterial_0iggl")
+mesh = SubResource("PlaneMesh_7byvj")
+
 [node name="SceneConcreteCeiling" parent="LightmapGI/levelGeo/arcade" unique_id=793244220 instance=ExtResource("7_173re")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5, 8)
 length = 7.0
@@ -998,6 +1104,26 @@ width = 9.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1, -1, -8)
 material_override = ExtResource("12_gygl6")
 mesh = SubResource("BoxMesh_gygl6")
+
+[node name="ceilingSideNorth2" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade/SceneConcreteCeiling" unique_id=1744241059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.781961, -2.5775218, -8)
+material_override = SubResource("ShaderMaterial_xacbb")
+mesh = SubResource("BoxMesh_c3ewd")
+
+[node name="ceilingSideNorth3" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade/SceneConcreteCeiling" unique_id=249512062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.781961, -2.3880553, -8)
+material_override = SubResource("ShaderMaterial_xacbb")
+mesh = SubResource("BoxMesh_c3ewd")
+
+[node name="ceilingSideNorth4" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade/SceneConcreteCeiling" unique_id=974801094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8324938, -2.5775218, -8)
+material_override = SubResource("ShaderMaterial_xacbb")
+mesh = SubResource("BoxMesh_c3ewd")
+
+[node name="ceilingSideNorth5" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade/SceneConcreteCeiling" unique_id=1034196949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8324938, -2.3880553, -8)
+material_override = SubResource("ShaderMaterial_xacbb")
+mesh = SubResource("BoxMesh_c3ewd")
 
 [node name="ceilingSideEast" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade/SceneConcreteCeiling" unique_id=1192427936]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -1, 1.1000004)
@@ -1016,26 +1142,32 @@ mesh = SubResource("BoxMesh_n8v8u")
 
 [node name="WallNorth" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=830142557]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5, -8)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_hkksu")
 
 [node name="WallNorth3" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=754713359]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2.25, -6)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_te35t")
 
 [node name="WallNorth2" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=1386200051]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.5, 2)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_ofks7")
 
 [node name="WallSouth" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=1440510514]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1.5, 0)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_gijpi")
 
 [node name="WallEast" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=1692537983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 9)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_ov46t")
 
 [node name="WallWest" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=1519443123]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 1.5, -9)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_5ctpl")
 
 [node name="WallWest2" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcade" unique_id=628729399]
@@ -1058,6 +1190,7 @@ light_color = Color(1, 0.60784316, 0.30980393, 1)
 light_energy = 2.0
 light_size = 0.2
 light_bake_mode = 1
+light_cull_mask = 4294967291
 shadow_enabled = true
 shadow_reverse_cull_face = true
 spot_range = 9.0
@@ -1079,19 +1212,22 @@ mesh = SubResource("PlaneMesh_r5lcs")
 
 [node name="WallNorth" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeCorridor" unique_id=235659198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.25, 0.05)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_xacbb")
 
 [node name="WallSouth" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeCorridor" unique_id=935792318]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 1.25, 0)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_ywp47")
 
 [node name="Ceiling" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeCorridor" unique_id=1114301725]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 2.75, 0)
+material_override = ExtResource("17_r5lcs")
 mesh = SubResource("BoxMesh_h0g04")
 
 [node name="arcadeVent" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1930159243]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 8)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("PlaneMesh_e1iq1")
 
 [node name="ReflectionProbe3" type="ReflectionProbe" parent="LightmapGI/levelGeo/arcadeVent" unique_id=1178107064]
@@ -1101,15 +1237,16 @@ size = Vector3(2, 2, 10)
 box_projection = true
 interior = true
 enable_shadows = true
+cull_mask = 1048571
 
 [node name="arcadeVent2" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent" unique_id=939959882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, 3)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("PlaneMesh_nusfb")
 
 [node name="WallEast" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent/arcadeVent2" unique_id=125367891]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0.6, 0.6)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("BoxMesh_rkil3")
 
 [node name="WallWest" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent/arcadeVent2" unique_id=769525935]
@@ -1124,6 +1261,7 @@ mesh = SubResource("BoxMesh_l0s7m")
 [node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/arcadeVent/arcadeVent2/Ceiling" unique_id=121139447]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7493744, -0.5262415, 1.2535105)
 light_energy = 0.2
+light_cull_mask = 4294967291
 omni_range = 3.9967046
 
 [node name="arcadeVent3" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent" unique_id=2003971671]
@@ -1133,37 +1271,38 @@ mesh = SubResource("PlaneMesh_bwipc")
 
 [node name="WallEast" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent/arcadeVent3" unique_id=618685813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0.6, 0.6)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("BoxMesh_ggqdw")
 
 [node name="WallWest" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent/arcadeVent3" unique_id=401135168]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0.6, -0.6)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("BoxMesh_ggqdw")
 
 [node name="Ceiling" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent/arcadeVent3" unique_id=882523308]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 1.4, 0)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("BoxMesh_e1iq1")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/arcadeVent/arcadeVent3/Ceiling" unique_id=355619795]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7493744, -0.5262415, 1.2535105)
 light_energy = 0.2
+light_cull_mask = 4294967293
 omni_range = 3.9967046
 
 [node name="WallNorth" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent" unique_id=1123070762]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.6, 0.05)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("BoxMesh_nusfb")
 
 [node name="WallSouth" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent" unique_id=1787646431]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.6, 0)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("BoxMesh_v0dwg")
 
 [node name="Ceiling" type="MeshInstance3D" parent="LightmapGI/levelGeo/arcadeVent" unique_id=85595217]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
-material_override = ExtResource("24_vnpcl")
+material_override = ExtResource("32_h0g04")
 mesh = SubResource("BoxMesh_hyikb")
 
 [node name="Sofa" parent="LightmapGI/levelGeo" unique_id=1729698945 instance=ExtResource("31_r5lcs")]
@@ -1193,6 +1332,10 @@ transform = Transform3D(-0.3088179, 7.1054274e-15, 0.9511213, 3.4243041e-15, 1, 
 [node name="Sofa6" parent="LightmapGI/levelGeo" unique_id=1980501251 instance=ExtResource("31_r5lcs")]
 transform = Transform3D(0.92278045, 0, 0.38532645, 2.2946038e-15, 1, 0, -0.38532645, 3.5527137e-15, 0.92278045, 6.897808, 1.1920929e-07, -4.939285)
 
+[node name="SmSofa" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1933865835]
+transform = Transform3D(0.91066927, -0.4131362, -1.8058758e-08, 0, -4.371139e-08, 1, -0.4131362, -0.91066927, -3.980662e-08, 9.926253, -0.0614869, 21.308815)
+mesh = ExtResource("39_auksg")
+
 [node name="SmNeonPhaseArcade" type="MeshInstance3D" parent="." unique_id=826508568]
 transform = Transform3D(-4.3711392e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1.0000001, 4.371139e-08, 1.9106855e-15, 0.30617213, 4.73661, 3.720872)
 cast_shadow = 0
@@ -1204,25 +1347,13 @@ cast_shadow = 0
 mesh = ExtResource("16_gygl6")
 
 [node name="SmNeonLogo" type="MeshInstance3D" parent="SmNeonPhaseArcade" unique_id=1680461300]
-transform = Transform3D(1, 0, -6.352747e-22, 0, 1, 8.3518686e-23, 0, 8.351872e-23, 0.9999999, 0.21041298, 8.940697e-08, -0.60835695)
+transform = Transform3D(1, 0, -6.352747e-22, 0, 1, 8.3518686e-23, 0, 8.351872e-23, 0.9999999, 0.16, 0, -0.608)
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_xacbb")
 
 [node name="SmNeonGlowLogo" type="MeshInstance3D" parent="SmNeonPhaseArcade/SmNeonLogo" unique_id=57050978]
 cast_shadow = 0
 mesh = ExtResource("16_ofks7")
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1137015794]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.205639, 1.8251119, 14.148449)
-light_color = Color(0.2684, 0.44, 0.28555998, 1)
-light_bake_mode = 1
-omni_range = 7.369379
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1691470158]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.205639, 1.8251119, 20.550592)
-light_color = Color(0.2684, 0.44, 0.28555998, 1)
-light_bake_mode = 1
-omni_range = 7.369379
 
 [node name="SM_PrizeCounter" parent="." unique_id=2140673125 instance=ExtResource("25_rn6t8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 3.442)
@@ -1234,7 +1365,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 shape = SubResource("BoxShape3D_jay6p")
 
 [node name="SM_AirVent" parent="." unique_id=1456588445 instance=ExtResource("31_0xm26")]
-transform = Transform3D(-1, -2.1175824e-21, -8.742278e-08, 4.2351647e-22, 1, 1.4210855e-14, 8.742278e-08, 1.4210855e-14, -1, 5.042579, 6.544482, 5.091982)
+transform = Transform3D(-1, -2.1175824e-21, -8.742278e-08, 4.2351647e-22, 1, 1.4210855e-14, 8.742278e-08, 1.4210855e-14, -1, 5.043, 6, 5.092)
 
 [node name="SM_AirVent3" parent="SM_AirVent" unique_id=68120566 instance=ExtResource("31_0xm26")]
 transform = Transform3D(1, -7.341046e-22, 0, 4.2351647e-22, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 0, 4)
@@ -1308,20 +1439,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 [node name="SM_AirVent2" parent="SM_AirVent/SM_AirVent5" unique_id=1429174251 instance=ExtResource("31_0xm26")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="SM_HeavyCabling" parent="." unique_id=1746556908 instance=ExtResource("18_0xm26")]
-transform = Transform3D(-1.7, -2.5669289e-07, 0, 2.5669289e-07, -1.7, 0, 0, 0, 1.7, 9.999709, 7.133685, 5.910292)
+[node name="cabling_heavy2" parent="." unique_id=2012200611 instance=ExtResource("22_lcydp")]
+transform = Transform3D(-1.7000003, -2.566929e-07, 0, 2.566929e-07, -1.7000003, 0, 0, 0, 1.7000003, 9.999709, 7.133685, 5.910292)
 
-[node name="SM_HeavyCabling2" parent="SM_HeavyCabling" unique_id=1099126057 instance=ExtResource("18_0xm26")]
-transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 11.998514, 0.042681694, 0)
+[node name="cabling_heavy4" parent="cabling_heavy2" unique_id=320808458 instance=ExtResource("22_lcydp")]
+transform = Transform3D(-1, -2.3841858e-07, 1.509958e-07, -1.5099582e-07, 4.371137e-08, -1, 2.3841858e-07, -1, -4.3711406e-08, 7.0973797, -0.49253702, -3.219787)
 
-[node name="SM_HeavyCabling2" parent="." unique_id=1270527689 instance=ExtResource("18_0xm26")]
-transform = Transform3D(-1.7000003, -2.566929e-07, 0, -1.1220403e-14, 7.430937e-08, 1.7000003, -2.566929e-07, 1.7000003, -7.430937e-08, 2.05, 7.971, 0.36409783)
+[node name="cabling_heavy5" parent="cabling_heavy2" unique_id=2048525892 instance=ExtResource("22_lcydp")]
+transform = Transform3D(2.8212995e-07, -1, 1.072844e-07, 2.170213e-14, -1.0728441e-07, -1, 1, 2.8212995e-07, -8.359325e-15, 5.160222, -0.49253702, -3.219787)
 
-[node name="SM_HeavyCabling2" parent="SM_HeavyCabling2" unique_id=396059665 instance=ExtResource("18_0xm26")]
-transform = Transform3D(-1, -8.742278e-08, -1.2705494e-21, 8.742278e-08, -1, -2.1316282e-14, 5.0821977e-21, -2.1316282e-14, 1, 2.421081, 0.04268025, 0)
+[node name="cabling_heavy3" parent="cabling_heavy2" unique_id=384665334 instance=ExtResource("22_lcydp")]
+transform = Transform3D(1, 1.509958e-07, 1.509958e-07, 1.509958e-07, -4.3711367e-08, -1, -1.509958e-07, 1, -4.371139e-08, 4.676299, -0.49253702, -3.2624667)
 
-[node name="SM_HeavyCabling3" parent="SM_HeavyCabling2" unique_id=1863347045 instance=ExtResource("18_0xm26")]
-transform = Transform3D(1.3113414e-07, -1, -4.371141e-08, 1, 1.3113414e-07, 4.371137e-08, -4.3711363e-08, -4.371141e-08, 1, 0.4839232, 0.042679906, 0)
+[node name="cabling_heavy6" parent="cabling_heavy2" unique_id=516961557 instance=ExtResource("22_lcydp")]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 11.998512, 0.04268217, 0)
 
 [node name="SmCablingTray" type="MeshInstance3D" parent="." unique_id=1160949934]
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 11.006667, 0.91906357, -5.9007907)
@@ -1442,3 +1573,24 @@ mesh = ExtResource("32_vnpcl")
 [node name="SmCablingTray2" type="MeshInstance3D" parent="SmCablingTray3/SmCablingTray2/SmCablingTray2/SmCablingTray2/SmCablingTray3/SmCablingTray2/SmCablingTray2" unique_id=171519948]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 mesh = ExtResource("32_vnpcl")
+
+[node name="SK_JellyButtonMonke" parent="." unique_id=1189213942 instance=ExtResource("40_r5lcs")]
+transform = Transform3D(-0.38918304, 0, 0.092393495, 0, 0.4, 0, -0.092393495, 0, -0.38918304, 1.3975207, 1.6444829, 5.509773)
+
+[node name="SK_JellyButtonMonke2" parent="." unique_id=410483532 instance=ExtResource("40_r5lcs")]
+transform = Transform3D(-0.39391947, 0, -0.06947993, 0, 0.4, 0, 0.06947993, 0, -0.39391947, 1.6967386, 1.6444829, 5.4265037)
+
+[node name="SK_JellyButtonMonke3" parent="." unique_id=2009697474 instance=ExtResource("40_r5lcs")]
+transform = Transform3D(-0.39988008, 0, 0.009793781, 0, 0.4, 0, -0.009793781, 0, -0.39988008, 0.7967808, 1.6444829, 5.5407557)
+
+[node name="SK_JellyButtonMonke4" parent="." unique_id=653827834 instance=ExtResource("40_r5lcs")]
+transform = Transform3D(-0.3709911, 0, -0.14955133, 0, 0.39999998, 0, 0.14955133, 0, -0.3709911, 1.0895121, 1.6444829, 5.47879)
+
+[node name="SK_JellyButtonMonke5" parent="." unique_id=646472043 instance=ExtResource("40_r5lcs")]
+transform = Transform3D(-0.3709911, 0, -0.14955132, -0.14257851, 0.120715, 0.35369372, 0.045132723, 0.38135007, -0.111960486, 1.9131187, 1.6617963, 5.3347626)
+
+[node name="SM_Duct_Round" parent="." unique_id=1083795838 instance=ExtResource("43_40a1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75, 7.343, -2.924)
+
+[node name="SM_Duct_Round2" parent="SM_Duct_Round" unique_id=520274406 instance=ExtResource("43_40a1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)

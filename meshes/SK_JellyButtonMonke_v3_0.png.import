@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2u1f052imhht"
-path.s3tc="res://.godot/imported/coin_coin_roughness.png-9ce13ac85727a4daf29ab45bdcfe7d3a.s3tc.ctex"
+uid="uid://d3rsv1k80ay35"
+path.s3tc="res://.godot/imported/SK_JellyButtonMonke_v3_0.png-f7a066c567553d5ec0edf9f991aac13b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ca8873885f73ce9784362b64e8c9ef6d"
+"md5": "7fd2122ee297d5d2323a437bd9f0468f"
 }
 
 [deps]
 
-source_file="res://stuff/coin/coin_coin_roughness.png"
-dest_files=["res://.godot/imported/coin_coin_roughness.png-9ce13ac85727a4daf29ab45bdcfe7d3a.s3tc.ctex"]
+source_file="res://meshes/SK_JellyButtonMonke_v3_0.png"
+dest_files=["res://.godot/imported/SK_JellyButtonMonke_v3_0.png-f7a066c567553d5ec0edf9f991aac13b.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://8xx3dcuhmnv2"]
+
+[ext_resource type="PackedScene" uid="uid://b1ad3qdttovjl" path="res://meshes/SK_JellyButtonMonke_v3.fbx" id="1_yk1g0"]
+[ext_resource type="Material" uid="uid://defo2airiw5p4" path="res://materials/JellyButtonMonkey.tres" id="2_84cfs"]
+
+[node name="SK_JellyButtonMonke" unique_id=1189213942 instance=ExtResource("1_yk1g0")]
+
+[node name="MonkeyJelly" parent="Skeleton3D" parent_id_path=PackedInt32Array(430832126) index="0" unique_id=375852934]
+material_override = ExtResource("2_84cfs")

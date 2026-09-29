@@ -35,7 +35,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pj10f")
 
-[node name="SM_CStudWall" unique_id=468731720 instance=ExtResource("1_q12tn")]
+[node name="CStudWall" unique_id=468731720 instance=ExtResource("1_q12tn")]
 
 [node name="CStud" parent="." index="0" unique_id=1726404967]
 mesh = SubResource("ArrayMesh_h4x23")

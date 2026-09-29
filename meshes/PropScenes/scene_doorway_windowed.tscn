@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://csvyrqpwx17q8"]
 
 [ext_resource type="ArrayMesh" uid="uid://fpj2fejo4tlb" path="res://meshes/sm_door_windowed.tres" id="1_gygjo"]
+[ext_resource type="Material" uid="uid://f7pb3wu04tx7" path="res://materials/PlasterWall.tres" id="2_0bukc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e3x8e"]
 size = Vector3(0.1, 0.89, 2.133)
@@ -77,6 +78,7 @@ visible = false
 
 [node name="Doorway" type="MeshInstance3D" parent="." unique_id=1996922192]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+material_override = ExtResource("2_0bukc")
 mesh = SubResource("ArrayMesh_v2ni4")
 
 [node name="DoorwayA" type="StaticBody3D" parent="." unique_id=2143942977]

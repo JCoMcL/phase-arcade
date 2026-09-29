@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dkcad5o58joxu"]
 
 [ext_resource type="PackedScene" uid="uid://rpuf2q54ooij" path="res://meshes/LevelGeo/SM_geo_foyerEntry.fbx" id="1_o0cfk"]
+[ext_resource type="Material" uid="uid://f7pb3wu04tx7" path="res://materials/PlasterWall.tres" id="2_lofpg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3spcf"]
 
@@ -45,6 +46,7 @@ size = Vector3(0.6, 0.6, 4.5)
 [node name="geo_foyerEntry" unique_id=173917522 instance=ExtResource("1_o0cfk")]
 
 [node name="FoyerEntranceWalls" parent="." index="0" unique_id=1605117370]
+material_override = ExtResource("2_lofpg")
 mesh = SubResource("ArrayMesh_o0cfk")
 
 [node name="Wall_Side" type="StaticBody3D" parent="FoyerEntranceWalls" index="0" unique_id=570326670]

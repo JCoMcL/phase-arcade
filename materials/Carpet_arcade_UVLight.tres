@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjybyqlxadjme"]
+
+[ext_resource type="Texture2D" uid="uid://birjwixp15s82" path="res://textures/carpet/T_PhaseConnectCarpet_UV.png" id="1_uhkk1"]
+
+[resource]
+resource_name = "Bricks"
+blend_mode = 1
+cull_mode = 2
+albedo_color = Color(2.503, 2.503, 2.503, 1)
+albedo_texture = ExtResource("1_uhkk1")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.6, 0.6, 0.6)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 2

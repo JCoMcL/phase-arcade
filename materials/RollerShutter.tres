@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cb4mu3mpa55ax"]
+
+[ext_resource type="Texture2D" uid="uid://spkuc02ku0p0" path="res://meshes/SM_RollerShutter_0.png" id="1_hx70m"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_hx70m")
+roughness = 0.4
+texture_filter = 2
