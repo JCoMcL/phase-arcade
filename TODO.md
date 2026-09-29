@@ -66,6 +66,7 @@
 - [ ] evidence of the passage of time since construction
 - [ ] bringing the arcade back online
 - [ ] "puzzles" to unlock new areas
+- [ ] something not quite right about this place
 ## Progression
 - [ ] coins hidden deeper in the arcade
 - [ ] circuit breakers bring new areas online
@@ -82,11 +83,12 @@
 - [ ] wrecked cabinets
 - [ ] various light sources which could operate without mains power
 - [ ] things that produce environmental audio
+- [ ] working doors
 ## Scares
 - [ ] things that go bump in the night
 - [ ] power outages
 - [ ] singing fish
-- [ ] signs of a scruggle
+- [ ] signs of a struggle
 - [ ] rats
 - [ ] dizzy phasebear
 ## Audio
