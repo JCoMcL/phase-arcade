@@ -20,6 +20,13 @@ signal interacted_by(Node3D)
 			await ready
 		%Label.text = s
 
+@export var active = true:
+	set(b):
+		active = b
+		visible = b
+		collision_layer = Layers.physics3D["Interactive"] && b
+@export var oneshot = false
+
 func _ready() -> void:
 	if not Engine.is_editor_hint():
 		collision_layer = Layers.physics3D["Interactive"]
@@ -34,9 +41,10 @@ func hover(observer: Node3D):
 
 func interact(operator: Node3D):
 	print(self, "interacted with")
-	$Tooltip.visible = false #HACK
 	interacted.emit()
 	interacted_by.emit(operator)
+	if oneshot:
+		active = false
 
 func _process(delta):
 	if Engine.is_editor_hint():
