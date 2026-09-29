@@ -1,11 +1,8 @@
 @tool
-class_name TemperatureLight
+class_name HandyLight
 extends Light3D
 
-## A [Light3D] that takes its colour from a colour temperature in kelvin, so a
-## light can be authored as "a 2700K bulb" instead of a hand-picked RGB value.
-## [member temperature] is the source of truth: whatever [member Light3D.light_color]
-## says in the inspector gets overwritten.
+# --- Color Temperature ---
 
 const MIN_TEMPERATURE := 1000.0
 
@@ -21,9 +18,6 @@ const MIN_TEMPERATURE := 1000.0
 	set(value):
 		tint = value
 		apply_temperature()
-
-func _ready() -> void:
-	apply_temperature()
 
 func apply_temperature() -> void:
 	light_color = color_for_temperature(temperature) * tint
@@ -53,3 +47,37 @@ static func color_for_temperature(kelvin: float) -> Color:
 		clampf(blue, 0.0, 255.0) / 255.0
 	)
 	return srgb.srgb_to_linear()
+
+# --- Circuits ---
+
+class Switched:
+	signal on
+	signal off
+	signal to(bool)
+	var state:bool:
+		set(b):
+			to.emit(b)
+			(on if b else off).emit()
+			state = b
+	func toggle():
+		state = not state
+
+static var circuits:Dictionary[StringName, Switched]
+
+static func register_circuit(s:StringName) -> Switched:
+	if not circuits.has(s):
+		circuits[s] = Switched.new()
+		print("registered circuit: ", s)
+	return circuits[s]
+
+@export var circuit:StringName = &""
+
+func _on_circuit_switched(state:bool):
+	visible = state
+
+func _ready():
+	print(self)
+	if circuit != &"":
+		var switched = register_circuit(circuit)
+		switched.to.connect(_on_circuit_switched)
+	apply_temperature()
