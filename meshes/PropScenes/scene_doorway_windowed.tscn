@@ -82,7 +82,7 @@ points = PackedVector3Array(-0.10001957, -1, -5.715275e-17, 0.09999022, -1, -5.7
 [node name="scene_doorway_windowed" type="Node3D" unique_id=197144363]
 
 [node name="DoorPivot" type="Node3D" parent="." unique_id=979159790]
-transform = Transform3D(0.37470374, -0.9271446, -4.052678e-08, 0, -4.371139e-08, 1, -0.9271446, -0.37470374, -1.637882e-08, -0.09, 0, -0.457)
+transform = Transform3D(-0.99999994, 8.742277e-08, 3.821371e-15, 0, -4.3711385e-08, 1, 8.742277e-08, 0.99999994, 4.371139e-08, -0.09, 0, -0.457)
 
 [node name="HingeJoint3D" type="HingeJoint3D" parent="DoorPivot" unique_id=643683205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032, 0, 0.25)
