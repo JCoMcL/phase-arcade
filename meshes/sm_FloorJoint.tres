@@ -1,0 +1,33 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://besvkxjcsesdy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fesi3"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_baa25"]
+_surfaces = [{
+"aabb": AABB(-0.1, -0.5, 0, 0.20000002, 1, 0.005),
+"format": 34359742465,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAwAEAAEAAgAFAAAABQACAAYABgAHAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("hYgIvQAAAL8K16M7iogIvQAAAD8K16M7iIgIPQAAAD8K16M7zMzMvQAAAL8AAAAAzczMvQAAAD8AAAAAjYgIPQAAAL8K16M7zczMPQAAAD8AAAAAzszMPQAAAL8AAAAA")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "FloorJoint"
+_surfaces = [{
+"aabb": AABB(-0.1, -0.5, 0, 0.20000002, 1, 0.005),
+"attribute_data": PackedByteArray("tvwZPy5PFT+8/Bk/yjVjPy/LFD/KNWM/+DEfPyxPFT//MR8/yTVjPyjLFD8wTxU/7JUPP8s1Yz/mlQ8/ME8VPw=="),
+"format": 34359742487,
+"index_count": 18,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAwAEAAEAAgAFAAAABQACAAYABgAHAAUA"),
+"material": SubResource("StandardMaterial3D_fesi3"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("hYgIvQAAAL8K16M7iogIvQAAAD8K16M7iIgIPQAAAD8K16M7zMzMvQAAAL8AAAAAzczMvQAAAD8AAAAAjYgIPQAAAL8K16M7zczMPQAAAD8AAAAAzszMPQAAAL8AAAAAYHv/fwAATsJge/9/AABOwp6E/3+eBP+/EXf/fwAAdsQRd/9/AAB2xJ6E/3+eBP+/7Yj/f+4I/7/tiP9/7gj/vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_baa25")

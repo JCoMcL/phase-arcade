@@ -40,6 +40,9 @@ shadow_mesh = SubResource("ArrayMesh_432ri")
 [sub_resource type="BoxShape3D" id="BoxShape3D_o0cfk"]
 size = Vector3(5, 6.5, 4.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rm7ly"]
+size = Vector3(11, 2, 4.5)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_lofpg"]
 size = Vector3(0.6, 0.6, 4.5)
 
@@ -61,13 +64,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 3.25, 2.25)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FoyerEntranceWalls/Wall_Side2" index="0" unique_id=779956869]
 shape = SubResource("BoxShape3D_o0cfk")
 
-[node name="Pillar" type="StaticBody3D" parent="FoyerEntranceWalls" index="2" unique_id=502399367]
+[node name="Doors" type="StaticBody3D" parent="FoyerEntranceWalls" index="2" unique_id=1610726682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 2.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FoyerEntranceWalls/Doors" index="0" unique_id=77456205]
+shape = SubResource("BoxShape3D_rm7ly")
+
+[node name="Pillar" type="StaticBody3D" parent="FoyerEntranceWalls" index="3" unique_id=502399367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.3, -2.75)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FoyerEntranceWalls/Pillar" index="0" unique_id=877990160]
 shape = SubResource("BoxShape3D_lofpg")
 
-[node name="Pillar2" type="StaticBody3D" parent="FoyerEntranceWalls" index="3" unique_id=1852418273]
+[node name="Pillar2" type="StaticBody3D" parent="FoyerEntranceWalls" index="4" unique_id=1852418273]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.3, -2.75)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FoyerEntranceWalls/Pillar2" index="0" unique_id=1713843355]

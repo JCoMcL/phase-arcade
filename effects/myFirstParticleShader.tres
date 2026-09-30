@@ -1,0 +1,5 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://htyxn622kwqj"]
+
+[resource]
+initial_velocity_min = 0.5
+initial_velocity_max = 2.0

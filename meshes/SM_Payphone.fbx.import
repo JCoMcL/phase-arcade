@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://6k1gn74pb3l6"
-path="res://.godot/imported/SM_Doorway_Standard.fbx-6125b90f36c43d896181af4a252a24a1.scn"
+uid="uid://c178lfbqyyhpv"
+path="res://.godot/imported/SM_Payphone.fbx-7ba1d431f9c67d164322549de4ccae32.scn"
 
 [deps]
 
-source_file="res://meshes/SM_Doorway_Standard.fbx"
-dest_files=["res://.godot/imported/SM_Doorway_Standard.fbx-6125b90f36c43d896181af4a252a24a1.scn"]
+source_file="res://meshes/SM_Payphone.fbx"
+dest_files=["res://.godot/imported/SM_Payphone.fbx-7ba1d431f9c67d164322549de4ccae32.scn"]
 
 [params]
 
@@ -37,20 +37,8 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"meshes": {
-"Doorway": {
-"generate/lightmap_uv": 0,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 20.0,
-"save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/sm_doorway.tres",
-"save_to_file/path": "uid://caa04vfvcptmy"
-}
-}
-}
+_subresources={}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
+fbx/embedded_image_handling=0
 fbx/naming_version=2

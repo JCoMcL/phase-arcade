@@ -7,7 +7,6 @@
 render_priority = 0
 shader = ExtResource("1_m54jj")
 shader_parameter/Texture2DParameter2 = ExtResource("2_vmrk8")
-shader_parameter/Texture2DParameter = ExtResource("2_vmrk8")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vmrk8"]
 _surfaces = [{

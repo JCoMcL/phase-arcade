@@ -74,9 +74,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mcg7y")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_1rsy2"]
+size = Vector3(1.2, 2, 0.7)
+
 [node name="geo_EntryArch" unique_id=913865599 instance=ExtResource("1_aaik6")]
 
 [node name="EntryArch" parent="." index="0" unique_id=1882937154]
 mesh = SubResource("ArrayMesh_1rsy2")
 surface_material_override/0 = ExtResource("2_1rsy2")
 surface_material_override/1 = ExtResource("3_1rsy2")
+
+[node name="CollisionA" type="StaticBody3D" parent="EntryArch" index="0" unique_id=1314450797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.6, 0.35)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EntryArch/CollisionA" index="0" unique_id=1641117775]
+shape = SubResource("BoxShape3D_1rsy2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="EntryArch/CollisionA" index="1" unique_id=1889416469]
+transform = Transform3D(0.86602545, -0.50000006, 2.1855696e-08, 0.50000006, 0.86602545, 5.856215e-09, -2.1855694e-08, 5.8562186e-09, 1, 0.43, -1.55, 0)
+shape = SubResource("BoxShape3D_1rsy2")
+
+[node name="CollisionA2" type="StaticBody3D" parent="EntryArch" index="1" unique_id=633937633]
+transform = Transform3D(-1, 3.821371e-15, 8.742278e-08, -3.821371e-15, 1, -8.742278e-08, -8.742278e-08, -8.742278e-08, -1, 5.5, 1.6, 0.35)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EntryArch/CollisionA2" index="0" unique_id=367418942]
+shape = SubResource("BoxShape3D_1rsy2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="EntryArch/CollisionA2" index="1" unique_id=754674627]
+transform = Transform3D(0.86602545, -0.50000006, 2.1855696e-08, 0.50000006, 0.86602545, 5.856215e-09, -2.1855694e-08, 5.8562186e-09, 1, 0.43, -1.55, 0)
+shape = SubResource("BoxShape3D_1rsy2")

@@ -3,26 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv0g1nivvcy"
-path.s3tc="res://.godot/imported/T_LUT_UVGlowing.png-f238ff9d9f39c16bf3c6b5066e217135.s3tc.ctex"
+path="res://.godot/imported/T_LUT_UVGlowing.png-f238ff9d9f39c16bf3c6b5066e217135.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://textures/effects/T_LUT_UVGlowing.png"
-dest_files=["res://.godot/imported/T_LUT_UVGlowing.png-f238ff9d9f39c16bf3c6b5066e217135.s3tc.ctex"]
+dest_files=["res://.godot/imported/T_LUT_UVGlowing.png-f238ff9d9f39c16bf3c6b5066e217135.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
