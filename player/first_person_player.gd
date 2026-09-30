@@ -116,6 +116,14 @@ func _check_cabinet_lock() -> void:
 
 # --- Main ---
 
+func handle_collision(k: KinematicCollision3D):
+	var col = k.get_collider()
+	if col is RigidBody3D:
+		col.apply_force(
+			k.get_remainder() * 2000,
+			col.to_local(k.get_position())
+		)
+
 func _ready():
 	setup_children()
 
@@ -129,7 +137,8 @@ func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 
-	velocity += get_gravity() * delta
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 
 	var crouching = Input.is_action_pressed("crouch")
 	const crouch_speed:float = 10
@@ -153,6 +162,8 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+	for i in get_slide_collision_count():
+		handle_collision(get_slide_collision(i))
 
 func _input(ev: InputEvent) -> void:
 	if ev is InputEventMouseButton:
