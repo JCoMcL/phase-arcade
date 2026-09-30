@@ -60,6 +60,18 @@ func _interact():
 	if target:
 		target.interact(self)
 
+class Inventory extends Resource:
+	@export var contents:Dictionary[StringName, Array] #Array[Node]
+	func collect(n:Node, type:StringName):
+		if not contents.has(type):
+			contents[type] = [n]
+		else:
+			contents[type].append(n)
+		n.get_parent().remove_child(n)
+		print(contents)
+
+var inventory = Inventory.new()
+
 # --- Arcade Cabinets ---
 
 var active_cabinet:ArcadeCabinet = null

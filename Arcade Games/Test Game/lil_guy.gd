@@ -12,15 +12,15 @@ func _process(delta: float) -> void:
 	position += velocity
 	var outer = get_parent().get_global_rect()
 	var inner = get_global_rect()
-	
+
 	if inner.position.x < outer.position.x or inner.end.x > outer.end.x:
 		velocity.x *= -1
 		$AudioStreamPlayer2D.play()
 	if inner.position.y < outer.position.y or inner.end.y > outer.end.y:
 		velocity.y *= -1
 		$AudioStreamPlayer2D.play()
-	
-	
+
+
 var input_tracker = InputTracker.new()
 func _unhandled_input(event: InputEvent) -> void:
 	input_tracker._input(event)

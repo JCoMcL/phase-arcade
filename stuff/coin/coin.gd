@@ -4,6 +4,13 @@ var angular_velocity:Vector3
 
 var flippin = false
 
+var _player_pending_collection:FirstPersonCharacter
+
+func _on_interected_by(p:FirstPersonCharacter):
+	flip()
+	WorldEffects.create_temporary_sfx($ClinkSFX, get_parent())
+	_player_pending_collection = p
+
 func flip():
 	if flippin:
 		return
@@ -20,5 +27,5 @@ func _physics_process(delta: float) -> void:
 		angular_velocity = Vector3.ZERO
 		rotation = Vector3.ZERO
 
-	if flippin and velocity.y < 0:
-		visible = false
+	if flippin and velocity.y < 0 and _player_pending_collection:
+		_player_pending_collection.inventory.collect(self, "coin")

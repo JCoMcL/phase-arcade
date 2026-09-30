@@ -15,7 +15,7 @@
 - [x] interaction
 - [-] cabinet lock-on
 - [x] tooltips
-- [ ] inventory
+- [x] inventory
 ## Level
 - [ ] collisions on walls and floor
 - [ ] hidden coins
@@ -30,6 +30,7 @@
 - [ ] screen works for various sizes
 - [ ] different control schemes
 - [ ] different cabinet styles with similar UVs
+- [ ] insert coins
 ## API
 - [ ] port over FX code, add user-added FX library support
 - [ ] port over utils, split into own files, add 3D support of neccesary
@@ -41,6 +42,9 @@
 - [ ] preset highscore screen
 - [ ] scorekeeping library
 - [ ] online highscores
+## Arcade Games
+- [ ] verify Invaders still works
+- [ ] prototype Sakura Shooter mechanics
 
 # Phase 4: Game Jam (Oct 20)
 - [ ] help jammers with music
@@ -56,6 +60,7 @@
 - [ ] fix bugs in the jam games
 - [ ] add scares
 - [ ] finalize the layout
+- [ ] make coins and collcatables extra juicy
 - [ ] promote
 - [ ] hope
 
