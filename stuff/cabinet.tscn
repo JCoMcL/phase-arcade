@@ -6,19 +6,22 @@
 [ext_resource type="PackedScene" uid="uid://uw0nw0gw7d6s" path="res://Arcade Games/Test Game/test_game.tscn" id="2_y4ahd"]
 [ext_resource type="Script" uid="uid://bghaddibpt6f1" path="res://addons/crt/crt.gd" id="3_auxia"]
 [ext_resource type="PackedScene" uid="uid://ciofuhj1xxdb7" path="res://stuff/interact_zone.tscn" id="6_mg4d7"]
+[ext_resource type="Texture2D" uid="uid://bok722soe7as4" path="res://textures/props/T_TVTest.png" id="7_iyoos"]
 [ext_resource type="Script" uid="uid://cjchu44q7807" path="res://stuff/cabinet_audio.gd" id="7_sound"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mg4d7"]
 size = Vector3(0.55, 0.4, 0.01)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8w883"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_i5ll8"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_iyoos"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_wo0ye"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
 [node name="Cabinet" type="Node3D" unique_id=1752319625]
 script = ExtResource("1_gqhhl")
+start_powered_on = true
+game_scene = ExtResource("2_y4ahd")
 
 [node name="cabinet_model" parent="." unique_id=1223763958 instance=ExtResource("1_hcb6m")]
 
@@ -34,6 +37,7 @@ audio_listener_enable_2d = true
 size = Vector2i(320, 240)
 
 [node name="CRTLayer" type="CanvasLayer" parent="SubViewport" unique_id=1384800397]
+unique_name_in_owner = true
 script = ExtResource("3_auxia")
 resolution = Vector2(320, 240)
 scan_line_amount = 0.393
@@ -48,12 +52,9 @@ aberation_amount = 0.638
 roll_line_amount = 0.0
 roll_speed = -8.0
 
-[node name="TestGame" parent="SubViewport/CRTLayer" unique_id=2010249600 instance=ExtResource("2_y4ahd")]
-offset_right = 0.0
-offset_bottom = 0.0
-
 [node name="Screen" parent="." unique_id=769819713 instance=ExtResource("2_bisg2")]
 transform = Transform3D(1, 0, 0, 0, 0.813933, 0.5809587, 0, -0.5809587, 0.813933, 0, 1.023, 0)
+texture = ExtResource("7_iyoos")
 
 [node name="ScreenInteractZone" parent="Screen" unique_id=1828705782 instance=ExtResource("6_mg4d7")]
 unique_name_in_owner = true
@@ -66,13 +67,13 @@ shape = SubResource("BoxShape3D_mg4d7")
 
 [node name="Tooltip" parent="Screen/ScreenInteractZone" index="1" unique_id=1310991000]
 transform = Transform3D(1, 0, 0, 0, 0.99138325, 0.13099346, 0, -0.13099346, 0.99138325, 0, -0.21796304, -0.04354644)
-texture = SubResource("ViewportTexture_8w883")
+texture = SubResource("ViewportTexture_i5ll8")
 
 [node name="Label" parent="Screen/ScreenInteractZone/Tooltip/SubViewport" parent_id_path=PackedInt32Array(1828705782, 1414188419) index="0" unique_id=238621318]
 text = "[LMB] play"
 
 [node name="Shadow" parent="Screen/ScreenInteractZone/Tooltip" index="1" unique_id=1306854022]
-texture = SubResource("ViewportTexture_iyoos")
+texture = SubResource("ViewportTexture_wo0ye")
 
 [node name="ObservationPoint" type="Camera3D" parent="Screen" unique_id=1442811002]
 unique_name_in_owner = true
