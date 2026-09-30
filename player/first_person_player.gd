@@ -32,7 +32,7 @@ func setup_children() -> void:
 	if not is_node_ready():
 		# the above setters will trigger this early, so we have to wait until our children come home
 		await ready
-	assert (height >= width) #TODO: assert does nothing in tool mode, need a better we to handle this
+	assert (height >= width) #TODO: assert does nothing in tool mode, need a better way to handle this
 
 	collision_layer = Layers.physics3D["Player"]
 	collision_mask = Layers.physics3D["Solid"]
@@ -60,10 +60,58 @@ func _interact():
 	if target:
 		target.interact(self)
 
+# --- Arcade Cabinets ---
+
+var active_cabinet:ArcadeCabinet = null
+var active_camera_transform:CameraTransform = null
+var cabinet_tween:Tween = null
+var look_accum = Vector2.ZERO
+
+func set_active_cabinet(cab:ArcadeCabinet):
+	active_cabinet = cab
+	active_camera_transform = cab.get_observation_delta(%Camera)
+	_start_camera_transition(active_camera_transform)
+
+func clear_active_cabinet():
+	if not active_cabinet:
+		return
+	active_cabinet.on_operator_release()
+	_start_camera_transition(active_camera_transform.inverse())
+	active_camera_transform = null
+	rotate_y(%Camera.rotation.y)
+	reset_physics_interpolation()
+	%Camera.rotation.y = 0
+	%Camera.reset_physics_interpolation()
+	print(%Camera.rotation.y)
+
+	active_cabinet = null
+
+
+func _start_camera_transition(target:CameraTransform):
+	look_accum = Vector2.ZERO
+	if cabinet_tween:
+		cabinet_tween.kill() # TODO maybe reverse would be better
+	cabinet_tween = target.transition_relative(%Camera)
+
+const UNLOCK_ANGLE := 40.0
+func _check_cabinet_lock() -> void:
+	if not active_cabinet:
+		return
+	for axis in [look_accum.x, look_accum.y]:
+		if absf(rad_to_deg(axis)) > UNLOCK_ANGLE:
+			clear_active_cabinet()
+			return
+
 # --- Main ---
 
 func _ready():
 	setup_children()
+
+func _process(_delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
+
+	_check_cabinet_lock()
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
@@ -76,7 +124,11 @@ func _physics_process(delta: float) -> void:
 	var target_height = height * (0.4 if crouching else 1.0)
 	change_height(lerpf($Head.position.y, target_height, 1.0 - exp(-crouch_speed * delta)))
 
-	var walk_input := Input.get_vector("left", "right", "forward", "backward").normalized()
+	var walk_input:Vector2
+	if active_cabinet == null:
+		walk_input = Input.get_vector("left", "right", "forward", "backward").normalized()
+	else:
+		walk_input = Vector2.ZERO
 	var walk = walk_input.rotated(-rotation.y) * speed * clampf($Head.position.y / height, 0.0, 1.0)
 
 	# maybe this should be relative to the floor normal, but probably doesn't matter
@@ -93,19 +145,29 @@ func _physics_process(delta: float) -> void:
 func _input(ev: InputEvent) -> void:
 	if ev is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	if ev.is_action_pressed("interact"):
-		_interact()
-	if ev.is_action_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if ev is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+	elif ev is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		var look = ev.relative * -mouse_sensitivity / 1000
 
 		if DisplayServer.get_name() == &"web":
 			look *=  0.6 # Look is faster on the web for some reason
 
-		rotate_y(look.x)
+		if active_cabinet:
+			%Camera.rotate_y(look.x)
+		else:
+			rotate_y(%Camera.rotation.y)
+			%Camera.rotation.y = 0
+			rotate_y(look.x)
 		# Rotating the camera instead of the head, as the head is a sphere so it doesn't need to rotate.
 		# and moving collision objects unneccesarily can have side-effects.
 		%Camera.rotate_x(look.y)
+		look_accum += look
+
 		const max_vertical_look = PI/2
 		%Camera.rotation.x = clampf(%Camera.rotation.x, -max_vertical_look, max_vertical_look)
+
+	if ev.is_action_pressed("interact"):
+		_interact()
+	elif ev.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	elif active_cabinet != null:
+		active_cabinet.push_input(ev)

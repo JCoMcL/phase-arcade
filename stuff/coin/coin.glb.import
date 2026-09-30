@@ -34,15 +34,15 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=1
+materials/extract=0
 materials/extract_format=0
 materials/extract_path="res://materials"
 _subresources={
 "materials": {
 "Coin": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://materials/Coin.tres",
-"use_external/path": "uid://b0pk1xehvmp5y"
+"use_external/fallback_path": "res://stuff/coin/Coin material.tres",
+"use_external/path": "uid://cxr8c3lg0bmnc"
 }
 }
 }

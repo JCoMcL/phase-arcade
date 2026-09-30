@@ -13,6 +13,6 @@ emission_enabled = true
 emission = Color(0.17393684, 0.13883919, 0.07375295, 1)
 emission_energy_multiplier = 0.62
 normal_enabled = true
-normal_scale = 0.63
+normal_scale = 0.39
 normal_texture = ExtResource("1_vaff6")
 grow_amount = 0.058

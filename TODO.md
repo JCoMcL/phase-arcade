@@ -6,20 +6,20 @@
 
 # Phase 2: Core Functionality (Oct 01)
 ## Arcade Cabinet
-- [ ] video
-- [ ] audio
-- [ ] input
+- [x] video
+- [-] audio
+- [x] input
 ## Player Character
 - [x] basic first person controls
 - [x] crouching
 - [x] interaction
-- [ ] cabinet lock-on
+- [-] cabinet lock-on
 - [x] tooltips
 - [ ] inventory
 ## Level
 - [ ] collisions on walls and floor
 - [ ] hidden coins
-- [ ] switchable lights
+- [x] switchable lights
 
 # Phase 3: Open For Submissions (Oct 10)
 - [ ] documentation
@@ -79,6 +79,8 @@
 - [ ] rigid bodies
 - [ ] cabinets illuminate themselves
 - [ ] flickering lights
+## Gamefeel
+- [ ] gradual angle-based transition from cabinet lock-on
 ## Props
 - [ ] wrecked cabinets
 - [ ] various light sources which could operate without mains power
