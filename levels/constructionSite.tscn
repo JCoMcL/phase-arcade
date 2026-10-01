@@ -361,7 +361,7 @@ quality = 3
 bounces = 5
 interior = true
 denoiser_strength = 0.4
-texel_scale = 2.0
+texel_scale = 3.0
 generate_probes_subdiv = 4
 light_data = ExtResource("10_5ctpl")
 
@@ -497,7 +497,7 @@ gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_2rewf")
 
 [node name="WallUpperNorth" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=647200535]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.002, 4.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4.5, 0)
 material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_jay6p")
@@ -664,7 +664,12 @@ interior = true
 enable_shadows = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=854881974]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.0054264, 2.1038895, -2.1526432)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.0054264, 2.7316477, -1.0724449)
+light_bake_mode = 1
+omni_range = 5.778603
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=76807690]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.0054264, 2.7316477, -3.0464334)
 light_bake_mode = 1
 omni_range = 5.778603
 

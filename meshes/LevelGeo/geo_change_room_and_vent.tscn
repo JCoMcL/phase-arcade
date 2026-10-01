@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://ctmgj6eqnpye5" path="res://materials/Concrete.tres" id="2_v5sw8"]
 [ext_resource type="Material" uid="uid://cqmf76ra2vssu" path="res://materials/Bricks_triplanar.tres" id="3_ma23d"]
 [ext_resource type="Material" uid="uid://dnvgetg74i2co" path="res://materials/Metal.tres" id="4_yxs1m"]
+[ext_resource type="Material" uid="uid://cn5nd0wh7xw5k" path="res://materials/Metal_rough.tres" id="5_v5sw8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2j8k"]
 resource_name = "MatA"
@@ -181,7 +182,7 @@ surface_material_override/2 = ExtResource("4_yxs1m")
 
 [node name="MaintenanceVent" parent="." index="1" unique_id=1477924550]
 mesh = SubResource("ArrayMesh_v5sw8")
-surface_material_override/0 = ExtResource("4_yxs1m")
+surface_material_override/0 = ExtResource("5_v5sw8")
 
 [node name="Floor" type="StaticBody3D" parent="." index="2" unique_id=1523005840]
 
