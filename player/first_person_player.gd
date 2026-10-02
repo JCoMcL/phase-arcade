@@ -120,7 +120,7 @@ func handle_collision(k: KinematicCollision3D):
 	var col = k.get_collider()
 	if col is RigidBody3D:
 		col.apply_force(
-			k.get_remainder() * 2000,
+			col.to_local(k.get_remainder() * -1000),
 			col.to_local(k.get_position())
 		)
 

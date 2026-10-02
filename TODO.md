@@ -4,7 +4,7 @@
 - [x] interesting level
 - [x] interactive coins
 
-# Phase 2: Core Functionality (Oct 01)
+# ~~Phase 2: Core Functionality (Oct 01)~~
 ## Arcade Cabinet
 - [x] video
 - [-] audio
@@ -17,8 +17,8 @@
 - [x] tooltips
 - [x] inventory
 ## Level
-- [ ] collisions on walls and floor
-- [ ] hidden coins
+- [-] collisions on walls and floor
+- [x] hidden coins
 - [x] switchable lights
 
 # Phase 3: Open For Submissions (Oct 10)
@@ -29,6 +29,7 @@
 ## Arcade Cabinet
 - [ ] screen works for various sizes
 - [ ] different control schemes
+- [ ] lock-on bugs fixed
 - [ ] different cabinet styles with similar UVs
 - [ ] insert coins
 ## API
@@ -45,6 +46,8 @@
 ## Arcade Games
 - [ ] verify Invaders still works
 - [ ] prototype Sakura Shooter mechanics
+## Level
+- [ ] proper rigidbody interaction
 
 # Phase 4: Game Jam (Oct 20)
 - [ ] help jammers with music
@@ -60,7 +63,7 @@
 - [ ] fix bugs in the jam games
 - [ ] add scares
 - [ ] finalize the layout
-- [ ] make coins and collcatables extra juicy
+- [ ] make coins and collectables extra juicy
 - [ ] promote
 - [ ] hope
 
@@ -90,7 +93,8 @@
 - [ ] wrecked cabinets
 - [ ] various light sources which could operate without mains power
 - [ ] things that produce environmental audio
-- [ ] working doors
+- [x] working doors
+- [ ] doors that work and aren't weird or clunky
 ## Scares
 - [ ] things that go bump in the night
 - [ ] power outages
@@ -106,10 +110,11 @@
 - [ ] good reverb settings
 ## Convenience
 - [ ] aggregate reference material in the repo
--
 ### Import script
 - [ ] pull assets from a multi-asset export
 - [ ] set up collisions
+- [ ] bounding box
+- [ ] rigidbodies
 
 `[x]`: done, `[-]`: WIP, better than nothing
 

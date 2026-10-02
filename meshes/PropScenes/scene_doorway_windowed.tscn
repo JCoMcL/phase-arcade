@@ -1,12 +1,26 @@
 [gd_scene format=4 uid="uid://csvyrqpwx17q8"]
 
 [ext_resource type="ArrayMesh" uid="uid://fpj2fejo4tlb" path="res://meshes/sm_door_windowed.tres" id="1_gygjo"]
+[ext_resource type="Script" uid="uid://kfkmmy1cvuxu" path="res://meshes/PropScenes/door.gd" id="1_q5lxy"]
 [ext_resource type="Material" uid="uid://cqmf76ra2vssu" path="res://materials/Bricks_triplanar.tres" id="2_0bukc"]
 [ext_resource type="Material" uid="uid://c2su0p7ytbnnf" path="res://materials/Construction.tres" id="3_5cnxy"]
-[ext_resource type="ArrayMesh" uid="uid://besvkxjcsesdy" path="res://meshes/sm_FloorJoint.tres" id="4_knowe"]
+[ext_resource type="PackedScene" uid="uid://ciofuhj1xxdb7" path="res://stuff/interact_zone.tscn" id="3_qhktn"]
+[ext_resource type="ArrayMesh" uid="uid://do8fanvchttdo" path="res://meshes/sm_FloorJoint.tres" id="4_knowe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e3x8e"]
-size = Vector3(0.1, 0.89, 2.133)
+size = Vector3(0.1, 0.83053184, 2.1047497)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7u3u8"]
+viewport_path = NodePath("Tooltip/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2s2nt"]
+viewport_path = NodePath("Tooltip/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_q5lxy"]
+viewport_path = NodePath("Tooltip/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qhktn"]
+viewport_path = NodePath("Tooltip/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cpso"]
 resource_name = "MatA"
@@ -85,23 +99,96 @@ points = PackedVector3Array(-0.10001957, -1, -5.715275e-17, 0.09999022, -1, -5.7
 transform = Transform3D(-0.99999994, 8.742277e-08, 3.821371e-15, 0, -4.3711385e-08, 1, 8.742277e-08, 0.99999994, 4.371139e-08, -0.09, 0, -0.457)
 
 [node name="HingeJoint3D" type="HingeJoint3D" parent="DoorPivot" unique_id=643683205]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032, 0, 0.25)
-node_b = NodePath("../RigidBody3D")
+unique_name_in_owner = true
+transform = Transform3D(0.9999999, 7.1054274e-15, 0, -7.1054274e-15, 0.9999999, 0, -4.2351647e-22, -3.5527137e-15, 1, 0.010635026, -0.009457707, 0.25)
+node_b = NodePath("../Door")
+angular_limit/enable = true
+angular_limit/upper = 3.1415927
+angular_limit/lower = 0.0
+motor/target_velocity = -0.34906584
 
 [node name="HingeJoint3D2" type="HingeJoint3D" parent="DoorPivot" unique_id=411445948]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032, 0, 1.8)
-node_b = NodePath("../RigidBody3D")
+transform = Transform3D(0.9999999, 7.1054274e-15, 0, -7.1054274e-15, 0.9999999, 0, -4.2351647e-22, -3.5527137e-15, 1, 0.010635026, -0.009457648, 1.8)
+node_b = NodePath("../Door")
+angular_limit/enable = true
+angular_limit/upper = 3.1415927
+angular_limit/lower = 0.0
 
-[node name="RigidBody3D" type="RigidBody3D" parent="DoorPivot" unique_id=442503229]
+[node name="Door" type="RigidBody3D" parent="DoorPivot" unique_id=442503229]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.031999994, 0, 0)
+script = ExtResource("1_q5lxy")
 
-[node name="SmDoorWindowed" type="MeshInstance3D" parent="DoorPivot/RigidBody3D" unique_id=1631294201]
+[node name="SmDoorWindowed" type="MeshInstance3D" parent="DoorPivot/Door" unique_id=1631294201]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.450581e-09, 0, 0)
 mesh = ExtResource("1_gygjo")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DoorPivot/RigidBody3D" unique_id=2044125488]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7252903e-09, 0.45700002, 1.067)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DoorPivot/Door" unique_id=2044125488]
+transform = Transform3D(0.9999835, 1.3216095e-12, 1.6474791e-19, -1.3216095e-12, 0.9999835, 1.0942358e-12, -2.723211e-19, -1.8154367e-12, 1, 3.3527613e-08, 0.47226143, 1.0615007)
 shape = SubResource("BoxShape3D_e3x8e")
+
+[node name="InteractZone" parent="DoorPivot/Door" unique_id=1828705782 instance=ExtResource("3_qhktn")]
+transform = Transform3D(-8.526513e-14, -4.371123e-08, -0.9999971, -0.9999971, -4.371123e-08, 8.526513e-14, -4.371126e-08, 0.99999994, -4.3711374e-08, -0.05000908, 0.7933248, 0.89528495)
+tooltip = "[LMB]
+
+open "
+
+[node name="CollisionShape3D" parent="DoorPivot/Door/InteractZone" index="0" unique_id=1398816554]
+transform = Transform3D(1, 5.2854856e-19, 0, -8.4703295e-22, 1, 6.446619e-22, 0, -1.3665859e-20, 1, 0, 0, 0.0016632099)
+
+[node name="Tooltip" parent="DoorPivot/Door/InteractZone" index="1" unique_id=1310991000]
+transform = Transform3D(1, -2.1006417e-19, 0, -8.4703295e-22, 1, 6.750156e-14, 0, -9.6282636e-21, 1, 0, 0, 0)
+texture = SubResource("ViewportTexture_7u3u8")
+
+[node name="SubViewport" parent="DoorPivot/Door/InteractZone/Tooltip" index="0" unique_id=1414188419]
+size = Vector2i(70, 81)
+
+[node name="Label" parent="DoorPivot/Door/InteractZone/Tooltip/SubViewport" index="0" unique_id=238621318]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[LMB]
+
+open "
+vertical_alignment = 1
+
+[node name="Shadow" parent="DoorPivot/Door/InteractZone/Tooltip" index="1" unique_id=1306854022]
+texture = SubResource("ViewportTexture_2s2nt")
+
+[node name="InteractZone2" parent="DoorPivot/Door" unique_id=2140775822 instance=ExtResource("3_qhktn")]
+transform = Transform3D(7.1054274e-15, 4.3711378e-08, 0.99999696, 0.99999696, -4.3711378e-08, -7.1054274e-15, 4.3711257e-08, 0.99999994, -4.371126e-08, 0.058680262, 0.7933247, 0.89528483)
+tooltip = "[LMB]
+
+close"
+
+[node name="CollisionShape3D" parent="DoorPivot/Door/InteractZone2" index="0" unique_id=1398816554]
+transform = Transform3D(1, 5.2854856e-19, 0, -8.4703295e-22, 1, 6.446619e-22, 0, -1.3665859e-20, 1, 0, 0, 0.0016632099)
+
+[node name="Tooltip" parent="DoorPivot/Door/InteractZone2" index="1" unique_id=1310991000]
+transform = Transform3D(1, -2.1006417e-19, 0, -8.4703295e-22, 1, 6.750156e-14, 0, -9.6282636e-21, 1, 0, 0, 0)
+texture = SubResource("ViewportTexture_q5lxy")
+
+[node name="SubViewport" parent="DoorPivot/Door/InteractZone2/Tooltip" index="0" unique_id=1414188419]
+size = Vector2i(70, 81)
+
+[node name="Label" parent="DoorPivot/Door/InteractZone2/Tooltip/SubViewport" index="0" unique_id=238621318]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[LMB]
+
+close"
+vertical_alignment = 1
+
+[node name="Shadow" parent="DoorPivot/Door/InteractZone2/Tooltip" index="1" unique_id=1306854022]
+texture = SubResource("ViewportTexture_qhktn")
 
 [node name="Doorway" type="MeshInstance3D" parent="." unique_id=1996922192]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
@@ -129,3 +216,9 @@ shape = SubResource("ConvexPolygonShape3D_w11eo")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 material_override = ExtResource("3_5cnxy")
 mesh = ExtResource("4_knowe")
+
+[connection signal="interacted" from="DoorPivot/Door/InteractZone" to="DoorPivot/Door" method="open"]
+[connection signal="interacted" from="DoorPivot/Door/InteractZone2" to="DoorPivot/Door" method="close"]
+
+[editable path="DoorPivot/Door/InteractZone"]
+[editable path="DoorPivot/Door/InteractZone2"]

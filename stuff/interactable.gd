@@ -4,7 +4,7 @@ extends CollisionObject3D
 signal interacted
 signal interacted_by(Node3D)
 
-@export var tooltip:String = "[LMB] interact":
+@export_multiline var tooltip:String = "[LMB] interact":
 	set(s):
 		tooltip = s
 		if is_node_ready():
