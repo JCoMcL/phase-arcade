@@ -1,9 +1,22 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://f7pb3wu04tx7"]
 
+[ext_resource type="Texture2D" uid="uid://c54c72cl375dy" path="res://textures/effects/T_pixelNoise.png" id="1_1eaqn"]
+
+[sub_resource type="Gradient" id="Gradient_5vmmu"]
+offsets = PackedFloat32Array(0.0034129692)
+colors = PackedColorArray(0.3, 0.3, 0.3, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_g806g"]
+gradient = SubResource("Gradient_5vmmu")
+width = 4
+
 [resource]
 resource_name = "Bricks"
 cull_mode = 2
 albedo_color = Color(1, 0.94, 0.88, 1)
+detail_enabled = true
+detail_mask = SubResource("GradientTexture1D_g806g")
+detail_albedo = ExtResource("1_1eaqn")
 uv1_triplanar = true
 uv1_world_triplanar = true
 texture_filter = 2

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://ctgsld2gkkji1"]
 
 [ext_resource type="PackedScene" uid="uid://c1uuib6xaypqk" path="res://meshes/SM_Duct_Round.fbx" id="1_8g53s"]
-[ext_resource type="Material" uid="uid://dnvgetg74i2co" path="res://materials/Metal.tres" id="2_r6yip"]
+[ext_resource type="Material" uid="uid://cn5nd0wh7xw5k" path="res://materials/Metal_rough.tres" id="2_8g53s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqkca"]
 
@@ -37,8 +37,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_a3tuo")
 
-[node name="SM_Duct_Round" unique_id=1083795838 instance=ExtResource("1_8g53s")]
+[node name="Duct_Round" unique_id=1083795838 instance=ExtResource("1_8g53s")]
 
 [node name="DuctRound_A" parent="." index="0" unique_id=957610187]
-material_override = ExtResource("2_r6yip")
+material_override = ExtResource("2_8g53s")
 mesh = SubResource("ArrayMesh_8g53s")
