@@ -370,11 +370,11 @@ transform = Transform3D(0.9644837, 0, 0.2641424, 0, 1, 0, -0.2641424, 0, 0.96448
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=1329519440]
 quality = 3
+supersampling = true
 bounces = 5
 directional = true
 interior = true
 denoiser_strength = 0.4
-texel_scale = 3.0
 generate_probes_subdiv = 4
 light_data = ExtResource("10_5ctpl")
 
