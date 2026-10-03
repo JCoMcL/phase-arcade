@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bqa3j5c136vqd" path="res://meshes/LevelGeo/SM_geo_MaintenanceCorridor.fbx" id="1_onm2l"]
 [ext_resource type="Material" uid="uid://ctmgj6eqnpye5" path="res://materials/Concrete.tres" id="2_i6kwm"]
 [ext_resource type="Material" uid="uid://cqmf76ra2vssu" path="res://materials/Bricks_triplanar.tres" id="3_412tj"]
+[ext_resource type="PackedScene" uid="uid://5d25caorg1ew" path="res://meshes/LevelGeo/stairwell_railing.tscn" id="4_ex75a"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2sytv"]
 points = PackedVector3Array(-3.8, -0.625, 1.45, -3.8, -0.625, 1.6499991, -3.8, 2.375, 1.45, -2.8, -0.625, 1.45, -2.8, -0.625, 1.6499991, -3.8, 2.375, 1.6499991, -2.8, 2.375, 1.45, -2.8, 2.375, 1.6495097)
@@ -91,3 +92,9 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -2.2, -6.9150667, 4.875)
 mesh = SubResource("ArrayMesh_412tj")
 surface_material_override/0 = ExtResource("2_i6kwm")
 surface_material_override/1 = ExtResource("3_412tj")
+
+[node name="StairwellRailing" parent="." index="18" unique_id=776346251 instance=ExtResource("4_ex75a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 0, 4)
+
+[node name="StairwellRailing2" parent="." index="19" unique_id=502271809 instance=ExtResource("4_ex75a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, -3.3, 4)

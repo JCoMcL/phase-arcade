@@ -1,9 +1,9 @@
-[gd_scene format=4 uid="uid://cg3qvbh6lqn8u"]
+[gd_scene format=4 uid="uid://cm6ndkr57fl01"]
 
-[ext_resource type="PackedScene" uid="uid://csvyrqpwx17q8" path="res://meshes/PropScenes/scene_doorway_windowed.tscn" id="1_27vip"]
-[ext_resource type="ArrayMesh" uid="uid://cepb3yf6ingef" path="res://meshes/sm_door.tres" id="2_sqyys"]
-[ext_resource type="Material" uid="uid://f7pb3wu04tx7" path="res://materials/PlasterWall.tres" id="4_uacm6"]
-[ext_resource type="Material" uid="uid://cqmf76ra2vssu" path="res://materials/Bricks_triplanar.tres" id="5_kb52q"]
+[ext_resource type="PackedScene" uid="uid://csvyrqpwx17q8" path="res://meshes/PropScenes/scene_doorway_windowed.tscn" id="1_j2lab"]
+[ext_resource type="ArrayMesh" uid="uid://cepb3yf6ingef" path="res://meshes/sm_door.tres" id="2_u03kr"]
+[ext_resource type="Material" uid="uid://f7pb3wu04tx7" path="res://materials/PlasterWall.tres" id="3_mbdqu"]
+[ext_resource type="Material" uid="uid://cqmf76ra2vssu" path="res://materials/Bricks_triplanar.tres" id="4_qa2x2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cpso"]
 resource_name = "MatA"
@@ -104,13 +104,14 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_do1ig")
 
-[node name="scene_doorway_plain" unique_id=197144363 instance=ExtResource("1_27vip")]
+[node name="scene_doorway_plain" unique_id=197144363 instance=ExtResource("1_j2lab")]
 
 [node name="SmDoorWindowed" parent="DoorPivot/RigidBody3D" parent_id_path=PackedInt32Array(442503229) index="0" unique_id=1631294201]
-mesh = ExtResource("2_sqyys")
+transform = Transform3D(-0.45810667, 0.8888971, 3.8854928e-08, -0.8888971, -0.45810667, -6.373587e-08, -3.8854928e-08, -6.373587e-08, 1, -7.450581e-09, 0, 0)
+mesh = ExtResource("2_u03kr")
 
 [node name="Doorway" parent="." index="1" unique_id=1996922192]
 mesh = SubResource("ArrayMesh_sb1tt")
-surface_material_override/0 = ExtResource("4_uacm6")
-surface_material_override/1 = ExtResource("4_uacm6")
-surface_material_override/2 = ExtResource("5_kb52q")
+surface_material_override/0 = ExtResource("3_mbdqu")
+surface_material_override/1 = ExtResource("3_mbdqu")
+surface_material_override/2 = ExtResource("4_qa2x2")

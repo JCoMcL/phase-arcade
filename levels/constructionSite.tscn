@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://cg3qvbh6lqn8u" path="res://meshes/PropScenes/scene_doorway_plain.tscn" id="19_n8v8u"]
 [ext_resource type="PackedScene" uid="uid://d3d2lkut5yfxh" path="res://meshes/PropScenes/scene_cabling_heavy.tscn" id="22_lcydp"]
 [ext_resource type="PackedScene" uid="uid://dqtnuuscwf5ly" path="res://meshes/LevelGeo/geo_maintenance_corridor.tscn" id="23_auksg"]
+[ext_resource type="PackedScene" uid="uid://cm6ndkr57fl01" path="res://meshes/PropScenes/scene_doorway_plain_pinnedOpen.tscn" id="24_e1iq1"]
+[ext_resource type="PackedScene" uid="uid://bamm7200g7e61" path="res://meshes/PropScenes/scene_misc_cables.tscn" id="25_auksg"]
 [ext_resource type="PackedScene" uid="uid://d2awucc1aqq1q" path="res://meshes/PropScenes/prize_counter.tscn" id="25_rn6t8"]
 [ext_resource type="PackedScene" uid="uid://btjaqyhkj6rod" path="res://meshes/LevelGeo/geo_arcade_room.tscn" id="27_40a1i"]
 [ext_resource type="PackedScene" uid="uid://c3wtaj3flt31l" path="res://meshes/LevelGeo/change_counter.tscn" id="28_40a1i"]
@@ -43,9 +45,15 @@
 [ext_resource type="PackedScene" uid="uid://ctgsld2gkkji1" path="res://meshes/PropScenes/scene_duct_round.tscn" id="43_40a1i"]
 [ext_resource type="PackedScene" uid="uid://dv3451sltg66c" path="res://meshes/LevelGeo/geo_change_room_and_vent.tscn" id="46_ggqdw"]
 [ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://stuff/coin/coin.tscn" id="46_xsasp"]
+[ext_resource type="PackedScene" uid="uid://briklf270u7jk" path="res://meshes/SM_EmergencyLamp.fbx" id="47_xsasp"]
 [ext_resource type="Material" uid="uid://htyxn622kwqj" path="res://effects/myFirstParticleShader.tres" id="48_auksg"]
 [ext_resource type="Material" uid="uid://cur6y4wwkw7hp" path="res://effects/basicParticleMaterial.tres" id="49_0iggl"]
+[ext_resource type="ArrayMesh" uid="uid://oq1t7gxkt384" path="res://meshes/sm_FireExtinguisher_co2.tres" id="49_7byvj"]
 [ext_resource type="PackedScene" uid="uid://c178lfbqyyhpv" path="res://meshes/SM_Payphone.fbx" id="50_7byvj"]
+[ext_resource type="ArrayMesh" uid="uid://b27n7m21r0mh8" path="res://meshes/sm_FireExtinguisher_water.tres" id="50_e1iq1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jay6p"]
+size = Vector3(69, 4, 100)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
 sky_top_color = Color(0.042913936, 0.070302956, 0.10943019, 1)
@@ -159,9 +167,6 @@ size = Vector3(14, 2, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_n8v8u"]
 size = Vector3(0.2, 2, 18)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jay6p"]
-size = Vector3(100, 4, 100)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_u1clg"]
 _surfaces = [{
@@ -291,6 +296,13 @@ size = Vector2(0.03, 0.1)
 
 [node name="level" type="Node3D" unique_id=1498293256]
 
+[node name="FloorBox" type="StaticBody3D" parent="." unique_id=545620827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorBox" unique_id=1892300573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+shape = SubResource("BoxShape3D_jay6p")
+
 [node name="FirstPersonCharacter" parent="." unique_id=743034332 instance=ExtResource("33_1841t")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.614065, 0.069281936, -3.6743503)
 
@@ -359,6 +371,7 @@ transform = Transform3D(0.9644837, 0, 0.2641424, 0, 1, 0, -0.2641424, 0, 0.96448
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=1329519440]
 quality = 3
 bounces = 5
+directional = true
 interior = true
 denoiser_strength = 0.4
 texel_scale = 3.0
@@ -491,7 +504,7 @@ gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_rn6t8")
 
 [node name="WallNorth2" type="MeshInstance3D" parent="LightmapGI/levelGeo/foyer" unique_id=925130562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.002, 1.5, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.5, 2)
 material_override = ExtResource("17_r5lcs")
 gi_lightmap_texel_scale = 4.0
 mesh = SubResource("BoxMesh_2rewf")
@@ -531,7 +544,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.0000001, 0, 1, 0, -4.371139e-
 [node name="scene_doorway_plain4" parent="LightmapGI/levelGeo/foyer" unique_id=2139982719 instance=ExtResource("19_n8v8u")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.0000001, 0, 1, 0, -4.371139e-08, -8.5, 0, 6)
 
-[node name="scene_doorway_plain2" parent="LightmapGI/levelGeo/foyer" unique_id=1185195087 instance=ExtResource("19_n8v8u")]
+[node name="scene_doorway_plain5" parent="LightmapGI/levelGeo/foyer" unique_id=486905505 instance=ExtResource("24_e1iq1")]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 10, 0, -3)
 
 [node name="foyerEntry" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=16682961]
@@ -612,6 +625,9 @@ mesh = SubResource("BoxMesh_vnpcl")
 [node name="geo_MaintenanceCorridor" parent="LightmapGI/levelGeo" unique_id=1098223120 instance=ExtResource("23_auksg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, -4)
 
+[node name="MiscCables" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=238186824 instance=ExtResource("25_auksg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9, 0, 0.7)
+
 [node name="cabling_heavy" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=537466891 instance=ExtResource("22_lcydp")]
 transform = Transform3D(-1.0546057e-07, 0, 0.983, 0, 0.983, 0, -0.983, 0, -1.0546057e-07, 1.8999999, 2.5, 1.9699993)
 
@@ -622,8 +638,18 @@ transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, -8, 
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6286871, 2.7180865, 2.195938)
 light_color = Color(1, 0.91, 0.8, 1)
 light_energy = 0.4
+light_size = 0.1
 light_bake_mode = 1
-omni_range = 7.0
+omni_range = 9.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=566424859]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.6286881, 2.7180865, -1.8040619)
+light_color = Color(1, 0.91, 0.8, 1)
+light_energy = 0.08
+light_size = 0.1
+light_bake_mode = 1
+omni_range = 9.0
 omni_attenuation = 2.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=233993720]
@@ -632,6 +658,24 @@ light_color = Color(0.7340916, 0.9877773, 0.9166448, 1)
 light_energy = 0.4
 light_bake_mode = 1
 omni_range = 8.548474
+omni_attenuation = 2.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=453780009]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.57907, -2.3451805, 3.804905)
+light_color = Color(0.8568945, 0.0069211777, 6.738305e-07, 1)
+light_energy = 0.01
+light_indirect_energy = 3.0
+light_size = 0.5
+light_bake_mode = 1
+omni_range = 6.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=502429786]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.9921193, 5.0505724, 2.8083115)
+light_color = Color(0.7340916, 0.9877773, 0.9166448, 1)
+light_energy = 0.1
+omni_range = 8.548474
+omni_attenuation = 2.0
 
 [node name="scene_doorway_escape" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=834765802 instance=ExtResource("19_2rewf")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.3841858e-07, 0, 6)
@@ -667,11 +711,13 @@ enable_shadows = true
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.0054264, 2.7316477, -1.0724449)
 light_bake_mode = 1
 omni_range = 5.778603
+omni_attenuation = 2.0
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=76807690]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.0054264, 2.7316477, -3.0464334)
 light_bake_mode = 1
 omni_range = 5.778603
+omni_attenuation = 2.0
 
 [node name="SM_geo_ArcadeRoom" parent="LightmapGI/levelGeo" unique_id=343757919 instance=ExtResource("27_40a1i")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.5, 0, 17)
@@ -685,7 +731,7 @@ light_color = Color(0.49803922, 0, 1, 1)
 light_energy = 0.21
 
 [node name="Light_UVTest" type="OmniLight3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1640310653]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.4055443, 1.340107, -2.8474636)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.065424, 1.340107, -0.78112125)
 layers = 2
 light_color = Color(0.49803922, 0, 1, 1)
 light_energy = 0.3
@@ -805,16 +851,16 @@ transform = Transform3D(0.25881916, -3.5527137e-15, -0.96592605, 0, 1, 0, 0.9659
 transform = Transform3D(-0.07440421, -3.5527137e-15, -0.99722826, 7.992032e-17, 1, -3.5527137e-15, 0.99722826, 4.440892e-16, -0.07440421, 9.288436, 1.1920929e-07, 1.3319768)
 
 [node name="Sofa9" parent="LightmapGI/levelGeo" unique_id=469762780 instance=ExtResource("31_r5lcs")]
-transform = Transform3D(0.2547372, -3.5527137e-15, -0.96701056, 7.992033e-17, 1, -3.5527137e-15, 0.96701056, 3.5527137e-15, 0.2547372, 9.271562, 1.1920929e-07, -0.57470465)
+transform = Transform3D(-0.5523632, -0.48418677, -0.67857105, -0.5694359, 0.81365967, -0.11705183, 0.6088006, 0.32174733, -0.7251489, 9.574827, 0.42660424, -2.8667126)
 
 [node name="Sofa4" parent="LightmapGI/levelGeo" unique_id=1516233921 instance=ExtResource("31_r5lcs")]
-transform = Transform3D(0.54446346, -3.5527137e-15, -0.8387845, 0, 1, 0, 0.8387845, 3.5527137e-15, 0.54446346, 8.574016, -1.1920929e-07, -4.257549)
+transform = Transform3D(0.5158661, -0.8563392, -0.023777135, 0.85543096, 0.5164138, -0.039428256, 0.0460428, -1.5004603e-09, 0.99893945, 9.53396, 0.62806606, -5.2246118)
 
 [node name="Sofa5" parent="LightmapGI/levelGeo" unique_id=810877907 instance=ExtResource("31_r5lcs")]
-transform = Transform3D(-0.3088179, 7.1054274e-15, 0.9511213, 3.4243041e-15, 1, -3.5527137e-15, -0.9511213, 8.881784e-16, -0.3088179, 5.8682995, 1.1920929e-07, -2.8728929)
+transform = Transform3D(-0.3088179, 7.1054274e-15, 0.9511213, 3.4243041e-15, 1, -3.5527137e-15, -0.9511213, 8.881784e-16, -0.3088179, 6.889016, 1.1920929e-07, -4.563616)
 
 [node name="Sofa6" parent="LightmapGI/levelGeo" unique_id=1980501251 instance=ExtResource("31_r5lcs")]
-transform = Transform3D(0.92278045, 0, 0.38532645, 2.2946038e-15, 1, 0, -0.38532645, 3.5527137e-15, 0.92278045, 6.897808, 1.1920929e-07, -4.939285)
+transform = Transform3D(-0.624568, 0.78067297, 0.021551136, -0.7808811, -0.6246769, -0.0020722623, 0.011844785, -0.018123113, 0.9997658, 8.080732, 1.0779462, -5.360346)
 
 [node name="SmSofa" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1933865835]
 transform = Transform3D(0.91066927, -0.4131362, -1.8058758e-08, 0, -4.371139e-08, 1, -0.4131362, -0.91066927, -3.980662e-08, 12.539233, -0.0614869, 15.425039)
@@ -825,12 +871,6 @@ transform = Transform3D(-4.3711392e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1.
 
 [node name="SM_PrizeCounter" parent="." unique_id=2140673125 instance=ExtResource("25_rn6t8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 3.442)
-
-[node name="FloorBox" type="StaticBody3D" parent="." unique_id=545620827]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FloorBox" unique_id=1892300573]
-shape = SubResource("BoxShape3D_jay6p")
 
 [node name="SM_AirVent" parent="." unique_id=1456588445 instance=ExtResource("31_0xm26")]
 transform = Transform3D(-1, -2.1175824e-21, -8.742278e-08, 4.2351647e-22, 1, 1.4210855e-14, 8.742278e-08, 1.4210855e-14, -1, 5.043, 6, 5.092)
@@ -1083,21 +1123,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -9)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 0, 3)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="geo_ChangeRoomAndVent" unique_id=415266999]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1455963, 2.931037, 5.2784443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1455963, 2.2083402, 5.2784443)
 light_color = Color(0.58431375, 1, 0.60784316, 1)
 light_energy = 0.4
+light_indirect_energy = 3.0
+light_size = 1.0
 light_bake_mode = 1
 omni_attenuation = 2.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="geo_ChangeRoomAndVent" unique_id=244291818]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.329107, 4.431386, 5.365032)
 light_color = Color(0.37254903, 1, 1, 1)
+light_indirect_energy = 10.0
 light_bake_mode = 1
 omni_attenuation = 2.0
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="geo_ChangeRoomAndVent" unique_id=1269159304]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.566513, 1.0571833, 5.4945946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.566513, 0.8997886, 5.4645977)
 size = Vector3(13.337891, 4.669922, 5.05249)
 
 [node name="Coin" parent="." unique_id=1489538825 instance=ExtResource("46_xsasp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.892715, 1.4699695, -7.092303)
+
+[node name="SM_EmergencyLamp" parent="." unique_id=1048329118 instance=ExtResource("47_xsasp")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 18.2, 2.75, -5.9)
+
+[node name="SM_EmergencyLamp3" parent="." unique_id=404727446 instance=ExtResource("47_xsasp")]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 18.5, 5.279805, -0.010073066)
+
+[node name="SM_EmergencyLamp2" parent="." unique_id=1178029859 instance=ExtResource("47_xsasp")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 14.200001, 2.75, -5.9)
+
+[node name="SmFireExtinguisherCo2" type="MeshInstance3D" parent="." unique_id=1510131940]
+transform = Transform3D(0.25881907, -0.9659258, -4.222196e-08, 0, -4.371139e-08, 1, -0.9659258, -0.25881907, -1.1313341e-08, 17.851917, 0, -2.2511418)
+mesh = ExtResource("49_7byvj")
+
+[node name="SmFireExtinguisherCo3" type="MeshInstance3D" parent="." unique_id=1878784467]
+transform = Transform3D(0.38932678, -0.42994034, 0.8146017, -0.74124986, -0.6712291, -6.8231216e-08, 0.5467844, -0.60382336, -0.5800207, 17.000038, 0.12737837, -2.314402)
+mesh = ExtResource("49_7byvj")
+
+[node name="SmFireExtinguisherWater" type="MeshInstance3D" parent="." unique_id=429551851]
+transform = Transform3D(-0.07755434, 0.9969881, 4.3579735e-08, 0, -4.371139e-08, 1, 0.9969881, 0.07755434, 3.3900078e-09, 14.997796, 0, -2.2957962)
+mesh = ExtResource("50_e1iq1")
