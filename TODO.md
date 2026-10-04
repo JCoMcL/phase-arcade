@@ -13,7 +13,7 @@
 - [x] basic first person controls
 - [x] crouching
 - [x] interaction
-- [-] cabinet lock-on
+- [x] cabinet lock-on
 - [x] tooltips
 - [x] inventory
 ## Level
@@ -26,10 +26,12 @@
 - [ ] an easy way to test the game during development
 - [ ] get started on our respective games do know what's needed
 - [ ] different places to put games, how accessible?
+- [ ] A nice looking screenshot/video/gif for the announcement
 ## Arcade Cabinet
 - [ ] screen works for various sizes
 - [ ] different control schemes
-- [ ] lock-on bugs fixed
+- [ ] visual controls
+- [x] lock-on bugs fixed
 - [ ] different cabinet styles with similar UVs
 - [ ] insert coins
 ## API
@@ -38,7 +40,6 @@
 - [ ] port unit.gd and shoota.gd and such
 - [ ] add documentation comments to everything
 - [ ] abstract out useful building blocks such as *lives*
-- [ ] add demo recording and demo screen
 ## Highscore
 - [ ] preset highscore screen
 - [ ] scorekeeping library
@@ -48,6 +49,14 @@
 - [ ] prototype Sakura Shooter mechanics
 ## Level
 - [ ] proper rigidbody interaction
+## Audio
+- [ ] Pool my sfxr effects
+- [ ] Warioware sfx
+- [ ] footsteps
+- [ ] cabinet controls
+- [ ] cabinet power on
+- [ ] cabinet insert coins
+- [ ] just some, y'know, things buzzing
 
 # Phase 4: Game Jam (Oct 20)
 - [ ] help jammers with music
@@ -77,7 +86,7 @@
 - [ ] something not quite right about this place
 ## Progression
 - [ ] coins hidden deeper in the arcade
-- [ ] circuit breakers bring new areas online
+- [ ] fuses bring new areas online
 - [ ] machines print prize tickets
 - [ ] vending machine or claw machine to give out prizes
 - [ ] glowing pippa
@@ -104,10 +113,10 @@
 - [ ] dizzy phasebear
 ## Audio
 - [-] coins
-- [ ] footsteps
 - [ ] ambiance
-- [ ] arcade machinery
 - [ ] good reverb settings
+## Arcade Mechanics
+- [ ] add demo recording and demo screen
 ## Convenience
 - [ ] aggregate reference material in the repo
 ### Import script
