@@ -12,10 +12,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_mg4d7"]
 size = Vector3(0.55, 0.4, 0.01)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_i5ll8"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_iyoos"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_wo0ye"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_i5ll8"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
 [node name="Cabinet" type="Node3D" unique_id=1752319625]
@@ -67,13 +67,13 @@ shape = SubResource("BoxShape3D_mg4d7")
 
 [node name="Tooltip" parent="Screen/ScreenInteractZone" index="1" unique_id=1310991000]
 transform = Transform3D(1, 0, 0, 0, 0.99138325, 0.13099346, 0, -0.13099346, 0.99138325, 0, -0.21796304, -0.04354644)
-texture = SubResource("ViewportTexture_i5ll8")
+texture = SubResource("ViewportTexture_iyoos")
 
 [node name="Label" parent="Screen/ScreenInteractZone/Tooltip/SubViewport" parent_id_path=PackedInt32Array(1828705782, 1414188419) index="0" unique_id=238621318]
 text = "[LMB] play"
 
 [node name="Shadow" parent="Screen/ScreenInteractZone/Tooltip" index="1" unique_id=1306854022]
-texture = SubResource("ViewportTexture_wo0ye")
+texture = SubResource("ViewportTexture_i5ll8")
 
 [node name="ObservationPoint" type="Camera3D" parent="Screen" unique_id=1442811002]
 unique_name_in_owner = true

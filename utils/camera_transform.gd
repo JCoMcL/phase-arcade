@@ -3,71 +3,60 @@ class_name CameraTransform
 
 const TRANSITION_TIME := 0.3
 
+var transform:Transform3D
 var position:Vector3
-var rotation:Vector3
 var fov:float
+var from_basis := Basis.IDENTITY
 
 func _init(to:Camera3D, from:Camera3D=null):
 	if not to:
 		return
-	position = to.global_position
-	rotation = to.global_rotation
+	transform = Transform3D(to.get_global_basis())
+	position = to.get_global_position()
 	fov = to.fov
 
 	if from:
-		position -= from.global_position
-		rotation -= from.global_rotation
+		from_basis = from.get_global_basis()
+		transform *= Transform3D(from_basis).inverse()
+		position -= from.get_global_position()
 		fov -= from.fov
 
 
 func inverse() -> CameraTransform:
 	var out = CameraTransform.new(null)
+	out.transform = transform.inverse()
 	out.position = -position
-	out.rotation = -rotation
 	out.fov = -fov
 	return out
 
 func apply_absolute(cam:Camera3D):
-	cam.global_position = position
-	cam.global_rotation = rotation
+	cam.global_transform = Transform3D(transform.basis, position)
 	cam.fov = fov
 	cam.reset_physics_interpolation()
 
 func apply_relative(cam:Camera3D):
-	cam.global_position += position
-	cam.global_rotation += rotation
-	cam.fov += fov
+	# not implemented
+	pass
+
+func yaw(angle:float):
+	transform = transform.rotated(Vector3.UP, angle)
+func pitch(angle:float):
+	transform = transform.rotated_local(Vector3.RIGHT, angle)
+func yaw_and_pitch(v:Vector2):
+	yaw(v.x)
+	pitch(v.y)
+
+func blend_relative(target:CameraTransform, cam:Camera3D, factor:float):
+	var t := clampf(factor, 0.0, 1.0)
+	var delta := Basis(Quaternion.IDENTITY.slerp(target.transform.basis.get_rotation_quaternion(), t))
+	# the relative transform goes on the left: at t == 1 this is the target's basis, exactly
+	cam.global_transform = Transform3D(delta * transform.basis, position + target.position * t)
+	cam.fov = fov + lerpf(0.0, target.fov, t)
 	cam.reset_physics_interpolation()
 
-func transition_absolute(cam:Camera3D, duration:float=TRANSITION_TIME) -> Tween:
-	var from = CameraTransform.new(cam)
-	var tween = cam.create_tween()
-	var blend = tween.tween_method(_blend.bind(cam, from, self), 0.0, 1.0, duration)
-	blend.set_trans(Tween.TRANS_SINE)
-	blend.set_ease(Tween.EASE_IN_OUT)
-	return tween
-
-func transition_relative(cam:Camera3D, duration:float=TRANSITION_TIME) -> Tween:
-	var from = CameraTransform.new(cam)
-	var tween = cam.create_tween()
-	var blend = tween.tween_method(_blend_relative.bind(cam, from, self), 0.0, 1.0, duration)
-	blend.set_trans(Tween.TRANS_SINE)
-	blend.set_ease(Tween.EASE_IN_OUT)
-	return tween
-
-func _blend(t:float, cam:Camera3D, from:CameraTransform, to:CameraTransform):
-	cam.global_position = from.position.lerp(to.position, t)
-	cam.global_rotation = Vector3(
-		lerp_angle(from.rotation.x, to.rotation.x, t),
-		lerp_angle(from.rotation.y, to.rotation.y, t),
-		lerp_angle(from.rotation.z, to.rotation.z, t)
+## How far `aim` has turned from the orientation this transform was captured relative to.
+func angle_from(aim:Basis) -> float:
+	return rad_to_deg(
+		from_basis.get_rotation_quaternion()
+		.angle_to(aim.get_rotation_quaternion())
 	)
-	cam.fov = lerpf(from.fov, to.fov, t)
-
-func _blend_relative(t:float, cam:Camera3D, from:CameraTransform, to:CameraTransform):
-	from.apply_absolute(cam)
-	var step = CameraTransform.new(null)
-	step.position = to.position * t
-	step.rotation = to.rotation * t
-	step.fov = to.fov * t
-	step.apply_relative(cam)

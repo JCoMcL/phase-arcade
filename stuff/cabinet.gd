@@ -31,6 +31,7 @@ func set_power_state(on:bool):
 		if game_scene:
 			curr_game = game_scene.instantiate()
 			game_parent.add_child(curr_game)
+			curr_game.z_index = -1
 			print(game_parent)
 			print(game_parent.get_children())
 		$Screen.texture = $SubViewport.get_texture()
@@ -47,9 +48,6 @@ func _ready() -> void:
 		for player in $SubViewport.find_children("*", type, true, false):
 			_route_game_audio(player)
 	get_tree().node_added.connect(_route_game_audio)
-	if not start_powered_on:
-		await get_tree().create_timer(6).timeout
-		set_power_state(true)
 
 func _route_game_audio(node: Node) -> void:
 	if not $SubViewport.is_ancestor_of(node):

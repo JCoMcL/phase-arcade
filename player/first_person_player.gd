@@ -76,43 +76,25 @@ var inventory = Inventory.new()
 
 var active_cabinet:ArcadeCabinet = null
 var active_camera_transform:CameraTransform = null
-var cabinet_tween:Tween = null
-var look_accum = Vector2.ZERO
+var camera_transform_factor:float
 
 func set_active_cabinet(cab:ArcadeCabinet):
 	active_cabinet = cab
 	active_camera_transform = cab.get_observation_delta(%Camera)
-	_start_camera_transition(active_camera_transform)
+	camera_transform_factor = 0
 
 func clear_active_cabinet():
 	if not active_cabinet:
 		return
 	active_cabinet.on_operator_release()
-	_start_camera_transition(active_camera_transform.inverse())
-	active_camera_transform = null
-	rotate_y(%Camera.rotation.y)
-	reset_physics_interpolation()
-	%Camera.rotation.y = 0
-	%Camera.reset_physics_interpolation()
-	print(%Camera.rotation.y)
-
 	active_cabinet = null
 
-
-func _start_camera_transition(target:CameraTransform):
-	look_accum = Vector2.ZERO
-	if cabinet_tween:
-		cabinet_tween.kill() # TODO maybe reverse would be better
-	cabinet_tween = target.transition_relative(%Camera)
-
-const UNLOCK_ANGLE := 40.0
-func _check_cabinet_lock() -> void:
-	if not active_cabinet:
-		return
-	for axis in [look_accum.x, look_accum.y]:
-		if absf(rad_to_deg(axis)) > UNLOCK_ANGLE:
-			clear_active_cabinet()
-			return
+const UNLOCK_ANGLE := 50.0
+## 1: fully locked-in, 0: fully daydreaming
+func _cabinet_lock_factor() -> float:
+	return 1.0 - pow(active_camera_transform.angle_from(
+		base_camera_transform.transform.basis
+	) / UNLOCK_ANGLE, 2) #squaring smoothes it out a bit; looks nicer
 
 # --- Main ---
 
@@ -124,14 +106,34 @@ func handle_collision(k: KinematicCollision3D):
 			col.to_local(k.get_position())
 		)
 
+var base_camera_transform:CameraTransform
 func _ready():
 	setup_children()
+	base_camera_transform = CameraTransform.new(%Camera)
 
-func _process(_delta: float) -> void:
+const CAM_T_RATE:float = 3.0
+func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 
-	_check_cabinet_lock()
+	base_camera_transform.position = $Head.global_position
+	if active_camera_transform:
+		camera_transform_factor = min(camera_transform_factor + CAM_T_RATE * (delta if active_cabinet else -delta), 1)
+		camera_transform_factor = minf(camera_transform_factor, _cabinet_lock_factor())
+		var factor := smoothstep(0.0, 1.0, camera_transform_factor)
+		base_camera_transform.blend_relative(
+			active_camera_transform,
+			%Camera,
+			factor
+		)
+		if active_cabinet and factor <= 0.0:
+			camera_transform_factor = 0
+			clear_active_cabinet()
+		elif not active_cabinet and camera_transform_factor <= 0.0:
+			active_camera_transform = null
+	else:
+		base_camera_transform.apply_absolute(%Camera)
+
 
 func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint():
@@ -150,7 +152,7 @@ func _physics_process(delta: float) -> void:
 		walk_input = Input.get_vector("left", "right", "forward", "backward").normalized()
 	else:
 		walk_input = Vector2.ZERO
-	var walk = walk_input.rotated(-rotation.y) * speed * clampf($Head.position.y / height, 0.0, 1.0)
+	var walk = walk_input.rotated(-%Camera.global_rotation.y) * speed * clampf($Head.position.y / height, 0.0, 1.0)
 
 	# maybe this should be relative to the floor normal, but probably doesn't matter
 	velocity.x = move_toward(velocity.x, walk.x, accel * delta)
@@ -159,7 +161,6 @@ func _physics_process(delta: float) -> void:
 	var target =  %InteractRay.get_collider()
 	if target:
 		target.hover(self)
-
 
 	move_and_slide()
 	for i in get_slide_collision_count():
@@ -174,19 +175,11 @@ func _input(ev: InputEvent) -> void:
 		if DisplayServer.get_name() == &"web":
 			look *=  0.6 # Look is faster on the web for some reason
 
-		if active_cabinet:
-			%Camera.rotate_y(look.x)
-		else:
-			rotate_y(%Camera.rotation.y)
-			%Camera.rotation.y = 0
-			rotate_y(look.x)
-		# Rotating the camera instead of the head, as the head is a sphere so it doesn't need to rotate.
-		# and moving collision objects unneccesarily can have side-effects.
-		%Camera.rotate_x(look.y)
-		look_accum += look
-
-		const max_vertical_look = PI/2
-		%Camera.rotation.x = clampf(%Camera.rotation.x, -max_vertical_look, max_vertical_look)
+		var t = %Camera.transform.basis
+		# soft clamp pitch using magic numbers from the matrix
+		if sign(look.y) != sign(t.z.y):
+			look.y *= t.y.y
+		base_camera_transform.yaw_and_pitch(look)
 
 	if ev.is_action_pressed("interact"):
 		_interact()

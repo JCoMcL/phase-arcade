@@ -9,3 +9,5 @@ temp/
 export
 audio/sfx/crushed-*
 test_scene.tscn
+AGENTS.md
+.docs
