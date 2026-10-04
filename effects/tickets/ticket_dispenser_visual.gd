@@ -28,8 +28,8 @@ func _process(delta: float) -> void:
 
 func dispense(number_of_tickets: int):
 	if dispensed_tickets > 0:
-		remaining_tickets = number_of_tickets
-		dispenseLoop()
+		remaining_tickets += number_of_tickets
+		#dispenseLoop() #the logic in _process handles this actually. Left here as a reminder if that changes.
 	else:
 		if number_of_tickets < 20:
 			play_section("Take 001", -1, anim_length/20 * number_of_tickets, -1, vend_speed)
