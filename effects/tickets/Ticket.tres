@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://djj1wnk4dtw0m"]
+
+[ext_resource type="Texture2D" uid="uid://1uyaetihugql" path="res://effects/tickets/T_Ticket.png" id="1_ej7rj"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_color = Color(0.99, 0.726, 0.19799998, 1)
+albedo_texture = ExtResource("1_ej7rj")
+metallic_specular = 0.4
+roughness = 0.8
+texture_filter = 2

@@ -38,6 +38,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cyo06mjkj4grk" path="res://meshes/sm_Cabling_tray.tres" id="32_vnpcl"]
 [ext_resource type="PackedScene" uid="uid://c5qhyuctvc26m" path="res://player/player_character.tscn" id="33_1841t"]
 [ext_resource type="Shader" uid="uid://b3nse2vuiwyot" path="res://materials/shd_NeonTube.tres" id="34_r5lcs"]
+[ext_resource type="PackedScene" uid="uid://bqgqc4rvqqvmd" path="res://effects/tickets/ticketDispenser.tscn" id="37_rkil3"]
 [ext_resource type="Material" uid="uid://bdwcl28853tmp" path="res://materials/Cabling_tray.tres" id="38_r5lcs"]
 [ext_resource type="PackedScene" uid="uid://c7me5j6srknla" path="res://meshes/PropScenes/scene_neonSign_foyer.tscn" id="38_xsasp"]
 [ext_resource type="ArrayMesh" uid="uid://bwu5ijrgiqeii" path="res://meshes/sm_Sofa.tres" id="39_auksg"]
@@ -48,9 +49,9 @@
 [ext_resource type="PackedScene" uid="uid://briklf270u7jk" path="res://meshes/SM_EmergencyLamp.fbx" id="47_xsasp"]
 [ext_resource type="Material" uid="uid://htyxn622kwqj" path="res://effects/myFirstParticleShader.tres" id="48_auksg"]
 [ext_resource type="Material" uid="uid://cur6y4wwkw7hp" path="res://effects/basicParticleMaterial.tres" id="49_0iggl"]
-[ext_resource type="ArrayMesh" uid="uid://oq1t7gxkt384" path="res://meshes/sm_FireExtinguisher_co2.tres" id="49_7byvj"]
+[ext_resource type="ArrayMesh" uid="uid://criucr6vfnphg" path="res://meshes/sm_FireExtinguisher_co2.tres" id="49_7byvj"]
 [ext_resource type="PackedScene" uid="uid://c178lfbqyyhpv" path="res://meshes/SM_Payphone.fbx" id="50_7byvj"]
-[ext_resource type="ArrayMesh" uid="uid://b27n7m21r0mh8" path="res://meshes/sm_FireExtinguisher_water.tres" id="50_e1iq1"]
+[ext_resource type="ArrayMesh" uid="uid://ciee7b4u3lmru" path="res://meshes/sm_FireExtinguisher_water.tres" id="50_e1iq1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jay6p"]
 size = Vector3(69, 4, 100)
@@ -1165,3 +1166,6 @@ mesh = ExtResource("49_7byvj")
 [node name="SmFireExtinguisherWater" type="MeshInstance3D" parent="." unique_id=429551851]
 transform = Transform3D(-0.07755434, 0.9969881, 4.3579735e-08, 0, -4.371139e-08, 1, 0.9969881, 0.07755434, 3.3900078e-09, 14.997796, 0, -2.2957962)
 mesh = ExtResource("50_e1iq1")
+
+[node name="TicketDispener2" parent="." unique_id=786825236 instance=ExtResource("37_rkil3")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 18.393866, 0, -4.8004007)

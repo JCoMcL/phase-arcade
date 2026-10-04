@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bqjfdjiq35jlj"]
+
+[ext_resource type="PackedScene" uid="uid://cbbl6xhf5ri78" path="res://effects/tickets/Sk_Ticket_dispensing.fbx" id="1_yrdiv"]
+[ext_resource type="Material" uid="uid://djj1wnk4dtw0m" path="res://effects/tickets/Ticket.tres" id="2_noukc"]
+[ext_resource type="Animation" uid="uid://bqte2nyp6br3n" path="res://effects/tickets/a_ticketDispensing_loop.anim" id="3_x8v45"]
+[ext_resource type="Animation" uid="uid://dxua0xcx4f5q0" path="res://effects/tickets/a_ticketDispensing_start.anim" id="4_ekbmb"]
+[ext_resource type="Script" uid="uid://brlfjwbx6pavx" path="res://effects/tickets/ticket_dispenser_visual.gd" id="5_w0kfv"]
+[ext_resource type="ArrayMesh" uid="uid://tyo6uy1fj3l4" path="res://effects/tickets/sm_ticketStack.tres" id="6_b2i33"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ljnri"]
+_data = {
+&"a_ticketDispensing_loop": ExtResource("3_x8v45"),
+&"a_ticketDispensing_start": ExtResource("4_ekbmb")
+}
+
+[node name="YouProbablyWantTheOtherOne" unique_id=862103904 instance=ExtResource("1_yrdiv")]
+
+[node name="DispenserPivot" type="Node3D" parent="." index="0" unique_id=1236826762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+
+[node name="Skeleton3D" parent="." index="1" unique_id=1939571139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+bones/0/rotation = Quaternion(0.9971857, 0, 0, -0.074971475)
+bones/1/position = Vector3(0, -4.440892e-16, 2.5)
+bones/1/rotation = Quaternion(-0.8498494, 0, 0, 0.5270258)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(0, 0, 0, 1)
+bones/3/position = Vector3(0, 0, 2.5)
+bones/3/rotation = Quaternion(-0.9984386, 0, 0, 0.055860672)
+bones/3/scale = Vector3(1, 1, 1)
+bones/5/position = Vector3(0, 1.4305114e-08, 2.5)
+bones/5/rotation = Quaternion(-0.9739586, 0, 0, 0.22672598)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/position = Vector3(0, 3.0517577e-07, 0)
+
+[node name="TicketRow" parent="Skeleton3D" index="0" unique_id=1528521656]
+surface_material_override/0 = ExtResource("2_noukc")
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=235653172]
+libraries/al_TicketAnimations = SubResource("AnimationLibrary_ljnri")
+script = ExtResource("5_w0kfv")
+
+[node name="TicketStack" type="MeshInstance3D" parent="." index="3" unique_id=1105452738]
+transform = Transform3D(0.01, -8.7422775e-10, -8.7422775e-10, -8.7422775e-10, -0.01, 0, -8.7422775e-10, 7.642742e-17, -0.01, 0, 0, 0)
+mesh = ExtResource("6_b2i33")
