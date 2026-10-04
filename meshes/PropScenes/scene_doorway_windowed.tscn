@@ -5,14 +5,15 @@
 [ext_resource type="Material" uid="uid://cqmf76ra2vssu" path="res://materials/Bricks_triplanar.tres" id="2_0bukc"]
 [ext_resource type="Material" uid="uid://c2su0p7ytbnnf" path="res://materials/Construction.tres" id="3_5cnxy"]
 [ext_resource type="PackedScene" uid="uid://ciofuhj1xxdb7" path="res://stuff/interact_zone.tscn" id="3_qhktn"]
-[ext_resource type="ArrayMesh" uid="uid://besvkxjcsesdy" path="res://meshes/sm_FloorJoint.tres" id="4_knowe"]
+[ext_resource type="ArrayMesh" uid="uid://do8fanvchttdo" path="res://meshes/sm_FloorJoint.tres" id="4_knowe"]
 [ext_resource type="Material" uid="uid://f7pb3wu04tx7" path="res://materials/PlasterWall.tres" id="4_qhktn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e3x8e"]
 size = Vector3(0.1, 0.83053184, 2.1047497)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_qhktn"]
-viewport_path = NodePath("Tooltip/SubViewport")
+[sub_resource type="BoxShape3D" id="BoxShape3D_qhktn"]
+resource_local_to_scene = true
+size = Vector3(0.15234375, 0.24633789, 0.13781738)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_7u3u8"]
 viewport_path = NodePath("Tooltip/SubViewport")
@@ -20,7 +21,10 @@ viewport_path = NodePath("Tooltip/SubViewport")
 [sub_resource type="ViewportTexture" id="ViewportTexture_2s2nt"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_l622s"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_650ba"]
+viewport_path = NodePath("Tooltip/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_caor5"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_do1ig"]
@@ -147,11 +151,12 @@ tooltip = "[LMB]
 open "
 
 [node name="CollisionShape3D" parent="DoorPivot/Door/InteractZone" index="0" unique_id=1398816554]
-transform = Transform3D(1, 5.2854856e-19, 0, -8.4703295e-22, 1, 6.446619e-22, 0, -1.3665859e-20, 1, 0, 0, 0.0016632099)
+transform = Transform3D(1, 1.4514757e-17, 0, -8.4703295e-22, 1, 6.446619e-22, 0, -1.3664636e-20, 1, 0, 0, 0.05291418)
+shape = SubResource("BoxShape3D_qhktn")
 
 [node name="Tooltip" parent="DoorPivot/Door/InteractZone" index="1" unique_id=1310991000]
 transform = Transform3D(1, -2.1006417e-19, 0, -8.4703295e-22, 1, 6.750156e-14, 0, -9.6282636e-21, 1, 0, 0, 0)
-texture = SubResource("ViewportTexture_qhktn")
+texture = SubResource("ViewportTexture_7u3u8")
 
 [node name="SubViewport" parent="DoorPivot/Door/InteractZone/Tooltip" index="0" unique_id=1414188419]
 size = Vector2i(70, 81)
@@ -170,7 +175,7 @@ open "
 vertical_alignment = 1
 
 [node name="Shadow" parent="DoorPivot/Door/InteractZone/Tooltip" index="1" unique_id=1306854022]
-texture = SubResource("ViewportTexture_7u3u8")
+texture = SubResource("ViewportTexture_2s2nt")
 
 [node name="InteractZone2" parent="DoorPivot/Door" unique_id=2140775822 instance=ExtResource("3_qhktn")]
 transform = Transform3D(7.1054274e-15, 4.3711378e-08, 0.99999696, 0.99999696, -4.3711378e-08, -7.1054274e-15, 4.3711257e-08, 0.99999994, -4.371126e-08, 0.058680262, 0.7933247, 0.89528483)
@@ -179,11 +184,12 @@ tooltip = "[LMB]
 close"
 
 [node name="CollisionShape3D" parent="DoorPivot/Door/InteractZone2" index="0" unique_id=1398816554]
-transform = Transform3D(1, 5.2854856e-19, 0, -8.4703295e-22, 1, 6.446619e-22, 0, -1.3665859e-20, 1, 0, 0, 0.0016632099)
+transform = Transform3D(1, -5.5395955e-19, -8.277823e-12, -1.6959188e-19, 1, 4.1389114e-12, 8.277823e-12, -4.1389114e-12, 1, 0, 0, 0.03906867)
+shape = SubResource("BoxShape3D_qhktn")
 
 [node name="Tooltip" parent="DoorPivot/Door/InteractZone2" index="1" unique_id=1310991000]
 transform = Transform3D(1, -2.1006417e-19, 0, -8.4703295e-22, 1, 6.750156e-14, 0, -9.6282636e-21, 1, 0, 0, 0)
-texture = SubResource("ViewportTexture_2s2nt")
+texture = SubResource("ViewportTexture_650ba")
 
 [node name="SubViewport" parent="DoorPivot/Door/InteractZone2/Tooltip" index="0" unique_id=1414188419]
 size = Vector2i(70, 81)
@@ -202,7 +208,7 @@ close"
 vertical_alignment = 1
 
 [node name="Shadow" parent="DoorPivot/Door/InteractZone2/Tooltip" index="1" unique_id=1306854022]
-texture = SubResource("ViewportTexture_l622s")
+texture = SubResource("ViewportTexture_caor5")
 
 [node name="Doorway" type="MeshInstance3D" parent="." unique_id=1996922192]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
