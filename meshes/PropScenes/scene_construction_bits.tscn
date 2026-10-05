@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://docbuikkpeuto"]
 
-[ext_resource type="PackedScene" uid="uid://cug028ta2fklu" path="res://meshes/SM_ConstructionBits.fbx" id="1_y1a05"]
+[ext_resource type="PackedScene" uid="uid://cug028ta2fklu" path="res://meshes/Construction Bits/SM_ConstructionAssets.fbx" id="1_y1a05"]
 [ext_resource type="Material" uid="uid://c2su0p7ytbnnf" path="res://materials/Construction.tres" id="2_70qe7"]
 
 [node name="SM_ConstructionBits" unique_id=1139805140 instance=ExtResource("1_y1a05")]

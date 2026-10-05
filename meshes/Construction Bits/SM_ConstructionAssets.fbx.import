@@ -4,18 +4,20 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cug028ta2fklu"
-path="res://.godot/imported/SM_ConstructionBits.fbx-74da109b3c5a8a19db06ac0d6f3f7ce1.scn"
+path="res://.godot/imported/SM_ConstructionAssets.fbx-9a243672935eca2ad95e07d5a28b2c5f.scn"
 
 [deps]
 
-source_file="res://meshes/SM_ConstructionBits.fbx"
-dest_files=["res://.godot/imported/SM_ConstructionBits.fbx-74da109b3c5a8a19db06ac0d6f3f7ce1.scn"]
+source_file="res://meshes/Construction Bits/SM_ConstructionAssets.fbx"
+dest_files=["res://.godot/imported/SM_ConstructionAssets.fbx-9a243672935eca2ad95e07d5a28b2c5f.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -33,12 +35,20 @@ animation/fps=30
 animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="uid://de4lx54fyloec"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"construction": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Construction.tres",
+"use_external/path": "uid://c2su0p7ytbnnf"
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
+fbx/embedded_image_handling=0
 fbx/naming_version=2

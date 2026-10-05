@@ -2,23 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bys0uj54nkj1y"
-path="res://.godot/imported/SM_ConstructionBits_0.png-f0e401d81414431801f201f4d79ccebf.ctex"
+uid="uid://dquashfa5722f"
+path.s3tc="res://.godot/imported/arcade_texture.png-bef28212fab6b2c3a083b1a2c8ed9bd1.s3tc.ctex"
 metadata={
-"vram_texture": false
-}
-generator_parameters={
-"md5": "298648aeb0b12ddba9fc5bf64a316758"
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://meshes/SM_ConstructionBits_0.png"
-dest_files=["res://.godot/imported/SM_ConstructionBits_0.png-f0e401d81414431801f201f4d79ccebf.ctex"]
+source_file="res://stuff/cabinets/textures/arcade_texture.png"
+dest_files=["res://.godot/imported/arcade_texture.png-bef28212fab6b2c3a083b1a2c8ed9bd1.s3tc.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

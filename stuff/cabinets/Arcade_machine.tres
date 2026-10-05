@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://0cn7mw5ok22s"]
+
+[ext_resource type="Texture2D" uid="uid://dquashfa5722f" path="res://stuff/cabinets/textures/arcade_texture.png" id="1_h02nv"]
+
+[resource]
+resource_name = "Arcade_machine"
+cull_mode = 2
+albedo_texture = ExtResource("1_h02nv")
+roughness = 0.5
+normal_enabled = true
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0

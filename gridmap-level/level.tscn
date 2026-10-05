@@ -3,7 +3,7 @@
 [ext_resource type="MeshLibrary" uid="uid://cgkcujwd432h2" path="res://gridmap-level/mesh_library.tres" id="1_ghvus"]
 [ext_resource type="PackedScene" uid="uid://c5qhyuctvc26m" path="res://player/player_character.tscn" id="2_ghvus"]
 [ext_resource type="PackedScene" uid="uid://bnrat3k8mdug0" path="res://stuff/cabinet.tscn" id="4_oq02x"]
-[ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://stuff/coin/coin.tscn" id="4_vpf4b"]
+[ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://stuff/coin.tscn" id="4_vpf4b"]
 [ext_resource type="PackedScene" uid="uid://cg3qvbh6lqn8u" path="res://meshes/PropScenes/scene_doorway_plain.tscn" id="5_oq02x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
@@ -87,7 +87,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8321171, -2.9802322e-08, 1.
 
 [node name="Cabinet" parent="." unique_id=1752319625 instance=ExtResource("4_oq02x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037123263, 1.19092874e-07, -3.9271576)
-start_powered_on = true
 
 [node name="scene_doorway_plain" parent="." unique_id=197144363 instance=ExtResource("5_oq02x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0391443, 3.9969912e-08, -3.0517323)

@@ -17,6 +17,6 @@ func _process(delta: float) -> void:
 		speed = lerpf(speed, minSpeed, delta * 0.1)
 	else:
 		speed = lerpf(speed, maxSpeed, delta * 40.0)
-	
+
 	rotation += Vector3(delta * 2.0, 0, 0)#speed, 0, 0)
 	pass

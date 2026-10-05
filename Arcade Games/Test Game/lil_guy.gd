@@ -1,14 +1,8 @@
 extends TextureRect
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
 var velocity:Vector2
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	velocity += input_tracker.movement_input * delta
+	velocity += ArcadeCabinet.get_input_state(self).movement * delta
 	position += velocity
 	var outer = get_parent().get_global_rect()
 	var inner = get_global_rect()
@@ -19,8 +13,3 @@ func _process(delta: float) -> void:
 	if inner.position.y < outer.position.y or inner.end.y > outer.end.y:
 		velocity.y *= -1
 		$AudioStreamPlayer2D.play()
-
-
-var input_tracker = InputTracker.new()
-func _unhandled_input(event: InputEvent) -> void:
-	input_tracker._input(event)

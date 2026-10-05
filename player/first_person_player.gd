@@ -6,6 +6,7 @@ const speed = 3.0
 const accel = 20.0
 
 @export_range(0.2, 2.0, 0.01) var mouse_sensitivity:float = 1
+@export_range(0.2, 2.0, 0.01) var controller_sensitivity:float = 1
 
 @export var height = 1.6:
 	set(val):
@@ -55,10 +56,12 @@ func change_height(new_height:float) -> KinematicCollision3D:
 
 # --- Interaction ---
 
-func _interact():
+func _interact() -> bool:
 	var target = %InteractRay.get_collider()
-	if target:
+	if target and target.has_method("interact"):
 		target.interact(self)
+		return true
+	return false
 
 class Inventory extends Resource:
 	@export var contents:Dictionary[StringName, Array] #Array[Node]
@@ -116,6 +119,11 @@ func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
 
+	look(Vector2(
+		Input.get_axis("look_right", "look_left"),
+		Input.get_axis("look_down", "look_up")
+	) * controller_sensitivity / 30)
+
 	base_camera_transform.position = $Head.global_position
 	if active_camera_transform:
 		camera_transform_factor = min(camera_transform_factor + CAM_T_RATE * (delta if active_cabinet else -delta), 1)
@@ -149,7 +157,7 @@ func _physics_process(delta: float) -> void:
 
 	var walk_input:Vector2
 	if active_cabinet == null:
-		walk_input = Input.get_vector("left", "right", "forward", "backward").normalized()
+		walk_input = Input.get_vector("left", "right", "forward", "backward").limit_length(1)
 	else:
 		walk_input = Vector2.ZERO
 	var walk = walk_input.rotated(-%Camera.global_rotation.y) * speed * clampf($Head.position.y / height, 0.0, 1.0)
@@ -166,23 +174,25 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
 		handle_collision(get_slide_collision(i))
 
-func _input(ev: InputEvent) -> void:
+func look(relative:Vector2):
+	var t = %Camera.transform.basis
+		# soft clamp pitch using magic numbers from the matrix
+	if sign(relative.y) != sign(t.z.y):
+		relative.y *= t.y.y
+	base_camera_transform.yaw_and_pitch(relative)
+
+func _unhandled_input(ev: InputEvent) -> void:
 	if ev is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	elif ev is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		var look = ev.relative * -mouse_sensitivity / 1000
-
+		var _look = ev.relative * -mouse_sensitivity / 1000
 		if DisplayServer.get_name() == &"web":
-			look *=  0.6 # Look is faster on the web for some reason
-
-		var t = %Camera.transform.basis
-		# soft clamp pitch using magic numbers from the matrix
-		if sign(look.y) != sign(t.z.y):
-			look.y *= t.y.y
-		base_camera_transform.yaw_and_pitch(look)
+			_look *=  0.6 # Look is faster on the web for some reason
+		look(_look)
 
 	if ev.is_action_pressed("interact"):
-		_interact()
+		if _interact():
+			get_viewport().set_input_as_handled()
 	elif ev.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	elif active_cabinet != null:

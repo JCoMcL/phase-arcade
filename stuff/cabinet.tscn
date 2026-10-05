@@ -1,21 +1,24 @@
 [gd_scene format=3 uid="uid://bnrat3k8mdug0"]
 
-[ext_resource type="Script" uid="uid://dw56sgfx8hq8l" path="res://stuff/cabinet.gd" id="1_gqhhl"]
-[ext_resource type="PackedScene" uid="uid://b2th27vl4noa2" path="res://stuff/cabinet.glb" id="1_hcb6m"]
-[ext_resource type="PackedScene" uid="uid://cruql6bs6awns" path="res://stuff/screen.tscn" id="2_bisg2"]
+[ext_resource type="Script" uid="uid://dw56sgfx8hq8l" path="res://stuff/cabinets/cabinet.gd" id="1_gqhhl"]
+[ext_resource type="PackedScene" uid="uid://b65jbvordjewb" path="res://stuff/cabinets/cabinet.glb" id="1_hcb6m"]
+[ext_resource type="PackedScene" uid="uid://cruql6bs6awns" path="res://stuff/cabinets/screen.tscn" id="2_bisg2"]
 [ext_resource type="PackedScene" uid="uid://uw0nw0gw7d6s" path="res://Arcade Games/Test Game/test_game.tscn" id="2_y4ahd"]
 [ext_resource type="Script" uid="uid://bghaddibpt6f1" path="res://addons/crt/crt.gd" id="3_auxia"]
 [ext_resource type="PackedScene" uid="uid://ciofuhj1xxdb7" path="res://stuff/interact_zone.tscn" id="6_mg4d7"]
-[ext_resource type="Texture2D" uid="uid://bok722soe7as4" path="res://textures/props/T_TVTest.png" id="7_iyoos"]
-[ext_resource type="Script" uid="uid://cjchu44q7807" path="res://stuff/cabinet_audio.gd" id="7_sound"]
+[ext_resource type="Script" uid="uid://cjchu44q7807" path="res://stuff/cabinets/cabinet_audio.gd" id="7_sound"]
+[ext_resource type="Script" uid="uid://5hwfjkgng2dw" path="res://stuff/control_plane.gd" id="8_i5ll8"]
+[ext_resource type="PackedScene" uid="uid://c7yxr2v1shlxa" path="res://stuff/cabinets/controls/_controls_joystick.tscn" id="8_iyoos"]
+[ext_resource type="PackedScene" uid="uid://cqbrssuy25t8w" path="res://stuff/cabinets/controls/_controls_fire_button.tscn" id="9_0dpka"]
+[ext_resource type="PackedScene" uid="uid://flvwf42ou114" path="res://stuff/cabinets/controls/_controls_bomb_button.tscn" id="11_xlqc2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mg4d7"]
 size = Vector3(0.55, 0.4, 0.01)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_iyoos"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_0dpka"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_i5ll8"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_xlqc2"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
 [node name="Cabinet" type="Node3D" unique_id=1752319625]
@@ -55,7 +58,6 @@ roll_speed = -8.0
 
 [node name="Screen" parent="." unique_id=769819713 instance=ExtResource("2_bisg2")]
 transform = Transform3D(1, 0, 0, 0, 0.813933, 0.5809587, 0, -0.5809587, 0.813933, 0, 1.023, 0)
-texture = ExtResource("7_iyoos")
 
 [node name="ScreenInteractZone" parent="Screen" unique_id=1828705782 instance=ExtResource("6_mg4d7")]
 unique_name_in_owner = true
@@ -68,16 +70,29 @@ shape = SubResource("BoxShape3D_mg4d7")
 
 [node name="Tooltip" parent="Screen/ScreenInteractZone" index="1" unique_id=1310991000]
 transform = Transform3D(1, 0, 0, 0, 0.99138325, 0.13099346, 0, -0.13099346, 0.99138325, 0, -0.21796304, -0.04354644)
-texture = SubResource("ViewportTexture_iyoos")
+texture = SubResource("ViewportTexture_0dpka")
 
 [node name="Label" parent="Screen/ScreenInteractZone/Tooltip/SubViewport" parent_id_path=PackedInt32Array(1828705782, 1414188419) index="0" unique_id=238621318]
 text = "[LMB] play"
 
 [node name="Shadow" parent="Screen/ScreenInteractZone/Tooltip" index="1" unique_id=1306854022]
-texture = SubResource("ViewportTexture_i5ll8")
+texture = SubResource("ViewportTexture_xlqc2")
 
 [node name="ObservationPoint" type="Camera3D" parent="Screen" unique_id=1442811002]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.9952376, -0.09747869, 0, 0.09747869, 0.9952376, 0, -0.19705975, 0.6974405)
+
+[node name="ControlPlane" type="Node3D" parent="." unique_id=872288392]
+transform = Transform3D(1, 0, 0, 0, 0.93821406, -0.34605542, 0, 0.34605542, 0.93821406, 0, 0.804, 0.243)
+script = ExtResource("8_i5ll8")
+
+[node name="FireButton" parent="ControlPlane" unique_id=1755314034 instance=ExtResource("9_0dpka")]
+transform = Transform3D(1.475, 0, 0, 0, 1.475, 0, 0, 0, 1.475, 0.144, 0, 0.003)
+
+[node name="BombButton" parent="ControlPlane" unique_id=1099850201 instance=ExtResource("11_xlqc2")]
+transform = Transform3D(1.087, 0, 0, 0, 1.176, 0, 0, 0, 1.087, 0.194, 0, -0.02)
+
+[node name="Joystick" parent="ControlPlane" unique_id=704790631 instance=ExtResource("8_iyoos")]
+transform = Transform3D(1.348, 0, 0, 0, 1.348, 0, 0, 0, 1.348, -0.135, 0, 0)
 
 [editable path="Screen/ScreenInteractZone"]

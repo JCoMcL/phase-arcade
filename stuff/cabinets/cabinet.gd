@@ -8,17 +8,23 @@ class_name ArcadeCabinet
 @onready var game_parent = %CRTLayer
 var curr_game:Node
 
+# --- External Interface ---
+
 func _interacted_by(operator:FirstPersonCharacter):
 	operator.set_active_cabinet(self)
 
 func on_operator_release():
 	%ScreenInteractZone.active = true
+	input_tracker.reset()
 
 func get_observation_delta(from:Camera3D) -> CameraTransform:
 	return CameraTransform.new(%ObservationPoint, from)
 
+var input_tracker=InputTracker.new()
 func push_input(ev: InputEvent):
 	get_viewport().set_input_as_handled()
+	input_tracker._input(ev)
+	$ControlPlane.track_input(ev)
 	$SubViewport.push_input(ev)
 
 const GAME_AUDIO_TYPES := [&"AudioStreamPlayer", &"AudioStreamPlayer2D"]
@@ -41,13 +47,18 @@ func set_power_state(on:bool):
 			curr_game.queue_free()
 	%ScreenInteractZone.active = on
 
-func _ready() -> void:
-	set_power_state(start_powered_on)
-	%ScreenInteractZone.interacted_by.connect(_interacted_by)
-	for type in GAME_AUDIO_TYPES:
-		for player in $SubViewport.find_children("*", type, true, false):
-			_route_game_audio(player)
-	get_tree().node_added.connect(_route_game_audio)
+# --- Internal Interface ---
+
+static func get_cabinet(from:Node) -> ArcadeCabinet:
+	while from and from is not ArcadeCabinet:
+		from = from.get_parent()
+	return from
+
+static func get_input_state(from:Node) -> InputTracker:
+	var cab = get_cabinet(from)
+	if cab:
+		return cab.input_tracker
+	return null
 
 func _route_game_audio(node: Node) -> void:
 	if not $SubViewport.is_ancestor_of(node):
@@ -56,3 +67,13 @@ func _route_game_audio(node: Node) -> void:
 		(node as AudioStreamPlayer).bus = ArcadeCabinetAudio.GAME_BUS
 	elif node is AudioStreamPlayer2D:
 		(node as AudioStreamPlayer2D).bus = ArcadeCabinetAudio.GAME_BUS
+
+# --- Main ---
+
+func _ready() -> void:
+	set_power_state(start_powered_on)
+	%ScreenInteractZone.interacted_by.connect(_interacted_by)
+	for type in GAME_AUDIO_TYPES:
+		for player in $SubViewport.find_children("*", type, true, false):
+			_route_game_audio(player)
+	get_tree().node_added.connect(_route_game_audio)
