@@ -31,6 +31,7 @@ const GAME_AUDIO_TYPES := [&"AudioStreamPlayer", &"AudioStreamPlayer2D"]
 
 var power:bool
 func set_power_state(on:bool):
+	power = on
 	if not is_node_ready():
 		await ready
 	if on:
@@ -46,6 +47,20 @@ func set_power_state(on:bool):
 		if curr_game:
 			curr_game.queue_free()
 	%ScreenInteractZone.active = on
+
+# --- Circuits ---
+
+func _on_circuit_switched(on:bool):
+	set_power_state(on)
+
+## Subscribes the cabinet to [param s], seeding the circuit while it's still fresh.
+func join_circuit(s:StringName):
+	var switched := HandyLight.register_circuit(s)
+	switched.to.connect(_on_circuit_switched)
+	if not switched.state and start_powered_on:
+		switched.state = start_powered_on
+	else:
+		set_power_state(switched.state)
 
 # --- Internal Interface ---
 
@@ -71,7 +86,10 @@ func _route_game_audio(node: Node) -> void:
 # --- Main ---
 
 func _ready() -> void:
-	set_power_state(start_powered_on)
+	if circuit != &"":
+		join_circuit(circuit)
+	else:
+		set_power_state(start_powered_on)
 	%ScreenInteractZone.interacted_by.connect(_interacted_by)
 	for type in GAME_AUDIO_TYPES:
 		for player in $SubViewport.find_children("*", type, true, false):
