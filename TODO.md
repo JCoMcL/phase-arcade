@@ -30,7 +30,7 @@
 ## Arcade Cabinet
 - [ ] screen works for various sizes
 - [ ] different control schemes
-- [ ] visual controls
+- [x] visual controls
 - [x] lock-on bugs fixed
 - [ ] different cabinet styles with similar UVs
 - [ ] insert coins
@@ -87,7 +87,7 @@
 ## Progression
 - [ ] coins hidden deeper in the arcade
 - [ ] fuses bring new areas online
-- [ ] machines print prize tickets
+- [x] machines print prize tickets
 - [ ] vending machine or claw machine to give out prizes
 - [ ] glowing pippa
 ## Visual
@@ -97,7 +97,7 @@
 - [ ] cabinets illuminate themselves
 - [ ] flickering lights
 ## Gamefeel
-- [ ] gradual angle-based transition from cabinet lock-on
+- [x] gradual angle-based transition from cabinet lock-on
 ## Props
 - [ ] wrecked cabinets
 - [ ] various light sources which could operate without mains power
@@ -118,10 +118,9 @@
 ## Arcade Mechanics
 - [ ] add demo recording and demo screen
 ## Convenience
-- [ ] aggregate reference material in the repo
+- [x] aggregate reference material in the repo
 ### Import script
-- [ ] pull assets from a multi-asset export
-- [ ] set up collisions
+- [x] pull assets from a multi-asset export
 - [ ] bounding box
 - [ ] rigidbodies
 
