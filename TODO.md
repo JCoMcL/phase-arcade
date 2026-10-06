@@ -21,10 +21,10 @@
 - [x] hidden coins
 - [x] switchable lights
 
-# Phase 3: Open For Submissions (Oct 10)
+# Phase 3: Open For Submissions (Oct 09)
 - [ ] documentation
-- [ ] an easy way to test the game during development
-- [ ] get started on our respective games do know what's needed
+- [x] an easy way to test the game during development
+- [ ] get started on our respective games to know what's needed
 - [ ] different places to put games, how accessible?
 - [ ] A nice looking screenshot/video/gif for the announcement
 ## Arcade Cabinet

@@ -1,5 +1,7 @@
 extends Object
 class_name InputTracker
+## Reconstructs input state from events
+## Used as an alternative to [Input] if global input querying is undesirable
 
 var movement: Vector2
 var firing: bool
@@ -10,6 +12,9 @@ var _input_right: float
 var _input_up: float
 var _input_down: float
 
+## Reset inputs that are not currently pressed.
+##
+## Can be useful for flushing stuck inputs but will cause problems if used unconditionally
 func sanity_check():
 	if not Input.is_action_pressed("left"):
 		_input_left = 0.0
@@ -23,6 +28,7 @@ func sanity_check():
 	if not Input.is_action_pressed("fire"):
 		firing = false
 
+## Feed an event to update the state
 func _input(ev: InputEvent) -> void:
 	# NOTE: the lack of `elif` here is actually important for controllers
 	if ev.is_action("left"):
@@ -43,6 +49,7 @@ func _input(ev: InputEvent) -> void:
 	if movement.length_squared() > 1:
 		movement = movement.normalized()
 
+## Sets all tracked inputs to their zero state
 func reset():
 	movement = Vector2.ZERO
 	firing = false
