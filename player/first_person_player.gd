@@ -8,7 +8,7 @@ const accel = 20.0
 @export_range(0.2, 2.0, 0.01) var mouse_sensitivity:float = 1
 @export_range(0.2, 2.0, 0.01) var controller_sensitivity:float = 1
 
-@export var height = 1.6:
+@export var height = 1.2:
 	set(val):
 		height = max(val, width)
 		setup_children()
