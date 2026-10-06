@@ -1,11 +1,19 @@
 extends Node3D
 class_name ArcadeCabinet
 
-@export var start_powered_on:bool
-@export var circuit:StringName
+## Put your game here
 @export var game_scene:PackedScene
+## Start powered on, and automatically recieve inputs. Useful for standalone testing.
+@export var test_mode = false
+## For level design use: If false, will need to be powered on by an external call.
+## This is ignored in test mode
+@export var start_powered_on:bool
+## Subscribe to a named circuit, which controls power state.
+## This overrides [member start_powered_on]
+@export var circuit:StringName
 
 @onready var game_parent = %CRTLayer
+
 var curr_game:Node
 
 # --- External Interface ---
@@ -64,11 +72,13 @@ func join_circuit(s:StringName):
 
 # --- Internal Interface ---
 
+## Returns a reference to the nearest [ArcadeCabinet] that [param from] is inside of, or [code]null[/code] if not inside an [ArcadeCabinet]
 static func get_cabinet(from:Node) -> ArcadeCabinet:
 	while from and from is not ArcadeCabinet:
 		from = from.get_parent()
 	return from
 
+## Returns the [InputTracker] containing the nearest cabinet's input state.
 static func get_input_state(from:Node) -> InputTracker:
 	var cab = get_cabinet(from)
 	if cab:
@@ -86,7 +96,9 @@ func _route_game_audio(node: Node) -> void:
 # --- Main ---
 
 func _ready() -> void:
-	if circuit != &"":
+	if test_mode:
+		set_power_state(true)
+	elif circuit != &"":
 		join_circuit(circuit)
 	else:
 		set_power_state(start_powered_on)
@@ -95,3 +107,7 @@ func _ready() -> void:
 		for player in $SubViewport.find_children("*", type, true, false):
 			_route_game_audio(player)
 	get_tree().node_added.connect(_route_game_audio)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if test_mode:
+		push_input(event)

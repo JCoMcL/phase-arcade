@@ -23,8 +23,8 @@ viewport_path = NodePath("Tooltip/SubViewport")
 
 [node name="Cabinet" type="Node3D" unique_id=1752319625]
 script = ExtResource("1_gqhhl")
-start_powered_on = true
 game_scene = ExtResource("2_y4ahd")
+test_mode = true
 
 [node name="cabinet_model" parent="." unique_id=1223763958 instance=ExtResource("1_hcb6m")]
 
