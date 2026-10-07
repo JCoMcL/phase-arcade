@@ -1,6 +1,7 @@
 extends Node3D
 class_name ArcadeCabinet
 
+@export var game_name:StringName
 ## Put your game here
 @export var game_scene:PackedScene
 ## Start powered on, and automatically recieve inputs. Useful for standalone testing.
