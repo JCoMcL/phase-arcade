@@ -70,9 +70,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mp12r")
 
-[node name="FireButton" type="MeshInstance3D" unique_id=1755314034]
+[node name="FireButton" type="MeshInstance3D" unique_id=1956844253]
 mesh = SubResource("ArrayMesh_hfk84")
 
-[node name="Push_004" type="MeshInstance3D" parent="." unique_id=1789833054]
+[node name="Push_004" type="MeshInstance3D" parent="." unique_id=1920142789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0011427235, 0)
 mesh = SubResource("ArrayMesh_ylanf")

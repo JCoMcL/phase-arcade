@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c41cqfkrmo4n7"]
+
+[ext_resource type="Texture2D" uid="uid://bewgoscrlmbid" path="res://textures/concrete/T_Concrete_pale.png" id="1_24sua"]
+
+[resource]
+albedo_texture = ExtResource("1_24sua")
+metallic = 0.9
+metallic_specular = 0.42
+roughness = 0.02
+normal_enabled = true
+normal_scale = 0.1
+uv1_triplanar = true
+texture_filter = 2

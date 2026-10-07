@@ -1,12 +1,16 @@
 [gd_resource type="ArrayMesh" format=4 uid="uid://bwu5ijrgiqeii"]
 
-[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_UVLit.tres" id="1_m54jj"]
+[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_Blacklight.tres" id="1_m54jj"]
 [ext_resource type="Texture2D" uid="uid://d0x2o34p1lhxl" path="res://textures/props/T_Chesterfield_purple.png" id="2_vmrk8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pnsoa"]
 render_priority = 0
 shader = ExtResource("1_m54jj")
+shader_parameter/Tiling = Vector2(1, 1)
 shader_parameter/Texture2DParameter2 = ExtResource("2_vmrk8")
+shader_parameter/triplanar_scale = Vector3(1, 1, 1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vmrk8"]
 _surfaces = [{

@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bwhuqdou28dyn"]
+
+[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_Blacklight.tres" id="1_r2yee"]
+[ext_resource type="Texture2D" uid="uid://bv0g1nivvcy" path="res://textures/effects/T_LUT_UVGlowing.png" id="2_h1oww"]
+[ext_resource type="Texture2D" uid="uid://d0x2o34p1lhxl" path="res://textures/props/T_Chesterfield_purple.png" id="3_r2yee"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_r2yee")
+shader_parameter/Tiling = Vector2(1, 1)
+shader_parameter/Texture2DParameter2 = ExtResource("3_r2yee")
+shader_parameter/LUT = ExtResource("2_h1oww")
+shader_parameter/triplanar_scale = Vector3(1, 1, 1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5

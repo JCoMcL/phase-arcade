@@ -1,13 +1,18 @@
 [gd_resource type="ArrayMesh" format=4 uid="uid://ipj6hhe2qvtv"]
 
-[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_UVLit.tres" id="1_eyn5g"]
+[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_Blacklight.tres" id="1_eyn5g"]
+[ext_resource type="Texture2D" uid="uid://bv0g1nivvcy" path="res://textures/effects/T_LUT_UVGlowing.png" id="2_eudw5"]
 [ext_resource type="Texture2D" uid="uid://bjdoqru3jieo7" path="res://textures/arcadeCabinets/T_ArcadeCabinetA_LR.png" id="2_y0mu5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eudw5"]
 render_priority = 0
 shader = ExtResource("1_eyn5g")
+shader_parameter/Tiling = Vector2(1, 1)
 shader_parameter/Texture2DParameter2 = ExtResource("2_y0mu5")
-shader_parameter/TextureForUV = ExtResource("2_y0mu5")
+shader_parameter/LUT = ExtResource("2_eudw5")
+shader_parameter/triplanar_scale = Vector3(1, 1, 1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2c1jo"]
 _surfaces = [{
@@ -24,6 +29,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [resource]
+resource_local_to_scene = true
 resource_name = "ArcadeCabinetLR"
 _surfaces = [{
 "aabb": AABB(-0.35200042, -0.395, -7.6293944e-08, 0.70400083, 0.7891724, 1.751534),

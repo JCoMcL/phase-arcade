@@ -11,7 +11,7 @@ var scale_pivot = $"../DispenserPivot"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
-	dispense(700)
+	dispense(70) #test call
 	pass # Replace with function body.
 
 
@@ -40,6 +40,7 @@ func dispense(number_of_tickets: int):
 	pass
 
 func dispenseLoop():
+	vend_speed = lerpf(1.0, 4.0, clampf((remaining_tickets/200.0), 0, 1.0))
 	ticket_stack.scale = Vector3(1.0, dispensed_tickets / 100.0, 1.0)
 	scale_pivot.scale = Vector3(1.0, 1.0 - (dispensed_tickets/2500.0), 1.0)
 	if remaining_tickets < 10:
@@ -56,6 +57,7 @@ func takeTickets():
 	scale_pivot.scale = Vector3(1.0, 1.0, 1.0)
 	remaining_tickets = 0
 	dispensed_tickets = 0
-	play("Take 001")
+	play("Take 001")#couldn't find a better way to get back to the start frame
 	stop()
+	get_section_end_time()
 	pass

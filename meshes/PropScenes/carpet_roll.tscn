@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dequomo4icek7"]
+
+[ext_resource type="PackedScene" uid="uid://0y5bhnljp4g5" path="res://meshes/SM_CarpetRoll.fbx" id="1_auwv5"]
+[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_Blacklight.tres" id="2_sur30"]
+[ext_resource type="Texture2D" uid="uid://bv0g1nivvcy" path="res://textures/effects/T_LUT_UVGlowing.png" id="3_rrpe1"]
+[ext_resource type="Texture2D" uid="uid://daswnm46guxoe" path="res://textures/carpet/T_PhaseConnectCarpet.png" id="4_8ue1u"]
+[ext_resource type="Material" uid="uid://cvcmx8emwoixe" path="res://materials/Blacklight/Carpet_back.tres" id="5_hm6fl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_frl8c"]
+render_priority = 0
+shader = ExtResource("2_sur30")
+shader_parameter/Tiling = Vector2(1, 1)
+shader_parameter/Texture2DParameter2 = ExtResource("4_8ue1u")
+shader_parameter/LUT = ExtResource("3_rrpe1")
+shader_parameter/triplanar_scale = Vector3(1, 1, 1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5
+
+[node name="CarpetRoll" unique_id=102447486 instance=ExtResource("1_auwv5")]
+
+[node name="CarpetRoll002" parent="." index="0" unique_id=1273967736]
+surface_material_override/0 = SubResource("ShaderMaterial_frl8c")
+surface_material_override/1 = ExtResource("5_hm6fl")

@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://datnwu6nb24ck"]
+
+[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_Blacklight.tres" id="1_6fcgg"]
+[ext_resource type="Texture2D" uid="uid://bv0g1nivvcy" path="res://textures/effects/T_LUT_UVGlowing.png" id="2_k8ecp"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_6fcgg")
+shader_parameter/Tiling = Vector2(1, 1)
+shader_parameter/LUT = ExtResource("2_k8ecp")
+shader_parameter/triplanar_scale = Vector3(1, 1, 1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5

@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://davb3fnnqk4q3"]
+
+[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_Blacklight.tres" id="1_r1ljl"]
+[ext_resource type="Texture2D" uid="uid://bv0g1nivvcy" path="res://textures/effects/T_LUT_UVGlowing.png" id="2_ecg7g"]
+[ext_resource type="Texture2D" uid="uid://daswnm46guxoe" path="res://textures/carpet/T_PhaseConnectCarpet.png" id="2_kww14"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_r1ljl")
+shader_parameter/Tiling = Vector2(4, 4)
+shader_parameter/Texture2DParameter2 = ExtResource("2_kww14")
+shader_parameter/LUT = ExtResource("2_ecg7g")
+shader_parameter/triplanar_scale = Vector3(1, 1, 1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5

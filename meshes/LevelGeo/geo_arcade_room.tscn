@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://btjaqyhkj6rod"]
 
 [ext_resource type="PackedScene" uid="uid://reldejuyt3t1" path="res://meshes/LevelGeo/SM_geo_ArcadeRoom.fbx" id="1_bbp5q"]
-[ext_resource type="Material" uid="uid://mmf34lqyxd32" path="res://materials/Carpet_arcade.tres" id="2_jae6f"]
+[ext_resource type="Material" uid="uid://davb3fnnqk4q3" path="res://materials/Blacklight/Carpet_arcade.tres" id="2_y46fe"]
 [ext_resource type="Material" uid="uid://f7pb3wu04tx7" path="res://materials/PlasterWall.tres" id="3_y46fe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_58b20"]
@@ -118,7 +118,7 @@ size = Vector3(2.2, 3, 0.2)
 [node name="ArcadeRoom" parent="." index="0" unique_id=1803970716]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_y46fe")
-surface_material_override/0 = ExtResource("2_jae6f")
+surface_material_override/0 = ExtResource("2_y46fe")
 surface_material_override/1 = ExtResource("3_y46fe")
 
 [node name="Floor" type="StaticBody3D" parent="." index="1" unique_id=1150001314]
