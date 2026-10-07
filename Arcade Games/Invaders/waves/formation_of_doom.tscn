@@ -1,0 +1,35 @@
+[gd_scene load_steps=10 format=3 uid="uid://jty5ue45sh4n"]
+
+[ext_resource type="Script" uid="uid://dosksyhc2t0m" path="res://waves/formation.gd" id="1_1lhci"]
+[ext_resource type="PackedScene" uid="uid://bd02pjd7wdaa1" path="res://units/enemies/star.tscn" id="2_hvxc0"]
+[ext_resource type="PackedScene" uid="uid://ds6wp0hmnouyk" path="res://units/enemies/bug.tscn" id="3_btdum"]
+[ext_resource type="PackedScene" uid="uid://dmsgpgydfdor5" path="res://units/enemies/crab.tscn" id="4_dla8v"]
+[ext_resource type="Script" uid="uid://ckri073qfsukw" path="res://waves/grid_pattern.gd" id="5_yapgq"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="6_653op"]
+[ext_resource type="Script" uid="uid://ksdfgesjdr6c" path="res://units/behaviours/sidewinder.gd" id="7_84ehl"]
+
+[sub_resource type="Resource" id="Resource_rq143"]
+script = ExtResource("5_yapgq")
+members = {
+"a": ExtResource("2_hvxc0"),
+"b": ExtResource("3_btdum"),
+"c": ExtResource("4_dla8v")
+}
+pattern_string = "a c aab bba b b b ab ba"
+metadata/_custom_type_script = "uid://ckri073qfsukw"
+
+[sub_resource type="Resource" id="Resource_n0a7u"]
+resource_local_to_scene = true
+script = ExtResource("7_84ehl")
+speed = 28
+turn_speed = 5
+avoidance_scale = 2
+metadata/_custom_type_script = "uid://ksdfgesjdr6c"
+
+[node name="Formation" type="Node2D"]
+script = ExtResource("1_1lhci")
+rank = 9
+file = 14
+using = 1
+unit_pattern = SubResource("Resource_rq143")
+behaviours = Array[ExtResource("6_653op")]([SubResource("Resource_n0a7u")])

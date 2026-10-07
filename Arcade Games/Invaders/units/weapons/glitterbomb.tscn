@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://0mgc37ep2ehp"]
+
+[ext_resource type="Script" uid="uid://ckclius2pkbox" path="res://units/weapons/scattershot.gd" id="1_sgubh"]
+[ext_resource type="PackedScene" uid="uid://jn7aclb0by4l" path="res://units/weapons/sparkle.tscn" id="2_ax1ip"]
+
+[node name="Glitterbomb" type="Node2D"]
+script = ExtResource("1_sgubh")
+ammo = ExtResource("2_ax1ip")
+ammo_count = 12
+pool_mode = 0
+spread = 2.0944
+apply_impulse = 500.0
+oneshot = true
+shoot_sfx = &""
+metadata/_custom_type_script = "uid://bbav8weitt8f3"

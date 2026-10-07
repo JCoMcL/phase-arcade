@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cum2r1jlyxtb8"
+path="res://.godot/imported/boom.wav-1d4079a6cae3a5e31cd447539f15b693.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-64/boom.wav"
+dest_files=["res://.godot/imported/boom.wav-1d4079a6cae3a5e31cd447539f15b693.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=3 uid="uid://bd02pjd7wdaa1"]
+
+[ext_resource type="PackedScene" uid="uid://bguhxfj4pgmhq" path="res://units/enemies/_enemy.tscn" id="1_tbvge"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_au8sf"]
+[ext_resource type="Texture2D" uid="uid://b0yx0e1akq830" path="res://units/enemies/enemies.png" id="2_necur"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="3_a8bsq"]
+[ext_resource type="Script" uid="uid://cg7fwgjodshka" path="res://addons/jodot/handy_atlas.gd" id="3_au8sf"]
+
+[sub_resource type="Resource" id="Resource_qpx7v"]
+script = ExtResource("3_a8bsq")
+ignore_layers = 0
+damage = 1
+take_damage = 1
+play_area_bounded = false
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au8sf"]
+resource_local_to_scene = true
+atlas = ExtResource("2_necur")
+region = Rect2(0, 1, 32, 14)
+script = ExtResource("3_au8sf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_au8sf"]
+resource_local_to_scene = true
+size = Vector2(14, 14)
+
+[node name="Star" instance=ExtResource("1_tbvge")]
+behaviours = Array[ExtResource("2_au8sf")]([SubResource("Resource_qpx7v")])
+health = 2
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_au8sf")
+hframes = 2
+damage_frames = 2
+vertical_speed_only = false
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_au8sf")

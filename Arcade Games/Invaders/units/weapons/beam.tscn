@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=3 uid="uid://du58m1l12sjp3"]
+
+[ext_resource type="PackedScene" uid="uid://cglfd6h0f8dxb" path="res://units/weapons/_bullet.tscn" id="1_owcm1"]
+[ext_resource type="Script" uid="uid://m8gbiu1vlgwt" path="res://units/weapons/beam.gd" id="2_5vwdh"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="3_5vwdh"]
+[ext_resource type="Shader" uid="uid://dypbkrt1g7tws" path="res://addons/jodot/effects/sprite_fx.gdshader" id="3_r1dul"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="5_iegav"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="5_qa05e"]
+[ext_resource type="Texture2D" uid="uid://da7ep115w0rqx" path="res://units/weapons/ammunition.png" id="6_4tqlc"]
+
+[sub_resource type="Resource" id="Resource_qa05e"]
+script = ExtResource("5_iegav")
+take_damage = 0
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4tqlc"]
+resource_local_to_scene = true
+shader = ExtResource("3_r1dul")
+shader_parameter/light = Color(1, 0.321569, 0.466667, 1)
+shader_parameter/midtone = Color(0.678431, 0.184314, 0.270588, 1)
+shader_parameter/dark = Color(0.470588, 0.113725, 0.309804, 1)
+shader_parameter/apply_palette = false
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/mosaic = 1.0
+shader_parameter/rotation = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tqlc"]
+atlas = ExtResource("6_4tqlc")
+region = Rect2(103, 0, 20, 30)
+
+[node name="Beam" instance=ExtResource("1_owcm1")]
+collision_mask = 23
+script = ExtResource("2_5vwdh")
+max_range = 1000
+hitrate = 6.4
+behaviours = Array[ExtResource("3_5vwdh")]([SubResource("Resource_qa05e")])
+expire_fx = Array[ExtResource("5_qa05e")]([])
+
+[node name="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_4tqlc")
+texture = SubResource("AtlasTexture_4tqlc")
+hframes = 2
+vframes = 3
+animation_frames = 6
+animation_rate = 12
+randomize_frames = 6
+randomize_rate = 1
+
+[node name="CollisionShape2D" parent="." index="1"]
+disabled = true
+
+[node name="Line2D" type="Line2D" parent="." index="2"]
+width = 4.0

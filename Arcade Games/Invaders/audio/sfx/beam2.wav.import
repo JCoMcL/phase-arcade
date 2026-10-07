@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmrw266g8nown"
+path="res://.godot/imported/beam2.wav-652e48b9b89b53681c15253564b3d314.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/beam2.wav"
+dest_files=["res://.godot/imported/beam2.wav-652e48b9b89b53681c15253564b3d314.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

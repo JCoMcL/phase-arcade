@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cepq07bhxard5"]
+
+[ext_resource type="Theme" uid="uid://bnc4gesw2cmsb" path="res://ui/theme.tres" id="1_u4kgu"]
+[ext_resource type="PackedScene" uid="uid://beu6m7t7diqpy" path="res://ui/lives.tscn" id="2_85dvu"]
+[ext_resource type="Texture2D" uid="uid://ds0gta24h6pt2" path="res://ui/ghost.png" id="9_7nbam"]
+[ext_resource type="Script" uid="uid://dqawa48auhxc5" path="res://ui/points_label.gd" id="10_ngtl8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bty8r"]
+atlas = ExtResource("9_7nbam")
+region = Rect2(0, 0, 14, 16)
+
+[node name="Header" type="ColorRect"]
+z_index = 1
+offset_right = 511.0
+offset_bottom = 36.465
+theme = ExtResource("1_u4kgu")
+color = Color(0, 0, 0, 1)
+
+[node name="Lives" parent="." instance=ExtResource("2_85dvu")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -105.0
+offset_right = 0.0
+grow_horizontal = 0
+
+[node name="Score" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 32.0
+
+[node name="Icon" type="TextureRect" parent="Score"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_bty8r")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Score"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "000"
+script = ExtResource("10_ngtl8")

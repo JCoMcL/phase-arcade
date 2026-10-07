@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://jlgm0bk143yu"
+path="res://.godot/imported/buwoo.wav-496d32c30f36e235da43b17c867a34ce.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-64/buwoo.wav"
+dest_files=["res://.godot/imported/buwoo.wav-496d32c30f36e235da43b17c867a34ce.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

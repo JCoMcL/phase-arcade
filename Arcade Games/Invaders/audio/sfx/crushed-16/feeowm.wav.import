@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b040v382o3p0o"
+path="res://.godot/imported/feeowm.wav-3b6a4333761c69b7011f07b7a1536d77.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-16/feeowm.wav"
+dest_files=["res://.godot/imported/feeowm.wav-3b6a4333761c69b7011f07b7a1536d77.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

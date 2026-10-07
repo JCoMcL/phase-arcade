@@ -1,0 +1,43 @@
+[gd_scene load_steps=10 format=3 uid="uid://cvr074hn5uj3a"]
+
+[ext_resource type="PackedScene" uid="uid://cglfd6h0f8dxb" path="res://units/weapons/_bullet.tscn" id="1_wbn1e"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_6ivgk"]
+[ext_resource type="Script" uid="uid://5vc4lge53ga2" path="res://units/behaviours/missile.gd" id="3_uimfh"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="4_fpp4g"]
+[ext_resource type="Texture2D" uid="uid://da7ep115w0rqx" path="res://units/weapons/ammunition.png" id="5_wbn1e"]
+
+[sub_resource type="Resource" id="Resource_pyca4"]
+script = ExtResource("3_uimfh")
+speed = 1200
+play_area_bounded = false
+metadata/_custom_type_script = "uid://5vc4lge53ga2"
+
+[sub_resource type="Resource" id="Resource_6ol1o"]
+script = ExtResource("4_fpp4g")
+ignore_layers = 0
+damage = 1
+take_damage = 1
+play_area_bounded = false
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_840x1"]
+atlas = ExtResource("5_wbn1e")
+region = Rect2(4, 0, 6, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oabq6"]
+size = Vector2(2, 8)
+
+[node name="Bolt" instance=ExtResource("1_wbn1e")]
+behaviours = Array[ExtResource("2_6ivgk")]([SubResource("Resource_pyca4"), SubResource("Resource_6ol1o")])
+health = 3
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 7)
+texture = SubResource("AtlasTexture_840x1")
+hframes = 3
+frame = 2
+randomize_frames = 3
+randomize_rate = 60
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_oabq6")

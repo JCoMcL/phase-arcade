@@ -1,0 +1,77 @@
+[gd_scene load_steps=20 format=3 uid="uid://bcexupn4fuc53"]
+
+[ext_resource type="PackedScene" uid="uid://cglfd6h0f8dxb" path="res://units/weapons/_bullet.tscn" id="1_mi1cs"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="3_35w50"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="5_lg6bi"]
+[ext_resource type="Script" uid="uid://dkywtcocw0jaa" path="res://units/behaviours/oscillate.gd" id="6_46kd7"]
+[ext_resource type="Script" uid="uid://benmqv834rxw0" path="res://units/behaviours/inertial.gd" id="6_pcxav"]
+[ext_resource type="Texture2D" uid="uid://da7ep115w0rqx" path="res://units/weapons/ammunition.png" id="7_lypa5"]
+[ext_resource type="Script" uid="uid://cft4t5nfaiai4" path="res://units/behaviours/bouncy.gd" id="7_pcxav"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="7_vuopu"]
+[ext_resource type="Shader" uid="uid://dypbkrt1g7tws" path="res://addons/jodot/effects/sprite_fx.gdshader" id="7_y2yfs"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="8_jh187"]
+[ext_resource type="Script" uid="uid://bgrpm82m7374j" path="res://addons/jodot/effects/vfxid.gd" id="9_xqbpd"]
+
+[sub_resource type="Resource" id="Resource_6ol1o"]
+script = ExtResource("5_lg6bi")
+ignore_layers = 137
+damage = 2
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="Resource" id="Resource_pcxav"]
+resource_local_to_scene = true
+script = ExtResource("6_46kd7")
+x_frequency = 0.6
+amplitude = Vector2(20.615, 6.015)
+frequency_spread = 0.218
+metadata/_custom_type_script = "uid://dkywtcocw0jaa"
+
+[sub_resource type="Resource" id="Resource_lypa5"]
+script = ExtResource("6_pcxav")
+metadata/_custom_type_script = "uid://benmqv834rxw0"
+
+[sub_resource type="Resource" id="Resource_y2yfs"]
+script = ExtResource("7_pcxav")
+ignore_layers = 0
+metadata/_custom_type_script = "uid://cft4t5nfaiai4"
+
+[sub_resource type="Resource" id="Resource_u8hrw"]
+script = ExtResource("8_jh187")
+id = &"thoom"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[sub_resource type="Resource" id="Resource_vuopu"]
+script = ExtResource("9_xqbpd")
+random_flip = true
+id = &"bang"
+metadata/_custom_type_script = "uid://bgrpm82m7374j"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vuopu"]
+resource_local_to_scene = true
+shader = ExtResource("7_y2yfs")
+shader_parameter/light = Color(1, 0.321569, 0.466667, 1)
+shader_parameter/midtone = Color(0.678431, 0.184314, 0.270588, 1)
+shader_parameter/dark = Color(0.470588, 0.113725, 0.309804, 1)
+shader_parameter/apply_palette = false
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/mosaic = 1.0
+shader_parameter/rotation = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2yfs"]
+atlas = ExtResource("7_lypa5")
+region = Rect2(16, 0, 16, 9)
+
+[node name="Orb" instance=ExtResource("1_mi1cs")]
+collision_mask = 24
+behaviours = Array[ExtResource("3_35w50")]([SubResource("Resource_6ol1o"), SubResource("Resource_pcxav"), SubResource("Resource_lypa5"), SubResource("Resource_y2yfs")])
+expire_fx = Array[ExtResource("7_vuopu")]([SubResource("Resource_u8hrw"), SubResource("Resource_vuopu")])
+
+[node name="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_vuopu")
+texture = SubResource("AtlasTexture_y2yfs")
+hframes = 2
+speed_frames = 2
+speed_start = 200.0
+speed_end = 200.0
+vertical_speed_only = true
+directional_vflip = false

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uw0nw0gw7d6s"]
 
-[ext_resource type="Script" uid="uid://dmh0c4qhtksxe" path="res://Arcade Games/Test Game/test_game.gd" id="1_oymay"]
+[ext_resource type="Script" uid="uid://c77ae1m8sue4x" path="res://Arcade Games/game.gd" id="1_oymay"]
 [ext_resource type="Script" uid="uid://c1eebo47v00cq" path="res://Arcade Games/Test Game/label.gd" id="1_yggbx"]
 [ext_resource type="Texture2D" uid="uid://b7eu7jeygvi6s" path="res://icon.svg" id="2_oxv5y"]
 [ext_resource type="Script" uid="uid://bhvu86r23wjxr" path="res://Arcade Games/Test Game/lil_guy.gd" id="3_oymay"]

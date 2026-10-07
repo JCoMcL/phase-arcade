@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bnrat3k8mdug0" path="res://stuff/cabinet.tscn" id="4_oq02x"]
 [ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://stuff/coin.tscn" id="4_vpf4b"]
 [ext_resource type="PackedScene" uid="uid://cg3qvbh6lqn8u" path="res://meshes/PropScenes/scene_doorway_plain.tscn" id="5_oq02x"]
+[ext_resource type="PackedScene" uid="uid://civ3r62diebkh" path="res://Arcade Games/Invaders/space_invaders.tscn" id="5_u25yn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
 sky_top_color = Color(0.042913936, 0.070302956, 0.10943019, 1)
@@ -87,6 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8321171, -2.9802322e-08, 1.
 
 [node name="Cabinet" parent="." unique_id=1752319625 instance=ExtResource("4_oq02x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037123263, 1.19092874e-07, -3.9271576)
+game_scene = ExtResource("5_u25yn")
 
 [node name="scene_doorway_plain" parent="." unique_id=197144363 instance=ExtResource("5_oq02x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0391443, 3.9969912e-08, -3.0517323)

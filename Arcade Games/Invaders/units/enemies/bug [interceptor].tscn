@@ -1,0 +1,40 @@
+[gd_scene load_steps=11 format=3 uid="uid://xqbbmfmf47yh"]
+
+[ext_resource type="PackedScene" uid="uid://ds6wp0hmnouyk" path="res://units/enemies/bug.tscn" id="1_84rjw"]
+[ext_resource type="Texture2D" uid="uid://b0yx0e1akq830" path="res://units/enemies/enemies.png" id="2_e4qox"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_f7vl2"]
+[ext_resource type="Script" uid="uid://cg7fwgjodshka" path="res://addons/jodot/handy_atlas.gd" id="3_4fa3h"]
+[ext_resource type="Script" uid="uid://civxpexunlqfi" path="res://units/behaviours/bomber.gd" id="3_fj43m"]
+[ext_resource type="Script" uid="uid://5vc4lge53ga2" path="res://units/behaviours/missile.gd" id="4_jw627"]
+
+[sub_resource type="Resource" id="Resource_pnbvc"]
+resource_local_to_scene = true
+script = ExtResource("3_fj43m")
+require_clear_shot = true
+play_area_bounded = true
+metadata/_custom_type_script = "uid://civxpexunlqfi"
+
+[sub_resource type="Resource" id="Resource_f7vl2"]
+script = ExtResource("4_jw627")
+speed = 50
+metadata/_custom_type_script = "uid://5vc4lge53ga2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7vl2"]
+resource_local_to_scene = true
+atlas = ExtResource("2_e4qox")
+region = Rect2(0, 16, 32, 16)
+script = ExtResource("3_4fa3h")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj43m"]
+resource_local_to_scene = true
+size = Vector2(16, 15)
+
+[node name="Bug" instance=ExtResource("1_84rjw")]
+collision_mask = 2
+behaviours = Array[ExtResource("2_f7vl2")]([SubResource("Resource_pnbvc"), SubResource("Resource_f7vl2")])
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_f7vl2")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_fj43m")

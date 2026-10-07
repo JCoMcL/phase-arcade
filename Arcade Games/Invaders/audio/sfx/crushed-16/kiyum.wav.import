@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2jw3bf1gmq0k"
+path="res://.godot/imported/kiyum.wav-599d0af29111a6a80416af246f7af89c.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-16/kiyum.wav"
+dest_files=["res://.godot/imported/kiyum.wav-599d0af29111a6a80416af246f7af89c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

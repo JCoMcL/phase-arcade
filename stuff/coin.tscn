@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://otft3bv64umi"]
 
 [ext_resource type="Script" uid="uid://b8tmhljysvkd8" path="res://stuff/coin/coin.gd" id="1_7jtme"]
-[ext_resource type="PackedScene" uid="uid://wsxhsr50jcv7" path="res://stuff/coin/coin.glb" id="1_d5gmh"]
+[ext_resource type="PackedScene" uid="uid://dkef4pm5wcx4w" path="res://stuff/coin/coin.glb" id="1_d5gmh"]
 [ext_resource type="PackedScene" uid="uid://ciofuhj1xxdb7" path="res://stuff/interact_zone.tscn" id="2_jnefc"]
-[ext_resource type="AudioStream" uid="uid://cngv1jt00kb4n" path="res://audio/clink_1.wav" id="3_5t2kp"]
-[ext_resource type="AudioStream" uid="uid://bek88833hvxs3" path="res://audio/clink_2.wav" id="4_7jtme"]
-[ext_resource type="AudioStream" uid="uid://4dkfi2ehjhbg" path="res://audio/clink_3.wav" id="5_82hwq"]
-[ext_resource type="AudioStream" uid="uid://c5u8538b7arxc" path="res://audio/clink_4.wav" id="6_2i1yi"]
+[ext_resource type="AudioStream" uid="uid://cngv1jt00kb4n" path="res://audio/foley/clink_1.wav" id="3_5t2kp"]
+[ext_resource type="AudioStream" uid="uid://bek88833hvxs3" path="res://audio/foley/clink_2.wav" id="4_7jtme"]
+[ext_resource type="AudioStream" uid="uid://4dkfi2ehjhbg" path="res://audio/foley/clink_3.wav" id="5_82hwq"]
+[ext_resource type="AudioStream" uid="uid://c5u8538b7arxc" path="res://audio/foley/clink_4.wav" id="6_2i1yi"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5t2kp"]
 random_pitch = 1.0632641

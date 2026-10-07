@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://y6xsuf2k1qqk"
+path="res://.godot/imported/flare.wav-31b36756fe411dd4c42405d34095986b.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-32/flare.wav"
+dest_files=["res://.godot/imported/flare.wav-31b36756fe411dd4c42405d34095986b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

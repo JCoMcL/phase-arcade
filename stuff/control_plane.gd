@@ -9,9 +9,6 @@ func _ready():
 		await cab.ready
 	input_tracker = cab.input_tracker
 
-func track_input(ev:InputEvent):
-	input_tracker._input(ev)
-
 func fbool(b:bool) -> float:
 	return 1.0 if b else 0.0
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://eq3vnjr5wam2"
+path="res://.godot/imported/flerr.wav-b5c585aae549fa23dde7d71df6c7a4f3.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-8/flerr.wav"
+dest_files=["res://.godot/imported/flerr.wav-b5c585aae549fa23dde7d71df6c7a4f3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3bchcdgf2rt0"
+path="res://.godot/imported/puck.wav-a7b29f332a574390c5ac614a2a1d66e9.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-16/puck.wav"
+dest_files=["res://.godot/imported/puck.wav-a7b29f332a574390c5ac614a2a1d66e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,51 @@
+[gd_scene load_steps=12 format=3 uid="uid://cmrq0ppgwpip2"]
+
+[ext_resource type="PackedScene" uid="uid://cglfd6h0f8dxb" path="res://units/weapons/_bullet.tscn" id="1_jr3dx"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_5n4y3"]
+[ext_resource type="Texture2D" uid="uid://da7ep115w0rqx" path="res://units/weapons/ammunition.png" id="2_bqa5y"]
+[ext_resource type="Script" uid="uid://5vc4lge53ga2" path="res://units/behaviours/missile.gd" id="3_b5fxm"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="4_kpwla"]
+[ext_resource type="Shader" uid="uid://dypbkrt1g7tws" path="res://addons/jodot/effects/sprite_fx.gdshader" id="5_uhocs"]
+
+[sub_resource type="Resource" id="Resource_fvkhm"]
+script = ExtResource("3_b5fxm")
+speed = 200
+metadata/_custom_type_script = "uid://5vc4lge53ga2"
+
+[sub_resource type="Resource" id="Resource_6ol1o"]
+script = ExtResource("4_kpwla")
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6kqix"]
+resource_local_to_scene = true
+shader = ExtResource("5_uhocs")
+shader_parameter/light = Color(1, 0.321569, 0.466667, 1)
+shader_parameter/midtone = Color(0.678431, 0.184314, 0.270588, 1)
+shader_parameter/dark = Color(0.470588, 0.113725, 0.309804, 1)
+shader_parameter/apply_palette = false
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/mosaic = 1.0
+shader_parameter/rotation = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_addjp"]
+atlas = ExtResource("2_bqa5y")
+region = Rect2(11, 16, 18, 13)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c8f7v"]
+radius = 3.09233
+
+[node name="Bullet" instance=ExtResource("1_jr3dx")]
+behaviours = Array[ExtResource("2_5n4y3")]([SubResource("Resource_fvkhm"), SubResource("Resource_6ol1o")])
+
+[node name="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_6kqix")
+texture = SubResource("AtlasTexture_addjp")
+offset = Vector2(0, 2.5)
+hframes = 3
+animation_frames = 3
+animation_rate = 12
+random_hflip = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -1.25)
+shape = SubResource("CircleShape2D_c8f7v")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d4dua3mcpwv7b"
+path="res://.godot/imported/bem.wav-a22432725acc327ef1b072684d9b3e7b.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-8/bem.wav"
+dest_files=["res://.godot/imported/bem.wav-a22432725acc327ef1b072684d9b3e7b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

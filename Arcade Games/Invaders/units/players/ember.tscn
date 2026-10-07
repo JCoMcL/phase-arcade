@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://dq80wlctowul2"]
+
+[ext_resource type="PackedScene" uid="uid://do4kgcgelx4o2" path="res://units/players/player_character.tscn" id="1_srfxa"]
+[ext_resource type="Texture2D" uid="uid://b4gtuk6lsub2p" path="res://units/players/ember.png" id="2_syuq8"]
+[ext_resource type="PackedScene" uid="uid://beqk5wfnbn6hv" path="res://units/weapons/flare.tscn" id="4_syuq8"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="4_wmb35"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="5_5p1ay"]
+
+[sub_resource type="Resource" id="Resource_ui7fb"]
+script = ExtResource("5_5p1ay")
+id = &"flooph"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[node name="PlayerCharacter" instance=ExtResource("1_srfxa")]
+bomb_icon = 3
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_syuq8")
+
+[node name="Shoota" parent="." index="2"]
+ammo = ExtResource("4_syuq8")
+shoot_fx = Array[ExtResource("4_wmb35")]([SubResource("Resource_ui7fb")])

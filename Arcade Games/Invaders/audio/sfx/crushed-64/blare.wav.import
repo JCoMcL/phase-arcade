@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwudxopaht5xp"
+path="res://.godot/imported/blare.wav-c4cc26eb57c46fa62ee15db85354d700.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-64/blare.wav"
+dest_files=["res://.godot/imported/blare.wav-c4cc26eb57c46fa62ee15db85354d700.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

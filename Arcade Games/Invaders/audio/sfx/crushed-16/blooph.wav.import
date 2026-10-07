@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dr676ug8701lp"
+path="res://.godot/imported/blooph.wav-a6d1bf229b9813b2ef552207e65f0c23.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-16/blooph.wav"
+dest_files=["res://.godot/imported/blooph.wav-a6d1bf229b9813b2ef552207e65f0c23.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,87 @@
+[gd_scene load_steps=17 format=3 uid="uid://d0umuuuxuv1ti"]
+
+[ext_resource type="PackedScene" uid="uid://cglfd6h0f8dxb" path="res://units/weapons/_bullet.tscn" id="1_fr1x7"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_cngue"]
+[ext_resource type="Texture2D" uid="uid://da7ep115w0rqx" path="res://units/weapons/ammunition.png" id="2_k0qbt"]
+[ext_resource type="PackedScene" uid="uid://0mgc37ep2ehp" path="res://units/weapons/glitterbomb.tscn" id="2_pmnkl"]
+[ext_resource type="Script" uid="uid://5vc4lge53ga2" path="res://units/behaviours/missile.gd" id="3_pmnkl"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="4_a8rm7"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="6_a8rm7"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="7_wbyng"]
+[ext_resource type="Script" uid="uid://bgrpm82m7374j" path="res://addons/jodot/effects/vfxid.gd" id="8_sjm7l"]
+
+[sub_resource type="Resource" id="Resource_h0pa3"]
+script = ExtResource("3_pmnkl")
+speed = 300
+metadata/_custom_type_script = "uid://5vc4lge53ga2"
+
+[sub_resource type="Resource" id="Resource_6ol1o"]
+script = ExtResource("4_a8rm7")
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="Resource" id="Resource_vlkiv"]
+script = ExtResource("7_wbyng")
+id = &"bang"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[sub_resource type="Resource" id="Resource_h0114"]
+script = ExtResource("8_sjm7l")
+id = &"snap"
+metadata/_custom_type_script = "uid://bgrpm82m7374j"
+
+[sub_resource type="Shader" id="Shader_2xa64"]
+code = "shader_type canvas_item;
+uniform vec3 light: source_color = vec3(1.0);
+uniform vec3 midtone: source_color = vec3(.5);
+uniform vec3 dark: source_color = vec3(.2);
+uniform bool active = false;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	COLOR = texture(TEXTURE, UV);
+	if (active && COLOR.a > 0.0) {
+		if (COLOR.b > 0.7)
+			COLOR.rgb=light;
+		else if (COLOR.b > 0.5)
+			COLOR.rgb=midtone;
+		else if (COLOR.b > 0.3)
+			COLOR.rgb=dark;
+	}
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the CanvasItem.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ujg1r"]
+resource_local_to_scene = true
+shader = SubResource("Shader_2xa64")
+shader_parameter/light = Color(1, 0.321569, 0.466667, 1)
+shader_parameter/midtone = Color(0.678431, 0.184314, 0.270588, 1)
+shader_parameter/dark = Color(0.470588, 0.113725, 0.309804, 1)
+shader_parameter/active = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao3mq"]
+atlas = ExtResource("2_k0qbt")
+region = Rect2(32, 0, 32, 32)
+
+[node name="Star" instance=ExtResource("1_fr1x7")]
+payload = ExtResource("2_pmnkl")
+hit_sfx = "bang"
+behaviours = Array[ExtResource("2_cngue")]([SubResource("Resource_h0pa3"), SubResource("Resource_6ol1o")])
+expire_fx = Array[ExtResource("6_a8rm7")]([SubResource("Resource_vlkiv"), SubResource("Resource_h0114")])
+
+[node name="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_ujg1r")
+position = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_ao3mq")
+hframes = 2
+vframes = 2
+frame = 1
+randomize_frames = 4
+randomize_rate = 35

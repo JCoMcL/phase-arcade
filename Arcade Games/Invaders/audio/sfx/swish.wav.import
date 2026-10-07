@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpaunnb7ax23b"
+path="res://.godot/imported/swish.wav-61c305fb171a620e3f5d61cd7c6191c1.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/swish.wav"
+dest_files=["res://.godot/imported/swish.wav-61c305fb171a620e3f5d61cd7c6191c1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://jmkcdb54glbd"]
+
+[ext_resource type="Script" uid="uid://dmjvmdhrsh2i2" path="res://Arcade Games/Invaders/waves/wave.gd" id="1_3x8x8"]
+[ext_resource type="PackedScene" uid="uid://jty5ue45sh4n" path="res://Arcade Games/Invaders/waves/formation_of_doom.tscn" id="2_007hc"]
+[ext_resource type="PackedScene" uid="uid://xqbbmfmf47yh" path="res://Arcade Games/Invaders/units/enemies/bug [interceptor].tscn" id="3_5looi"]
+[ext_resource type="PackedScene" uid="uid://c1qnfwnlsqvh0" path="res://Arcade Games/Invaders/units/enemies/marten.tscn" id="4_fusvu"]
+
+[node name="Wave0" type="Node2D" unique_id=1080282564]
+script = ExtResource("1_3x8x8")
+starting_formation = ExtResource("2_007hc")
+interceptor = ExtResource("3_5looi")
+marten = ExtResource("4_fusvu")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clnpl0an0hbjs"
+path="res://.godot/imported/bop.wav-be4a5a4cb04fc3cf047bf2f3ef978439.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-32/bop.wav"
+dest_files=["res://.godot/imported/bop.wav-be4a5a4cb04fc3cf047bf2f3ef978439.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,45 @@
+[gd_scene load_steps=11 format=3 uid="uid://bc6lg0ushliyj"]
+
+[ext_resource type="PackedScene" uid="uid://do4kgcgelx4o2" path="res://units/players/player_character.tscn" id="1_7tlug"]
+[ext_resource type="Script" uid="uid://brjwqlyiq7c2l" path="res://units/players/lumi.gd" id="2_40uyx"]
+[ext_resource type="Texture2D" uid="uid://c0cbl4qinp5v6" path="res://units/players/lumi.png" id="3_vx4pn"]
+[ext_resource type="Script" uid="uid://g3sb0piig0rh" path="res://units/weapons/sustainer.gd" id="5_vx4pn"]
+[ext_resource type="Script" uid="uid://dan3fllud0atx" path="res://addons/jodot/envelope.gd" id="6_hg30c"]
+[ext_resource type="PackedScene" uid="uid://du58m1l12sjp3" path="res://units/weapons/beam.tscn" id="6_triik"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="6_ul16y"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="7_5tc3g"]
+
+[sub_resource type="Resource" id="Resource_i2hi7"]
+script = ExtResource("7_5tc3g")
+id = &"bew1"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[sub_resource type="Resource" id="Resource_vx4pn"]
+script = ExtResource("6_hg30c")
+attack = 0.7
+release = 0.7
+metadata/_custom_type_script = "uid://dan3fllud0atx"
+
+[node name="Lumi" instance=ExtResource("1_7tlug")]
+script = ExtResource("2_40uyx")
+speed = 320
+bomb_cooldown = 2.0
+bomb_icon = 2
+walk_rate = 0.0157
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_vx4pn")
+
+[node name="Shoota" parent="." index="2"]
+position = Vector2(0, -20)
+script = ExtResource("5_vx4pn")
+sustain_sfx = &"beam3"
+sustain_sfx_rate = 8.135
+ammo = ExtResource("6_triik")
+ammo_count = 1
+pool_mode = 2
+shoot_fx = Array[ExtResource("6_ul16y")]([SubResource("Resource_i2hi7")])
+run_and_gun = 0.0
+run_and_gun_envelope = SubResource("Resource_vx4pn")
+windup_time = 0.8
+windup_sfx = "charge1"

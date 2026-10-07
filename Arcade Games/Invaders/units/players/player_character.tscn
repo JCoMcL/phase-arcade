@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://do4kgcgelx4o2"]
+
+[ext_resource type="Script" uid="uid://xu838nvrsxjk" path="res://units/players/player.gd" id="1_dk4pa"]
+[ext_resource type="Texture2D" uid="uid://poqg1d5e838j" path="res://units/players/dummy.png" id="2_7rm7g"]
+[ext_resource type="Script" uid="uid://blu1c4kvb2ite" path="res://units/character_sprite.gd" id="4_7rm7g"]
+[ext_resource type="Script" uid="uid://bbav8weitt8f3" path="res://units/weapons/shoota.gd" id="4_480fu"]
+[ext_resource type="PackedScene" uid="uid://cglfd6h0f8dxb" path="res://units/weapons/_bullet.tscn" id="5_4jue3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04jrr"]
+size = Vector2(12, 28)
+
+[node name="PlayerCharacter" type="CharacterBody2D"]
+disable_mode = 1
+collision_layer = 2
+script = ExtResource("1_dk4pa")
+acceleration = 2400
+bomb_cooldown = 1.0
+auto_free = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7rm7g")
+hframes = 10
+script = ExtResource("4_7rm7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_04jrr")
+
+[node name="Shoota" type="Node2D" parent="."]
+script = ExtResource("4_480fu")
+ammo = ExtResource("5_4jue3")
+metadata/_custom_type_script = "uid://bbav8weitt8f3"

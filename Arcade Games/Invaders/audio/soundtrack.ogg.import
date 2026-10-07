@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2eu65vihpb4i"
+path="res://.godot/imported/soundtrack.ogg-73c5e9556c417a2a4dfa20cb2b7c2cc7.oggvorbisstr"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/soundtrack.ogg"
+dest_files=["res://.godot/imported/soundtrack.ogg-73c5e9556c417a2a4dfa20cb2b7c2cc7.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=100
+beat_count=0
+bar_beats=4

@@ -1,0 +1,285 @@
+[gd_scene format=3 uid="uid://civ3r62diebkh"]
+
+[ext_resource type="Script" uid="uid://hmnb8xcddo0d" path="res://Arcade Games/Invaders/game.gd" id="1_2u8fv"]
+[ext_resource type="Script" uid="uid://dy0t0sdbw1h2a" path="res://Arcade Games/Invaders/play_area.gd" id="2_2u8fv"]
+[ext_resource type="PackedScene" uid="uid://jmkcdb54glbd" path="res://Arcade Games/Invaders/waves/wave_0.tscn" id="2_hgni5"]
+[ext_resource type="PackedScene" uid="uid://cepq07bhxard5" path="res://Arcade Games/Invaders/ui/header.tscn" id="3_hm1og"]
+[ext_resource type="Theme" uid="uid://bnc4gesw2cmsb" path="res://Arcade Games/Invaders/ui/theme.tres" id="3_hu1xn"]
+[ext_resource type="Script" uid="uid://c1xo8svguvebh" path="res://Arcade Games/Invaders/ui/status_label.gd" id="4_ep106"]
+[ext_resource type="Texture2D" uid="uid://dlcuolwxlbrkn" path="res://Arcade Games/Invaders/gravestones.png" id="6_f1sqh"]
+[ext_resource type="PackedScene" uid="uid://t6vey86s1202" path="res://Arcade Games/Invaders/ui/character_select.tscn" id="6_jn53l"]
+[ext_resource type="Texture2D" uid="uid://di2ijs4liu8jk" path="res://Arcade Games/Invaders/ground.png" id="6_rq143"]
+[ext_resource type="Script" uid="uid://1dgxw6sw6l6f" path="res://Arcade Games/Invaders/ui/bomb_indicator.gd" id="8_f1sqh"]
+[ext_resource type="Script" uid="uid://d1jykceug6mql" path="res://addons/jodot/effects/effect_sprite.gd" id="11_3pn3u"]
+[ext_resource type="Script" uid="uid://b2wj6hdp3fpmf" path="res://Arcade Games/Invaders/player_spawn.gd" id="11_150to"]
+[ext_resource type="AudioStream" uid="uid://2eu65vihpb4i" path="res://Arcade Games/Invaders/audio/soundtrack.ogg" id="11_uxjvs"]
+[ext_resource type="Script" uid="uid://bn8bpshcm5u4k" path="res://Arcade Games/Invaders/spawn_point.gd" id="12_r0y7k"]
+[ext_resource type="Script" uid="uid://cnaebjqiyqlv1" path="res://addons/jodot/effects/sfx.gd" id="14_v0e1x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0e1x"]
+size = Vector2(512, 445)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cxrdh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vf4al"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kv4wm"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5mc0s"]
+
+[node name="Game" type="Node2D" unique_id=618685806 node_paths=PackedStringArray("play_area", "new_entity_region", "lives", "player_spawn_point", "dialgoue_screens", "sfx_player")]
+script = ExtResource("1_2u8fv")
+play_area = NodePath("PlayArea")
+new_entity_region = NodePath("Scaling")
+lives = NodePath("PlayArea/Header/Lives")
+player_spawn_point = NodePath("Scaling/PlayerSpawn")
+dialgoue_screens = [NodePath("PlayArea/Foreground/CharacterSelectScreen")]
+waves = Array[PackedScene]([ExtResource("2_hgni5")])
+sfx_player = NodePath("SoundEffects")
+
+[node name="PlayArea" type="Area2D" parent="." unique_id=2035292387]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("2_2u8fv")
+top_padding = 35
+viewable = true
+metadata/_custom_type_script = "uid://dy0t0sdbw1h2a"
+
+[node name="Header" parent="PlayArea" unique_id=1020676529 instance=ExtResource("3_hm1og")]
+offset_right = 512.0
+offset_bottom = 35.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayArea/Header" unique_id=1898306188]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 10.0
+offset_right = 255.0
+offset_bottom = 18.0
+scale = Vector2(2, 2)
+alignment = 1
+script = ExtResource("8_f1sqh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea" unique_id=686129356]
+visible = false
+position = Vector2(256, 257.5)
+shape = SubResource("RectangleShape2D_v0e1x")
+
+[node name="Background" type="ColorRect" parent="PlayArea" unique_id=1057276390]
+z_index = -10
+offset_top = 35.0
+offset_right = 256.0
+offset_bottom = 257.5
+scale = Vector2(2, 2)
+color = Color(0.011764706, 0.015686275, 0.03529412, 1)
+
+[node name="Floor" type="TextureRect" parent="PlayArea/Background" unique_id=1490413127]
+z_index = 2
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_rq143")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Gravestone" type="Sprite2D" parent="PlayArea/Background/Floor" unique_id=1135341001]
+show_behind_parent = true
+z_index = -2
+position = Vector2(28, 11.5)
+texture = ExtResource("6_f1sqh")
+vframes = 4
+script = ExtResource("11_3pn3u")
+randomize_frames = 4
+random_hflip = true
+
+[node name="Gravestone2" type="Sprite2D" parent="PlayArea/Background/Floor" unique_id=471718667]
+show_behind_parent = true
+z_index = -2
+position = Vector2(60.5, 11.5)
+texture = ExtResource("6_f1sqh")
+vframes = 4
+script = ExtResource("11_3pn3u")
+randomize_frames = 4
+random_hflip = true
+
+[node name="Gravestone3" type="Sprite2D" parent="PlayArea/Background/Floor" unique_id=635169205]
+show_behind_parent = true
+z_index = -2
+position = Vector2(80.5, 14.5)
+texture = ExtResource("6_f1sqh")
+vframes = 4
+script = ExtResource("11_3pn3u")
+randomize_frames = 4
+random_hflip = true
+
+[node name="Gravestone4" type="Sprite2D" parent="PlayArea/Background/Floor" unique_id=2004612558]
+show_behind_parent = true
+z_index = -2
+position = Vector2(117, 16)
+texture = ExtResource("6_f1sqh")
+vframes = 4
+script = ExtResource("11_3pn3u")
+randomize_frames = 4
+random_hflip = true
+
+[node name="Gravestone5" type="Sprite2D" parent="PlayArea/Background/Floor" unique_id=2044498244]
+show_behind_parent = true
+z_index = -2
+position = Vector2(184.5, 11.5)
+texture = ExtResource("6_f1sqh")
+vframes = 4
+script = ExtResource("11_3pn3u")
+randomize_frames = 4
+random_hflip = true
+
+[node name="Gravestone6" type="Sprite2D" parent="PlayArea/Background/Floor" unique_id=599558380]
+show_behind_parent = true
+z_index = -2
+position = Vector2(229, 12.5)
+texture = ExtResource("6_f1sqh")
+vframes = 4
+script = ExtResource("11_3pn3u")
+randomize_frames = 4
+random_hflip = true
+
+[node name="Gravestone7" type="Sprite2D" parent="PlayArea/Background/Floor" unique_id=1284630612]
+show_behind_parent = true
+z_index = -2
+position = Vector2(249, 13)
+texture = ExtResource("6_f1sqh")
+vframes = 4
+script = ExtResource("11_3pn3u")
+randomize_frames = 4
+random_hflip = true
+
+[node name="Foreground" type="Control" parent="PlayArea" unique_id=1813087258]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 240.0
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="PlayArea/Foreground" unique_id=619398609]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_hu1xn")
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_ep106")
+
+[node name="CharacterSelectScreen" parent="PlayArea/Foreground" unique_id=1998133961 instance=ExtResource("6_jn53l")]
+visible = false
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="DownWall" type="StaticBody2D" parent="PlayArea" unique_id=201815]
+position = Vector2(256, 468)
+collision_layer = 129
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea/DownWall" unique_id=674260653]
+shape = SubResource("WorldBoundaryShape2D_cxrdh")
+one_way_collision = true
+one_way_collision_margin = 50.0
+
+[node name="LeftWall" type="StaticBody2D" parent="PlayArea" unique_id=1746996124]
+position = Vector2(0, 257.5)
+collision_layer = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea/LeftWall" unique_id=102136596]
+position = Vector2(-2, -1.5)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_vf4al")
+one_way_collision = true
+one_way_collision_margin = 50.0
+
+[node name="RightWall" type="StaticBody2D" parent="PlayArea" unique_id=1712136584]
+position = Vector2(512, 257.5)
+collision_layer = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea/RightWall" unique_id=509408183]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_kv4wm")
+one_way_collision = true
+one_way_collision_margin = 50.0
+
+[node name="UpWall" type="StaticBody2D" parent="PlayArea" unique_id=492785398]
+position = Vector2(256, 35)
+collision_layer = 257
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea/UpWall" unique_id=1542820434]
+rotation = -3.1415927
+shape = SubResource("WorldBoundaryShape2D_5mc0s")
+one_way_collision = true
+one_way_collision_margin = 50.0
+
+[node name="Scaling" type="Node2D" parent="." unique_id=169101027]
+scale = Vector2(2, 2)
+
+[node name="PlayerSpawn" type="Marker2D" parent="Scaling" unique_id=1350387460]
+position = Vector2(128, 195.5)
+script = ExtResource("11_150to")
+y = 80
+
+[node name="FormationCorner" type="Marker2D" parent="Scaling" unique_id=2098761353]
+position = Vector2(8.999988, 8.500009)
+script = ExtResource("12_r0y7k")
+x = 3.51562
+y = -4.04494
+
+[node name="Edge" type="Marker2D" parent="Scaling" unique_id=1848607684]
+position = Vector2(-27.000063, 102.4999)
+script = ExtResource("12_r0y7k")
+x = -10.5469
+y = 38.2022
+mirrored = true
+metadata/_custom_type_script = "uid://bn8bpshcm5u4k"
+
+[node name="Moon" type="Sprite2D" parent="Scaling" unique_id=785045145]
+position = Vector2(60, 71)
+rotation = 0.011099183
+hframes = 6
+frame = 5
+script = ExtResource("11_3pn3u")
+
+[node name="CenterSpawn" type="Marker2D" parent="Scaling" unique_id=913985389]
+position = Vector2(128, 106.5)
+script = ExtResource("12_r0y7k")
+y = 40
+metadata/_custom_type_script = "uid://bn8bpshcm5u4k"
+
+[node name="PincerSpawn" type="Marker2D" parent="Scaling" unique_id=942029586]
+position = Vector2(52, 136.5)
+script = ExtResource("12_r0y7k")
+x = 20.3125
+y = 53.483147
+mirrored = true
+metadata/_custom_type_script = "uid://bn8bpshcm5u4k"
+
+[node name="SoundEffects" type="AudioStreamPlayer2D" parent="." unique_id=161053284]
+script = ExtResource("14_v0e1x")
+
+[node name="Soundtrack" type="AudioStreamPlayer2D" parent="." unique_id=546310968]
+stream = ExtResource("11_uxjvs")
+volume_db = -6.42
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=339393293]
+position = Vector2(256, 223)
+zoom = Vector2(2.483, 2.483)

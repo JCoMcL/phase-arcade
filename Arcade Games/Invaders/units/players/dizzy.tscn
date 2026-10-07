@@ -1,0 +1,62 @@
+[gd_scene load_steps=15 format=3 uid="uid://dgyeqcyecu50c"]
+
+[ext_resource type="PackedScene" uid="uid://do4kgcgelx4o2" path="res://units/players/player_character.tscn" id="1_2k1ve"]
+[ext_resource type="Texture2D" uid="uid://cks4j15y8ely7" path="res://units/players/dizzy.png" id="2_l7ykn"]
+[ext_resource type="Script" uid="uid://bhia8xj5gcylw" path="res://units/players/dizzy.gd" id="2_tb46d"]
+[ext_resource type="Script" uid="uid://b8bccgwrucbgf" path="res://units/weapons/orbthrower.gd" id="4_0nkv5"]
+[ext_resource type="PackedScene" uid="uid://bcexupn4fuc53" path="res://units/weapons/orb.tscn" id="5_1jacx"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="5_ko4n6"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="6_xy5ri"]
+[ext_resource type="Script" uid="uid://bgrpm82m7374j" path="res://addons/jodot/effects/vfxid.gd" id="7_fam8i"]
+[ext_resource type="Script" uid="uid://bbav8weitt8f3" path="res://units/weapons/shoota.gd" id="8_xy5ri"]
+[ext_resource type="PackedScene" uid="uid://bonmcs46wfcxf" path="res://units/weapons/revive.tscn" id="9_fam8i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ko4n6"]
+size = Vector2(11, 29)
+
+[sub_resource type="Resource" id="Resource_tb46d"]
+script = ExtResource("6_xy5ri")
+id = &"blooph"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[sub_resource type="Resource" id="Resource_ol4hu"]
+script = ExtResource("7_fam8i")
+random_flip = true
+id = &"form"
+metadata/_custom_type_script = "uid://bgrpm82m7374j"
+
+[sub_resource type="Resource" id="Resource_38xts"]
+script = ExtResource("6_xy5ri")
+id = &"oewow"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[node name="Dizzy" instance=ExtResource("1_2k1ve")]
+script = ExtResource("2_tb46d")
+acceleration = 800
+speed = 200
+bomb_cooldown = 30.0
+bomb_icon = 0
+walk_rate = 0.035
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_l7ykn")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_ko4n6")
+
+[node name="Shoota" parent="." index="2"]
+position = Vector2(-9, -15)
+script = ExtResource("4_0nkv5")
+respawn_delay = 0.2
+ammo = ExtResource("5_1jacx")
+ammo_count = 2
+shoot_fx = Array[ExtResource("5_ko4n6")]([SubResource("Resource_tb46d"), SubResource("Resource_ol4hu")])
+
+[node name="Bomb" type="Node2D" parent="." index="3"]
+script = ExtResource("8_xy5ri")
+ammo = ExtResource("9_fam8i")
+ammo_count = 1
+pool_mode = 0
+shoot_fx = Array[ExtResource("5_ko4n6")]([SubResource("Resource_38xts")])
+metadata/_custom_type_script = "uid://bbav8weitt8f3"

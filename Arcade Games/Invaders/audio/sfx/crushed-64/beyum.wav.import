@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgdgfjr7q78uf"
+path="res://.godot/imported/beyum.wav-bf4207b4640f5dc4a20bf5ca137f679d.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-64/beyum.wav"
+dest_files=["res://.godot/imported/beyum.wav-bf4207b4640f5dc4a20bf5ca137f679d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

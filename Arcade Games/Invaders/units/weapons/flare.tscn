@@ -1,0 +1,69 @@
+[gd_scene load_steps=17 format=3 uid="uid://beqk5wfnbn6hv"]
+
+[ext_resource type="PackedScene" uid="uid://cglfd6h0f8dxb" path="res://units/weapons/_bullet.tscn" id="1_fyeyr"]
+[ext_resource type="Texture2D" uid="uid://da7ep115w0rqx" path="res://units/weapons/ammunition.png" id="2_4ou4y"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_gg0jp"]
+[ext_resource type="Script" uid="uid://rqhke1r2xrwp" path="res://units/behaviours/accelerate.gd" id="4_gg0jp"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="4_gyp0y"]
+[ext_resource type="Shader" uid="uid://dypbkrt1g7tws" path="res://addons/jodot/effects/sprite_fx.gdshader" id="5_gg0jp"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="5_sidca"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="6_t5fm1"]
+[ext_resource type="Script" uid="uid://bgrpm82m7374j" path="res://addons/jodot/effects/vfxid.gd" id="7_13be1"]
+
+[sub_resource type="Resource" id="Resource_sidca"]
+script = ExtResource("4_gyp0y")
+damage = 2
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="Resource" id="Resource_4f7oy"]
+script = ExtResource("4_gg0jp")
+acceleration = 800
+target_speed = 600
+initial_speed = 100
+metadata/_custom_type_script = "uid://rqhke1r2xrwp"
+
+[sub_resource type="Resource" id="Resource_2ofow"]
+script = ExtResource("6_t5fm1")
+id = &"flerr"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[sub_resource type="Resource" id="Resource_h0114"]
+script = ExtResource("7_13be1")
+id = &"snap"
+metadata/_custom_type_script = "uid://bgrpm82m7374j"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4f7oy"]
+resource_local_to_scene = true
+shader = ExtResource("5_gg0jp")
+shader_parameter/light = Color(1, 0.321569, 0.466667, 1)
+shader_parameter/midtone = Color(0.678431, 0.184314, 0.270588, 1)
+shader_parameter/dark = Color(0.470588, 0.113725, 0.309804, 1)
+shader_parameter/apply_palette = false
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/mosaic = 1.0
+shader_parameter/rotation = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyeyr"]
+atlas = ExtResource("2_4ou4y")
+region = Rect2(80, 0, 20, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ou4y"]
+size = Vector2(4, 4)
+
+[node name="Bullet" instance=ExtResource("1_fyeyr")]
+behaviours = Array[ExtResource("2_gg0jp")]([SubResource("Resource_sidca"), SubResource("Resource_4f7oy")])
+expire_fx = Array[ExtResource("5_sidca")]([SubResource("Resource_2ofow"), SubResource("Resource_h0114")])
+
+[node name="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_4f7oy")
+texture = SubResource("AtlasTexture_fyeyr")
+offset = Vector2(0, 14)
+hframes = 5
+speed_frames = 5
+speed_start = 250.0
+speed_end = 600.0
+randomize_rate = 20
+random_hflip = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_4ou4y")

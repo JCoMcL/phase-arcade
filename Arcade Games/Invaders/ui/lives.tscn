@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://beu6m7t7diqpy"]
+
+[ext_resource type="Script" uid="uid://dyuxpo5xxanxv" path="res://ui/lives.gd" id="1_rfh4l"]
+[ext_resource type="PackedScene" uid="uid://bwifivy4kgkc7" path="res://ui/life_container.tscn" id="2_7r6da"]
+
+[node name="Lives" type="GridContainer"]
+offset_left = 403.0
+offset_right = 508.0
+offset_bottom = 38.0
+columns = 3
+script = ExtResource("1_rfh4l")
+
+[node name="LifeContainer" parent="." instance=ExtResource("2_7r6da")]
+layout_mode = 2
+
+[node name="LifeContainer2" parent="." instance=ExtResource("2_7r6da")]
+layout_mode = 2
+
+[node name="LifeContainer3" parent="." instance=ExtResource("2_7r6da")]
+layout_mode = 2

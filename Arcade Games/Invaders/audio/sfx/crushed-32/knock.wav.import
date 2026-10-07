@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8d6y8jv7kjko"
+path="res://.godot/imported/knock.wav-9e900cb9a9a29baee7d76f8d8dbd0e50.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-32/knock.wav"
+dest_files=["res://.godot/imported/knock.wav-9e900cb9a9a29baee7d76f8d8dbd0e50.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

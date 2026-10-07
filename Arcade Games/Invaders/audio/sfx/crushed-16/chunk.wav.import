@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cc2kxp10y8iod"
+path="res://.godot/imported/chunk.wav-51a269dcb3f3e24ee38e5dab12af6a57.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-16/chunk.wav"
+dest_files=["res://.godot/imported/chunk.wav-51a269dcb3f3e24ee38e5dab12af6a57.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmsgpgydfdor5"]
+
+[ext_resource type="PackedScene" uid="uid://bguhxfj4pgmhq" path="res://units/enemies/_enemy.tscn" id="1_d1wrx"]
+[ext_resource type="Texture2D" uid="uid://b0yx0e1akq830" path="res://units/enemies/enemies.png" id="2_4ljjv"]
+[ext_resource type="Script" uid="uid://cg7fwgjodshka" path="res://addons/jodot/handy_atlas.gd" id="3_lkky1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjmlk"]
+resource_local_to_scene = true
+atlas = ExtResource("2_4ljjv")
+region = Rect2(0, 32, 64, 16)
+script = ExtResource("3_lkky1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0tbq"]
+resource_local_to_scene = true
+size = Vector2(16, 15)
+
+[node name="Crab" instance=ExtResource("1_d1wrx")]
+health = 4
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -0.5)
+texture = SubResource("AtlasTexture_tjmlk")
+flip_h = false
+hframes = 4
+damage_frames = 4
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_m0tbq")

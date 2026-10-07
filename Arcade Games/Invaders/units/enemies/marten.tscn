@@ -1,0 +1,58 @@
+[gd_scene load_steps=14 format=3 uid="uid://c1qnfwnlsqvh0"]
+
+[ext_resource type="PackedScene" uid="uid://bguhxfj4pgmhq" path="res://units/enemies/_enemy.tscn" id="1_lbgsf"]
+[ext_resource type="Texture2D" uid="uid://b0yx0e1akq830" path="res://units/enemies/enemies.png" id="2_pc788"]
+[ext_resource type="Script" uid="uid://d4kdc7jwb63nj" path="res://units/enemies/marten.gd" id="2_yc40u"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="3_pvrua"]
+[ext_resource type="Script" uid="uid://cg7fwgjodshka" path="res://addons/jodot/handy_atlas.gd" id="3_yc40u"]
+[ext_resource type="Script" uid="uid://dkywtcocw0jaa" path="res://units/behaviours/oscillate.gd" id="4_g7bfp"]
+[ext_resource type="Script" uid="uid://civxpexunlqfi" path="res://units/behaviours/bomber.gd" id="5_g7bfp"]
+[ext_resource type="Script" uid="uid://bbav8weitt8f3" path="res://units/weapons/shoota.gd" id="8_g7bfp"]
+[ext_resource type="PackedScene" uid="uid://w1a5615lpye4" path="res://units/weapons/ball_lightning.tscn" id="9_g7bfp"]
+
+[sub_resource type="Resource" id="Resource_aqsql"]
+resource_local_to_scene = true
+script = ExtResource("4_g7bfp")
+x_frequency = 0.645
+amplitude = Vector2(30, 30)
+metadata/_custom_type_script = "uid://dkywtcocw0jaa"
+
+[sub_resource type="Resource" id="Resource_p2nan"]
+resource_local_to_scene = true
+script = ExtResource("5_g7bfp")
+interval = 3.0
+metadata/_custom_type_script = "uid://civxpexunlqfi"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvrua"]
+resource_local_to_scene = true
+atlas = ExtResource("2_pc788")
+region = Rect2(0, 48, 32, 16)
+script = ExtResource("3_yc40u")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g7bfp"]
+radius = 6.0
+
+[node name="Marten" instance=ExtResource("1_lbgsf")]
+collision_layer = 68
+collision_mask = 194
+script = ExtResource("2_yc40u")
+h_distance = 50.0
+h_distance_variance = 0.2
+behaviours = Array[ExtResource("3_pvrua")]([SubResource("Resource_aqsql"), SubResource("Resource_p2nan")])
+
+[node name="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_pvrua")
+offset = Vector2(0, -2)
+hframes = 2
+vertical_speed_only = false
+action_pose_offset = 1
+animation_rate = 0
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_g7bfp")
+
+[node name="Shoota" type="Node2D" parent="." index="2"]
+script = ExtResource("8_g7bfp")
+ammo = ExtResource("9_g7bfp")
+windup_time = 0.4
+metadata/_custom_type_script = "uid://bbav8weitt8f3"

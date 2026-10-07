@@ -1,0 +1,56 @@
+[gd_scene load_steps=17 format=3 uid="uid://cglfd6h0f8dxb"]
+
+[ext_resource type="Script" uid="uid://bfggqidxv4qmv" path="res://units/weapons/bullet.gd" id="1_s1sts"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_jqm6u"]
+[ext_resource type="Script" uid="uid://5vc4lge53ga2" path="res://units/behaviours/missile.gd" id="3_gvlvk"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="4_tluh8"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="5_4vhet"]
+[ext_resource type="Texture2D" uid="uid://da7ep115w0rqx" path="res://units/weapons/ammunition.png" id="5_r7xm8"]
+[ext_resource type="Material" uid="uid://bf4en5m778svj" path="res://addons/jodot/effects/sprite_fx.tres" id="5_rdu7o"]
+[ext_resource type="Script" uid="uid://blu1c4kvb2ite" path="res://units/character_sprite.gd" id="6_2xa64"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="6_vknvg"]
+[ext_resource type="Script" uid="uid://bgrpm82m7374j" path="res://addons/jodot/effects/vfxid.gd" id="7_g6lmi"]
+
+[sub_resource type="Resource" id="Resource_h0pa3"]
+script = ExtResource("3_gvlvk")
+speed = 220
+metadata/_custom_type_script = "uid://5vc4lge53ga2"
+
+[sub_resource type="Resource" id="Resource_6ol1o"]
+script = ExtResource("4_tluh8")
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="Resource" id="Resource_4rgbh"]
+script = ExtResource("6_vknvg")
+id = &"pip"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[sub_resource type="Resource" id="Resource_h0114"]
+script = ExtResource("7_g6lmi")
+random_flip = true
+id = &"bang"
+metadata/_custom_type_script = "uid://bgrpm82m7374j"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxwh4"]
+atlas = ExtResource("5_r7xm8")
+region = Rect2(0, 0, 2, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfotm"]
+size = Vector2(5, 3)
+
+[node name="Bullet" type="CharacterBody2D"]
+collision_layer = 32
+collision_mask = 17
+script = ExtResource("1_s1sts")
+behaviours = Array[ExtResource("2_jqm6u")]([SubResource("Resource_h0pa3"), SubResource("Resource_6ol1o")])
+expire_outside_play_area = true
+expire_fx = Array[ExtResource("5_4vhet")]([SubResource("Resource_4rgbh"), SubResource("Resource_h0114")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("5_rdu7o")
+texture = SubResource("AtlasTexture_cxwh4")
+script = ExtResource("6_2xa64")
+directional_vflip = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pfotm")

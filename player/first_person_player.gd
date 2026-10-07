@@ -157,7 +157,7 @@ func _physics_process(delta: float) -> void:
 
 	var walk_input:Vector2
 	if active_cabinet == null:
-		walk_input = Input.get_vector("left", "right", "forward", "backward").limit_length(1)
+		walk_input = Input.get_vector("left", "right", "up", "down").limit_length(1)
 	else:
 		walk_input = Vector2.ZERO
 	var walk = walk_input.rotated(-%Camera.global_rotation.y) * speed * clampf($Head.position.y / height, 0.0, 1.0)

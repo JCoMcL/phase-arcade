@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://i2p5l7semdl5"
+path="res://.godot/imported/blup.wav-ff30751d1d71eb2909bc6d3cab26859f.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-8/blup.wav"
+dest_files=["res://.godot/imported/blup.wav-ff30751d1d71eb2909bc6d3cab26859f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

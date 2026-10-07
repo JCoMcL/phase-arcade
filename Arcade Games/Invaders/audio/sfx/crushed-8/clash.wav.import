@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d215jit1y73a0"
+path="res://.godot/imported/clash.wav-6ff73120f5be84f0b69a00bbffa114fc.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-8/clash.wav"
+dest_files=["res://.godot/imported/clash.wav-6ff73120f5be84f0b69a00bbffa114fc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

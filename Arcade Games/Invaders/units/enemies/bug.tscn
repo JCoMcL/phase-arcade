@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=3 uid="uid://ds6wp0hmnouyk"]
+
+[ext_resource type="PackedScene" uid="uid://bguhxfj4pgmhq" path="res://units/enemies/_enemy.tscn" id="1_n80v8"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_870p3"]
+[ext_resource type="Script" uid="uid://civxpexunlqfi" path="res://units/behaviours/bomber.gd" id="3_pghv7"]
+[ext_resource type="Texture2D" uid="uid://b0yx0e1akq830" path="res://units/enemies/enemies.png" id="4_mawgr"]
+[ext_resource type="Script" uid="uid://cg7fwgjodshka" path="res://addons/jodot/handy_atlas.gd" id="5_d8ihr"]
+[ext_resource type="Script" uid="uid://bbav8weitt8f3" path="res://units/weapons/shoota.gd" id="6_h1eq8"]
+[ext_resource type="PackedScene" uid="uid://cmrq0ppgwpip2" path="res://units/weapons/esphere.tscn" id="7_870p3"]
+
+[sub_resource type="Resource" id="Resource_pnbvc"]
+resource_local_to_scene = true
+script = ExtResource("3_pghv7")
+interval = 6
+require_clear_shot = true
+play_area_bounded = true
+metadata/_custom_type_script = "uid://civxpexunlqfi"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t64g"]
+resource_local_to_scene = true
+atlas = ExtResource("4_mawgr")
+region = Rect2(0, 16, 32, 16)
+script = ExtResource("5_d8ihr")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_870p3"]
+resource_local_to_scene = true
+size = Vector2(16, 15)
+
+[node name="Bug" instance=ExtResource("1_n80v8")]
+behaviours = Array[ExtResource("2_870p3")]([SubResource("Resource_pnbvc")])
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 0.5)
+texture = SubResource("AtlasTexture_1t64g")
+hframes = 2
+animation_frames = 2
+animation_rate = 1
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_870p3")
+
+[node name="Shoota" type="Node2D" parent="." index="2"]
+script = ExtResource("6_h1eq8")
+ammo = ExtResource("7_870p3")

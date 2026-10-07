@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bypwkc7ajpkib"
+path="res://.godot/imported/crunch.wav-7cb8f04b70819bb54e721b2f84fce751.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-32/crunch.wav"
+dest_files=["res://.godot/imported/crunch.wav-7cb8f04b70819bb54e721b2f84fce751.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

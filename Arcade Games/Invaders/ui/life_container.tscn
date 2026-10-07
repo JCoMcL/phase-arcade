@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwifivy4kgkc7"]
+
+[ext_resource type="Script" uid="uid://dgq6s68jarg5p" path="res://ui/life_container.gd" id="1_sohe2"]
+[ext_resource type="Texture2D" uid="uid://eg5e5ky0jlgl" path="res://ui/ui.png" id="2_bp7ve"]
+[ext_resource type="Script" uid="uid://cwu5jitc4ba7s" path="res://ui/ui_contact_shadow.gd" id="3_bp7ve"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6y4e"]
+atlas = ExtResource("2_bp7ve")
+region = Rect2(36, 41, 16, 6)
+
+[node name="LifeContainer" type="TextureRect"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 0
+script = ExtResource("1_sohe2")
+metadata/_custom_type_script = "uid://dgq6s68jarg5p"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_top = 27.0
+offset_right = 16.0
+offset_bottom = 33.0
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_l6y4e")
+stretch_mode = 4
+script = ExtResource("3_bp7ve")
+show_as_focused = true

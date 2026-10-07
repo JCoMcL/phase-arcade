@@ -29,25 +29,33 @@ func sanity_check():
 		firing = false
 
 ## Feed an event to update the state
-func _input(ev: InputEvent) -> void:
+func _input(ev: InputEvent) -> bool:
+	var tracked=false
+	if ev.is_echo():
+		return false
 	# NOTE: the lack of `elif` here is actually important for controllers
+	# It seems JoyPadMotions is all four always
 	if ev.is_action("left"):
+		tracked=true
 		_input_left = ev.get_action_strength("left")
 	if ev.is_action("right"):
+		tracked=true
 		_input_right = ev.get_action_strength("right")
-	if ev.is_action("forward"):
-		_input_up = ev.get_action_strength("forward")
-	if ev.is_action("backward"):
-		_input_down = ev.get_action_strength("backward")
+	if ev.is_action("up"):
+		tracked=true
+		_input_up = ev.get_action_strength("up")
+	if ev.is_action("down"):
+		tracked=true
+		_input_down = ev.get_action_strength("down")
+	movement = Vector2(_input_right - _input_left, _input_down - _input_up).limit_length(1)
 
-	elif ev.is_action("fire"):
+	if ev.is_action("fire"):
 		firing = not ev.is_action_released("fire")
 	elif ev.is_action("bomb"):
 		bombing = not ev.is_action_released("bomb")
-
-	movement = Vector2(_input_right - _input_left, _input_down - _input_up)
-	if movement.length_squared() > 1:
-		movement = movement.normalized()
+	else:
+		return tracked
+	return true
 
 ## Sets all tracked inputs to their zero state
 func reset():

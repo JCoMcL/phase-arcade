@@ -28,14 +28,12 @@ func on_operator_release():
 func get_observation_delta(from:Camera3D) -> CameraTransform:
 	return CameraTransform.new(%ObservationPoint, from)
 
+var discretizer=Discretizer.new()
 var input_tracker=InputTracker.new()
 func push_input(ev: InputEvent):
 	get_viewport().set_input_as_handled()
-	input_tracker._input(ev)
-	$ControlPlane.track_input(ev)
-	$SubViewport.push_input(ev)
-
-const GAME_AUDIO_TYPES := [&"AudioStreamPlayer", &"AudioStreamPlayer2D"]
+	if input_tracker._input(ev):
+		$SubViewport.push_input(ev)
 
 var power:bool
 func set_power_state(on:bool):
@@ -46,12 +44,12 @@ func set_power_state(on:bool):
 		if game_scene:
 			curr_game = game_scene.instantiate()
 			game_parent.add_child(curr_game)
-			curr_game.z_index = -1
+			curr_game.z_index = -9
 			print(game_parent)
 			print(game_parent.get_children())
-		$Screen.texture = $SubViewport.get_texture()
+		%Screen.texture = $SubViewport.get_texture()
 	else:
-		$Screen.texture = null
+		%Screen.texture = null
 		if curr_game:
 			curr_game.queue_free()
 	%ScreenInteractZone.active = on
@@ -103,7 +101,7 @@ func _ready() -> void:
 	else:
 		set_power_state(start_powered_on)
 	%ScreenInteractZone.interacted_by.connect(_interacted_by)
-	for type in GAME_AUDIO_TYPES:
+	for type in [&"AudioStreamPlayer", &"AudioStreamPlayer2D"]:
 		for player in $SubViewport.find_children("*", type, true, false):
 			_route_game_audio(player)
 	get_tree().node_added.connect(_route_game_audio)
@@ -111,3 +109,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if test_mode:
 		push_input(event)
+
+func _process(delta:float):
+	for ev in discretizer.to_input_events(discretizer.update(input_tracker.movement, delta)):
+		$SubViewport.push_input(ev)

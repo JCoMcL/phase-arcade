@@ -1,0 +1,64 @@
+[gd_scene load_steps=17 format=3 uid="uid://dool7c70ctjda"]
+
+[ext_resource type="PackedScene" uid="uid://cglfd6h0f8dxb" path="res://units/weapons/_bullet.tscn" id="1_nfrdk"]
+[ext_resource type="Script" uid="uid://kbo7yeuuwhwa" path="res://units/behaviours/behaviour.gd" id="2_840x1"]
+[ext_resource type="Shader" uid="uid://dypbkrt1g7tws" path="res://addons/jodot/effects/sprite_fx.gdshader" id="2_s1bhs"]
+[ext_resource type="Script" uid="uid://5vc4lge53ga2" path="res://units/behaviours/missile.gd" id="3_pyca4"]
+[ext_resource type="Script" uid="uid://32qn5elehj72" path="res://units/behaviours/deadly.gd" id="4_h7365"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="5_fgpun"]
+[ext_resource type="Texture2D" uid="uid://da7ep115w0rqx" path="res://units/weapons/ammunition.png" id="6_fgpun"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="6_ufigm"]
+[ext_resource type="Script" uid="uid://bgrpm82m7374j" path="res://addons/jodot/effects/vfxid.gd" id="7_tomj5"]
+
+[sub_resource type="Resource" id="Resource_ufigm"]
+script = ExtResource("3_pyca4")
+speed = 800
+metadata/_custom_type_script = "uid://5vc4lge53ga2"
+
+[sub_resource type="Resource" id="Resource_6ol1o"]
+script = ExtResource("4_h7365")
+metadata/_custom_type_script = "uid://32qn5elehj72"
+
+[sub_resource type="Resource" id="Resource_4rgbh"]
+script = ExtResource("6_ufigm")
+id = &"pip"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[sub_resource type="Resource" id="Resource_rlcgu"]
+script = ExtResource("7_tomj5")
+random_flip = true
+invert = true
+id = &"hit"
+metadata/_custom_type_script = "uid://bgrpm82m7374j"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0afam"]
+resource_local_to_scene = true
+shader = ExtResource("2_s1bhs")
+shader_parameter/light = Color(1, 0.321569, 0.466667, 1)
+shader_parameter/midtone = Color(0.678431, 0.184314, 0.270588, 1)
+shader_parameter/dark = Color(0.470588, 0.113725, 0.309804, 1)
+shader_parameter/apply_palette = false
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/mosaic = 1.0
+shader_parameter/rotation = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tomj5"]
+atlas = ExtResource("6_fgpun")
+region = Rect2(2, 0, 4, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oabq6"]
+size = Vector2(2, 3)
+
+[node name="Laser" instance=ExtResource("1_nfrdk")]
+behaviours = Array[ExtResource("2_840x1")]([SubResource("Resource_ufigm"), SubResource("Resource_6ol1o")])
+expire_fx = Array[ExtResource("5_fgpun")]([SubResource("Resource_4rgbh"), SubResource("Resource_rlcgu")])
+
+[node name="Sprite2D" parent="." index="0"]
+material = SubResource("ShaderMaterial_0afam")
+texture = SubResource("AtlasTexture_tomj5")
+hframes = 2
+animation_frames = 2
+animation_rate = 20
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_oabq6")

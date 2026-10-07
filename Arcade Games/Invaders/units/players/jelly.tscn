@@ -1,0 +1,59 @@
+[gd_scene load_steps=14 format=3 uid="uid://rex66rah1v0f"]
+
+[ext_resource type="PackedScene" uid="uid://do4kgcgelx4o2" path="res://units/players/player_character.tscn" id="1_5dvry"]
+[ext_resource type="Texture2D" uid="uid://3bs6b0bvfdvj" path="res://units/players/jelly.png" id="2_8i1wf"]
+[ext_resource type="Script" uid="uid://ckukfwmbjjo1q" path="res://units/players/jelly.gd" id="2_gmnjv"]
+[ext_resource type="PackedScene" uid="uid://dool7c70ctjda" path="res://units/weapons/laser.tscn" id="4_xnicf"]
+[ext_resource type="Script" uid="uid://bbav8weitt8f3" path="res://units/weapons/shoota.gd" id="5_gmnjv"]
+[ext_resource type="Script" uid="uid://dan3fllud0atx" path="res://addons/jodot/envelope.gd" id="5_i1cal"]
+[ext_resource type="PackedScene" uid="uid://d0umuuuxuv1ti" path="res://units/weapons/star.tscn" id="5_mq5pm"]
+[ext_resource type="Script" uid="uid://druedjh5c8pk2" path="res://addons/jodot/effects/fxid.gd" id="8_0hvdp"]
+[ext_resource type="Script" uid="uid://cdjy88tyln3p3" path="res://addons/jodot/effects/sfxid.gd" id="9_qfekx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmnjv"]
+size = Vector2(8, 23)
+
+[sub_resource type="Resource" id="Resource_qfekx"]
+script = ExtResource("9_qfekx")
+id = &"pew"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[sub_resource type="Resource" id="Resource_0hvdp"]
+script = ExtResource("5_i1cal")
+sustain = 0.4
+release = 0.2
+metadata/_custom_type_script = "uid://dan3fllud0atx"
+
+[sub_resource type="Resource" id="Resource_tqof4"]
+script = ExtResource("9_qfekx")
+id = &"eeowm"
+metadata/_custom_type_script = "uid://cdjy88tyln3p3"
+
+[node name="Jelly" instance=ExtResource("1_5dvry")]
+script = ExtResource("2_gmnjv")
+acceleration = 1800
+bomb_cooldown = 3.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_8i1wf")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_gmnjv")
+
+[node name="Shoota" parent="." index="2"]
+ammo = ExtResource("4_xnicf")
+ammo_count = 1
+pool_mode = 0
+interval = 0.6
+shoot_fx = Array[ExtResource("8_0hvdp")]([SubResource("Resource_qfekx")])
+run_and_gun = 0.39
+run_and_gun_envelope = SubResource("Resource_0hvdp")
+
+[node name="Bomb" type="Node2D" parent="." index="3"]
+script = ExtResource("5_gmnjv")
+ammo = ExtResource("5_mq5pm")
+ammo_count = 1
+pool_mode = 1
+shoot_fx = Array[ExtResource("8_0hvdp")]([SubResource("Resource_tqof4")])
+metadata/_custom_type_script = "uid://bbav8weitt8f3"

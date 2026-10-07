@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cdkp41e0ltjg6"
+path="res://.godot/imported/pip.wav-8508fab2e7ee3315ec98cb6450539a22.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/crushed-8/pip.wav"
+dest_files=["res://.godot/imported/pip.wav-8508fab2e7ee3315ec98cb6450539a22.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

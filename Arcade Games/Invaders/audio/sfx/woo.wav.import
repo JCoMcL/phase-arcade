@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckc5im8354c1m"
+path="res://.godot/imported/woo.wav-831dbbe9a31113e5787d4a0d4443fab1.sample"
+
+[deps]
+
+source_file="res://Arcade Games/Invaders/audio/sfx/woo.wav"
+dest_files=["res://.godot/imported/woo.wav-831dbbe9a31113e5787d4a0d4443fab1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
