@@ -17,7 +17,7 @@ While the jam is a great opportunity to make a game for the arcade, it's not jus
 Also note, if you wanted to, you could make some other kind of arcade attraction; pinball, or a claw-machine, or something of that sort. We'd be delighted, but you'll have to work with us a little more closely to ensure that your submission will work in the arcade.
 
 # How?
-The first step is downloading [Godot 4.7](https://godotengine.org/download/archive/4.7.2-stable) if you don't have it already. Games made with other versions of Godot wil probably work, and if not, they can probably be ported. But 4.7 is what we're using.
+The first step is downloading [Godot 4.7](https://godotengine.org/download/archive/4.7.2-stable) if you don't have it already. Games made with other versions of Godot will probably work, and if not, they can probably be ported. But 4.7 is what we're using.
 
 The next step is cloning the repo, which is not as easy as it sounds. We're using [LFS](https://git-lfs.com/) and a [submodule](https://github.com/JCoMcL/jodot). LFS shouldn't give you much trouble, but make sure you run `git clone --recurse-submodules https://github.com/JCoMcL/phase-arcade` when cloning. Or, if you've already cloned the repo, you can run `git submodule update --init --recursive`. If you downloaded the zip, it will not have the submodule, but you can add it in manually by downloading [the zip of the submodule](https://github.com/JCoMcL/jodot/archive/refs/heads/master.zip) and extracting it into the `addons/jodot` folder.
 
@@ -39,9 +39,9 @@ Redirecting inputs events is fairly easy in Godot. Any [`_input`](https://docs.g
 ### Video
 Video redirection is achieved using [SubViewports](https://docs.godotengine.org/en/stable/tutorials/rendering/viewports.html). You may need to learn a little bit about how these work, if you run into any problems, but you'll probably be fine. What's more important to be aware of is **your game should run at around Standard Definition (~480p) or lower**. This will limit the amount of text you can fit on the screen. Note that this is mostly a stylistic decision, and we could make exceptions, but we really encourage you to try to lean into the limitations of the medium.
 ### Audio
-Audio is redirected using [`AudioEffectCapture`](https://docs.godotengine.org/en/stable/classes/class_audioeffectcapture.html), which *should* Just Work™, but it hasn't been thouroughly tested and it has some known shortcomings: It adds an unavoidable 40ms of latency to the audio, and it can very easily choke and crackle in web builds. We may end up having to replace the `AudioEffectCapture` system with some more bone-headed that is more work, but has no such caveats. To make things easier on yourself, **try to avoid having too many AudioPlayer nodes, and try to avoid spawning new ones at runtime**. The cabinet doesn't (currently) have stereo sound, so there's no advantage to spatializing your audio, for now. You can use the `SFXPlayer` node that might have already come with your preset, it's very convenient, and it comes pre-loaded with a bunch of SFX.
- ---
- The work-in-progress line
+Audio is redirected using [`AudioEffectCapture`](https://docs.godotengine.org/en/stable/classes/class_audioeffectcapture.html), which *should* Just Work™, but it hasn't been thoroughly tested and it has some known shortcomings: It adds an unavoidable 40ms of latency to the audio, and it can very easily choke and crackle in web builds. We may end up having to replace the `AudioEffectCapture` system with some more bone-headed that is more work, but has no such caveats. To make things easier on yourself, **try to avoid having too many AudioPlayer nodes, and try to avoid spawning new ones at runtime**. The cabinet doesn't (currently) have stereo sound, so there's no advantage to spatializing your audio, for now. You can use the `SFXPlayer` node that might have already come with your preset, it's very convenient, and it comes pre-loaded with a bunch of SFX.
+
+ --- the work-in-progress line ---
 
 ## Setting up your cabinet
 First, creat
@@ -60,4 +60,4 @@ First, creat
 ## Creating your game
 ## Considerations
 
-We're using Godot 4.7's new AreaLights to illuminate the cabinet from the screen. It's not physicially accurate because doing it physicially accurately would be unbelievably expensive, so you may have to dial in some setting to make the effect look good for your particular game.
+We're using Godot 4.7's new AreaLights to illuminate the cabinet from the screen. It's not physically accurate because doing it physically accurately would be unbelievably expensive, so you may have to dial in some setting to make the effect look good for your particular game.
