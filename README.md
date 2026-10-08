@@ -9,7 +9,9 @@ Now. [Unofficial Phase Jam 13](https://itch.io/jam/unofficial-phasejam-13) begin
 The two most important things are that it's an _Arcade game_, and it's a _Phase game_.
 If there were a third thing, it would be that your game is at least a little bit _haunted_.
 
-An arcade game is about exchanging quarters for lives, earning points, and getting a high score. An arcade game is also usually *retro*. Having a look at some popular arcade games is a great place to start for inspiration and guidance. Though make sure to coordinate with the other jammers if you do this so we don't up having to make space for six different Phase Pong cabinets.
+An arcade game is about exchanging quarters for lives, earning points, and getting a high score. An arcade game is also usually *retro*. Having a look at some popular arcade games is a great place to start for inspiration and guidance. Though make sure to coordinate with the other jammers if you do this so we don't up having to make space for six different Phase Pong cabinets. Your cabinets will print prize tickets in exchange for points earned in the game. We have a system we're quite proud of that can print ludicrous quantities of tickets, so if you want to make a game you can crack wide open, Balatro-style, that would suit us just fine.
+
+The whole ticket economy thing may end up being a bit of a complicated issue, and we may have to put the more busted games behind progression barriers. But we want to work with you throughout the whole process to make sure you're happy with the place your game serves in the arcade.
 
 See also the [Limitations and Guidelines](#limitations-and-guidelines) section for details. Some of those *may* be a dealbreaker. We've done what we can to allow just about any [Godot](https://godotengine.org/) game to run in the arcade, but there are still some unavoidable restrictions.
 
@@ -42,7 +44,7 @@ If you have custom UI in your game, make sure that it controls using `ui_` event
 
 Oh yes, also **test on a joypad** if you have one to hand. Your game should work flawlessly with one.
 ### Video
-Video redirection is achieved using [SubViewports](https://docs.godotengine.org/en/stable/tutorials/rendering/viewports.html). You may need to learn a little bit about how these work if you run into any problems, but you'll probably be fine. What's more important to be aware of is **your game should run at around Standard Definition (~480p) or lower**. This will limit the amount of text you can fit on the screen. Note that this is mostly a stylistic decision, and we could make exceptions, but we really encourage you to try to lean into the limitations of the medium.
+Video redirection is achieved using [SubViewports](https://docs.godotengine.org/en/stable/tutorials/rendering/viewports.html). You may need to learn a little bit about how these work if you run into any problems, but you'll probably be fine. What's more important to be aware of is **your game should run at around Standard Definition (~480p) or lower**. This will limit the amount of text you can fit on the screen. See the [screen size section](#screen-size) for more details. Note that this is mostly a stylistic decision, and we could make exceptions, but we really encourage you to try to lean into the limitations of the medium.
 ### Audio
 Audio is redirected using [`AudioEffectCapture`](https://docs.godotengine.org/en/stable/classes/class_audioeffectcapture.html), which *should* Just Work™, but it hasn't been thoroughly tested and it has some known shortcomings: It adds an unavoidable 40ms of latency to the audio, and it can very easily choke and crackle in web builds. We may end up having to replace the `AudioEffectCapture` system with some more bone-headed that is more work, but has no such caveats. To make things easier on yourself, **try to avoid having too many AudioPlayer nodes, and try to avoid spawning new ones at runtime**. The cabinet doesn't (currently) have stereo sound, so there's no advantage to spatializing your audio, for now. You can use the `SFXPlayer` node that might have already come with your preset, it's very convenient, and it comes pre-loaded with a bunch of SFX.
 ### Getting along with your neighbors
@@ -59,7 +61,7 @@ If you find something which isn't documented and should be, let us know.
 
 Here are the aspects of the cabinet you'll likely want to modify in descending order of importance
 #### Screen Size
-the `SubViewport` `size` property controls screen size and synchronizes it with the other components automatically. At higher resolutions like 640x480, you may want to increase `crt downscale` to reduce artefacts, we're working on an automatic fix for this problem. You may still want to increase for it aesthetic purposes.
+the `SubViewport` `size` property controls screen size and synchronizes it with the other components automatically. At higher resolutions like 640x480, you may want to increase `crt downscale` to reduce artifacts, we're working on an automatic fix for this problem. You may still want to increase for it aesthetic purposes.
 Note: The 3D and UI game should adapt automatically to the new screen size, but **the 2D preset will require manually managing the game size**. In general for 2D games, screen size will have a lot of gameplay consequences so it's worth nailing down early. In general we recommend going with the smallest size you feel like you can get away with.
 #### CRT Filter
 The `Screen` has a CRT filter on it, we've chosen reasonable defaults but you're welcome to experiment. Many of the settings alter the color and contrast, so be sure to check that your game looks as good on the screen as it does in your editor.
@@ -71,11 +73,11 @@ Increasing `light_update_interval` can also improve performance, however, if rec
 `ControlPlane` manages the controls. Set visibility off on the ones you aren't using. Also, feel free to move them and scale them you your liking. For best results, use the transform property editor instead if the gizmo. The gizmo doesn't operate in local space.
 ![](Images/transform-property.png)
 
-If you want more control, let us know.
+If you want more controls, let us know.
 
 ### Customizing your cabinet
 We're still working on this, but if you're comfortable with 3D modelling or texturing you can have a stab at it yourself. The blender file is in the repo.
 
 ## Future Work
 ### Score and Highscore
-Use the game's `score` methods to track the score. We haven't figured out highscore yet. We're hoping to do that within the first few days of the jam, and with any luck it will be handled for you without you needing to lift a 
+Use the game's `score` methods to track the score. We haven't figured out highscore yet. We're hoping to do that within the first few days of the jam, and with any luck the online component will be handled for you without you needing to lift a finger.
