@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://viduemu7j404"
-path="res://.godot/imported/controlsAssets.glb-b0fbd410fc0878eaf563bbf12ddc445e.scn"
+path="res://.godot/imported/controlsAssets.glb-9f62abdfaefc56faac06c11ba86243ab.scn"
 
 [deps]
 
-source_file="res://stuff/cabinets/controls/controlsAssets.glb"
-dest_files=["res://.godot/imported/controlsAssets.glb-b0fbd410fc0878eaf563bbf12ddc445e.scn"]
+source_file="res://Cabinets/controls/controlsAssets.glb"
+dest_files=["res://.godot/imported/controlsAssets.glb-9f62abdfaefc56faac06c11ba86243ab.scn"]
 
 [params]
 
@@ -43,7 +43,7 @@ _subresources={
 "materials": {
 "Arcade_machine": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://stuff/cabinets/Arcade_machine.tres",
+"use_external/fallback_path": "res://Cabinets/Arcade_machine.tres",
 "use_external/path": "uid://0cn7mw5ok22s"
 },
 "Metal": {

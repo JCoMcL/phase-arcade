@@ -2,21 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dquashfa5722f"
-path.s3tc="res://.godot/imported/arcade_texture.png-bef28212fab6b2c3a083b1a2c8ed9bd1.s3tc.ctex"
+uid="uid://bpeyjog0gca8a"
+path="res://.godot/imported/tiles_Normal_Map.png-36b5261279e3fa1522caa7119acfd2f5.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
+}
+generator_parameters={
+"md5": "8b8321816b5ae576dcee4d2c574c6dda"
 }
 
 [deps]
 
-source_file="res://stuff/cabinets/textures/arcade_texture.png"
-dest_files=["res://.godot/imported/arcade_texture.png-bef28212fab6b2c3a083b1a2c8ed9bd1.s3tc.ctex"]
+source_file="res://levels/gridmap-level/tiles_Normal_Map.png"
+dest_files=["res://.godot/imported/tiles_Normal_Map.png-36b5261279e3fa1522caa7119acfd2f5.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -38,4 +40,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

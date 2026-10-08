@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://0cn7mw5ok22s"]
 
-[ext_resource type="Texture2D" uid="uid://dquashfa5722f" path="res://stuff/cabinets/textures/arcade_texture.png" id="1_h02nv"]
+[ext_resource type="Texture2D" uid="uid://dquashfa5722f" path="res://Cabinets/textures/arcade_texture.png" id="1_h02nv"]
 
 [resource]
 resource_name = "Arcade_machine"

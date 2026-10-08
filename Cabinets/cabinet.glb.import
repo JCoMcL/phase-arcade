@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b65jbvordjewb"
-path="res://.godot/imported/cabinet.glb-b1d94d2359da96100ce5b14fc6c54c3b.scn"
+path="res://.godot/imported/cabinet.glb-2d059bd95a0d58192b9ff8dc2964d10b.scn"
 
 [deps]
 
-source_file="res://stuff/cabinets/cabinet.glb"
-dest_files=["res://.godot/imported/cabinet.glb-b1d94d2359da96100ce5b14fc6c54c3b.scn"]
+source_file="res://Cabinets/cabinet.glb"
+dest_files=["res://.godot/imported/cabinet.glb-2d059bd95a0d58192b9ff8dc2964d10b.scn"]
 
 [params]
 
@@ -43,7 +43,7 @@ _subresources={
 "materials": {
 "Arcade_machine": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://stuff/cabinets/Arcade_machine.tres",
+"use_external/fallback_path": "res://Cabinets/Arcade_machine.tres",
 "use_external/path": "uid://0cn7mw5ok22s"
 }
 }

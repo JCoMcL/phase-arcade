@@ -49,6 +49,7 @@ func set_power_state(on:bool):
 			print(game_parent)
 			print(game_parent.get_children())
 		%Screen.texture = $SubViewport.get_texture()
+		%TextureRect.texture = $SubViewport.get_texture()
 	else:
 		%Screen.texture = null
 		if curr_game:
@@ -94,6 +95,7 @@ func _route_game_audio(node: Node) -> void:
 
 # --- Main ---
 
+var downscale_texture:ViewportTexture
 func _ready() -> void:
 	if test_mode:
 		set_power_state(true)
@@ -106,6 +108,7 @@ func _ready() -> void:
 		for player in $SubViewport.find_children("*", type, true, false):
 			_route_game_audio(player)
 	get_tree().node_added.connect(_route_game_audio)
+	downscale_texture = $Downsample.get_texture()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if test_mode:
@@ -114,3 +117,16 @@ func _unhandled_input(event: InputEvent) -> void:
 func _process(delta:float):
 	for ev in discretizer.to_input_events(discretizer.update(input_tracker.movement, delta)):
 		$SubViewport.push_input(ev)
+	_update_screen_light()
+
+func _update_screen_light() -> void:
+	if downscale_texture == null:
+		return
+	var img:Image = downscale_texture.get_image()
+	if img == null or img.is_empty():
+		return
+	var total := Color(0, 0, 0, 0)
+	for y in img.get_height():
+		for x in img.get_width():
+			total += img.get_pixel(x, y)
+	%ScreenLight.light_color = total / (img.get_width() * img.get_height())

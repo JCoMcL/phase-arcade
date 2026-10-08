@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://cruql6bs6awns"]
 
 [ext_resource type="ArrayMesh" uid="uid://bqsij0ujf14wg" path="res://meshes/sm_ArcadeCabA_screen.tres" id="1_hd6m2"]
-[ext_resource type="Script" uid="uid://ctdmwrtullusu" path="res://stuff/cabinets/screen.gd" id="1_m7trp"]
+[ext_resource type="Script" uid="uid://ctdmwrtullusu" path="res://Cabinets/screen.gd" id="1_m7trp"]
 [ext_resource type="Texture2D" uid="uid://bok722soe7as4" path="res://textures/props/T_TVTest.png" id="2_bvisk"]
 [ext_resource type="Material" uid="uid://djx1k2nyialm8" path="res://materials/GlassScreen.tres" id="2_m7trp"]
+[ext_resource type="Shader" uid="uid://hrqo4eysdqfi" path="res://Cabinets/screen.tres" id="4_wxrux"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_23kub"]
+render_priority = 0
+shader = ExtResource("4_wxrux")
 
 [node name="Screen" type="Node3D" unique_id=769819713]
 script = ExtResource("1_m7trp")
@@ -12,4 +17,5 @@ texture = ExtResource("2_bvisk")
 [node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="." unique_id=1754580422]
 transform = Transform3D(-1, -8.715209e-08, -6.8743273e-09, 0, -0.07863313, 0.99690366, -8.742277e-08, 0.99690366, 0.07863313, 0, -1.2876806, -0.13010687)
 material_override = ExtResource("2_m7trp")
+material_overlay = SubResource("ShaderMaterial_23kub")
 mesh = ExtResource("1_hd6m2")

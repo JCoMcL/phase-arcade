@@ -1,5 +1,6 @@
 extends Node3D
 class_name ControlPlane
+## THis node has a description
 
 var input_tracker:InputTracker
 func _ready():

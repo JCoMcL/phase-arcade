@@ -3,7 +3,7 @@
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
 uid="uid://bhr4i5g4bgghk"
-path.bptc="res://.godot/imported/level.exr-a27125fe7f8605a0d252f4519ca07c3c.bptc.ctexarray"
+path.bptc="res://.godot/imported/level.exr-f5495d050a812dac5581bed39c57762d.bptc.ctexarray"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gridmap-level/level.exr"
-dest_files=["res://.godot/imported/level.exr-a27125fe7f8605a0d252f4519ca07c3c.bptc.ctexarray"]
+source_file="res://levels/gridmap-level/level.exr"
+dest_files=["res://.godot/imported/level.exr-f5495d050a812dac5581bed39c57762d.bptc.ctexarray"]
 
 [params]
 

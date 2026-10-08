@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://qkgwsow7b2ek"]
 
 [ext_resource type="PackedScene" uid="uid://cwwfyh3ji873q" path="res://meshes/SM_VentFan.fbx" id="1_wuc5t"]
-[ext_resource type="Script" uid="uid://c2cqj8fv5mgkm" path="res://vent_fan.gd" id="2_0h2ik"]
+[ext_resource type="Script" uid="uid://c2cqj8fv5mgkm" path="res://stuff/vent_fan.gd" id="2_0h2ik"]
 [ext_resource type="Material" uid="uid://cn5nd0wh7xw5k" path="res://materials/Metal_rough.tres" id="2_uxjtb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_veu7k"]

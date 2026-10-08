@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpeyjog0gca8a"
-path="res://.godot/imported/tiles_Normal_Map.png-1f00d1a8fad1f9494eee3974c7b04402.ctex"
+uid="uid://2gw4d4rsrco2"
+path="res://.godot/imported/tiles_Roughness_Map_5.png-15b29f0e3ea9431049afc82611de23ec.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "8b8321816b5ae576dcee4d2c574c6dda"
+"md5": "b588ffd7c1ad45e2affbe03f9dd5a918"
 }
 
 [deps]
 
-source_file="res://gridmap-level/tiles_Normal_Map.png"
-dest_files=["res://.godot/imported/tiles_Normal_Map.png-1f00d1a8fad1f9494eee3974c7b04402.ctex"]
+source_file="res://levels/gridmap-level/tiles_Roughness_Map_5.png"
+dest_files=["res://.godot/imported/tiles_Roughness_Map_5.png-15b29f0e3ea9431049afc82611de23ec.ctex"]
 
 [params]
 

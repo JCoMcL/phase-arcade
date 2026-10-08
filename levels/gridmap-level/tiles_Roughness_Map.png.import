@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nyxie4hbxryb"
-path="res://.godot/imported/tiles_breezeblocks.png-1f3a30e359eded361d168cae2b6fa61e.ctex"
+uid="uid://dtueplmikp66k"
+path="res://.godot/imported/tiles_Roughness_Map.png-2a213086aee924950f1a83a7b257b40e.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "71a64bc1e203ca75d776a91c0adb6d0d"
+"md5": "afb5f22d7e40af6f29fba94d27895fe0"
 }
 
 [deps]
 
-source_file="res://gridmap-level/tiles_breezeblocks.png"
-dest_files=["res://.godot/imported/tiles_breezeblocks.png-1f3a30e359eded361d168cae2b6fa61e.ctex"]
+source_file="res://levels/gridmap-level/tiles_Roughness_Map.png"
+dest_files=["res://.godot/imported/tiles_Roughness_Map.png-2a213086aee924950f1a83a7b257b40e.ctex"]
 
 [params]
 
