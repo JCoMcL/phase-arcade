@@ -12,6 +12,12 @@ class_name ArcadeCabinet
 ## Subscribe to a named circuit, which controls power state.
 ## This overrides [member start_powered_on]
 @export var circuit:StringName
+## How often the ScreenLight is updated based on the screen's color.
+## Setting this higher will reduce flickering and improve performance,
+## but may fail to sell certain dramatic effects.
+##
+## Increasing the Downsample size will also reduce flickering, but at an exponential cost to performance
+@export_range(1, 60, 1, "suffix:frames") var light_update_interval:int = 8
 
 @onready var game_parent = %CRTLayer
 
@@ -49,7 +55,6 @@ func set_power_state(on:bool):
 			print(game_parent)
 			print(game_parent.get_children())
 		%Screen.texture = $SubViewport.get_texture()
-		%TextureRect.texture = $SubViewport.get_texture()
 	else:
 		%Screen.texture = null
 		if curr_game:
@@ -119,14 +124,35 @@ func _process(delta:float):
 		$SubViewport.push_input(ev)
 	_update_screen_light()
 
-func _update_screen_light() -> void:
-	if downscale_texture == null:
-		return
+var light_from := Color(0, 0, 0, 0)
+var light_to := Color(0, 0, 0, 0)
+var light_frame := 0
+var light_sampled := false
+
+func _sample_screen_light() -> bool:
 	var img:Image = downscale_texture.get_image()
 	if img == null or img.is_empty():
-		return
+		return false
 	var total := Color(0, 0, 0, 0)
 	for y in img.get_height():
 		for x in img.get_width():
 			total += img.get_pixel(x, y)
-	%ScreenLight.light_color = total / (img.get_width() * img.get_height())
+	light_from = %ScreenLight.light_color
+	light_to = total / (img.get_width() * img.get_height())
+	light_frame = 0
+	light_sampled = true
+	return true
+
+func _update_screen_light() -> void:
+	if downscale_texture == null:
+		return
+	light_frame += 1
+	if not light_sampled or light_frame >= light_update_interval:
+		_sample_screen_light()
+	if not light_sampled:
+		return
+	if light_update_interval <= 1:
+		%ScreenLight.light_color = light_to
+		return
+	var t := clampf(float(light_frame) / float(light_update_interval - 1), 0.0, 1.0)
+	%ScreenLight.light_color = light_from.lerp(light_to, t)

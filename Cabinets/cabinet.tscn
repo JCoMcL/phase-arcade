@@ -15,10 +15,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_mg4d7"]
 size = Vector3(0.55, 0.4, 0.01)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_23kub"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_onb47"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_k105s"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_8lges"]
 viewport_path = NodePath("Tooltip/SubViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_hetsb"]
@@ -65,7 +65,7 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -0.9957975, 0.09158245, 0, -0.09158245, -0.9957975, 0, 0.017353952, -0.021703959)
 light_color = Color(0, 0, 0, 1)
-light_energy = 0.2
+light_energy = 1.544
 shadow_reverse_cull_face = true
 area_range = 0.459
 area_attenuation = 2.0
@@ -83,13 +83,13 @@ shape = SubResource("BoxShape3D_mg4d7")
 
 [node name="Tooltip" parent="ScreenContainer/ScreenInteractZone" index="1" unique_id=1310991000]
 transform = Transform3D(1, 0, 0, 0, 0.99138325, 0.13099346, 0, -0.13099346, 0.99138325, 0, -0.21796304, -0.04354644)
-texture = SubResource("ViewportTexture_23kub")
+texture = SubResource("ViewportTexture_onb47")
 
 [node name="Label" parent="ScreenContainer/ScreenInteractZone/Tooltip/SubViewport" parent_id_path=PackedInt32Array(1828705782, 1414188419) index="0" unique_id=238621318]
 text = "[LMB] play"
 
 [node name="Shadow" parent="ScreenContainer/ScreenInteractZone/Tooltip" index="1" unique_id=1306854022]
-texture = SubResource("ViewportTexture_k105s")
+texture = SubResource("ViewportTexture_8lges")
 
 [node name="ObservationPoint" type="Camera3D" parent="ScreenContainer" unique_id=1442811002]
 unique_name_in_owner = true
@@ -112,11 +112,10 @@ transform = Transform3D(1.348, 0, 0, 0, 1.348, 0, 0, 0, 1.348, -0.135, 0, 0)
 scaling_3d_mode = 5
 anisotropic_filtering_level = 0
 gui_disable_input = true
-size = Vector2i(3, 3)
+size = Vector2i(7, 7)
 render_target_update_mode = 4
 
 [node name="TextureRect" type="TextureRect" parent="Downsample" unique_id=1900591909]
-unique_name_in_owner = true
 texture_filter = 2
 texture_repeat = 1
 anchors_preset = 15
