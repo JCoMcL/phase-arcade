@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bfq5t634bvk1c"]
+
+[ext_resource type="Script" uid="uid://c77ae1m8sue4x" path="res://Arcade Games/game.gd" id="1_m7vym"]
+[ext_resource type="Sky" uid="uid://mn5skbywvx8c" path="res://levels/gridmap-level/night_sky.tres" id="2_56t8i"]
+
+[sub_resource type="Environment" id="Environment_hetsb"]
+background_mode = 2
+sky = ExtResource("2_56t8i")
+
+[node name="Game" type="Node3D" unique_id=913553725]
+script = ExtResource("1_m7vym")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=56179063]
+environment = SubResource("Environment_hetsb")

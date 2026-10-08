@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b3a76ioy6lfgm"]
+
+[ext_resource type="Script" uid="uid://c77ae1m8sue4x" path="res://Arcade Games/game.gd" id="1_ytu0d"]
+[ext_resource type="Script" uid="uid://cnaebjqiyqlv1" path="res://addons/jodot/effects/sfx.gd" id="2_yg453"]
+
+[node name="Game" type="Node2D" unique_id=942354906 node_paths=PackedStringArray("sfx_player")]
+script = ExtResource("1_ytu0d")
+sfx_player = NodePath("SFXPlayer2D")
+
+[node name="SFXPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2075103531]
+script = ExtResource("2_yg453")
