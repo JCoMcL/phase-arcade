@@ -1,5 +1,6 @@
 extends Node3D
 class_name ArcadeCabinet
+## A marvelous device which contians a whole other game
 
 @export var game_name:StringName
 ## Put your game here
