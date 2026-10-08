@@ -1,11 +1,7 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bdib37kfchtlb"]
 
-[ext_resource type="Texture2D" uid="uid://bok722soe7as4" path="res://textures/props/T_TVTest.png" id="1_gdcno"]
-
 [resource]
 albedo_color = Color(0.08686232, 0.101475574, 0.081990145, 1)
-emission_enabled = true
-emission_texture = ExtResource("1_gdcno")
 clearcoat_enabled = true
 clearcoat = 0.3
 clearcoat_roughness = 0.19

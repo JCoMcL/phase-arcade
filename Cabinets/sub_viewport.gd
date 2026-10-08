@@ -20,7 +20,7 @@ func _on_size_changed():
 		var aspect_ratio = float(size.x)/float(size.y)
 		var aspect_ratio_differnece = screen_aspect_ratio(screen) / aspect_ratio
 		screen.scale.x /= aspect_ratio_differnece
-	$CRTLayer.resolution = size / crt_downscale
+		screen.resolution = size / crt_downscale
 	
 func _ready() -> void:
 	size_changed.connect(_on_size_changed)

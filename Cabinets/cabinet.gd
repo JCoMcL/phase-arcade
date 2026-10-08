@@ -19,7 +19,7 @@ class_name ArcadeCabinet
 ## Increasing the Downsample size will also reduce flickering, but at an exponential cost to performance
 @export_range(1, 60, 1, "suffix:frames") var light_update_interval:int = 8
 
-@onready var game_parent = %CRTLayer
+@onready var game_parent = $SubViewport
 
 var curr_game:Node
 
