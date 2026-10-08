@@ -51,7 +51,6 @@ func set_power_state(on:bool):
 		if game_scene:
 			curr_game = game_scene.instantiate()
 			game_parent.add_child(curr_game)
-			curr_game.z_index = -9
 			print(game_parent)
 			print(game_parent.get_children())
 		%Screen.texture = $SubViewport.get_texture()
