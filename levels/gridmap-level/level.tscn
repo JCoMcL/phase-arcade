@@ -1,22 +1,14 @@
 [gd_scene format=3 uid="uid://samwjuw67shl"]
 
 [ext_resource type="MeshLibrary" uid="uid://cgkcujwd432h2" path="res://levels/gridmap-level/mesh_library.tres" id="1_xelmh"]
+[ext_resource type="Script" uid="uid://byveuay1ec0cg" path="res://utils/handy_light.gd" id="2_27vry"]
+[ext_resource type="Sky" uid="uid://mn5skbywvx8c" path="res://levels/gridmap-level/night_sky.tres" id="2_h3cex"]
 [ext_resource type="PackedScene" uid="uid://dequomo4icek7" path="res://meshes/PropScenes/carpet_roll.tscn" id="3_m61q4"]
 [ext_resource type="PackedScene" uid="uid://cg3qvbh6lqn8u" path="res://meshes/PropScenes/scene_doorway_plain.tscn" id="6_wh152"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kou5f"]
-sky_top_color = Color(0.042913936, 0.070302956, 0.10943019, 1)
-sky_horizon_color = Color(0.1176419, 0.20127389, 0.23294652, 1)
-sky_energy_multiplier = 0.62
-ground_bottom_color = Color(0.06887774, 0.05348716, 0.036228362, 1)
-ground_horizon_color = Color(0.15714207, 0.23953366, 0.28494656, 1)
-
-[sub_resource type="Sky" id="Sky_vpf4b"]
-sky_material = SubResource("ProceduralSkyMaterial_kou5f")
-
 [sub_resource type="Environment" id="Environment_oq02x"]
 background_mode = 2
-sky = SubResource("Sky_vpf4b")
+sky = ExtResource("2_h3cex")
 
 [node name="level" type="Node3D" unique_id=1498293256]
 
@@ -55,19 +47,15 @@ light_color = Color(0.38077882, 0.44247177, 0.5451058, 1)
 shadow_enabled = true
 shadow_reverse_cull_face = true
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=275790911]
-transform = Transform3D(0.9767002, -0.16840667, -0.13302648, 0.13234733, -0.015302002, 0.9910854, -0.16894092, -0.98559886, 0.0073426664, 3.556295, 3.0964682, -0.89939785)
-light_color = Color(0.7183131, 0.20532736, 0.28202447, 1)
-shadow_enabled = true
-shadow_reverse_cull_face = true
-spot_attenuation = 2.0
-
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=674092471]
 transform = Transform3D(-0.6864115, 0.71064615, -0.15434185, -0.6121357, -0.45004895, 0.65018916, 0.39259303, 0.5407754, 0.7439306, -1.1128134, 4.117285, -3.701165)
-light_color = Color(0.4740851, 0.5086553, 0.38007134, 1)
+light_color = Color(0.4745098, 0.505766, 0.3637833, 1)
 shadow_enabled = true
-omni_range = 7.518
+omni_range = 4.7922626
 omni_attenuation = 2.0
+script = ExtResource("2_27vry")
+temperature = 6500.0
+tint = Color(0.4745098, 0.50980395, 0.38039216, 1)
 
 [node name="scene_doorway_plain" parent="." unique_id=197144363 instance=ExtResource("6_wh152")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0391443, 3.9969912e-08, -3.0517323)
