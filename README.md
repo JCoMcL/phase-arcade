@@ -25,6 +25,7 @@ The next step is cloning the repo, which is not as easy as it sounds. We're usin
 
 ## Setting up your game
 Create a folder for your game in `Arcade Games`, then pick whichever template project suits you most, (either `_Game2D.tscn`, or `_Game3D.tscn`, `_GameUI.tscn`), and create a new inherited scene from it, which will go in your new game folder.
+
 ![](Images/new_game.jpg)
 
 The game root will have a script attached: [`game.gd`](Arcade Games/game.gd). Right click to find '*Open Documentation*', which will tell you more about it. There is a lot of existing code in this project, and we've done our best to document the parts that you might want or need to use. Be sure to read the documentation, and let us know if there are any issues with it. This guide is specifically for the high-level details that aren't covered in the docs, so it won't suffice on its own.
@@ -53,10 +54,12 @@ This is a shared Godot project, it's been set up in a somewhat opinionated way. 
 ## Setting up your cabinet
 Your game is gonna need its own, dedicated cabinet with its own model, and texture, and branding. We're still figuring that part out, but in the meantime this section still applies to the placeholder cabinet in the test closet. You'll want to experiment with the settings; how your cabinet is set up *will impact* the game.
 Many aspects of the cabinet will already be documented, you can hover over something to see what it does.
+
 ![](Images/tooltip.jpg)
 
 If you find something which isn't documented and should be, let us know.
 ### Anatomy of the cabinet
+
 ![](Images/cabinet.png)
 
 Here are the aspects of the cabinet you'll likely want to modify in descending order of importance
@@ -72,6 +75,7 @@ Increasing `light_update_interval` can also improve performance, however if reca
 
 #### Controls
 `ControlPlane` manages the controls. Set visibility off on the ones you aren't using. Feel free to move them and scale them you your liking. For best results, use the transform property editor instead if the gizmo. The gizmo doesn't operate in local space.
+
 ![](Images/transform-property.png)
 
 If you want more controls, or different type of controls, let us know.
