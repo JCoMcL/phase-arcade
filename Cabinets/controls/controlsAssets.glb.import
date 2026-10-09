@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bqa3j5c136vqd"
-path="res://.godot/imported/SM_geo_MaintenanceCorridor.fbx-2be0491a185dfd2548305456fc640b0f.scn"
+uid="uid://viduemu7j404"
+path="res://.godot/imported/controlsAssets.glb-9f62abdfaefc56faac06c11ba86243ab.scn"
 
 [deps]
 
-source_file="res://meshes/LevelGeo/SM_geo_MaintenanceCorridor.fbx"
-dest_files=["res://.godot/imported/SM_geo_MaintenanceCorridor.fbx-2be0491a185dfd2548305456fc640b0f.scn"]
+source_file="res://Cabinets/controls/controlsAssets.glb"
+dest_files=["res://.godot/imported/controlsAssets.glb-9f62abdfaefc56faac06c11ba86243ab.scn"]
 
 [params]
 
@@ -32,15 +32,27 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path=""
+import_script/path="uid://de4lx54fyloec"
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+_subresources={
+"materials": {
+"Arcade_machine": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Cabinets/Arcade_machine.tres",
+"use_external/path": "uid://0cn7mw5ok22s"
+},
+"Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://materials/Metal.tres",
+"use_external/path": "uid://dnvgetg74i2co"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=0
+gltf/texture_map_mode=1

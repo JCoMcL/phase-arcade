@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cruql6bs6awns"]
+
+[ext_resource type="ArrayMesh" uid="uid://bqsij0ujf14wg" path="res://meshes/sm_ArcadeCabA_screen.tres" id="1_hd6m2"]
+[ext_resource type="Script" uid="uid://ctdmwrtullusu" path="res://Cabinets/screen.gd" id="1_m7trp"]
+[ext_resource type="Material" uid="uid://bdib37kfchtlb" path="res://Cabinets/screen material.tres" id="2_wxrux"]
+[ext_resource type="Shader" uid="uid://4ursucr8he68" path="res://Cabinets/crt_screen.gdshader" id="4_wxrux"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_23kub"]
+render_priority = 0
+shader = ExtResource("4_wxrux")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/effect_strength = 0.0
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/warp_amount = 0.1
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.6
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/pixel_strength = -2.0
+
+[node name="Screen" type="Node3D" unique_id=769819713]
+script = ExtResource("1_m7trp")
+
+[node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="." unique_id=1754580422]
+transform = Transform3D(-1, -8.715209e-08, -6.8743273e-09, 0, -0.07863313, 0.99690366, -8.742277e-08, 0.99690366, 0.07863313, 0, -1.2876806, -0.13010687)
+material_override = ExtResource("2_wxrux")
+material_overlay = SubResource("ShaderMaterial_23kub")
+mesh = ExtResource("1_hd6m2")

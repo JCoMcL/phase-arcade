@@ -6,7 +6,7 @@ class_name Game
 ## which is achieved by tricking the GDScript parser into letting us do multiple inheritence.
 ## If you need access to a specific node interface, use one of [method get_ui], [method get_2D], or [method get_3D] as appropriate.
 ##
-## While none of these methods, or even the class itself,  are required,
+## While none of these methods, or even the class itself, are required,
 ## it may help us to fix compatibility issues and such if you rely on them where you can.
 
 ## [SFX] node in the game, if any, to route [method play_sfx] calls to
@@ -35,11 +35,15 @@ func add_coin():
 
 # --- Accessors ---
 
+## Returns the [Game], if any, that [param from] is inside of
 static func get_game(from: Node) -> Game:
 	while from and from is not Game:
 		from = from.get_parent()
 	return from
 
+## Plays SFX via the the [Game]'s [member Game.sfx_player].
+##
+## See [method SFX.play_sfx] for more info
 static func play_sfx(from:Node, effect_name:StringName) -> SFX.SFXControl:
 	var game = get_game(from)
 	if not game or not game.sfx_player:
