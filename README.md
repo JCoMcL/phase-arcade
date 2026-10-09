@@ -1,5 +1,5 @@
 # Phase Arcade is Open
-![](Images/cover.png)
+![](Images/phase_arcade.gif)
 We want *your* games to populate *Phase Arcade*; a mysterious abandoned entertainment venue set as a showcase of jammers' talents, and perhaps something more sinister...?
 
 # When?
