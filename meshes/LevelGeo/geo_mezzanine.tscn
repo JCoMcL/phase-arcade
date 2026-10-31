@@ -165,13 +165,13 @@ size = Vector3(0.1, 0.97, 0.95)
 
 [node name="geo_Mezzanine" unique_id=1873148602 instance=ExtResource("1_gfh88")]
 
-[node name="OfficeShell" parent="." index="0" unique_id=1489471551]
+[node name="OfficeShell" parent="." index="0" unique_id=1777548081]
 mesh = SubResource("ArrayMesh_7n4as")
 surface_material_override/0 = ExtResource("2_7n4as")
 surface_material_override/1 = ExtResource("3_ytmsk")
 surface_material_override/2 = ExtResource("4_12rlb")
 
-[node name="MezzanineWalkway" parent="." index="1" unique_id=342929165]
+[node name="MezzanineWalkway" parent="." index="1" unique_id=1617451803]
 mesh = SubResource("ArrayMesh_ytmsk")
 surface_material_override/0 = ExtResource("4_12rlb")
 

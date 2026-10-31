@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bbnn0ppc6doud"]
 
 [ext_resource type="PackedScene" uid="uid://b4tsop16mpm1w" path="res://meshes/LevelGeo/SM_geo_Foyer.fbx" id="1_uhisc"]
+[ext_resource type="Material" uid="uid://f7pb3wu04tx7" path="res://materials/PlasterWall.tres" id="2_jtirh"]
 [ext_resource type="PackedScene" uid="uid://bvd707wrnkrhd" path="res://meshes/LevelGeo/geo_foyer_north_wall.tscn" id="3_5p43x"]
 [ext_resource type="PackedScene" uid="uid://dorlyulbnobqd" path="res://meshes/LevelGeo/geo_mezzanine.tscn" id="4_jtirh"]
 
@@ -88,6 +89,7 @@ shadow_mesh = SubResource("ArrayMesh_0sc37")
 
 [node name="Foyer_BackWall" parent="." index="0" unique_id=2044040882]
 mesh = SubResource("ArrayMesh_ya2bt")
+surface_material_override/0 = ExtResource("2_jtirh")
 
 [node name="UsefulWallPiece" parent="." index="1" unique_id=821027742]
 transform = Transform3D(-4.371139e-08, -1, 0, 0, 0, 1, -1, 4.371139e-08, 0, 6, -3, 9.9)
