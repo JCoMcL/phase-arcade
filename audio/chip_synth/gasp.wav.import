@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:71dd84da81757281f47ecf837fd564734cb8eaacdad3d35f0529a2ad84bac5d7
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dn2wge3jhu0tf"
+path="res://.godot/imported/gasp.wav-b325468e38c90560b927019f05411f83.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/gasp.wav"
+dest_files=["res://.godot/imported/gasp.wav-b325468e38c90560b927019f05411f83.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

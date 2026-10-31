@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3fb5d02217cd280743f9a86dea011451e9bac545954544b339239258b6a77eab
-size 501
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://e3mlcifqo6ee"
+path="res://.godot/imported/giggle.wav-6315f8474655fbeb2ba85cbaffeb11af.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/voice/giggle.wav"
+dest_files=["res://.godot/imported/giggle.wav-6315f8474655fbeb2ba85cbaffeb11af.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

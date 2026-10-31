@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:29e024a349aaabeb1291ac81587cc91cb36c43258e3d12630e2384f71a560ecf
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://douxjcfs1udex"
+path="res://.godot/imported/flare.wav-1991d94fb315d447ee3bbe2229cc4874.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/flare.wav"
+dest_files=["res://.godot/imported/flare.wav-1991d94fb315d447ee3bbe2229cc4874.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

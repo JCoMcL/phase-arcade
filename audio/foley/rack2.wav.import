@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a3d388e874efe609f356a83f7ab3ce94795bf673bd8c8ab3c8c819e272e9c531
-size 485
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ds715ny5xho6j"
+path="res://.godot/imported/rack2.wav-0387b647f35296c367ec0e4882a7f93e.sample"
+
+[deps]
+
+source_file="res://audio/foley/rack2.wav"
+dest_files=["res://.godot/imported/rack2.wav-0387b647f35296c367ec0e4882a7f93e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e10aed4340a5f89b13f33adb3010f2786d17dcbd5ccab5b4d31918a33a3a6bd8
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4g5vfwxj3yok"
+path="res://.godot/imported/beam1.wav-1024d44257ce90df7ecffd56036c12ef.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/beam1.wav"
+dest_files=["res://.godot/imported/beam1.wav-1024d44257ce90df7ecffd56036c12ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

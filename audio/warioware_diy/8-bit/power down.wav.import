@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a533ac2d02e39d2049fe991a111cfe264277e835cf5b8109202c81a177f25017
-size 514
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtcklkb4n75il"
+path="res://.godot/imported/power down.wav-95f5310f8f43a280bca8a33fceaa6a57.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/8-bit/power down.wav"
+dest_files=["res://.godot/imported/power down.wav-95f5310f8f43a280bca8a33fceaa6a57.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f4484de1dc6c60b8a4fa8b9bdaaa31a1d279e45234b082afecdc9cfc6cb83221
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtb33nyutd6ew"
+path="res://.godot/imported/thoom.wav-02e6d214f795aaabcba4e9dd6e875acc.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/thoom.wav"
+dest_files=["res://.godot/imported/thoom.wav-02e6d214f795aaabcba4e9dd6e875acc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:08adb1f4d90f77c4e72872f1000acfa6cd20b61c9b6caf0d8d448652627d2d46
-size 507
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dge86spqx2j2"
+path="res://.godot/imported/victory.wav-27ebf50511e28f820cf7adc1d82d91cb.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/computer/victory.wav"
+dest_files=["res://.godot/imported/victory.wav-27ebf50511e28f820cf7adc1d82d91cb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

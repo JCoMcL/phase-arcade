@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d331eba2e9120643339c2b7bca7b58d66f5c52e15b7720203e6a146c63e9f4c
-size 522
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cc1rcmtt84ftr"
+path="res://.godot/imported/mobile phone.wav-6a3d400d3fb3d973a2f7ee21c0f1f0d5.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/general/mobile phone.wav"
+dest_files=["res://.godot/imported/mobile phone.wav-6a3d400d3fb3d973a2f7ee21c0f1f0d5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

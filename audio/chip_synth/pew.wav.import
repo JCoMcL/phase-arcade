@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:646d187612b664472952797e0f894a36ef07ed67b0c5d583e998d824ffc4dbfd
-size 483
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gsetqlfohrmy"
+path="res://.godot/imported/pew.wav-3d806bc78c300372eb8b2e5f02c18fe1.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/pew.wav"
+dest_files=["res://.godot/imported/pew.wav-3d806bc78c300372eb8b2e5f02c18fe1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

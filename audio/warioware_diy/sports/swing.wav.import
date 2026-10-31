@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8dd228266c49a059b991696bde19723c5c93dbb391bbebcdfceb806e89bd39ab
-size 499
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://17u83st568in"
+path="res://.godot/imported/swing.wav-930f2ea4bb42f83bb640e473960d2967.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/sports/swing.wav"
+dest_files=["res://.godot/imported/swing.wav-930f2ea4bb42f83bb640e473960d2967.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8889edea5f23f2a56c95d5f017b6e0cdb75d0f43fbb0ea949fa30d82ec78b5d8
-size 499
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckf7wmjfstrv1"
+path="res://.godot/imported/crow.wav-b53d47932592162cd6f2341e767e725c.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/creature/crow.wav"
+dest_files=["res://.godot/imported/crow.wav-b53d47932592162cd6f2341e767e725c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

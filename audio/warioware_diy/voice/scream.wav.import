@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a9f37a11a661fec4dee989919e329bba31afdf549b078c474b86bb78d1a3fb1d
-size 502
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsmco0qg7pqve"
+path="res://.godot/imported/scream.wav-d9c5ddb7427a4727c134d0c1c7e00713.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/voice/scream.wav"
+dest_files=["res://.godot/imported/scream.wav-d9c5ddb7427a4727c134d0c1c7e00713.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

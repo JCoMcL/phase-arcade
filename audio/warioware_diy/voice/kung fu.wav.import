@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74dc070c00d10e796e5218673a5360677b6c9bd4d46a1746f03ee5f73951e799
-size 505
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://biibsq6etdsge"
+path="res://.godot/imported/kung fu.wav-32ef752a12f8b06afb46254db8c8bc6c.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/voice/kung fu.wav"
+dest_files=["res://.godot/imported/kung fu.wav-32ef752a12f8b06afb46254db8c8bc6c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

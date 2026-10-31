@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9b578cfa9e55052590ec40ca7936812bc1fd9dd03192345001b7a3e21d21cd0d
-size 507
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://kpc63wrutc2x"
+path="res://.godot/imported/cheering.wav-3227404b3f1269133b496b78d97105d6.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/voice/cheering.wav"
+dest_files=["res://.godot/imported/cheering.wav-3227404b3f1269133b496b78d97105d6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

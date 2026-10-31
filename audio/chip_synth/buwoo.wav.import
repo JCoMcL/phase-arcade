@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2e7ec653c308128b42b5c6ffbdec8b77daa643b0af4073ed2f04b137bb707ac9
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://beby1flw4nl51"
+path="res://.godot/imported/buwoo.wav-cc1bfe4e069f9dca583d8a147ae832b8.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/buwoo.wav"
+dest_files=["res://.godot/imported/buwoo.wav-cc1bfe4e069f9dca583d8a147ae832b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

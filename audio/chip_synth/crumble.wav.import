@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4bca096cd17de0cd66cbdffca43abccec1c5d6edc0d4d0402d219dabd8ee1377
-size 495
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://nx618q5ovvb8"
+path="res://.godot/imported/crumble.wav-645f4f09fdb30288f72d5f257c0a5e4f.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/crumble.wav"
+dest_files=["res://.godot/imported/crumble.wav-645f4f09fdb30288f72d5f257c0a5e4f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

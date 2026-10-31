@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e853d20802af14be6f9f6ffb8a70160bbda295279619ce1c89e0792f5049b7ec
-size 507
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dv0ym17am3143"
+path="res://.godot/imported/munching.wav-b0cb12b4faeeef899cd491d56f2ca622.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/body/munching.wav"
+dest_files=["res://.godot/imported/munching.wav-b0cb12b4faeeef899cd491d56f2ca622.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

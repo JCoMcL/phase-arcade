@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1725b505f060ecf90377219b6431bc107b5fa55e8119700158a5c8b328f7c56a
-size 501
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://s2uic4mavfld"
+path="res://.godot/imported/ui_enter.wav-9f202373421c8cf42adb9a607fc94ad4.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/ui_enter.wav"
+dest_files=["res://.godot/imported/ui_enter.wav-9f202373421c8cf42adb9a607fc94ad4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

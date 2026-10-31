@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d2d57a8386a3aeafc730f597c90f6da8d76a1a9e22bc0941b28520f82c512844
-size 516
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctohidrn8wsi0"
+path="res://.godot/imported/frying pan.wav-0b2aa8e163935faeec5379d3dfb1c71d.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/general/frying pan.wav"
+dest_files=["res://.godot/imported/frying pan.wav-0b2aa8e163935faeec5379d3dfb1c71d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

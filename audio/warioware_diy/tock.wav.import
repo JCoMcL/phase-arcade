@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90c2ef936713879bb054b914380ab1cee02317f42fc400d54e30c37a69a2ec75
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bddpocq8sf0m1"
+path="res://.godot/imported/tock.wav-79f94d3c601ac31689ec6b30c3de8f06.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/tock.wav"
+dest_files=["res://.godot/imported/tock.wav-79f94d3c601ac31689ec6b30c3de8f06.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6943c0ff199fb3b3d7a11ca47dee5f646cf27aa48581efe2d1891d2d2d263f3
-size 503
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cc7u4vsud2msl"
+path="res://.godot/imported/impact.wav-7fe19ad7281311b6824a48b17b8df631.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/sports/impact.wav"
+dest_files=["res://.godot/imported/impact.wav-7fe19ad7281311b6824a48b17b8df631.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

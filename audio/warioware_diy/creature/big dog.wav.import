@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4450dabd1a7ff3f3a860c38f25c4697bba7fa8f62631ae8fb7f357a5d24b2af4
-size 507
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ld0l5uq8k51v"
+path="res://.godot/imported/big dog.wav-996d95850b293f9599aa76f5b92a5292.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/creature/big dog.wav"
+dest_files=["res://.godot/imported/big dog.wav-996d95850b293f9599aa76f5b92a5292.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

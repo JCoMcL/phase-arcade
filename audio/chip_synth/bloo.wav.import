@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:345cbe5403554a017d19dc75306a6767f281ca38ee6626becc8ec3997062ffa0
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b24xv1jwp4h8u"
+path="res://.godot/imported/bloo.wav-6247cb583512c8d79f62bc2f65cba059.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/bloo.wav"
+dest_files=["res://.godot/imported/bloo.wav-6247cb583512c8d79f62bc2f65cba059.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

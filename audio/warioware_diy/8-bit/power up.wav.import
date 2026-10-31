@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f89b5dfde15925367d649099a73a91491b2e9b1dbffeb78b56fafd04f067bce
-size 507
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://wxbi40x1kojd"
+path="res://.godot/imported/power up.wav-636171703846e8eb47e2b39975866278.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/8-bit/power up.wav"
+dest_files=["res://.godot/imported/power up.wav-636171703846e8eb47e2b39975866278.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:023c19aa8624e287b3f67ed8324f16305727b094f001db159d2d7c98c2bd98b6
-size 506
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d0pw561prguvg"
+path="res://.godot/imported/bowling.wav-b3688ad503b33f4e4667543bf78c1dea.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/sports/bowling.wav"
+dest_files=["res://.godot/imported/bowling.wav-b3688ad503b33f4e4667543bf78c1dea.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

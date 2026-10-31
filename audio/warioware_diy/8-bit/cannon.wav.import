@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e0bf36368fd38313c498fdee18c76af4a071fba91c739aa6240630da8c6ec054
-size 501
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4m1773d64lgy"
+path="res://.godot/imported/cannon.wav-d113ffce7986c8b79b49d4e0d6d8a23d.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/8-bit/cannon.wav"
+dest_files=["res://.godot/imported/cannon.wav-d113ffce7986c8b79b49d4e0d6d8a23d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

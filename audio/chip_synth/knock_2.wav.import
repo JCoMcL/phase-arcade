@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b64e2acc9ae4bb8e0b62b76baca2f842378054ace4927b372e0614953d500f1f
-size 496
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d17eqr3yr0te5"
+path="res://.godot/imported/knock_2.wav-74762a8f5865fa2ae8a81efaa9d08304.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/knock_2.wav"
+dest_files=["res://.godot/imported/knock_2.wav-74762a8f5865fa2ae8a81efaa9d08304.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

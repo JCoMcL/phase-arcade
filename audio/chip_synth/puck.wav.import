@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8fc8365fa4984ad7e07ca41bfc5c40f15a982ab6d9cf20e220e2d3c48aca4f14
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cy7sfqjys4lmr"
+path="res://.godot/imported/puck.wav-b8358fdd2a15f8bd833d3d8b6876938f.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/puck.wav"
+dest_files=["res://.godot/imported/puck.wav-b8358fdd2a15f8bd833d3d8b6876938f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fd2262c1a5ecf2f312a90b036cf3c9a3c56eeec90074cd5cd59c51b0c220036f
-size 486
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7jxag25w2a66"
+path="res://.godot/imported/thud.wav-c28ed55d215ee4ece8c92dedaa9213f8.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/thud.wav"
+dest_files=["res://.godot/imported/thud.wav-c28ed55d215ee4ece8c92dedaa9213f8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

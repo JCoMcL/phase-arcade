@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5ee8e33261df7be6700ba6544456792154cb1e3d520f12328525f457d706248f
-size 495
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ugpwtwievyxi"
+path="res://.godot/imported/charge1.wav-0cf0e541242e524e37e3e6dd9f074688.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/charge1.wav"
+dest_files=["res://.godot/imported/charge1.wav-0cf0e541242e524e37e3e6dd9f074688.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

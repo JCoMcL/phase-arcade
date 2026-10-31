@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ebe2202e489099d2169b5ec5830bdcfe663ce54f01b609d0bdb5e3a0331e2c63
-size 492
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://eurqugi1ff02"
+path="res://.godot/imported/crunch.wav-a652e76c9c22a27ca51ab380257c3e1b.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/crunch.wav"
+dest_files=["res://.godot/imported/crunch.wav-a652e76c9c22a27ca51ab380257c3e1b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

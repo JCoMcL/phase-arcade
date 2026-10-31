@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6f73ab9d1ad068ecf8bb8cdf7f05cb03afe0ce61d9c9e9b872f194e40040914
-size 489
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://oyi18vf3i710"
+path="res://.godot/imported/shkum.wav-6284e95ea621dff162ff5bc198c51d5b.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/shkum.wav"
+dest_files=["res://.godot/imported/shkum.wav-6284e95ea621dff162ff5bc198c51d5b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

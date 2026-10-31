@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1f535dcaaf4d8c9fb1bb809a30e2d568493c1ffad8dfe6d8d0605cc87375beb6
-size 516
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcerjsdvipts"
+path="res://.godot/imported/let's fight.wav-33d4107e1772b640e2f557b75d71a7bc.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/voice/let's fight.wav"
+dest_files=["res://.godot/imported/let's fight.wav-33d4107e1772b640e2f557b75d71a7bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

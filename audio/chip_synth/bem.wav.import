@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:52568229cf02a7d8bfeb3a341e1875fa7e29e33f52ac24aef293287469e65ca2
-size 483
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qg2nemka5irk"
+path="res://.godot/imported/bem.wav-c8344c93088766d321826c3fda69e8fc.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/bem.wav"
+dest_files=["res://.godot/imported/bem.wav-c8344c93088766d321826c3fda69e8fc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

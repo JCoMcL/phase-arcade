@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5095ffe70359c3f4e195ed06ff122c6935e7cf1f9d4094974a9435d88264a554
-size 507
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://crt2a43vpconl"
+path="res://.godot/imported/applause.wav-735c291b8f05251879c1c3caef11f8c8.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/body/applause.wav"
+dest_files=["res://.godot/imported/applause.wav-735c291b8f05251879c1c3caef11f8c8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

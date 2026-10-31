@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f3ead1a292f7a4ec5e18f8fd45388d15e7e7701c0e0d58fe19f23e34fa78fa3f
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bh743fw3jrydm"
+path="res://.godot/imported/oewow.wav-f34d5fe176c8205386516dbeb49542c3.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/oewow.wav"
+dest_files=["res://.godot/imported/oewow.wav-f34d5fe176c8205386516dbeb49542c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

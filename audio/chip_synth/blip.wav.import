@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6623677037bcfa86d948768b1d6cff0782dcff2fb1b187ced6f1a568f2713ba
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnci0delg8vqi"
+path="res://.godot/imported/blip.wav-99c700340e09544b280852321254ae39.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/blip.wav"
+dest_files=["res://.godot/imported/blip.wav-99c700340e09544b280852321254ae39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

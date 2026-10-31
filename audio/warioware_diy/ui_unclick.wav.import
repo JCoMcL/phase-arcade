@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d93de9343766d28f1bd977f25a8119c110699d2774763b954991311fcca451c5
-size 508
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfuy04d07ewnx"
+path="res://.godot/imported/ui_unclick.wav-ce775a92a8e4a319445e178a8fcd3bea.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/ui_unclick.wav"
+dest_files=["res://.godot/imported/ui_unclick.wav-ce775a92a8e4a319445e178a8fcd3bea.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

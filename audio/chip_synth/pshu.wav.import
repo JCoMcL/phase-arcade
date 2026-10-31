@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:daf3da913d9fdeac511f02e66d461194516ec2650fad39b0308088de8105fc06
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ci354rgkgu5m7"
+path="res://.godot/imported/pshu.wav-6f9bdc0d53bfd6858cd3af8904374db7.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/pshu.wav"
+dest_files=["res://.godot/imported/pshu.wav-6f9bdc0d53bfd6858cd3af8904374db7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

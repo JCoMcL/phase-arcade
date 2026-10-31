@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:12c119e8ab8e6de25834f0f2ae3ab73583ebc2e724a8337f0cc300b362db7aba
-size 494
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://eod8kkqy1b2y"
+path="res://.godot/imported/gulp.wav-80562be49edfc5093c249ceeb115e872.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/body/gulp.wav"
+dest_files=["res://.godot/imported/gulp.wav-80562be49edfc5093c249ceeb115e872.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

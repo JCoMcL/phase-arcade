@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fd6a8deccf597185a070e1c7ac3190571a43c17dcdd84f69af74661c1ea1e4b6
-size 504
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://00dpxn3j7ogc"
+path="res://.godot/imported/switch.wav-381dfe75d542f792279453f6f54d58e2.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/computer/switch.wav"
+dest_files=["res://.godot/imported/switch.wav-381dfe75d542f792279453f6f54d58e2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

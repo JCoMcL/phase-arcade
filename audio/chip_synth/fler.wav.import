@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c01e56aac1e06261ad975d4dba4cf2abbcc9d4e5a4e233956c02c5efec669486
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgr7644lm61py"
+path="res://.godot/imported/fler.wav-d52d4384f4ea28b964f8cb520046726e.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/fler.wav"
+dest_files=["res://.godot/imported/fler.wav-d52d4384f4ea28b964f8cb520046726e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

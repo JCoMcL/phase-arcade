@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b70c3d01191b20806edb266a1022bd87088a0ba4c82abd9dcbe01b441e0d633f
-size 488
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qobtgnpdasc"
+path="res://.godot/imported/eeowm.wav-042de040ada15271c4c1ee7ba8ab350a.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/eeowm.wav"
+dest_files=["res://.godot/imported/eeowm.wav-042de040ada15271c4c1ee7ba8ab350a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

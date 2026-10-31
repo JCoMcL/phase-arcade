@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b17d2ce45e89f71aed4e28ae016833dbf207151c0155f5af5ed3caa6546ebf06
-size 504
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vfxfrah41rvv"
+path="res://.godot/imported/rising.wav-ed400454109a8ce1593a38a46b7ef9d4.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/computer/rising.wav"
+dest_files=["res://.godot/imported/rising.wav-ed400454109a8ce1593a38a46b7ef9d4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c1eb7c3d096367b1963ec084f210587bbd95cd0269d8e679c06fe99c0dc05aef
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5spi6k1j662r"
+path="res://.godot/imported/buwa.wav-d9cf044166e6ede5c373a36bf1942205.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/buwa.wav"
+dest_files=["res://.godot/imported/buwa.wav-d9cf044166e6ede5c373a36bf1942205.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

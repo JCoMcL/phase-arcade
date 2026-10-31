@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f8ef08ae450fb1a100b6f475deaa92743709ce0ad65b5db534cb9f03ac98420a
-size 514
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3bnbhflaux3q"
+path="res://.godot/imported/mario jump.wav-4752579ba4eb5831c015d70bb31742ec.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/8-bit/mario jump.wav"
+dest_files=["res://.godot/imported/mario jump.wav-4752579ba4eb5831c015d70bb31742ec.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

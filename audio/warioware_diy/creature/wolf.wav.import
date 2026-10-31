@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6f0e2d9872f6a92552f5c4ad4fbd5b45d917016c1dd3e258e47d316a011b1c1
-size 499
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://blskxt0i0vqdi"
+path="res://.godot/imported/wolf.wav-de6fd67ae223fe20110dcfb41f73730e.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/creature/wolf.wav"
+dest_files=["res://.godot/imported/wolf.wav-de6fd67ae223fe20110dcfb41f73730e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

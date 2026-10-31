@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:147346874a0a636dd784de0d555358f473ba18c06c80a393c5c64c76c1669095
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cr7p0i3pkd5j1"
+path="res://.godot/imported/swish.wav-7b4676c875fa3dac3a73c314e65af7aa.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/swish.wav"
+dest_files=["res://.godot/imported/swish.wav-7b4676c875fa3dac3a73c314e65af7aa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

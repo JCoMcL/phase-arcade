@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eb3eacdb3a28ecb2c2927a38c6b40cfb202bab16e0e92e5546a302e179fe461d
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1xtg1002mn0o"
+path="res://.godot/imported/clash.wav-94f9b7b33dff26a4350f33ad714ae8c7.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/clash.wav"
+dest_files=["res://.godot/imported/clash.wav-94f9b7b33dff26a4350f33ad714ae8c7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

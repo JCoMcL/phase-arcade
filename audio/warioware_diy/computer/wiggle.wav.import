@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fead2fda71353aa5a210be06115c957011dd89b786d0b96fdd1241ed03bc4c92
-size 505
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cnw2g66i7w2ye"
+path="res://.godot/imported/wiggle.wav-baec00324f1e986e17aba062488466e3.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/computer/wiggle.wav"
+dest_files=["res://.godot/imported/wiggle.wav-baec00324f1e986e17aba062488466e3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

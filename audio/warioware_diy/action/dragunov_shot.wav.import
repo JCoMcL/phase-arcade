@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b82d8ccb26d2995b1ed4a75811be8e1f7ec7567c30af2f16b50c4ea50a4b1f6d
-size 523
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ma2vy6ec0sss"
+path="res://.godot/imported/dragunov_shot.wav-9458e74c6078eacc24a8d87543f1537a.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/action/dragunov_shot.wav"
+dest_files=["res://.godot/imported/dragunov_shot.wav-9458e74c6078eacc24a8d87543f1537a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

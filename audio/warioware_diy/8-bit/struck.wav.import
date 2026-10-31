@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f4f1c679109ebcb31dde14f2ceda4529c6ba654891af846a096c80b667ac78c5
-size 502
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmxqbe6r3na8t"
+path="res://.godot/imported/struck.wav-403cf42972827126c33f8e5979a7fd7c.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/8-bit/struck.wav"
+dest_files=["res://.godot/imported/struck.wav-403cf42972827126c33f8e5979a7fd7c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:52785d75fa46dafd084f657e16097d8d7a8c093da5afed3b5b1fe413cfaea59b
-size 501
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6sy1dljexyyj"
+path="res://.godot/imported/water.wav-fa80a045c9ef9af95e0fee01da2057b8.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/general/water.wav"
+dest_files=["res://.godot/imported/water.wav-fa80a045c9ef9af95e0fee01da2057b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

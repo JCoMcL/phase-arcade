@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5f606227bb2b758f95270ae0c95df7705c511db7fbbf00981ec31ad2eb8bf533
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dud0waydlvj7o"
+path="res://.godot/imported/blare.wav-1728b962782eb4dd0f44738973069ccf.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/blare.wav"
+dest_files=["res://.godot/imported/blare.wav-1728b962782eb4dd0f44738973069ccf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

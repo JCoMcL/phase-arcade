@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3a3142d94a7effc63e6fba11c8a05af3af91c20ed0c171d2185eae33bb1742d4
-size 512
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0jghxrjnvq87"
+path="res://.godot/imported/explosion.wav-342ec924b00c687fcfb0f342d28dd8d2.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/action/explosion.wav"
+dest_files=["res://.godot/imported/explosion.wav-342ec924b00c687fcfb0f342d28dd8d2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

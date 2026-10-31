@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:13831a78b41d51b47f1644e1b77c38b668b763e15046ea19f7c199fbea3ed6af
-size 497
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ds6ak4sbq62vp"
+path="res://.godot/imported/kick.wav-9a1a8369be721519676d6a6b755e09b4.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/sports/kick.wav"
+dest_files=["res://.godot/imported/kick.wav-9a1a8369be721519676d6a6b755e09b4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

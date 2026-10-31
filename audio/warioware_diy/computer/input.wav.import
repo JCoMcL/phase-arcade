@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fa5f79faa5f6ceda275b32e6d262e20ce22f474499f38804a7d3d53fc632955f
-size 502
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpgf2rc61lct3"
+path="res://.godot/imported/input.wav-974d302ae52369db2fa4e749ce8ca7f1.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/computer/input.wav"
+dest_files=["res://.godot/imported/input.wav-974d302ae52369db2fa4e749ce8ca7f1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

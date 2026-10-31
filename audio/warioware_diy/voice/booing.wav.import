@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:43f200e3dd9920adc1a5c4dc21b79ef349e9942ce7c0df9ad7bd4f64189f8af1
-size 501
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://migxhk0l43in"
+path="res://.godot/imported/booing.wav-f6b667e3b525ea3a9bb964ced5b25c99.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/voice/booing.wav"
+dest_files=["res://.godot/imported/booing.wav-f6b667e3b525ea3a9bb964ced5b25c99.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

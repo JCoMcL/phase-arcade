@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:64dc32de2ef08a40d360fa38502a4ef84a7c587812a2fddf55892b908dccb1cb
-size 501
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2006xuuoyk8b"
+path="res://.godot/imported/razor.wav-e6bb13595d924270bbb958b8364f3c4e.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/general/razor.wav"
+dest_files=["res://.godot/imported/razor.wav-e6bb13595d924270bbb958b8364f3c4e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4c46fb4344c305ef7fdb7788748ded92ed1f2180313d94bf928a76e10cc1a07b
-size 498
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh5kxabiks7m1"
+path="res://.godot/imported/punch.wav-2352406306e9f4779b864dde8534bef2.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/body/punch.wav"
+dest_files=["res://.godot/imported/punch.wav-2352406306e9f4779b864dde8534bef2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

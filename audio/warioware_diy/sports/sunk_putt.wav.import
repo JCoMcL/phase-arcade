@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:42bdd60f0058fb5fb0a5145c2ce35947eb989b622c76df5735fc376064611ccc
-size 512
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmstntlw0cry2"
+path="res://.godot/imported/sunk_putt.wav-4b96c4597ba252a93aec7da92291e7f0.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/sports/sunk_putt.wav"
+dest_files=["res://.godot/imported/sunk_putt.wav-4b96c4597ba252a93aec7da92291e7f0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

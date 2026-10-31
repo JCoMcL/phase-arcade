@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5dccf548d2adae269be3848c65e0ac67c251b230d037999ac187edb7a768238c
-size 493
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh5h37o040xhn"
+path="res://.godot/imported/blooph.wav-fe9c8572b3a2a158eef3d082adc838b5.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/blooph.wav"
+dest_files=["res://.godot/imported/blooph.wav-fe9c8572b3a2a158eef3d082adc838b5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

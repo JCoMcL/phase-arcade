@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a7cfd94c85a9ca8bdbca3321b21d699391d19d02d8abe7e89c8e40368ab11b7
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c05sp4oee0brk"
+path="res://.godot/imported/blup.wav-244a2ff62845891dc61b43ab8e7ea0e9.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/blup.wav"
+dest_files=["res://.godot/imported/blup.wav-244a2ff62845891dc61b43ab8e7ea0e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

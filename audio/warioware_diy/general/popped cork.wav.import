@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8fc6d275820c5ffa02e999fc222cef637114b8768b06fdb72bd08c261d639296
-size 519
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c82oetkv3vmyp"
+path="res://.godot/imported/popped cork.wav-8893302307e20f2a71ba5d23bb121517.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/general/popped cork.wav"
+dest_files=["res://.godot/imported/popped cork.wav-8893302307e20f2a71ba5d23bb121517.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

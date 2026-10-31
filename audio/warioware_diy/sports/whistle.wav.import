@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:18ea7dbc0749740fe456592661c3c5144a33ef1785ecfac2d1c1044e87312c5d
-size 505
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://g3tsbrfaubbc"
+path="res://.godot/imported/whistle.wav-1cad4bfe154913b64f8812138a23e26b.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/sports/whistle.wav"
+dest_files=["res://.godot/imported/whistle.wav-1cad4bfe154913b64f8812138a23e26b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

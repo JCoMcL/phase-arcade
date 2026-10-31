@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8ba709ba4885280c9f84fa1dd57abe51a204f89392875de9915f112a696d5645
-size 512
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://pdsvsb3md2c8"
+path="res://.godot/imported/old phone.wav-4bb1b92100822cc369781689fbbd9965.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/general/old phone.wav"
+dest_files=["res://.godot/imported/old phone.wav-4bb1b92100822cc369781689fbbd9965.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

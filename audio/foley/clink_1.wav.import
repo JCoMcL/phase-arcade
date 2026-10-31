@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9bf55cc6fbfb7dee90d2fa6aad8fc6b6297050cf04b0e018587dc2bcbc46ce8f
-size 491
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cngv1jt00kb4n"
+path="res://.godot/imported/clink_1.wav-54ea92cac6b9192567c7d99057b14037.sample"
+
+[deps]
+
+source_file="res://audio/foley/clink_1.wav"
+dest_files=["res://.godot/imported/clink_1.wav-54ea92cac6b9192567c7d99057b14037.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

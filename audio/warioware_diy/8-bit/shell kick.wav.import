@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:809602e1d80db279357f8d04e3c3b5e47b9d2ecb157fe12f4dd675bc530d1138
-size 514
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cd0opdsekqwo1"
+path="res://.godot/imported/shell kick.wav-b32d459d1ade85b10f47b6a4176bc9d4.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/8-bit/shell kick.wav"
+dest_files=["res://.godot/imported/shell kick.wav-b32d459d1ade85b10f47b6a4176bc9d4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

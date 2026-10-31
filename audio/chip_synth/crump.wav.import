@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:de64ab312201da975e4023449055a2b66e9894157a479df5b255f7fb86080d49
-size 490
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dkasqv3qn73r6"
+path="res://.godot/imported/crump.wav-d12336c015660d671f0c44498c47f3c7.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/crump.wav"
+dest_files=["res://.godot/imported/crump.wav-d12336c015660d671f0c44498c47f3c7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

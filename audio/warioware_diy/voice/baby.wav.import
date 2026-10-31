@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1a1ab38e7e920b4e5d2cb8ef12c76bae1b6ca1fa209a0d8061735888306c41cc
-size 496
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cuqvvoehqk27s"
+path="res://.godot/imported/baby.wav-2264df8409e9118e563d3eb90a948f1e.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/voice/baby.wav"
+dest_files=["res://.godot/imported/baby.wav-2264df8409e9118e563d3eb90a948f1e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

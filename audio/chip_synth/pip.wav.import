@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3f2d360fa7dbd7d2a0804da2b424ee6059841c724ff018a2cb809d33dfeff670
-size 483
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://k23u1uatbkj8"
+path="res://.godot/imported/pip.wav-0258571e9812741a0d8c78cacb156b47.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/pip.wav"
+dest_files=["res://.godot/imported/pip.wav-0258571e9812741a0d8c78cacb156b47.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

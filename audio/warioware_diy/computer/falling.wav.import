@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b7b9195ea60dc6ff83d683ec83dee1e18d0c8d653732d5ae0a41da1846a0bb85
-size 508
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckig7dtlqp5jv"
+path="res://.godot/imported/falling.wav-d4aa6f3bf36f622739899751bf26efeb.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/computer/falling.wav"
+dest_files=["res://.godot/imported/falling.wav-d4aa6f3bf36f622739899751bf26efeb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

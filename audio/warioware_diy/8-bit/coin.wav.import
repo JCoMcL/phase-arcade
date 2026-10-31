@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4e5d9156413dcfb5037aabed585b6d61cbbd683cfb3a39568232cb71cf0cb95e
-size 495
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7lauvnyv23kj"
+path="res://.godot/imported/coin.wav-fbf07577c9bdd9b881d7eaf50f0f8a6e.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/8-bit/coin.wav"
+dest_files=["res://.godot/imported/coin.wav-fbf07577c9bdd9b881d7eaf50f0f8a6e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

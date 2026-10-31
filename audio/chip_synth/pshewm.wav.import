@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6ceeac49f2d69a2d0c5f353071d6e58ba148cd631d04b4b2024ebbcd97187d54
-size 492
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://twwhf2v812me"
+path="res://.godot/imported/pshewm.wav-bb2929fbd32c456cf2176b271db1a65d.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/pshewm.wav"
+dest_files=["res://.godot/imported/pshewm.wav-bb2929fbd32c456cf2176b271db1a65d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

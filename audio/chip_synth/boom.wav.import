@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:851b8ef2641673309d98ae353efded5f3edc584e4971289bc358e965b2efb5f0
-size 487
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjbxuiouihk01"
+path="res://.godot/imported/boom.wav-8cff04798064262cacf0952a84445367.sample"
+
+[deps]
+
+source_file="res://audio/chip_synth/boom.wav"
+dest_files=["res://.godot/imported/boom.wav-8cff04798064262cacf0952a84445367.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

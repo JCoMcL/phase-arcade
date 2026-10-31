@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d30844beefed3f586feded374137e47b5f49ebf8eafd89b41650b06c1bf002dc
-size 494
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://o2m4xyamwa47"
+path="res://.godot/imported/gasp.wav-4acbabfa8237f1420772d845572fd2e7.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/body/gasp.wav"
+dest_files=["res://.godot/imported/gasp.wav-4acbabfa8237f1420772d845572fd2e7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a31cb7f47622e088dad9ae3bcf23abd742bf5f73b9616a65bc08d7d2aaca625f
-size 503
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2jirv80aynlp"
+path="res://.godot/imported/pistol.wav-201c4fc09d075b964ee5b5d75628b5c9.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/action/pistol.wav"
+dest_files=["res://.godot/imported/pistol.wav-201c4fc09d075b964ee5b5d75628b5c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

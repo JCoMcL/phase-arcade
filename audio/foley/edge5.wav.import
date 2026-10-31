@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1a510006918cdef85387ecd89210f561b531dd38ab1ca97d1aa70fcff8b80a38
-size 485
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpawdhelqldlb"
+path="res://.godot/imported/edge5.wav-cb216847f75189d1592a429f427457b7.sample"
+
+[deps]
+
+source_file="res://audio/foley/edge5.wav"
+dest_files=["res://.godot/imported/edge5.wav-cb216847f75189d1592a429f427457b7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

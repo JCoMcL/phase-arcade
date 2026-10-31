@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:612b9fe0b5bc6b31200c142ad4c3fdf41d12588b5b6a6f6a3ccaa3250bf89d91
-size 514
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://brnkey2tywapm"
+path="res://.godot/imported/wing flap.wav-2406cc4abaaf77fa58594c27b7baf90f.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/creature/wing flap.wav"
+dest_files=["res://.godot/imported/wing flap.wav-2406cc4abaaf77fa58594c27b7baf90f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

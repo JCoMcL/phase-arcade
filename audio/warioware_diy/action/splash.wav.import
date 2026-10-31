@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27a704edb7e2c11f274ea8854aaf97890be6801945897f9303b4780609544bd0
-size 503
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cuj80uelg0tj7"
+path="res://.godot/imported/splash.wav-326dc1dd959163daa7dd1e7c27f8c2cc.sample"
+
+[deps]
+
+source_file="res://audio/warioware_diy/action/splash.wav"
+dest_files=["res://.godot/imported/splash.wav-326dc1dd959163daa7dd1e7c27f8c2cc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
