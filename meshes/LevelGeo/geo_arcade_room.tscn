@@ -267,21 +267,21 @@ shadow_mesh = SubResource("ArrayMesh_fx4fh")
 
 [node name="geo_ArcadeRoom" unique_id=343757919 instance=ExtResource("1_bbp5q")]
 
-[node name="ArcadeRoom" parent="." index="0" unique_id=695204420]
+[node name="ArcadeRoom" parent="." index="0" unique_id=1153371168]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gvceo")
 surface_material_override/0 = ExtResource("2_y46fe")
 surface_material_override/1 = ExtResource("3_y46fe")
 
-[node name="StairsCentred" parent="ArcadeRoom" index="0" unique_id=314113778]
+[node name="StairsCentred" parent="ArcadeRoom" index="0" unique_id=1079387018]
 material_override = ExtResource("4_c8ooc")
 mesh = SubResource("ArrayMesh_v6pp4")
 
-[node name="Railings_aio" parent="ArcadeRoom" index="1" unique_id=851691268]
+[node name="Railings_aio" parent="ArcadeRoom" index="1" unique_id=1529916854]
 mesh = SubResource("ArrayMesh_hnbh2")
 surface_material_override/0 = ExtResource("4_gvceo")
 
-[node name="LowerFloor" parent="ArcadeRoom" index="3" unique_id=1812794026]
+[node name="LowerFloor" parent="ArcadeRoom" index="3" unique_id=1192353606]
 material_override = ExtResource("6_h0moe")
 mesh = SubResource("ArrayMesh_c8ooc")
 
@@ -401,13 +401,7 @@ shape = SubResource("BoxShape3D_jp8u0")
 transform = Transform3D(0.99488074, 0, -0.10105629, 0, 1, 0, 0.10105629, 0, 0.99488074, -1.38, 0.5, 1.706)
 shape = SubResource("BoxShape3D_jp8u0")
 
-[node name="CeilingConcrete_Arcade005" parent="." index="4" unique_id=806436487]
+[node name="CeilingConcrete_Arcade005" parent="." index="4" unique_id=152164261]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1.5, 0, -1, -6.556708e-08, 7.9, 4.5, 4.9)
 material_override = ExtResource("4_c8ooc")
 mesh = SubResource("ArrayMesh_h0moe")
-
-[node name="SawHorseBox" parent="." index="5" unique_id=636861029]
-transform = Transform3D(0.007856061, 0, 0.0061872695, 0, 0.01, 0, -0.0061872695, 0, 0.007856061, -10.133929, -1.0000001, 5.807778)
-
-[node name="SawHorseBox2" parent="." index="6" unique_id=559470031]
-transform = Transform3D(-0.0023312157, 0, 0.009724475, 0, 0.01, 0, -0.009724475, 0, -0.0023312157, -9.491428, -1.0000001, 6.4104476)
