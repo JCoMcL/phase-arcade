@@ -80,12 +80,18 @@ static func register_circuit(s:StringName) -> Switched:
 ## Set the light's circuit to be on initially. Note that this will effect all lights in the circuit
 @export var circuit_default_on:bool = false
 
+@onready var enabled_layer=layers
 func _on_circuit_switched(state:bool):
-	visible = state
+	#visible=state
+	layers = enabled_layer if state else 0
 
 func _ready():
-	if circuit != &"":
-		var switched = register_circuit(circuit)
-		switched.to.connect(_on_circuit_switched)
-		_on_circuit_switched(switched.state)
 	apply_temperature()
+	if not Engine.is_editor_hint():
+		if circuit != &"":
+			var switched = register_circuit(circuit)
+			switched.to.connect(_on_circuit_switched)
+			if circuit_default_on:
+				switched.state = circuit_default_on
+			else:
+				_on_circuit_switched(switched.state)
