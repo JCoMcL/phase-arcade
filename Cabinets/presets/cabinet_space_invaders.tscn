@@ -40,4 +40,7 @@ texture = SubResource("ViewportTexture_b4818")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3187528e-05, 4.1007996e-05, -4.053116e-05)
 metadata/_arcade_body_surfaces = [0]
 
+[node name="coin-box" parent="." index="6" unique_id=1366224847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16014269, 0.59995234, 0.29716438)
+
 [editable path="ScreenContainer/ScreenInteractZone"]

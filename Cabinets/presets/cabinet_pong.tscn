@@ -47,4 +47,7 @@ texture = SubResource("ViewportTexture_ik0pf")
 [node name="Pong" parent="." index="5" unique_id=1438099235 instance=ExtResource("2_1ao4o")]
 metadata/_arcade_body_surfaces = [0]
 
+[node name="coin-box" parent="." index="6" unique_id=1366224847]
+transform = Transform3D(1, 0, 0, 0, 0.9998953, 0.014471999, 0, -0.014471999, 0.9998953, 0.17667902, 0.56459177, 0.21822143)
+
 [editable path="ScreenContainer/ScreenInteractZone"]
