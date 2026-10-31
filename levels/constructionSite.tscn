@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://br0xm1n26qa2v"]
 
 [ext_resource type="ArrayMesh" uid="uid://ipj6hhe2qvtv" path="res://meshes/sm_ArcadeCabA_base.tres" id="5_so5aq"]
-[ext_resource type="Material" uid="uid://djx1k2nyialm8" path="res://materials/GlassScreen.tres" id="6_dp2em"]
 [ext_resource type="ArrayMesh" uid="uid://bqsij0ujf14wg" path="res://meshes/sm_ArcadeCabA_screen.tres" id="7_6d5fx"]
 [ext_resource type="PackedScene" uid="uid://dtlwxaq0k7uab" path="res://meshes/PropScenes/scene_concrete_ceiling.tscn" id="7_173re"]
+[ext_resource type="Material" uid="uid://dhy3isiqkamsf" path="res://materials/GlassScreen_off.tres" id="7_ajn3o"]
 [ext_resource type="PackedScene" uid="uid://chgsktnxluv8p" path="res://meshes/SM_CStudWall.fbx" id="7_i4oqc"]
 [ext_resource type="PackedScene" uid="uid://di5f6gaskeyqe" path="res://meshes/PropScenes/scene_cStudWall.tscn" id="7_te35t"]
 [ext_resource type="PackedScene" uid="uid://dv2pp4sgqrclp" path="res://meshes/SM_PlasterboardPile.fbx" id="8_jd3w2"]
@@ -17,7 +17,6 @@
 [ext_resource type="Script" uid="uid://dab16pc0apfdo" path="res://utils/switchable_lightmap.gd" id="12_rkil3"]
 [ext_resource type="PackedScene" uid="uid://bbnn0ppc6doud" path="res://meshes/LevelGeo/geo_foyer.tscn" id="13_nbbox"]
 [ext_resource type="Script" uid="uid://byveuay1ec0cg" path="res://utils/handy_light.gd" id="13_v0dwg"]
-[ext_resource type="ArrayMesh" uid="uid://st7cmkawks3j" path="res://meshes/sm_lamp_planet.tres" id="13_v1fwx"]
 [ext_resource type="PackedScene" uid="uid://disowst3xs3tf" path="res://meshes/LevelGeo/geo_roller_shutter.tscn" id="13_xacbb"]
 [ext_resource type="Material" uid="uid://bx2mma2aiaf8o" path="res://materials/Wood.tres" id="14_l0s7m"]
 [ext_resource type="PackedScene" uid="uid://fg5oyojgjny" path="res://meshes/office/office.glb" id="15_2gd0u"]
@@ -34,20 +33,20 @@
 [ext_resource type="PackedScene" uid="uid://d2awucc1aqq1q" path="res://meshes/PropScenes/prize_counter.tscn" id="25_rn6t8"]
 [ext_resource type="PackedScene" uid="uid://btjaqyhkj6rod" path="res://meshes/LevelGeo/geo_arcade_room.tscn" id="27_40a1i"]
 [ext_resource type="PackedScene" uid="uid://c3wtaj3flt31l" path="res://meshes/LevelGeo/change_counter.tscn" id="28_40a1i"]
-[ext_resource type="Shader" uid="uid://f75kpnhpd2v1" path="res://materials/shd_Blacklight.tres" id="30_nbbox"]
 [ext_resource type="PackedScene" uid="uid://d2lkp6mk8m2r7" path="res://meshes/PropScenes/scene_airDuct.tscn" id="31_0xm26"]
 [ext_resource type="PackedScene" uid="uid://dw5qktcvdyo26" path="res://meshes/PropScenes/scene_Sofa.tscn" id="31_r5lcs"]
-[ext_resource type="Texture2D" uid="uid://daswnm46guxoe" path="res://textures/carpet/T_PhaseConnectCarpet.png" id="31_xsasp"]
 [ext_resource type="ArrayMesh" uid="uid://cyo06mjkj4grk" path="res://meshes/sm_Cabling_tray.tres" id="32_vnpcl"]
 [ext_resource type="PackedScene" uid="uid://c5qhyuctvc26m" path="res://player/player_character.tscn" id="33_1841t"]
 [ext_resource type="Shader" uid="uid://b3nse2vuiwyot" path="res://materials/shd_NeonTube.tres" id="34_r5lcs"]
-[ext_resource type="Material" uid="uid://datnwu6nb24ck" path="res://materials/Blacklight/BlacklightDefault.tres" id="34_rkil3"]
 [ext_resource type="PackedScene" uid="uid://btvtounpgdkxs" path="res://Cabinets/cloths/cloth.tscn" id="38_2gd0u"]
 [ext_resource type="Material" uid="uid://bdwcl28853tmp" path="res://materials/Cabling_tray.tres" id="38_r5lcs"]
 [ext_resource type="PackedScene" uid="uid://c7me5j6srknla" path="res://meshes/PropScenes/scene_neonSign_foyer.tscn" id="38_xsasp"]
 [ext_resource type="ArrayMesh" uid="uid://m2g6p8mlofmn" path="res://meshes/sm_Sofa.tres" id="39_auksg"]
 [ext_resource type="PackedScene" uid="uid://8xx3dcuhmnv2" path="res://meshes/Poseables/sk_jelly_button_monkey.tscn" id="40_r5lcs"]
+[ext_resource type="PackedScene" uid="uid://cfqc5v3lvwati" path="res://Cabinets/models/_cabinet__pong.tscn" id="41_a734w"]
+[ext_resource type="PackedScene" uid="uid://dfklqirgcwi4h" path="res://Cabinets/models/_cabinet__rushn_attack.tscn" id="42_vgrb5"]
 [ext_resource type="PackedScene" uid="uid://ctgsld2gkkji1" path="res://meshes/PropScenes/scene_duct_round.tscn" id="43_40a1i"]
+[ext_resource type="PackedScene" uid="uid://d062ebye6ubh3" path="res://Cabinets/models/_cabinet__space_invaders.tscn" id="43_vv80q"]
 [ext_resource type="PackedScene" uid="uid://dv3451sltg66c" path="res://meshes/LevelGeo/geo_change_room_and_vent.tscn" id="46_ggqdw"]
 [ext_resource type="PackedScene" uid="uid://otft3bv64umi" path="res://stuff/coin.tscn" id="46_xsasp"]
 [ext_resource type="PackedScene" uid="uid://briklf270u7jk" path="res://meshes/SM_EmergencyLamp.fbx" id="47_xsasp"]
@@ -60,6 +59,10 @@
 [ext_resource type="Shader" uid="uid://dpaab6bxayygx" path="res://materials/shd_PlasticSheet_frontface.tres" id="55_2gd0u"]
 [ext_resource type="ArrayMesh" uid="uid://bhgx05vttrsrw" path="res://meshes/sm_DustSheet_0.tres" id="55_ajn3o"]
 [ext_resource type="PackedScene" uid="uid://b53p4w7v2f8be" path="res://meshes/PropScenes/breaker_box.tscn" id="55_hyikb"]
+[ext_resource type="PackedScene" uid="uid://bahx37ok8je0c" path="res://Arcade Games/Blowjorb/cabinet/blowjorb_cabinet.tscn" id="57_2gd0u"]
+[ext_resource type="PackedScene" uid="uid://chuo826v1x2m6" path="res://meshes/PropScenes/air_hockey_dummy.tscn" id="61_41mi6"]
+[ext_resource type="PackedScene" uid="uid://bbx5b0lycuqwh" path="res://Arcade Games/Star Monkey/cabinet/cabinet_star_monkey.tscn" id="62_vv80q"]
+[ext_resource type="PackedScene" uid="uid://dyvvrg13g50k4" path="res://Arcade Games/Wippa's Curse/cabinet/cabinet_WippasCurse.tscn" id="63_41mi6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jay6p"]
 size = Vector3(69, 4, 34)
@@ -77,6 +80,21 @@ sky_material = SubResource("ProceduralSkyMaterial_kou5f")
 [sub_resource type="Environment" id="Environment_oq02x"]
 background_mode = 2
 sky = SubResource("Sky_vpf4b")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b4gvm"]
+render_priority = 0
+shader = ExtResource("54_hyikb")
+shader_parameter/triplanar_scale = Vector3(1, 1, 1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2gd0u"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_b4gvm")
+shader = ExtResource("55_2gd0u")
+shader_parameter/triplanar_scale = Vector3(1, 1, 1)
+shader_parameter/triplanar_offset = Vector3(0, 0, 0)
+shader_parameter/triplanar_sharpness = 0.5
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_01k7k"]
 lightmap_size_hint = Vector2i(102, 62)
@@ -146,29 +164,6 @@ shader_parameter/On = true
 lightmap_size_hint = Vector2i(114, 117)
 add_uv2 = true
 size = Vector3(0.02, 0.1, 22)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_auksg"]
-render_priority = 0
-shader = ExtResource("30_nbbox")
-shader_parameter/Tiling = Vector2(1, 1)
-shader_parameter/Texture2DParameter2 = ExtResource("31_xsasp")
-shader_parameter/triplanar_scale = Vector3(1, 1, 1)
-shader_parameter/triplanar_offset = Vector3(0, 0, 0)
-shader_parameter/triplanar_sharpness = 0.5
-
-[sub_resource type="BoxMesh" id="BoxMesh_vv80q"]
-material = SubResource("ShaderMaterial_auksg")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ggqdw"]
-render_priority = 0
-shader = ExtResource("30_nbbox")
-shader_parameter/Tiling = Vector2(1, 1)
-shader_parameter/triplanar_scale = Vector3(1, 1, 1)
-shader_parameter/triplanar_offset = Vector3(0, 0, 0)
-shader_parameter/triplanar_sharpness = 0.5
-
-[sub_resource type="BoxMesh" id="BoxMesh_a734w"]
-material = SubResource("ShaderMaterial_ggqdw")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_u1clg"]
 _surfaces = [{
@@ -296,21 +291,6 @@ shadow_mesh = SubResource("ArrayMesh_u1clg")
 material = ExtResource("49_0iggl")
 size = Vector2(0.03, 0.1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b4gvm"]
-render_priority = 0
-shader = ExtResource("54_hyikb")
-shader_parameter/triplanar_scale = Vector3(1, 1, 1)
-shader_parameter/triplanar_offset = Vector3(0, 0, 0)
-shader_parameter/triplanar_sharpness = 0.5
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2gd0u"]
-render_priority = 0
-next_pass = SubResource("ShaderMaterial_b4gvm")
-shader = ExtResource("55_2gd0u")
-shader_parameter/triplanar_scale = Vector3(1, 1, 1)
-shader_parameter/triplanar_offset = Vector3(0, 0, 0)
-shader_parameter/triplanar_sharpness = 0.5
-
 [node name="level" type="Node3D" unique_id=1498293256]
 
 [node name="FloorBox" type="StaticBody3D" parent="." unique_id=545620827]
@@ -350,25 +330,98 @@ omni_range = 24.0
 transform = Transform3D(-0.63052684, 0, -0.77616745, 0, 1, 0, 0.77616745, 0, -0.63052684, -5.425137, 1.05463, -3.355228)
 
 [node name="SmArcadeCabABase" type="MeshInstance3D" parent="." unique_id=571259920]
-transform = Transform3D(0.25881898, -0.9659258, -4.222196e-08, 0, -4.371139e-08, 1, -0.9659258, -0.25881898, -1.1313336e-08, 15.107062, 0, 13.576349)
+transform = Transform3D(0.079909, -0.99680215, -4.3571603e-08, 0, -4.371139e-08, 1, -0.99680215, -0.079909, -3.4929313e-09, 17.397816, 1.1920929e-07, 12.409906)
 mesh = ExtResource("5_so5aq")
+
+[node name="SmDustSheet0" type="MeshInstance3D" parent="SmArcadeCabABase" unique_id=350748327]
+transform = Transform3D(0.9943251, -0.10638553, -4.6502597e-09, 0.10638553, 0.9943251, -2.4806646e-10, 4.6502593e-09, -2.4805846e-10, 1, -0.040798187, -0.00157547, 1.8191541)
+material_override = SubResource("ShaderMaterial_2gd0u")
+mesh = ExtResource("55_ajn3o")
 
 [node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="SmArcadeCabABase" unique_id=1032177011]
-material_override = ExtResource("6_dp2em")
+material_override = ExtResource("7_ajn3o")
 mesh = ExtResource("7_6d5fx")
 
-[node name="SmArcadeCabAShooter" type="MeshInstance3D" parent="SmArcadeCabABase" unique_id=1089166069]
-mesh = ExtResource("8_ylfxq")
-
-[node name="SmArcadeCabABase2" type="MeshInstance3D" parent="." unique_id=895101733]
-transform = Transform3D(-0.2588191, -0.96592575, -4.2221956e-08, 0, -4.371139e-08, 1, -0.96592575, 0.2588191, 1.1313345e-08, 14.930533, 0, 14.646584)
+[node name="SmArcadeCabABase3" type="MeshInstance3D" parent="." unique_id=1972895703]
+transform = Transform3D(0.040943563, -0.9991614, -4.367473e-08, 0, -4.371139e-08, 1, -0.9991614, -0.040943563, -1.7896973e-09, 17.397816, 1.1920929e-07, 14.272823)
 mesh = ExtResource("5_so5aq")
 
+[node name="SmDustSheet0" type="MeshInstance3D" parent="SmArcadeCabABase3" unique_id=202470783]
+transform = Transform3D(0.9943251, -0.10638553, -4.6502597e-09, 0.10638553, 0.9943251, -2.4806646e-10, 4.6502593e-09, -2.4805846e-10, 1, -0.040798187, -0.00157547, 1.8191541)
+material_override = SubResource("ShaderMaterial_2gd0u")
+mesh = ExtResource("55_ajn3o")
+
+[node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="SmArcadeCabABase3" unique_id=2087510356]
+material_override = ExtResource("7_ajn3o")
+mesh = ExtResource("7_6d5fx")
+
+[node name="SmArcadeCabABase4" type="MeshInstance3D" parent="." unique_id=1856784391]
+transform = Transform3D(-0.94215494, -0.33517757, -1.4651075e-08, 0, -4.371139e-08, 1, -0.33517757, 0.94215494, 4.1182897e-08, 12.391984, -1.1920929e-07, 14.3386135)
+mesh = ExtResource("5_so5aq")
+
+[node name="SmDustSheet0" type="MeshInstance3D" parent="SmArcadeCabABase4" unique_id=984916132]
+transform = Transform3D(0.9943251, -0.10638553, -4.6502597e-09, 0.10638553, 0.9943251, -2.4806646e-10, 4.6502593e-09, -2.4805846e-10, 1, -0.040798187, -0.00157547, 1.8191541)
+material_override = SubResource("ShaderMaterial_2gd0u")
+mesh = ExtResource("55_ajn3o")
+
+[node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="SmArcadeCabABase4" unique_id=195531887]
+material_override = ExtResource("7_ajn3o")
+mesh = ExtResource("7_6d5fx")
+
+[node name="SmArcadeCabABase6" type="MeshInstance3D" parent="." unique_id=6435946]
+transform = Transform3D(-0.94215494, -0.33517757, -1.4651075e-08, 0, -4.371139e-08, 1, -0.33517757, 0.94215494, 4.1182897e-08, 8.701676, 1.1920929e-07, 13.982444)
+mesh = ExtResource("5_so5aq")
+
+[node name="SmDustSheet0" type="MeshInstance3D" parent="SmArcadeCabABase6" unique_id=1032279864]
+transform = Transform3D(0.9943251, -0.10638553, -4.6502597e-09, 0.10638553, 0.9943251, -2.4806646e-10, 4.6502593e-09, -2.4805846e-10, 1, -0.040798187, -0.00157547, 1.8191541)
+material_override = SubResource("ShaderMaterial_2gd0u")
+mesh = ExtResource("55_ajn3o")
+
+[node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="SmArcadeCabABase6" unique_id=1132938853]
+material_override = ExtResource("7_ajn3o")
+mesh = ExtResource("7_6d5fx")
+
+[node name="SmArcadeCabABase5" type="MeshInstance3D" parent="." unique_id=1929514501]
+transform = Transform3D(0.9757129, -0.21905348, -9.575138e-09, 1.4546076e-16, -4.3711392e-08, 1, -0.21905348, -0.9757129, -4.2649773e-08, 12.334541, -1.1920929e-07, 13.071155)
+mesh = ExtResource("5_so5aq")
+
+[node name="SmDustSheet0" type="MeshInstance3D" parent="SmArcadeCabABase5" unique_id=1781379966]
+transform = Transform3D(0.9943251, -0.10638553, -4.6502597e-09, 0.10638553, 0.9943251, -2.4806646e-10, 4.6502593e-09, -2.4805846e-10, 1, -0.040798187, -0.00157547, 1.8191541)
+material_override = SubResource("ShaderMaterial_2gd0u")
+mesh = ExtResource("55_ajn3o")
+
+[node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="SmArcadeCabABase5" unique_id=1104881957]
+material_override = ExtResource("7_ajn3o")
+mesh = ExtResource("7_6d5fx")
+
+[node name="SmArcadeCabABase7" type="MeshInstance3D" parent="." unique_id=94231251]
+transform = Transform3D(0.29051295, 0.95687103, 4.1826166e-08, 1.6305332e-15, -4.371139e-08, 1, 0.95687103, -0.29051295, -1.2698731e-08, 4.6762, -3.5762787e-07, 10.704653)
+mesh = ExtResource("5_so5aq")
+
+[node name="SmDustSheet0" type="MeshInstance3D" parent="SmArcadeCabABase7" unique_id=1035878970]
+transform = Transform3D(0.9943251, -0.10638553, -4.6502597e-09, 0.10638553, 0.9943251, -2.4806646e-10, 4.6502593e-09, -2.4805846e-10, 1, -0.040798187, -0.00157547, 1.8191541)
+material_override = SubResource("ShaderMaterial_2gd0u")
+mesh = ExtResource("55_ajn3o")
+
+[node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="SmArcadeCabABase7" unique_id=1803804283]
+material_override = ExtResource("7_ajn3o")
+mesh = ExtResource("7_6d5fx")
+
+[node name="SmArcadeCabABase2" type="MeshInstance3D" parent="." unique_id=895101733]
+transform = Transform3D(-0.2588191, -0.96592575, -4.2221956e-08, 0, -4.371139e-08, 1, -0.96592575, 0.2588191, 1.1313345e-08, 17.366104, 0, 13.31843)
+mesh = ExtResource("5_so5aq")
+
+[node name="SmDustSheet1" type="MeshInstance3D" parent="SmArcadeCabABase2" unique_id=1277587892]
+transform = Transform3D(0.99433804, -0.106264085, 0, 0.106264085, 0.99433804, 0, 0, 0, 1, -0.04, 0, 1.819)
+material_override = SubResource("ShaderMaterial_2gd0u")
+mesh = ExtResource("55_ajn3o")
+
 [node name="SmArcadeCabAScreen" type="MeshInstance3D" parent="SmArcadeCabABase2" unique_id=342827914]
-material_override = ExtResource("6_dp2em")
+material_override = ExtResource("7_ajn3o")
 mesh = ExtResource("7_6d5fx")
 
 [node name="SmArcadeCabAShooter" type="MeshInstance3D" parent="SmArcadeCabABase2" unique_id=466780723]
+visible = false
 mesh = ExtResource("8_ylfxq")
 
 [node name="SM_ConstructionBits" parent="." unique_id=1139805140 instance=ExtResource("9_gygl6")]
@@ -829,81 +882,32 @@ light_energy = 0.3
 omni_attenuation = 2.0
 
 [node name="SmArcadeCabABase" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=112795757]
-transform = Transform3D(-0.7071068, 0.7071067, 3.090862e-08, 0, -4.371139e-08, 1, 0.7071067, 0.7071068, 3.090862e-08, -8.483263, -0.99385095, -3.351923)
+transform = Transform3D(4.3711385e-08, -0.9999999, -4.371139e-08, 0, -4.371139e-08, 1, -0.9999999, -4.3711385e-08, 5.194742e-15, -12.203451, -0.99385095, -4.6905947)
 mesh = ExtResource("5_so5aq")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=474871439]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.726654, -0.35284418, -1.2270241)
-mesh = SubResource("BoxMesh_vv80q")
+[node name="SmArcadeCabABase2" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1140317895]
+transform = Transform3D(0.23025301, -0.9731307, -4.2536897e-08, -1.5529403e-22, -4.3711385e-08, 1, -0.9731307, -0.23025301, -1.0064672e-08, -12.447727, -0.99385095, -5.7085524)
+mesh = ExtResource("5_so5aq")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom/MeshInstance3D" unique_id=758958078]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6714153, 0.85755086, 1.4106407)
-visible = false
-light_negative = true
+[node name="SmArcadeCabABase3" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=578773568]
+transform = Transform3D(4.3711385e-08, -0.9999999, -4.371139e-08, 0, -4.371139e-08, 1, -0.9999999, -4.3711385e-08, 5.194742e-15, -12.431597, -0.99385095, -6.5842366)
+mesh = ExtResource("5_so5aq")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=436165122]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5269966, -0.35284418, -2.9368162)
-material_override = ExtResource("34_rkil3")
-mesh = SubResource("BoxMesh_a734w")
+[node name="SmArcadeCabABase4" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1597548779]
+transform = Transform3D(0.84049237, -0.5418231, -2.3683848e-08, -1.5529403e-22, -4.3711385e-08, 1, -0.5418231, -0.84049237, -3.6739085e-08, -12.431597, -0.99385095, -9.366201)
+mesh = ExtResource("5_so5aq")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom/MeshInstance3D3" unique_id=300350238]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6714153, 0.85755086, 1.4106407)
-visible = false
-light_negative = true
+[node name="PlanetLight" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1666403138 instance=ExtResource("16_v0dwg")]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 0.83698654, 3, 2.5954704)
+light_energy = 1.4
 
-[node name="SmLampPlanet3" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=267453728]
-transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 5, 3, -1)
-cast_shadow = 0
-mesh = ExtResource("13_v1fwx")
+[node name="PlanetLight2" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=541349350 instance=ExtResource("16_v0dwg")]
+transform = Transform3D(-4.3711385e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 5.463399e-15, -9.403702, 3, 2.5684967)
+light_energy = 1.4
 
-[node name="SpotLight3D" type="SpotLight3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom/SmLampPlanet3" unique_id=2078940787]
-light_color = Color(1, 0.60784316, 0.30980393, 1)
-light_energy = 2.0
-light_size = 0.2
-light_bake_mode = 1
-light_cull_mask = 4294967291
-shadow_enabled = true
-shadow_reverse_cull_face = true
-spot_range = 9.0
-spot_attenuation = 2.5
-spot_angle = 70.0
-spot_angle_attenuation = 0.5
-
-[node name="SmLampPlanet4" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=765655980]
-transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -9.403702, 3, 2.5684958)
-cast_shadow = 0
-mesh = ExtResource("13_v1fwx")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom/SmLampPlanet4" unique_id=715778049]
-light_color = Color(1, 0.60784316, 0.30980393, 1)
-light_energy = 2.0
-light_size = 0.2
-light_bake_mode = 1
-light_cull_mask = 4294967291
-shadow_enabled = true
-shadow_reverse_cull_face = true
-spot_range = 12.0
-spot_attenuation = 2.5
-spot_angle = 70.0
-spot_angle_attenuation = 0.5
-
-[node name="SmLampPlanet5" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=30380231]
-transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -9.403702, 3, -5.4315033)
-cast_shadow = 0
-mesh = ExtResource("13_v1fwx")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom/SmLampPlanet5" unique_id=1956378028]
-light_color = Color(1, 0.60784316, 0.30980393, 1)
-light_energy = 2.0
-light_size = 0.2
-light_bake_mode = 1
-light_cull_mask = 4294967291
-shadow_enabled = true
-shadow_reverse_cull_face = true
-spot_range = 12.0
-spot_attenuation = 2.5
-spot_angle = 70.0
-spot_angle_attenuation = 0.5
+[node name="PlanetLight3" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1051335049 instance=ExtResource("16_v0dwg")]
+transform = Transform3D(-4.3711385e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 5.463399e-15, -9.403702, 3, -5.4315023)
+light_energy = 0.2
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1590636323]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 2.55, -1)
@@ -921,8 +925,77 @@ box_projection = true
 interior = true
 enable_shadows = true
 
-[node name="cloth2" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=2102472543 instance=ExtResource("38_2gd0u")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.50021553, 2.3841858e-07, -1.4017334)
+[node name="Pong" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1190875804 instance=ExtResource("41_a734w")]
+transform = Transform3D(-0.9549233, 0, 0.29685256, 0, 1, 0, -0.29685256, 0, -0.9549233, -0.86644745, 0, 6.1062727)
+
+[node name="Pong4" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1295586314 instance=ExtResource("41_a734w")]
+transform = Transform3D(0.9549233, 0, -0.2968525, 0, 1, 0, 0.2968525, 0, 0.9549233, 2.75949, 0, 2.823925)
+
+[node name="Pong5" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=313596692 instance=ExtResource("41_a734w")]
+transform = Transform3D(0.26707348, 0, -0.96367604, 0, 1, 0, 0.96367604, 0, 0.26707348, 2.0596895, 0, 2.5405922)
+
+[node name="Pong6" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1454247540 instance=ExtResource("41_a734w")]
+transform = Transform3D(-0.49257243, 0, -0.8702713, 0, 1, 0, 0.8702713, 0, -0.49257243, 2.2505627, 0, 1.6865072)
+
+[node name="Pong7" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=686127477 instance=ExtResource("41_a734w")]
+transform = Transform3D(-0.49257243, 0, -0.8702713, 0, 1, 0, 0.8702713, 0, -0.49257243, 3.1388597, 0, -3.6826043)
+
+[node name="RushnAttack" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=116366138 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(-0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659258, 5.493368, -2.3841858e-07, 5.568288)
+
+[node name="RushnAttack2" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1346353888 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(-0.7760932, 0, -0.63061845, 0, 1, 0, 0.63061845, 0, -0.7760932, 7.2634544, -2.3841858e-07, 5.76991)
+
+[node name="RushnAttack6" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1888431851 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(-4.3711392e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, -4.3711392e-08, 2.9055243, 2.3841858e-07, -0.058285713)
+
+[node name="RushnAttack7" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1847644944 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(0.16900986, 0, -0.98561436, 0, 1, 0, 0.98561436, 0, 0.16900986, 2.9888964, 4.7683716e-07, -0.9542942)
+
+[node name="RushnAttack8" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=87760113 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(0.2588192, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.2588192, 4.3323593, 2.3841858e-07, -1.0033655)
+
+[node name="RushnAttack9" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=976672448 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(0.09184489, 0, 0.9957733, 0, 1, 0, -0.9957733, 0, 0.09184489, 4.0199223, 4.7683716e-07, -0.15946579)
+
+[node name="RushnAttack10" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1946882951 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(0.5884119, 0, 0.80856127, 0, 1, 0, -0.80856127, 0, 0.5884119, 3.727497, 4.7683716e-07, 2.6558561)
+
+[node name="RushnAttack3" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=945943313 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(0.030067505, 0, -0.99954796, 0, 1, 0, 0.99954796, 0, 0.030067505, -12.272852, -1.0000002, -3.803546)
+
+[node name="RushnAttack4" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=645007078 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(0.43552598, 0, -0.9001763, 0, 1, 0, 0.9001763, 0, 0.43552598, -11.406137, -1.0000002, -5.8039756)
+
+[node name="RushnAttack5" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1490897964 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(-0.17540307, 0, -0.98449683, 0, 1, 0, 0.98449683, 0, -0.17540307, -11.375538, -1.0000002, -6.8890133)
+
+[node name="SpaceInvaders" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=845335363 instance=ExtResource("43_vv80q")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1.5807753, 2.3841858e-07, 6.2509127)
+
+[node name="cloth2" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom/SpaceInvaders" unique_id=2102472543 instance=ExtResource("38_2gd0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012956619, 0, 0.030776978)
+
+[node name="Pong2" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1711889907 instance=ExtResource("41_a734w")]
+transform = Transform3D(-0.090923406, 0, -0.9958579, 0, 1, 0, 0.9958579, 0, -0.090923406, -12.062517, -0.99999976, -7.8614197)
+
+[node name="Pong3" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1033752020 instance=ExtResource("41_a734w")]
+transform = Transform3D(-0.5122713, 0, -0.8588237, 0, 1, 0, 0.8588237, 0, -0.5122713, -11.458975, -0.99999976, -8.633918)
+
+[node name="SpaceInvaders2" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1122333475 instance=ExtResource("43_vv80q")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.28038, -1, -7.7551847)
+
+[node name="SpaceInvaders3" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1071077378 instance=ExtResource("43_vv80q")]
+transform = Transform3D(0.25881916, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881916, 4.033638, 2.3841858e-07, 1.883462)
+
+[node name="RushnAttack11" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=423259427 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(0.9824024, 0, -0.18677755, 0, 1, 0, 0.18677755, 0, 0.9824024, 8.158034, 0, -6.557119)
+
+[node name="RushnAttack12" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1917566035 instance=ExtResource("42_vgrb5")]
+transform = Transform3D(0.9998371, 0, -0.018054916, 0, 1, 0, 0.018054916, 0, 0.9998371, 7.2933655, 2.3841858e-07, -6.8063803)
+
+[node name="SpaceInvaders4" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=1490223100 instance=ExtResource("43_vv80q")]
+transform = Transform3D(0.98240227, 0, -0.18677753, 0, 1, 0, 0.18677753, 0, 0.98240227, 5.3579273, 1.1920929e-07, -6.8490543)
 
 [node name="Sofa" parent="LightmapGI/levelGeo" unique_id=1729698945 instance=ExtResource("31_r5lcs")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -5.6600523, 1.1920929e-07, -2.923935)
@@ -952,7 +1025,19 @@ transform = Transform3D(-0.3088179, 7.1054274e-15, 0.9511213, 3.4243041e-15, 1, 
 transform = Transform3D(-0.624568, 0.78067297, 0.021551136, -0.7808811, -0.6246769, -0.0020722623, 0.011844785, -0.018123113, 0.9997658, 8.080732, 1.0779462, -5.360346)
 
 [node name="SmSofa" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1933865835]
-transform = Transform3D(0.91066927, -0.4131362, -1.8058758e-08, 0, -4.371139e-08, 1, -0.4131362, -0.91066927, -3.980662e-08, 12.539233, -0.0614869, 15.425039)
+transform = Transform3D(0.66718304, 0.7448938, 3.2560344e-08, 0, -4.371139e-08, 1, 0.7448938, -0.66718304, -2.9163495e-08, 15.768978, -0.06148714, 9.297595)
+mesh = ExtResource("39_auksg")
+
+[node name="SmSofa2" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=265885158]
+transform = Transform3D(0.56745815, 0.8234022, 3.599206e-08, -2.6488123e-17, -4.3711392e-08, 1, 0.8234022, -0.56745815, -2.4804383e-08, 17.572226, -0.061487257, 19.279827)
+mesh = ExtResource("39_auksg")
+
+[node name="SmSofa3" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1613726952]
+transform = Transform3D(-0.98366237, -0.1800231, -7.869058e-09, -1.0538985e-16, -4.3711395e-08, 1, -0.1800231, 0.98366237, 4.2997254e-08, 11.650227, -0.061487257, 17.645447)
+mesh = ExtResource("39_auksg")
+
+[node name="SmSofa4" type="MeshInstance3D" parent="LightmapGI/levelGeo" unique_id=1412714410]
+transform = Transform3D(-0.9985333, 0.054142132, 2.3666278e-09, -2.6488123e-17, -4.3711392e-08, 1, 0.054142132, 0.9985333, 4.3647283e-08, 9.088751, -0.061487257, 17.642948)
 mesh = ExtResource("39_auksg")
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="LightmapGI" unique_id=327169834]
@@ -960,6 +1045,7 @@ transform = Transform3D(1.3113417e-07, -1, -4.3711378e-08, 6.7762637e-22, -4.371
 light_color = Color(0.9933513, 0.7616974, 0.6138959, 1)
 light_bake_mode = 1
 shadow_enabled = true
+spot_attenuation = 2.0
 spot_angle = 73.18898
 
 [node name="SmNeonPhaseArcade" parent="." unique_id=1085586091 instance=ExtResource("38_xsasp")]
@@ -1223,7 +1309,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14, 
 [node name="OmniLight3D" type="OmniLight3D" parent="geo_ChangeRoomAndVent" unique_id=415266999]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1455963, 2.2083402, 5.2784443)
 light_color = Color(0.58431375, 1, 0.60784316, 1)
-light_energy = 0.4
+light_energy = 0.3
 light_indirect_energy = 3.0
 light_size = 1.0
 light_bake_mode = 1
@@ -1232,6 +1318,7 @@ omni_attenuation = 2.0
 [node name="OmniLight3D2" type="OmniLight3D" parent="geo_ChangeRoomAndVent" unique_id=244291818]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.329107, 4.431386, 5.365032)
 light_color = Color(0.37254903, 1, 1, 1)
+light_energy = 0.2
 light_indirect_energy = 10.0
 light_bake_mode = 1
 omni_attenuation = 2.0
@@ -1267,7 +1354,20 @@ mesh = ExtResource("49_7byvj")
 transform = Transform3D(-0.07755434, 0.9969881, 4.3579735e-08, 0, -4.371139e-08, 1, 0.9969881, 0.07755434, 3.3900078e-09, 14.997796, 0, -2.2957962)
 mesh = ExtResource("50_e1iq1")
 
-[node name="SmDustSheet0" type="MeshInstance3D" parent="." unique_id=350748327]
-transform = Transform3D(0.15458968, -0.9879788, -4.318592e-08, 0, -4.371139e-08, 1, -0.9879788, -0.15458968, -6.7573263e-09, 15.098024, 1.819154, 13.616164)
-material_override = SubResource("ShaderMaterial_2gd0u")
-mesh = ExtResource("55_ajn3o")
+[node name="Cabinet" parent="." unique_id=1752319625 instance=ExtResource("57_2gd0u")]
+transform = Transform3D(-0.048882112, 0, -0.99880457, 0, 1, 0, 0.99880457, 0, -0.048882112, 17.41718, 0, 17.055798)
+
+[node name="AirHockey_dummy" parent="." unique_id=1698418637 instance=ExtResource("61_41mi6")]
+transform = Transform3D(0.9110061, 0, 0.41239288, 0, 1, 0, -0.41239288, 0, 0.9110061, 3.5430772, 0.005000272, 14.53121)
+
+[node name="AirHockey_dummy2" parent="." unique_id=298464612 instance=ExtResource("61_41mi6")]
+transform = Transform3D(-0.16255519, 0, 0.98669946, 0, 1, 0, -0.98669946, 0, -0.16255519, 14.191878, -0.99499995, 29.046143)
+
+[node name="AirHockey_dummy3" parent="." unique_id=903835355 instance=ExtResource("61_41mi6")]
+transform = Transform3D(0.17742728, 0, 0.9841339, 0, 1, 0, -0.9841339, 0, 0.17742728, 15.063567, -0.99499995, 27.516163)
+
+[node name="Cabinet2" parent="." unique_id=862869152 instance=ExtResource("62_vv80q")]
+transform = Transform3D(-0.9659258, 0, 0.25881895, 0, 1, 0, -0.25881895, 0, -0.9659258, 9.739, -1, 26.104)
+
+[node name="cabinet_WippasCurse" parent="." unique_id=1739532739 instance=ExtResource("63_41mi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.578151, 0, 13.904672)

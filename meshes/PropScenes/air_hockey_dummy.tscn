@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://chuo826v1x2m6"]
+
+[ext_resource type="PackedScene" uid="uid://6j5pul21f2s7" path="res://meshes/SM_AirHockey.fbx" id="1_nuasm"]
+[ext_resource type="Material" uid="uid://dhy3isiqkamsf" path="res://materials/GlassScreen_off.tres" id="2_q6gm5"]
+
+[node name="AirHockey_dummy" unique_id=1698418637 instance=ExtResource("1_nuasm")]
+
+[node name="Box004" parent="." index="0" unique_id=640546385]
+material_override = ExtResource("2_q6gm5")

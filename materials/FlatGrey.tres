@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c6a4oml68705"]
+
+[ext_resource type="Texture2D" uid="uid://bok722soe7as4" path="res://textures/props/T_TVTest.png" id="1_qp0a7"]
+
+[resource]
+resource_name = "Material"
+albedo_color = Color(0.1275, 0.17, 0.16079167, 1)
+roughness = 0.03
+emission_texture = ExtResource("1_qp0a7")
