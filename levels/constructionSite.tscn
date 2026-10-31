@@ -126,6 +126,8 @@ size = Vector3(6, 3, 0.2)
 size = Vector3(8, 3, 0.1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2gd0u"]
+lightmap_size_hint = Vector2i(64, 116)
+add_uv2 = true
 size = Vector3(12, 5, 0.1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_nusfb"]
@@ -324,25 +326,16 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.6
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1952660331]
 environment = SubResource("Environment_oq02x")
 
-[node name="SpotLight3D_NeonFill" type="SpotLight3D" parent="." unique_id=592233982]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09993005, 4.3183374, 3.6471524)
-light_color = Color(0.5254902, 0.4745098, 0.92156863, 1)
-light_energy = 0.3
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 30.0
-spot_angle = 81.49
-
 [node name="OmniLight3D_NeonFillOld" type="OmniLight3D" parent="." unique_id=674092471]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46467257, 4.195501, 3.6471524)
 visible = false
-light_color = Color(0.5254902, 0.47075137, 0.88133067, 1)
+light_color = Color(0.38431373, 0.26844501, 0.88133067, 1)
 light_energy = 0.2
 light_bake_mode = 1
 shadow_enabled = true
 omni_range = 21.699
 script = ExtResource("13_v0dwg")
-tint = Color(0.5254902, 0.4745098, 0.92156863, 1)
+tint = Color(0.38431373, 0.27058825, 0.92156863, 1)
 circuit = &"foyer"
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=1901811500]
@@ -414,7 +407,8 @@ transform = Transform3D(-0.07646921, 0.96984005, -0.23143622, 0.28373086, 0.2436
 light_bake_mode = 1
 spot_range = 6.9336357
 spot_attenuation = 2.0
-spot_angle = 50.209652
+spot_angle = 29.394192
+spot_angle_attenuation = 0.5
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="LightmapGI" unique_id=460004642]
 transform = Transform3D(1.3113417e-07, -1, -4.371138e-08, 6.7762637e-22, -4.371138e-08, 1, -1, -1.3113417e-07, -5.732055e-15, 1.8, 2.95, 4.5)
@@ -736,6 +730,14 @@ light_bake_mode = 1
 omni_range = 5.778603
 omni_attenuation = 2.0
 
+[node name="OmniLight3D9" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=48983959]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.0054264, 5.7316475, -1.0724449)
+light_color = Color(0.5254902, 1, 0.7176471, 1)
+light_energy = 0.18
+light_bake_mode = 1
+omni_range = 5.778603
+omni_attenuation = 2.0
+
 [node name="OmniLight3D4" type="OmniLight3D" parent="LightmapGI/levelGeo/geo_MaintenanceCorridor" unique_id=76807690]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.0054264, 2.7316477, -3.0464334)
 light_bake_mode = 1
@@ -826,12 +828,6 @@ light_color = Color(0.49803922, 0, 1, 1)
 light_energy = 0.3
 omni_attenuation = 2.0
 
-[node name="Light_WhiteTest" type="OmniLight3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=296209347]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.3524723, 1.5408403, -3.1761475)
-layers = 2
-light_energy = 0.3
-omni_attenuation = 2.0
-
 [node name="SmArcadeCabABase" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=112795757]
 transform = Transform3D(-0.7071068, 0.7071067, 3.090862e-08, 0, -4.371139e-08, 1, 0.7071067, 0.7071068, 3.090862e-08, -8.483263, -0.99385095, -3.351923)
 mesh = ExtResource("5_so5aq")
@@ -870,7 +866,8 @@ shadow_enabled = true
 shadow_reverse_cull_face = true
 spot_range = 9.0
 spot_attenuation = 2.5
-spot_angle = 89.99
+spot_angle = 70.0
+spot_angle_attenuation = 0.5
 
 [node name="SmLampPlanet4" type="MeshInstance3D" parent="LightmapGI/levelGeo/SM_geo_ArcadeRoom" unique_id=765655980]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -9.403702, 3, 2.5684958)

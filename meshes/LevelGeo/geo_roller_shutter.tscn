@@ -46,8 +46,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4nofi")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_72uko"]
+size = Vector3(5.5, 5.5, 0.4)
+
 [node name="SM_RollerShutter" unique_id=1836176340 instance=ExtResource("1_vfv87")]
 
-[node name="RollerShutter" parent="." index="0" unique_id=587816259]
+[node name="RollerShutter" parent="." index="0" unique_id=918802957]
 material_override = ExtResource("2_jlu5l")
 mesh = SubResource("ArrayMesh_jlu5l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=2073860760]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1213049573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7499945, 0)
+shape = SubResource("BoxShape3D_72uko")
