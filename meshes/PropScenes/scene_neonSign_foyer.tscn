@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://b630323eqbcw1" path="res://meshes/PropScenes/scene_neon_sign_foyer.gd" id="2_idrl0"]
 [ext_resource type="ArrayMesh" uid="uid://bmmak7a0apcjv" path="res://meshes/sm_Neon_Logo.tres" id="3_ec4cs"]
 [ext_resource type="ArrayMesh" uid="uid://bblllyxlyiw1" path="res://meshes/sm_NeonGlow_Logo.tres" id="4_tweqy"]
+[ext_resource type="AudioStream" uid="uid://87xvhaqhasng" path="res://audio/foley/buzz.ogg" id="6_idrl0"]
 
 [node name="SmNeonPhaseArcade" type="MeshInstance3D" unique_id=1085586091]
 transform = Transform3D(-4.3711392e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1.0000001, 4.371139e-08, 1.9106855e-15, 0, 0, 0)
@@ -27,3 +28,10 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, -2.1175824e-22, 0, 1, 8.351868e-23, 2.1175824e-22, 8.3518724e-23, 1, 0, 0, 0)
 cast_shadow = 0
 mesh = ExtResource("4_tweqy")
+
+[node name="BuzzAudio" type="AudioStreamPlayer3D" parent="." unique_id=558081829]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 7.688422e-10, -0.017589103, 0.93445647)
+stream = ExtResource("6_idrl0")
+attenuation_model = 1
+volume_db = -24.0
+unit_size = 5.0

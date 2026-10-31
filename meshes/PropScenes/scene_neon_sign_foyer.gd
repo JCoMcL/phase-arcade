@@ -7,6 +7,7 @@ func set_power_state(state:bool):
 	$SmNeonLogo.mesh.surface_get_material(0).set_shader_parameter("On", state)
 	$SmNeonGlowPhaseArcade.visible = state
 	%SmNeonGlowLogo.visible = state
+	$BuzzAudio.playing = state
 
 func _ready() -> void:
 	if circuit != &"":
