@@ -100,13 +100,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0di05")
 
-[node name="Pong" type="MeshInstance3D" unique_id=1438099235]
+[node name="Pong" type="MeshInstance3D" unique_id=1090969651]
 mesh = SubResource("ArrayMesh_357vx")
 
-[node name="sides_002" type="MeshInstance3D" parent="." unique_id=105795446]
+[node name="sides_002" type="MeshInstance3D" parent="." unique_id=392206122]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32372802, 0.0015088948, -0.00035419117)
 mesh = SubResource("ArrayMesh_50dn0")
 
-[node name="top" type="MeshInstance3D" parent="." unique_id=871128117]
+[node name="top" type="MeshInstance3D" parent="." unique_id=1254146802]
 transform = Transform3D(1.0332193, 0, 0, 0, 0.8904561, -0.22873001, 0, 0.21022996, 0.9688153, 0, 1.4024528, -0.07002206)
 mesh = SubResource("ArrayMesh_snqn2")

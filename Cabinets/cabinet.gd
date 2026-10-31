@@ -76,7 +76,7 @@ signal coin_inserted
 ## A coin is "processed" when the game calls [method pop_coin]
 ## and converts it into a life or a retry or whatever
 var coins:int = 0
-func _on_insert_coin():
+func insert_coin():
 	coins += 1
 	coin_inserted.emit()
 
@@ -345,7 +345,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if test_mode:
 		if event.is_action_pressed("insert_coin"):
-			_on_insert_coin()
+			insert_coin()
 		elif event is InputEventMouseButton:
 			_screen_click(event)
 		elif event is InputEventMouseMotion:
